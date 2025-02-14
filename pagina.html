@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextech_login</title>
+</head>
+<body>
+    <?php 
+    if($_SERVER['REQUEST_METHOD']== "POST") {
+     $correo = htmlspecialchars($_POST['correo']);
+     $usuario = htmlspecialchars( $_POST['usuario']);
+     $contraseña = htmlspecialchars( $_POST['contraseña']);
+     echo "Tu correo es: ".$correo. "<br>Tu nombre de usuario es: ".$usuario;
+    }
+ ?>
+    <h2>User Login</h2>
+    <form method="post">
+        <label for="correo"> </label>
+        <input type="email"  name="correo" required placeholder="Correo"> <br>
+        <label for="usuario"></label>
+        <input type="text" name="usuario" required placeholder="Usuario:"> <br>
+        <label for="contraseña"></label>
+        <input type="password" name="contraseña" required placeholder="Contraseña"> <br>
+        <input type="submit" value="Login"> <br>
+    </form>
+    
+</body>
+</html>
