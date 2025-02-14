@@ -1,6 +1,6 @@
-### Repositorio de nuestra proyecto NEXTECH
+### Repositorio de nuestro proyecto NEXTECH
 
 Autores:
-@ Rodrigo Calderon
-@ Joan Ye
+<br> @Rodrigo Calderon
+<br>@ Joan Ye
 @ Rodri MD
