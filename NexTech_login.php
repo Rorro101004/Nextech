@@ -84,6 +84,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     echo "$username, $email, $password";
 } if(isset($_POST["login"])){
-    echo "Hola";
+    echo "<h1>¡Bienvenido a Nextech!</h1>
+    <p>Estamos encantados de tenerte aquí. Explora nuestras eventos disponibles o los no disponibles; o creas los tuyos propios.</p>
+    <a href='inicio.html' class='button'>Empezar</a>";
 }
 ?>
