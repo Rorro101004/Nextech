@@ -72,7 +72,7 @@
 
     <footer>
     <div class="contact-info">
-            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+            <p>Dirección: Calle Pelai 123, Barcelona, España</p>
             <p>Teléfono: +123 456 7890</p>
             <p>Email: <a href="mailto:info@nextech.com">info@nextech.com</a></p>
     </div>
