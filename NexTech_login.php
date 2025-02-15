@@ -53,7 +53,7 @@
         <br><br><br><br>
         <div class="forms">
             <form  method="post">
-                <label for="option">
+                <label>
                     Administrator<input type="radio" name="option" value="Administrator" required>
                 </label>
                 <label for="User">
