@@ -71,7 +71,11 @@
     </section>
 
     <footer>
-
+    <div class="contact-info">
+            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+            <p>Teléfono: +123 456 7890</p>
+            <p>Email: <a href="mailto:info@nextech.com">info@nextech.com</a></p>
+    </div>
     </footer>
 </body>
 
@@ -83,9 +87,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
     echo "$username, $email, $password";
-} if(isset($_POST["login"])){
-    echo "<h1>¡Bienvenido a Nextech!</h1>
-    <p>Estamos encantados de tenerte aquí. Explora nuestras eventos disponibles o los no disponibles; o creas los tuyos propios.</p>
-    <a href='inicio.html' class='button'>Empezar</a>";
+} if(isset($_POST["login"]) && isset($_POST["option"])){
+    if ($_POST["option"]=="Administrador") {
+        echo "<h1>¡Bienvenido, Administrador $username!</h1> <p> Que parte de Nextech quieres administrar </p>";
+    } else {
+    echo "<h1>¡Bienvenido a  Nextech!</h1> <h1> $username </h1>";
+    echo "<p>Estamos encantados de tenerte aquí.
+     Explora nuestras eventos disponibles o los no disponibles; o creas los tuyos propios.</p>";
+     echo "<a href='inicio.html' class='button'>Empezar</a>";
+    }
 }
 ?>
