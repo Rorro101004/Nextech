@@ -52,7 +52,7 @@
     <section>
         <br><br><br><br>
         <div class="forms">
-            <form action="pr05.php" method="post">
+            <form  method="post">
                 <label for="option">
                     Administrator<input type="radio" name="option" value="Administrator" required>
                 </label>
@@ -83,5 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
     echo "$username, $email, $password";
+} if(isset($_POST["submit"])){
+    echo "Hola";
 }
 ?>
