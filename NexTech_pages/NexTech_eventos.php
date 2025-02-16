@@ -6,6 +6,7 @@
     <title>NexTech Eventos</title>
 </head>
 <body>
-    <img src="Images/NexTech eventos.png" alt="Wireframe eventos" width="90%" height="730px">
+    <a href="../NexTech_login.php">Volver a login</a><br>
+    <img src="../Images/NexTech eventos.png" alt="Wireframe eventos" width="90%" height="730px">
 </body>
 </html>

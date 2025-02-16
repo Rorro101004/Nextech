@@ -6,6 +6,7 @@
     <title>NexTech barra lateral</title>
 </head>
 <body>
-    <img src="Images/NexTech barra lateral.png" alt="Imagen NexTech barra lateral" width="90%" height="730px">
+    <a href="../NexTech_login.php">Volver a login</a><br>
+    <img src="../Images/NexTech barra lateral.png" alt="Imagen NexTech barra lateral" width="90%" height="730px">
 </body>
 </html>

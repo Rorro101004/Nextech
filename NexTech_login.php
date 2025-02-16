@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexTech Login</title>
-    <link rel="stylesheet" href="Text.css">
+    <link rel="stylesheet" href="Css/NexTech_login.css">
     <style>
-        <?php include 'Test.css'; ?>
+        <?php include 'Css/NexTech_login.css'; ?>
         /*Enlace a archivo css*/
     </style>
 </head>
@@ -17,84 +17,75 @@
         <div class="header">
             <div class="inicio">
                 <div class="imagenes">
-                    <div>
-                        <a href="NexTech_barra_lateral.php">Barras</a>
+                    <div class="barras">
+                        <a href="NexTech_pages/NexTech_barra_lateral.php"><img src="Images/3 barras.png" alt="Imagen Barras" width="40px"></a>
                     </div>
-                    <div>
-                        <img src="Images/NexTech logo.png" alt="Imagen Logo NexTech" width="100px">
+                    <div class="logo">
+                        <a href="NexTech_menu.php"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech" width="100px"></a>
                     </div>
-
                 </div>
                 <div class="opciones">
-                    <div>
-                        <a href="NexTech_menu.php">Menu</a>
+                    <div class="home">
+                        <a href="NexTech_pages/NexTech_home.php" style="color:rgb(94, 6, 130)"><b>Home</b></a>
                     </div>
-                    <div>
-                        <a href="NexTech_eventos.php">Eventos</a>
+                    <div class="eventos">
+                        <a href="NexTech_pages/NexTech_eventos.php" style="color:rgb(147, 0, 233)">Eventos</a>
                     </div>
-                    <div>
-                        <p>Info</p>
+                    <div class="info">
+                        <p style="color:rgb(147, 0, 233)">Info</p>
                     </div>
                 </div>
             </div>
-            <div class="login">
+            <div class="login_register">
                 <div>
-                    <a href="NexTech_login.php">Login</a>
+                    <p style="color:rgb(147, 0, 233)">Register</p>
                 </div>
-                <div>
-                    <p>Register</p>
+                <div class="login">
+                    <a href="NexTech_login.php">Login</a>
                 </div>
             </div>
         </div>
-        <hr>
     </header>
 
     <section>
-        <br><br><br><br>
-        <div class="forms">
-            <form  method="post">
-                <label>
-                    Administrator<input type="radio" name="option" value="Administrator" required>
-                </label>
-                <label for="User">
-                    User<input type="radio" name="option" value="User">
-                </label><br>
-                <label for="username">Username</label>
-                <input type="text" name="username" required><br>
-                <label for="email">Email</label>
-                <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"><br>
-                <label for="password">Password</label>
-                <input type="password" name="password" required><br>
-                <input type="submit" name="login" value="Login">
-            </form>
+        <div class="section">
+            <div class="forms">
+                <div class="login">
+                    <p>lOGIN</p>
+                </div>
+                <div class="form">
+                    <form action="NexTech_menu.php" method="post">
+                        <div class="inputs">
+                            <label>
+                                ADMINISTRATOR<input type="radio" name="option" value="administrator" required>
+                            </label>
+                            <label>
+                                USER<input type="radio" name="option" value="user">
+                            </label><br>
+                            <label for="username">USERNAME</label>
+                            <input type="text" name="username" required><br>
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"><br>
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" required><br>
+                        </div>
+                        <div>
+                            <input type="submit" name="login" value="Login">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-    <div class="contact-info">
+        <div class="contact-info">
+            <p>&copy; 2025 NexTech.com. Todos los derechos reservados.</p>
             <p>Dirección: Calle Pelai 123, Barcelona, España</p>
-            <p>Teléfono: +123 456 7890</p>
-            <p>Email: <a href="mailto:info@nextech.com">info@nextech.com</a></p>
-    </div>
+            <p>Teléfono: +123 456 789</p>
+            <p>Email: infonextech@gmail.com</p>
+        </div>
     </footer>
 </body>
 
 </html>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    echo "$username, $email, $password";
-} if(isset($_POST["login"]) && isset($_POST["option"])){
-    if ($_POST["option"]=="Administrador") {
-        echo "<h1>¡Bienvenido, Administrador $username!</h1> <p> Que parte de Nextech quieres administrar </p>";
-    } else {
-    echo "<h1>¡Bienvenido a  Nextech!</h1> <h1> $username </h1>";
-    echo "<p>Estamos encantados de tenerte aquí.
-     Explora nuestras eventos disponibles o los no disponibles; o creas los tuyos propios.</p>";
-     echo "<a href='inicio.html' class='button'>Empezar</a>";
-    }
-}
-?>
