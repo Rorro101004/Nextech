@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexTech Login</title>
-    <link rel="stylesheet" href="NexTech_login.css">
+    <title>NexTech Menu</title>
+    <link rel="stylesheet" href="NexTech_menu.css">
+
 </head>
 
 <body>
@@ -14,10 +15,12 @@
             <div class="inicio">
                 <div class="imagenes">
                     <div class="barras">
-                        <a href="NexTech_pages/NexTech_barra_lateral.html"><img src="Images/3 barras.png" alt="Imagen Barras" width="40px"></a>
+                        <a href="NexTech_pages/NexTech_barra_lateral.html"><img src="Images/3 barras.png"
+                                alt="Imagen Barras" width="40px"></a>
                     </div>
                     <div class="logo">
-                        <a href="NexTech_menu_nologin.html"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech" width="100px"></a>
+                        <a href="NexTech_menu_nologin.html"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech"
+                                width="100px"></a>
                     </div>
                 </div>
                 <div class="opciones">
@@ -45,31 +48,11 @@
 
     <section>
         <div class="section">
-            <div class="forms">
-                <div class="login">
-                    <p>lOGIN</p>
-                </div>
-                <div class="form">
-                    <form action="NexTech_login_process.php" method="post">
-                        <div class="inputs">
-                            <label>
-                                ADMINISTRATOR<input type="radio" name="option" value="administrator" required>
-                            </label>
-                            <label>
-                                USER<input type="radio" name="option" value="user">
-                            </label><br>
-                            <label for="username">USERNAME</label>
-                            <input type="text" name="username" required><br>
-                            <label for="email">EMAIL</label>
-                            <input type="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"><br>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" required><br>
-                        </div>
-                        <div>
-                            <input type="submit" name="login" value="Login">
-                        </div>
-                    </form>
-                </div>
+            <div class="usuarios">
+                <h1>¡Bienvenido a NexTech!</h1>
+                <p>Estamos encantados de tenerte aquí. Explora todo lo que tenemos para ofrecerte.</p>
+                <p>Descubre nuestros eventos destacados y participa en experiencias únicas.</p>
+                <p>¿Aún no has iniciado sesion? <a href="NexTech_login.html">Inicia sesión ahora</a>.</p>
             </div>
         </div>
     </section>

@@ -16,9 +16,17 @@ header .inicio {
     align-items: center;
     justify-content: space-between;
     padding-left: 20px;
+}
 
-    a {
-        color: black;
+@media screen and (max-width: 1000px) and (min-width:90px) {
+
+    header .inicio {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
     }
 }
 
@@ -67,6 +75,17 @@ header .login_register {
     padding-right: 20px;
 }
 
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    header .login_register {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+}
+
 header .login_register .login {
     border: 1px solid rgb(12, 10, 88);
     background-color: rgb(12, 10, 88);
@@ -103,7 +122,7 @@ section .section .forms .login {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
-    margin-top: 130px;
+    margin-top: 10vh;
 
     p {
         margin: 0;
@@ -161,10 +180,21 @@ input[type="submit"]:hover {
 
 }
 
+
 footer .contact-info {
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+
+@media screen and (max-width: 900px) and (min-width:90px) {
+    footer .contact-info {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 @font-face {
