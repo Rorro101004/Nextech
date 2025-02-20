@@ -6,7 +6,7 @@ header .header {
     padding-top: 15px;
     padding-bottom: 15px;
     font-family: "Lexend_text", sans-serif;
-    border: 1px solid white
+    border: 1px solid black;
 }
 
 header .inicio {
