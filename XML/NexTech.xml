@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<NexTech
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="NexTech.xsd"
->
+<?xml-model href="NexTech.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<NexTech>
     <conjunto_de_eventos>
         <evento id="1">
             <nombre>Conferencia Internacional de Inteligencia Artificial</nombre>
