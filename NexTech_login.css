@@ -56,7 +56,7 @@ header .inicio .opciones {
     justify-content: space-between;
 }
 
-header .inicio .opciones .home:hover {
+header .inicio .opciones .perfil:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
