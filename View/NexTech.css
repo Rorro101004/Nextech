@@ -1,3 +1,4 @@
+/*HEADER*/
 header .header {
     display: flex;
     flex-direction: row;
@@ -38,6 +39,12 @@ header .inicio .imagenes {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    header .inicio .imagenes{
+        width: 20%;
+    }
+}
+
 header .inicio .imagenes .barras:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -56,7 +63,7 @@ header .inicio .opciones {
     justify-content: space-between;
 }
 
-header .inicio .opciones .pefil:hover {
+header .inicio .opciones .perfil:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -86,6 +93,20 @@ header .login_register {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    header .header {
+        font-size: 0.8rem;
+    }
+
+    header .opciones div, header .login_register div {
+        padding: 5px; 
+    }
+
+    header .imagenes .logo img{
+        width: 70px; 
+    }
+}
+
 header .login_register .login {
     border: 1px solid rgb(12, 10, 88);
     background-color: rgb(12, 10, 88);
@@ -105,21 +126,15 @@ header .login_register .login:hover {
     transform: scale(1.1);
 }
 
-section .section {
-    border: 1px solid white;
-    background: rgb(246, 91, 247);
-    background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
-    
-}
-
-
+/*FOOTER*/
 footer .contact-info {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-@media screen and (max-width: 900px) and (min-width:90px) {
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
         width: 100%;
         display: flex;
@@ -128,6 +143,98 @@ footer .contact-info {
     }
 }
 
+/*SECTION*/
+section .section {
+    border: 1px solid white;
+    background: rgb(246, 91, 247);
+    background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
+    height: 80vh;
+}
+
+    /*LOGIN*/
+    section .section .forms {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    section .section .forms .login {
+        font-family: "BladeRunner_title", sans-serif;
+        color: rgb(11, 11, 137);
+        font-size: 100px;
+        margin-top: 15vh;
+    
+        p {
+            margin: 0;
+        }
+    }
+    
+    section .section .forms .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    section .section .forms .form .inputs {
+        font-family: "SynthekLDR_text", sans-serif;
+        font-size: 30px;
+        color: rgb(5, 87, 220);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    input[type="text"] {
+        width: 200px;
+    }
+    
+    input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    input[type="password"] {
+        width: 200px;
+    }
+    
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 150px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+        transition: transform 0.3s ease;
+        transform: scale(1.1);
+    
+    }
+
+    /*MENU*/
+    section .section .usuarios{
+        h1{    
+            font-family: "Montserrat_title", sans-serif;
+            font-size: 65px;
+        }
+        p{
+            font-family: "Lexend_text", sans-serif;
+            font-size: 25px;
+        }
+    }
+    
+    /*EVENTOS*/
+
+    /*PERFIL*/
+
+    /*INFO*/
+
+/*OTROS*/
 @font-face {
     font-family: "Montserrat_title";
     src: url("Fonts/Montserrat-Bold.ttf") format("truetype");
