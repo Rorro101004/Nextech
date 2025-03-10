@@ -38,6 +38,12 @@ header .inicio .imagenes {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    header .inicio .imagenes{
+        width: 20%;
+    }
+}
+
 header .inicio .imagenes .barras:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -86,36 +92,17 @@ header .login_register {
     }
 }
 
-@media (max-width: 768px) {
-    .section {
-        flex-direction: column;
-        font-size: 0.5rem;
-    }
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     header .header {
-        align-items: flex-start;
-        text-align: left;
         font-size: 0.8rem;
     }
 
-    header .imagenes, header .opciones, header .login_register {
-        width: 100%; 
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-    header .imagenes {
-        justify-content: space-between; 
-    }
     header .opciones div, header .login_register div {
-        font-size: 12px;
         padding: 5px; 
     }
 
-    header .imagenes img {
-        width: 50px; 
+    header .imagenes .logo img{
+        width: 70px; 
     }
 }
 
@@ -162,7 +149,7 @@ footer .contact-info {
     justify-content: space-around;
 }
 
-@media screen and (max-width: 900px) and (min-width:90px) {
+@media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
         width: 100%;
         display: flex;
