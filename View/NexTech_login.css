@@ -38,6 +38,12 @@ header .inicio .imagenes {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    header .inicio .imagenes{
+        width: 20%;
+    }
+}
+
 header .inicio .imagenes .barras:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -83,6 +89,20 @@ header .login_register {
         align-items: center;
         justify-content: space-between;
         padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header .header {
+        font-size: 0.8rem;
+    }
+
+    header .opciones div, header .login_register div {
+        padding: 5px; 
+    }
+
+    header .imagenes .logo img{
+        width: 70px; 
     }
 }
 
@@ -184,7 +204,7 @@ footer .contact-info {
 }
 
 
-@media screen and (max-width: 900px) and (min-width:90px) {
+@media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
         width: 100%;
         display: flex;
