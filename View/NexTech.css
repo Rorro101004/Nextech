@@ -1,5 +1,6 @@
 /*HEADER*/
 header .header {
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,7 +41,7 @@ header .inicio .imagenes {
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
-    header .inicio .imagenes{
+    header .inicio .imagenes {
         width: 20%;
     }
 }
@@ -98,12 +99,13 @@ header .login_register {
         font-size: 0.8rem;
     }
 
-    header .opciones div, header .login_register div {
-        padding: 5px; 
+    header .opciones div,
+    header .login_register div {
+        padding: 5px;
     }
 
-    header .imagenes .logo img{
-        width: 70px; 
+    header .imagenes .logo img {
+        width: 70px;
     }
 }
 
@@ -144,6 +146,32 @@ footer .contact-info {
 }
 
 /*SECTION*/
+section {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7repx;
+        padding: 4px;
+        justify-content: center;
+
+        .login_register {
+            flex-direction: column;
+            padding: 4px;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+        inputs {
+            font-size: 0.6;
+            padding: 9px;
+        }
+
+    }
+}
+
 section .section {
     border: 1px solid white;
     background: rgb(246, 91, 247);
@@ -151,88 +179,89 @@ section .section {
     height: 80vh;
 }
 
-    /*LOGIN*/
-    section .section .forms {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+/*LOGIN*/
+section .section .forms {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section .section .forms .login {
+    font-family: "BladeRunner_title", sans-serif;
+    color: rgb(11, 11, 137);
+    font-size: 100px;
+    margin-top: 15vh;
+
+    p {
+        margin: 0;
     }
-    
-    section .section .forms .login {
-        font-family: "BladeRunner_title", sans-serif;
-        color: rgb(11, 11, 137);
-        font-size: 100px;
-        margin-top: 15vh;
-    
-        p {
-            margin: 0;
-        }
-    }
-    
-    section .section .forms .form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-    }
-    
-    section .section .forms .form .inputs {
-        font-family: "SynthekLDR_text", sans-serif;
-        font-size: 30px;
-        color: rgb(5, 87, 220);
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    input[type="text"] {
-        width: 200px;
-    }
-    
-    input:focus {
-        outline: none;
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
-    
-    input[type="password"] {
-        width: 200px;
-    }
-    
-    input[type="submit"] {
-        background-color: #007BFF;
-        color: white;
-        padding: 10px 30px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-left: 150px;
-    }
-    
-    input[type="submit"]:hover {
-        background-color: #0056b3;
-        transition: transform 0.3s ease;
-        transform: scale(1.1);
-    
+}
+
+section .section .forms .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+section .section .forms .form .inputs {
+    font-family: "SynthekLDR_text", sans-serif;
+    font-size: 30px;
+    color: rgb(5, 87, 220);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 200px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="password"] {
+    width: 200px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 150px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+
+}
+
+/*MENU*/
+section .section .usuarios {
+    h1 {
+        font-family: "Montserrat_title", sans-serif;
+        font-size: 65px;
     }
 
-    /*MENU*/
-    section .section .usuarios{
-        h1{    
-            font-family: "Montserrat_title", sans-serif;
-            font-size: 65px;
-        }
-        p{
-            font-family: "Lexend_text", sans-serif;
-            font-size: 25px;
-        }
+    p {
+        font-family: "Lexend_text", sans-serif;
+        font-size: 25px;
     }
-    
-    /*EVENTOS*/
+}
 
-    /*PERFIL*/
+/*EVENTOS*/
 
-    /*INFO*/
+/*PERFIL*/
+
+/*INFO*/
 
 /*OTROS*/
 @font-face {
@@ -258,12 +287,33 @@ section .section {
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+
 }
 
-header {
-    margin: 0;
-    padding: 0;
+@media (max-width: 768px) {
+    .header {
+        font-size: 0.7rem;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .opciones,
+    .login_register {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 5px;
+    }
+
+    .imagenes .barras img {
+        width: 5%;
+    }
+
+    .imagenes .logo img {
+        width: 40px;
+    }
 }
+
 
 section {
     margin: 0;
