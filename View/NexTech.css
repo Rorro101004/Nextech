@@ -11,7 +11,7 @@ header .header {
 }
 
 header .inicio {
-    width: 30%;
+    width: 300px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,7 +22,7 @@ header .inicio {
 @media screen and (max-width: 1000px) and (min-width:90px) {
 
     header .inicio {
-        width: 55%;
+        width: 200px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -32,17 +32,10 @@ header .inicio {
 }
 
 header .inicio .imagenes {
-    width: 33%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-@media screen and (max-width: 1000px) and (min-width:90px) {
-    header .inicio .imagenes {
-        width: 20%;
-    }
 }
 
 header .inicio .imagenes .barras:hover {
@@ -56,8 +49,7 @@ header .inicio .imagenes .logo:hover {
 }
 
 header .inicio .opciones {
-    
-    width: 60%;
+    width: 200px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -75,7 +67,7 @@ header .inicio .opciones .eventos:hover {
 }
 
 header .login_register {
-    width: 14%;
+    width: 200px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,12 +77,12 @@ header .login_register {
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     header .login_register {
-        width: 20%;
+        width: 140px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding-right: 30px;
+        padding-right: 10px;
     }
 }
 
@@ -147,7 +139,6 @@ footer .contact-info {
 
 /*SECTION*/
 section .section {
-    padding-top: 10px;
     border: 1px solid white;
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
@@ -159,16 +150,31 @@ section .section .forms {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 section .section .forms .login {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
-    margin-top: 15vh;
+    margin-top: 100px;
 
     p {
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .forms .login {
+        font-family: "BladeRunner_title", sans-serif;
+        color: rgb(11, 11, 137);
+        font-size: 80px;
+        margin-top: 100px;
+
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -185,6 +191,16 @@ section .section .forms .form .inputs {
     color: rgb(5, 87, 220);
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .forms .form .inputs {
+        font-family: "SynthekLDR_text", sans-serif;
+        font-size: 25px;
+        color: rgb(5, 87, 220);
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 input[type="text"] {
@@ -210,6 +226,19 @@ input[type="submit"] {
     font-size: 16px;
     cursor: pointer;
     margin-left: 150px;
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        padding: 8px 25px;
+        border: none;
+        border-radius: 5px;
+        font-size: 13px;
+        cursor: pointer;
+        margin-left: 150px;
+    }
 }
 
 input[type="submit"]:hover {
