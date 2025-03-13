@@ -1,6 +1,5 @@
 /*HEADER*/
 header .header {
-    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -146,32 +145,6 @@ footer .contact-info {
 }
 
 /*SECTION*/
-section {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-    @media (max-width: 600px) {
-        display: flex;
-        flex-direction: column;
-        font-size: 0.7repx;
-        padding: 4px;
-        justify-content: center;
-
-        .login_register {
-            flex-direction: column;
-            padding: 4px;
-        }
-    }
-
-    @media (min-width: 601px) and (max-width: 1200px) {
-        inputs {
-            font-size: 0.6;
-            padding: 9px;
-        }
-
-    }
-}
-
 section .section {
     border: 1px solid white;
     background: rgb(246, 91, 247);
@@ -287,33 +260,12 @@ section .section .usuarios {
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
-
 }
 
-@media (max-width: 768px) {
-    .header {
-        font-size: 0.7rem;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .opciones,
-    .login_register {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 5px;
-    }
-
-    .imagenes .barras img {
-        width: 5%;
-    }
-
-    .imagenes .logo img {
-        width: 40px;
-    }
+header {
+    margin: 0;
+    padding: 0;
 }
-
 
 section {
     margin: 0;

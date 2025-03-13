@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+$user = new UserController;
+
+class UserController
+{
+    private $conn;
+
+    public function __construct() {}
+
+    public function login() {}
+
+    public function logout() {}
+
+    public function register() {}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +43,8 @@
                 break;
         }
     }
+
+
     ?>
 </body>
 
