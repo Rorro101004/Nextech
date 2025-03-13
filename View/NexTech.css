@@ -57,6 +57,7 @@ header .inicio .imagenes .logo:hover {
 }
 
 header .inicio .opciones {
+    
     width: 60%;
     display: flex;
     flex-direction: row;
@@ -90,7 +91,7 @@ header .login_register {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding-right: 20px;
+        padding-right: 30px;
     }
 }
 
@@ -173,6 +174,7 @@ section {
 }
 
 section .section {
+    padding-top: 10px;
     border: 1px solid white;
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
