@@ -42,6 +42,7 @@
                 <div class="login">
                     <a href="NexTech_login.php">Login</a>
                 </div>
+                
             </div>
         </div>
     </header>
@@ -50,8 +51,8 @@
         <div class="section">
             <div class="perfil">
                 <h1>Mi Perfil</h1>
-                <img src="" alt="">
                 <h2>Nombre Generico</h2>
+                <img class="foto" src="Images/perfil_generico.png" alt="Foto de perfil generica">
             </div>
         </div>
     </section>
