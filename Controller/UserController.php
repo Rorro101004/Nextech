@@ -5,11 +5,14 @@ $user = new UserController;
 
 class UserController
 {
+
     private $conn;
 
     public function __construct() {}
 
-    public function login() {}
+    public function login() {
+      
+    }
 
     public function logout() {}
 
