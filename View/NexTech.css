@@ -174,12 +174,10 @@ header .login_register .register:hover {
 
 /*FOOTER*/
 footer .contact-info {
-    
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
-
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
@@ -193,7 +191,6 @@ section .section {
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
     height: 80vh;
-    padding-bottom: 5%;
 }
 
 /*LOGIN*/

@@ -50,7 +50,7 @@ session_start();
                 <div class="login">
                     <a href="NexTech_login.php">Login</a>
                 </div>
-                
+
             </div>
         </div>
     </header>
@@ -58,7 +58,7 @@ session_start();
     <section>
         <div class="section">
             <div class="perfil">
-                <h1>Perfil</h1>
+                <h1>Profile</h1>
             </div>
         </div>
     </section>
