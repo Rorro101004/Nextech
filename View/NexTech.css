@@ -72,7 +72,7 @@ header .login_register {
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     header .login_register {
-        width: 140px;
+        width: 160px;
         padding-right: 10px;
     }
 }
@@ -96,8 +96,8 @@ header .login_register .login {
     border: 1px solid rgb(12, 10, 88);
     background-color: rgb(12, 10, 88);
     border-radius: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
 
@@ -107,6 +107,25 @@ header .login_register .login {
 }
 
 header .login_register .login:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+header .login_register .register {
+    border: 1px solid rgb(5, 87, 220);
+    background-color: rgb(5, 87, 220);
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    a {
+        color: white;
+    }
+}
+
+header .login_register .register:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -227,6 +246,7 @@ input[type="submit"]:hover {
 /*MENU*/
 section .section .usuarios {
     margin-left: 5px;
+
     h1 {
         font-family: "Montserrat_title", sans-serif;
         font-size: 65px;

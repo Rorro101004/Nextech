@@ -18,7 +18,7 @@
                                 width="40px"></a>
                     </div>
                     <div class="logo">
-                        <a href="NexTech_menu_nologin.html"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech"
+                        <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech"
                                 width="100px"></a>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                         <a href="NexTech_eventos.html" style="color:rgb(94, 6, 130)"><b>Eventos</b></a>
                     </div>
                     <div class="perfil">
-                        <a href="NexTech_perfil.html" style="color:rgb(147, 0, 233)">Perfil</a>
+                        <a href="NexTech_perfil.php" style="color:rgb(147, 0, 233)">Perfil</a>
                     </div>
                     <div class="info">
                         <p style="color:rgb(147, 0, 233)">Info</p>
@@ -35,11 +35,11 @@
                 </div>
             </div>
             <div class="login_register">
-                <div>
-                    <p style="color:rgb(147, 0, 233)">Register</p>
+                <div class="register">
+                    <a href="NexTech_register.html">Register</a>
                 </div>
                 <div class="login">
-                    <a href="NexTech_login.html">Login</a>
+                    <a href="NexTech_login.php">Login</a>
                 </div>
             </div>
         </div>
@@ -47,30 +47,7 @@
 
     <section>
         <div class="section">
-            <div class="forms">
-                <div class="login">
-                    <p>lOGIN</p>
-                </div>
-                <div class="form">
-                    <form action="../Controller/UserController.php" method="post">
-                        <div class="inputs">
-                            <label>
-                                ADMINISTRATOR<input type="radio" name="option" value="administrator" required>
-                            </label>
-                            <label>
-                                USER<input type="radio" name="option" value="user">
-                            </label><br>
-                            <label for="username">USERNAME</label>
-                            <input type="text" name="username" required><br>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" required><br>
-                        </div>
-                        <div>
-                            <input class="login_div" type="submit" name="login" value="Login">
-                        </div>
-                    </form>
-                </div>
-            </div>
+
         </div>
     </section>
 
