@@ -61,7 +61,7 @@ header .inicio .imagenes .side_bar {
 }
 
 header .inicio .imagenes .side_bar {
-    p{
+    p {
         width: 100%;
         text-align: center;
         padding: 10px;
@@ -70,7 +70,7 @@ header .inicio .imagenes .side_bar {
     }
 }
 
-.menu-toggle:checked +  .menu + .side_bar {
+.menu-toggle:checked+.menu+.side_bar {
     display: flex;
 }
 
@@ -339,32 +339,24 @@ section .section .usuarios {
 
 /*PERFIL*/
 section .section .perfil {
-    
-    margin-left: 5px;
-    
-
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar verticalmente */
-    height: 100vh;
-    margin: 0; /* Elimina márgenes */
-    padding: 0;
+    align-items: center;
     h1 {
         font-family: "Montserrat_title", sans-serif;
         font-size: 65px;
         color: purple;
     }
 
-
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
-    .foto{
-        width:10%;
+
+    .foto {
+        width: 10%;
         height: 10%;
         padding: 20px;
-        
     }
 }
 
