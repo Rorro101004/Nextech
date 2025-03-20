@@ -19,7 +19,7 @@
                                 width="40px"></a>
                     </div>
                     <div class="logo">
-                        <a href="NexTech_menu_nologin.html"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech"
+                        <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech"
                                 width="100px"></a>
                     </div>
                 </div>
@@ -28,13 +28,19 @@
                         <a href="NexTech_eventos.html" style="color:rgb(94, 6, 130)"><b>Eventos</b></a>
                     </div>
                     <div class="perfil">
-                        <a href="NexTech_perfil.html" style="color:rgb(147, 0, 233)">
-                            <i class="fas fa-user-circle" style="font-size: 20px; color: rgb(147, 0, 233);"><span>Tu perfil</span></i>
-                        </a>
+                        <a href="NexTech_perfil.php" style="color:rgb(147, 0, 233)">Perfil</a>
                     </div>
                     <div class="logout">
                         <a href="logout.php" style="color:rgb(147, 0, 233)">Logout</a>
                     </div>
+                </div>
+            </div>
+            <div class="login_register">
+                <div class="register">
+                    <a href="NexTech_register.html">Register</a>
+                </div>
+                <div class="login">
+                    <a href="NexTech_login.php">Login</a>
                 </div>
             </div>
         </div>
