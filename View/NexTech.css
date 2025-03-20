@@ -33,7 +33,49 @@ header .inicio .imagenes {
     justify-content: space-between;
 }
 
-header .inicio .imagenes .barras:hover {
+header .inicio .imagenes .menu {
+    display: block;
+    background-color: rgb(17, 17, 205);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5em;
+    top: 15px;
+    right: 25px;
+}
+
+header .inicio .imagenes .side_bar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+}
+
+header .inicio .imagenes .side_bar {
+    p{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: white;
+        display: block;
+    }
+}
+
+.menu-toggle:checked +  .menu + .side_bar {
+    display: flex;
+}
+
+
+header .inicio .imagenes .menu:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -161,11 +203,18 @@ section .section .forms {
     margin-bottom: 10px;
 }
 
+section .section .forms .error {
+    margin-top: 100px;
+
+    p {
+        color: red;
+    }
+}
+
 section .section .forms .login {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
-    margin-top: 100px;
 
     p {
         margin: 0;
