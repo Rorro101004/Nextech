@@ -49,7 +49,9 @@
     <section>
         <div class="section">
             <div class="perfil">
-                <h1>Perfil</h1>
+                <h1>Mi Perfil</h1>
+                <img src="" alt="">
+                <h2>Nombre Generico</h2>
             </div>
         </div>
     </section>

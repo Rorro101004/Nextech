@@ -296,6 +296,7 @@ section .section .perfil {
     h1 {
         font-family: "Montserrat_title", sans-serif;
         font-size: 65px;
+        color: purple;
     }
 
     p {
