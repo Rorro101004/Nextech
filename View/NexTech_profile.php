@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +18,13 @@
         <div class="header">
             <div class="inicio">
                 <div class="imagenes">
-                    <div class="barras">
-                        <a href="NexTech_barra_lateral.html"><img src="Images/3 barras.png" alt="Image Bars"
-                                width="40px"></a>
+                    <div>
+                        <label for="side_bar" class="menu">☰</label>
+                    </div>
+                    <div class="side_bar">
+                        <p>d</p>
+                        <p>d</p>
+                        <p>d</p>
                     </div>
                     <div class="logo">
                         <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
@@ -25,13 +33,13 @@
                 </div>
                 <div class="opciones">
                     <div class="eventos">
-                        <a href="NexTech_eventos.html" style="color:rgb(94, 6, 130)"><b>Events</b></a>
+                        <a href="NexTech_events.html" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
                     <div class="perfil">
-                        <a href="NexTech_perfil.php" style="color:rgb(147, 0, 233)">Profile</a>
+                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
                     </div>
-                    <div class="logout">
-                        <a href="logout.php" style="color:rgb(147, 0, 233)">Logout</a>
+                    <div class="info">
+                        <p style="color:rgb(147, 0, 233)">Info</p>
                     </div>
                 </div>
             </div>
@@ -50,18 +58,16 @@
     <section>
         <div class="section">
             <div class="perfil">
-                <h1>Mi Perfil</h1>
-                <h2>Nombre Generico</h2>
-                <img class="foto" src="Images/perfil_generico.png" alt="Foto de perfil generica">
+                <h1>Perfil</h1>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="contact-info">
-            <p>&copy; 2025 NexTech.com. Todos los derechos reservados.</p>
-            <p>Dirección: Calle Pelai 123, Barcelona, España</p>
-            <p>Teléfono: +123 456 789</p>
+            <p>&copy; 2025 NexTech.com. All rights reserved.</p>
+            <p>Address: Calle Pelai 123, Barcelona, Spain</p>
+            <p>Phone number: +123 456 789</p>
             <p>Email: infonextech@gmail.com</p>
         </div>
     </footer>

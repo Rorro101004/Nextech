@@ -26,21 +26,14 @@ class UserController
 
     public function login()
     {
-        $password = 1234;
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
-            switch ($_POST["option"]) {
-                case "administrator":
-                    if ($_POST["password"] == $password) {
-                        header("Location: ../View/NexTech_perfil.php");
-                    } else {
-                        $_SESSION["error"] = "Error ";
-                        header("Location: ../View/NexTech_login.php");
-                    }
-                    break;
-                case "user":
-                    header("Location: ../View/NexTech_perfil.php");
-                    break;
-            }
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $passwordAdmin = 1234;
+        if ($_POST["password"] == $passwordAdmin) {
+            header("Location: ../View/NexTech_profile.php");
+        } else {
+            header("Location: ../View/NexTech_login.php");
         }
     }
 
@@ -60,25 +53,6 @@ class UserController
 </head>
 
 <body>
-    <?php
-    /*
-    $password = 1234;
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
-        switch ($_POST["option"]) {
-            case "administrator":
-                if ($_POST["password"] == $password) {
-                    header("Location: ../View/NexTech_menu_admin.html");
-                } else {
-                    header("Location: ../View/NexTech_menu_noadmin.html");
-                }
-                break;
-            case "user":
-                header("Location: ../View/NexTech_menu_user.html");
-                break;
-        }
-    }
-    */
-    ?>
 </body>
 
 </html>
