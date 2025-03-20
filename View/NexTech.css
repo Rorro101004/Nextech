@@ -293,8 +293,16 @@ section .section .usuarios {
 
 /*PERFIL*/
 section .section .perfil {
+    
     margin-left: 5px;
+    
 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh;
+    margin: 0; /* Elimina márgenes */
+    padding: 0;
     h1 {
         font-family: "Montserrat_title", sans-serif;
         font-size: 65px;
@@ -307,9 +315,10 @@ section .section .perfil {
         font-size: 25px;
     }
     .foto{
-        max-width:25%;
-        max-height: 25%;
+        width:10%;
+        height: 10%;
         padding: 20px;
+        
     }
 }
 
