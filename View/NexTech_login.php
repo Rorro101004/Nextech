@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["error"])) {
+    $_SESSION["error"] = "";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,20 +21,20 @@
             <div class="inicio">
                 <div class="imagenes">
                     <div class="barras">
-                        <a href="NexTech_barra_lateral.html"><img src="Images/3 barras.png" alt="Imagen Barras"
+                        <a href="NexTech_barra_lateral.html"><img src="Images/3 barras.png" alt="Image Bars"
                                 width="40px"></a>
                     </div>
                     <div class="logo">
-                        <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Imagen Logo NexTech"
+                        <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
                                 width="100px"></a>
                     </div>
                 </div>
                 <div class="opciones">
                     <div class="eventos">
-                        <a href="NexTech_eventos.html" style="color:rgb(94, 6, 130)"><b>Eventos</b></a>
+                        <a href="NexTech_eventos.html" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
                     <div class="perfil">
-                        <a href="NexTech_perfil.php" style="color:rgb(147, 0, 233)">Perfil</a>
+                        <a href="NexTech_perfil.php" style="color:rgb(147, 0, 233)">Profile</a>
                     </div>
                     <div class="info">
                         <p style="color:rgb(147, 0, 233)">Info</p>
@@ -49,6 +56,9 @@
         <div class="section">
             <div class="forms">
                 <div class="login">
+                    <?php
+                    echo '<p>$_SESSION["error"]<p>';
+                    ?>
                     <p>lOGIN</p>
                 </div>
                 <div class="form">
@@ -66,7 +76,7 @@
                             <input type="password" name="password" required><br>
                         </div>
                         <div>
-                            <input class="login_div" type="submit" name="login" value="Login">
+                            <input type="submit" name="login" value="Login">
                         </div>
                     </form>
                 </div>

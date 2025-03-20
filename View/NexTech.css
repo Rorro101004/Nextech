@@ -290,6 +290,19 @@ section .section .usuarios {
 
 
 /*PERFIL*/
+section .section .perfil {
+    margin-left: 5px;
+
+    h1 {
+        font-family: "Montserrat_title", sans-serif;
+        font-size: 65px;
+    }
+
+    p {
+        font-family: "Lexend_text", sans-serif;
+        font-size: 25px;
+    }
+}
 
 /*INFO*/
 

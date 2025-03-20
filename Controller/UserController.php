@@ -2,16 +2,46 @@
 session_start();
 
 $user = new UserController;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["login"])) {
+        echo "<p>Login button is clicked.</p>";
+        $user->login();
+    }
+    if (isset($_POST["logout"])) {
+        echo "<p>Logout button is clicked.</p>";
+        $user->logout();
+    }
+    if (isset($_POST["register"])) {
+        echo "<p>Login button is clicked.</p>";
+        $user->register();
+    }
+}
+
 
 class UserController
 {
-
     private $conn;
 
     public function __construct() {}
 
-    public function login() {
-      
+    public function login()
+    {
+        $password = 1234;
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
+            switch ($_POST["option"]) {
+                case "administrator":
+                    if ($_POST["password"] == $password) {
+                        header("Location: ../View/NexTech_perfil.php");
+                    } else {
+                        $_SESSION["error"] = "Error ";
+                        header("Location: ../View/NexTech_login.php");
+                    }
+                    break;
+                case "user":
+                    header("Location: ../View/NexTech_perfil.php");
+                    break;
+            }
+        }
     }
 
     public function logout() {}
@@ -31,6 +61,7 @@ class UserController
 
 <body>
     <?php
+    /*
     $password = 1234;
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
         switch ($_POST["option"]) {
@@ -46,8 +77,7 @@ class UserController
                 break;
         }
     }
-
-
+    */
     ?>
 </body>
 
