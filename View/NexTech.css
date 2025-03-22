@@ -308,25 +308,47 @@ section .section .usuarios {
 
 /*EVENTOS*/
 .eventos-grid {
+   
     .evento1 {
-        position: relative;
-        /* Establece un contexto para el pseudoelemento */
         background-image: url(Images/ciber.jpg);
-        /* Imagen de fondo */
         background-size: cover;
-        /* Ajusta la imagen */
-        background-repeat: no-repeat;
-        /* Evita que se repita */
         background-position: center;
-        /* Centra la imagen */
-        font-family: "Lexend_text", sans-serif;
-        /* Fuente personalizada */
-        color: aliceblue;
-        /* Color del texto */
+        /* Imagen de fondo */
+    }
+    .evento2{
+        background-image:url(Images/progra.jpg) ;
+        background-size: cover;
+        background-position: center;
+    }
+    .evento3{
+        background-image:url(Images/IA.jpg) ;
+        background-size: cover;
+        background-position: center;
+    }
+    .evento3 h3 {
+        color: rgb(216, 191, 216)
+        ;
+        /* Color específico del texto en h3 */
     }
 
+    .evento3 span {
+        font-weight: bold;
+        /* Texto en negrita */
+    }
+    font-family: "Lexend_text", sans-serif;
+    /* Fuente personalizada */
+    color: aliceblue;
+    /* Color del texto */
 
+    .evento2 h3 {
+        color: rgb(173, 216, 230);
+        /* Color específico del texto en h3 */
+    }
 
+    .evento2 span {
+        font-weight: bold;
+        /* Texto en negrita */
+    }
 
 
     .evento1 h3 {
