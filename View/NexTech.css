@@ -308,8 +308,10 @@ section .section .usuarios {
 
 /*EVENTOS*/
 #contentCarrusel {
+    
     height: 30vh;
     overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
 .evento_destacado {
@@ -379,6 +381,7 @@ section .section .usuarios {
 
 }
 
+
 .section .eventos-grid {
 
 
@@ -441,6 +444,19 @@ section .section .usuarios {
 
 
 
+    .evento1, .evento2, .evento3 {
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+        cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    }
+    
+    .evento1:hover, .evento2:hover, .evento3:hover {
+        transform: scale(1.3); /* Aumenta ligeramente el tamaño */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+    }
     display: grid;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
