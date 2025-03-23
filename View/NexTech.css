@@ -307,27 +307,63 @@ section .section .usuarios {
 }
 
 /*EVENTOS*/
-.eventos-grid {
+#contentCarrusel{
+    height: 35vh;
+    
+}
+.evento_destacado {
+    height: 35vh;
+
+    color: purple;
+
+    border: 20px solid #0056b3;
+    overflow: hidden;
+    position: relative;
+   .tarjeta{
+    border: 2px solid black;
+    height: 100%;
+}
+.flechas{
+    border: 2px solid red;
+    height: 18%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+   }
    
+
+}
+
+.section .eventos-grid {
+
+
+
     .evento1 {
         background-image: url(Images/ciber.jpg);
         background-size: cover;
         background-position: center;
         /* Imagen de fondo */
     }
-    .evento2{
-        background-image:url(Images/progra.jpg) ;
+
+    .evento2 {
+        background-image: url(Images/progra.jpg);
         background-size: cover;
         background-position: center;
     }
-    .evento3{
-        background-image:url(Images/IA.jpg) ;
+
+    .evento3 {
+        background-image: url(Images/IA.jpg);
         background-size: cover;
         background-position: center;
     }
+
     .evento3 h3 {
-        color: rgb(216, 191, 216)
-        ;
+        color: rgb(216, 191, 216);
         /* Color específico del texto en h3 */
     }
 
@@ -335,7 +371,9 @@ section .section .usuarios {
         font-weight: bold;
         /* Texto en negrita */
     }
-    font-family: "Lexend_text", sans-serif;
+
+    font-family: "Lexend_text",
+    sans-serif;
     /* Fuente personalizada */
     color: aliceblue;
     /* Color del texto */
@@ -364,14 +402,13 @@ section .section .usuarios {
 
 
     display: grid;
+    margin: auto;
     grid-template-columns: repeat(3, 1fr);
     /* Tres columnas */
     gap: 15px;
-    /* Espaciado entre los elementos */
-    padding: 10px;
     align-content: end;
     /* Agrupa los elementos hacia el final del contenedor */
-    height: 75vh
+    height: 35vh
     /* Asegura que el contenedor tenga un alto suficiente */
 
 }
