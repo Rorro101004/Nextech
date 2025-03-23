@@ -307,35 +307,75 @@ section .section .usuarios {
 }
 
 /*EVENTOS*/
-#contentCarrusel{
-    height: 35vh;
-    
+#contentCarrusel {
+    height: 30vh;
+    overflow: hidden;
 }
+
 .evento_destacado {
-    height: 35vh;
+
 
     color: purple;
-
-    border: 20px solid #0056b3;
-    overflow: hidden;
-    position: relative;
-   .tarjeta{
-    border: 2px solid black;
     height: 100%;
-}
-.flechas{
-    border: 2px solid red;
-    height: 18%;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
     
-    
-   }
-   
+    position: relative;
+
+    .tarjeta {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+
+    .flechas {
+        height: 18%;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+    }
+    .titulo {
+        font-size:5rem; /* Tamaño más grande del texto */
+        font-weight: bold; /* Hace el texto en negrita */
+        text-align: center; /* Opcional: Centra el texto horizontalmente */
+        
+    }
+    .fecha {
+        font-size: 18px; /* Tamaño más pequeño para la fecha */
+        font-weight: normal; /* No tan pesado como el título */
+        color: #f8f0f0; /* Un color más tenue para distinguirlo */
+        margin-top: 5px; /* Espacio adicional arriba */
+        margin-top: 20px; /* Espacio adicional arriba */
+    }
+
+    #tarjeta1 {
+        background-image: url(Images/evento_tecnologico.jpg);
+        
+       
+    }
+    #tarjeta2 {
+        background-image: url(Images/ciber.jpg);
+        
+    }
+    #tarjeta3 {
+        background-image: url(Images/progra.jpg);
+
+    }
+    a{
+        text-decoration: none;
+    }
 
 }
 
