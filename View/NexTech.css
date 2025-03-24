@@ -315,19 +315,14 @@ section .section .usuarios {
 
 /*EVENTOS*/
 #contentCarrusel {
-
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
 
 .evento_destacado {
-
-
     color: purple;
     height: 100%;
-
-
     position: relative;
 
     .tarjeta {
@@ -403,9 +398,6 @@ section .section .usuarios {
 
 
 .section .eventos-grid {
-   
-
-
     .evento1 {
         background-image: url(Images/ciber.jpg);
         background-size: cover;
@@ -451,7 +443,6 @@ section .section .usuarios {
         /* Texto en negrita */
     }
 
-
     .evento1 h3 {
         color: rgb(144, 238, 144);
         /* Color específico del texto en h3 */
@@ -461,8 +452,6 @@ section .section .usuarios {
         font-weight: bold;
         /* Texto en negrita */
     }
-
-
 
     .evento1,
     .evento2,
@@ -495,12 +484,12 @@ section .section .usuarios {
     align-content: end;
     /* Agrupa los elementos hacia el final del contenedor */
     height: 45vh;
+
     /* Asegura que el contenedor tenga un alto suficiente */
     @media screen and (min-width: 1024px) and (max-width: 1920px) {
         font-size: 10px;
         height: 40vh;
     }
-
 }
 
 .eventos-grid>div {
@@ -517,9 +506,6 @@ section .section .usuarios {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 
 }
-
-
-
 
 /*PERFIL*/
 section .section .perfil {
