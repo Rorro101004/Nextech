@@ -4,8 +4,8 @@ header .header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-family: "Lexend_text", sans-serif;
     border: 1px solid white;
 }
@@ -19,7 +19,18 @@ header .start {
     padding-left: 20px;
 }
 
+<<<<<<< HEAD
+@media screen and (max-width: 1000px) and (min-width:90px) {
+
+    header .inicio {
+        width: 200px;
+    }
+}
+
+header .inicio .imagenes {
+=======
 header .start .images {
+>>>>>>> 4a6b65e7332f59bf8222a9aab3964164e20e28fb
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,6 +67,28 @@ header .login_register {
     align-items: center;
     justify-content: space-between;
     padding-right: 20px;
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    header .login_register {
+        width: 160px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header .header {
+        font-size: 0.8rem;
+    }
+
+    header .opciones div,
+    header .login_register div {
+        padding: 5px;
+    }
+
+    header .imagenes .logo img {
+        width: 70px;
+    }
 }
 
 header .login_register .login {
@@ -138,7 +171,7 @@ section .section {
     border: 1px solid white;
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
-    height: 81vh;
+    height: 80vh;
 }
 
 /*LOGIN*/
@@ -168,13 +201,9 @@ section .section .forms .login {
     }
 }
 
-section .section .forms .register {
-    font-family: "BladeRunner_title", sans-serif;
-    color: rgb(11, 11, 137);
-    font-size: 100px;
-
-    p {
-        margin: 0;
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .forms .login {
+        font-size: 80px;
     }
 }
 
@@ -190,6 +219,14 @@ section .section .forms .form .inputs {
     color: rgb(5, 87, 220);
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .forms .form .inputs {
+        font-size: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 input[type="text"] {
@@ -217,33 +254,17 @@ input[type="submit"] {
     margin-left: 150px;
 }
 
-input[type="submit"]:hover {
-    background-color: #0056b3;
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
 @media screen and (max-width: 1000px) and (min-width:90px) {
-
-    section .section .forms .login {
-        font-size: 80px;
-    }
-
-    section .section .forms .register {
-        font-size: 70px;
-
-    }
-
-    section .section .forms .form .inputs {
-        font-size: 25px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
     input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
     }
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 
 /*REGISTER*/
@@ -266,14 +287,19 @@ section .section .message {
 
 /*EVENTS*/
 #contentCarrusel {
+
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
 
 .evento_destacado {
+
+
     color: purple;
     height: 100%;
+
+
     position: relative;
 
     .tarjeta {
@@ -327,22 +353,31 @@ section .section .message {
 
     #tarjeta1 {
         background-image: url(Images/evento_tecnologico.jpg);
+
+
     }
 
     #tarjeta2 {
         background-image: url(Images/ciber.jpg);
+
     }
 
     #tarjeta3 {
         background-image: url(Images/progra.jpg);
+
     }
 
     a {
         text-decoration: none;
     }
+
 }
 
+
 .section .eventos-grid {
+   
+
+
     .evento1 {
         background-image: url(Images/ciber.jpg);
         background-size: cover;
@@ -388,6 +423,7 @@ section .section .message {
         /* Texto en negrita */
     }
 
+
     .evento1 h3 {
         color: rgb(144, 238, 144);
         /* Color específico del texto en h3 */
@@ -398,11 +434,12 @@ section .section .message {
         /* Texto en negrita */
     }
 
+
+
     .evento1,
     .evento2,
     .evento3 {
         padding: 20px;
-        background-color: #f4f4f4;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         /* Sombra inicial */
@@ -429,12 +466,12 @@ section .section .message {
     align-content: end;
     /* Agrupa los elementos hacia el final del contenedor */
     height: 45vh;
-
     /* Asegura que el contenedor tenga un alto suficiente */
     @media screen and (min-width: 1024px) and (max-width: 1920px) {
         font-size: 10px;
         height: 40vh;
     }
+
 }
 
 .eventos-grid>div {
@@ -453,8 +490,11 @@ section .section .message {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/*PROFILE*/
-section .section .profile {
+
+
+
+/*PERFIL*/
+section .section .perfil {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -468,7 +508,7 @@ section .section .profile {
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
-    }
+    }z
 
     .image {
         width: 10%;
