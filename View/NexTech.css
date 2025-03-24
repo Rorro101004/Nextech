@@ -376,26 +376,20 @@ section .section .usuarios {
 
     #tarjeta1 {
         background-image: url(Images/evento_tecnologico.jpg);
-
-
     }
 
     #tarjeta2 {
         background-image: url(Images/ciber.jpg);
-
     }
 
     #tarjeta3 {
         background-image: url(Images/progra.jpg);
-
     }
 
     a {
         text-decoration: none;
     }
-
 }
-
 
 .section .eventos-grid {
     .evento1 {
