@@ -18,7 +18,7 @@ session_start();
             <div class="inicio">
                 <div class="imagenes">
                     <div>
-
+                    
                     </div>
                     <div class="logo">
                         <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
