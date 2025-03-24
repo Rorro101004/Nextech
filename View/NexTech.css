@@ -33,53 +33,6 @@ header .inicio .imagenes {
     justify-content: space-between;
 }
 
-header .inicio .imagenes .menu {
-    display: block;
-    background-color: rgb(17, 17, 205);
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.5em;
-    top: 15px;
-    right: 25px;
-}
-
-header .inicio .imagenes .side_bar {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: black;
-    color: white;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    padding: 10px 0;
-}
-
-header .inicio .imagenes .side_bar {
-    p {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        color: white;
-        display: block;
-    }
-}
-
-.menu-toggle:checked+.menu+.side_bar {
-    display: flex;
-}
-
-
-header .inicio .imagenes .menu:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
 header .inicio .imagenes .logo:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -193,7 +146,7 @@ section .section {
     height: 80vh;
 }
 
-/*LOGIN*/
+/*LOGIN Y REGISTER*/
 section .section .forms {
     display: flex;
     align-items: center;
@@ -223,6 +176,22 @@ section .section .forms .login {
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .forms .login {
         font-size: 80px;
+    }
+}
+
+section .section .forms .register {
+    font-family: "BladeRunner_title", sans-serif;
+    color: rgb(11, 11, 137);
+    font-size: 100px;
+
+    p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .forms .register {
+        font-size: 70px;
     }
 }
 
@@ -308,19 +277,16 @@ section .section .usuarios {
 
 /*EVENTOS*/
 #contentCarrusel {
-
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
 
 .evento_destacado {
-
-
     color: purple;
     height: 100%;
 
-
+    
     position: relative;
 
     .tarjeta {
@@ -394,9 +360,8 @@ section .section .usuarios {
 
 }
 
-
 .section .eventos-grid {
-   
+
 
 
     .evento1 {
@@ -444,7 +409,6 @@ section .section .usuarios {
         /* Texto en negrita */
     }
 
-
     .evento1 h3 {
         color: rgb(144, 238, 144);
         /* Color específico del texto en h3 */
@@ -457,9 +421,7 @@ section .section .usuarios {
 
 
 
-    .evento1,
-    .evento2,
-    .evento3 {
+    .evento1, .evento2, .evento3 {
         padding: 20px;
         background-color: #f4f4f4;
         border-radius: 10px;
@@ -489,10 +451,6 @@ section .section .usuarios {
     /* Agrupa los elementos hacia el final del contenedor */
     height: 45vh;
     /* Asegura que el contenedor tenga un alto suficiente */
-    @media screen and (min-width: 1024px) and (max-width: 1920px) {
-        font-size: 10px;
-        height: 40vh;
-    }
 
 }
 
