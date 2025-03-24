@@ -19,18 +19,7 @@ header .start {
     padding-left: 20px;
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 1000px) and (min-width:90px) {
-
-    header .inicio {
-        width: 200px;
-    }
-}
-
 header .inicio .imagenes {
-=======
-header .start .images {
->>>>>>> 4a6b65e7332f59bf8222a9aab3964164e20e28fb
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -67,28 +56,6 @@ header .login_register {
     align-items: center;
     justify-content: space-between;
     padding-right: 20px;
-}
-
-@media screen and (max-width: 1000px) and (min-width:90px) {
-    header .login_register {
-        width: 160px;
-        padding-right: 10px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    header .header {
-        font-size: 0.8rem;
-    }
-
-    header .opciones div,
-    header .login_register div {
-        padding: 5px;
-    }
-
-    header .imagenes .logo img {
-        width: 70px;
-    }
 }
 
 header .login_register .login {
@@ -201,12 +168,6 @@ section .section .forms .login {
     }
 }
 
-@media screen and (max-width: 1000px) and (min-width:90px) {
-    section .section .forms .login {
-        font-size: 80px;
-    }
-}
-
 section .section .forms .form {
     display: flex;
     flex-direction: column;
@@ -219,14 +180,6 @@ section .section .forms .form .inputs {
     color: rgb(5, 87, 220);
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-@media screen and (max-width: 1000px) and (min-width:90px) {
-    section .section .forms .form .inputs {
-        font-size: 25px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
 }
 
 input[type="text"] {
@@ -254,17 +207,25 @@ input[type="submit"] {
     margin-left: 150px;
 }
 
-@media screen and (max-width: 1000px) and (min-width:90px) {
-    input[type="submit"] {
-        padding: 8px 25px;
-        font-size: 13px;
-    }
-}
-
 input[type="submit"]:hover {
     background-color: #0056b3;
     transition: transform 0.3s ease;
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .forms .login {
+        font-size: 80px;
+    }
+    section .section .forms .form .inputs {
+        font-size: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    input[type="submit"] {
+        padding: 8px 25px;
+        font-size: 13px;
+    }
 }
 
 /*REGISTER*/
@@ -375,7 +336,7 @@ section .section .message {
 
 
 .section .eventos-grid {
-   
+
 
 
     .evento1 {
@@ -466,6 +427,7 @@ section .section .message {
     align-content: end;
     /* Agrupa los elementos hacia el final del contenedor */
     height: 45vh;
+
     /* Asegura que el contenedor tenga un alto suficiente */
     @media screen and (min-width: 1024px) and (max-width: 1920px) {
         font-size: 10px;
@@ -508,9 +470,9 @@ section .section .perfil {
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
-    }z
+    }
 
-    .image {
+    z .image {
         width: 10%;
         height: 10%;
         padding: 20px;
