@@ -308,7 +308,7 @@ section .section .usuarios {
 
 /*EVENTOS*/
 #contentCarrusel {
-    
+
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
@@ -320,7 +320,7 @@ section .section .usuarios {
     color: purple;
     height: 100%;
 
-    
+
     position: relative;
 
     .tarjeta {
@@ -348,34 +348,47 @@ section .section .usuarios {
 
 
     }
+
     .titulo {
-        font-size:5rem; /* Tamaño más grande del texto */
-        font-weight: bold; /* Hace el texto en negrita */
-        text-align: center; /* Opcional: Centra el texto horizontalmente */
-        
+        font-size: 5rem;
+        /* Tamaño más grande del texto */
+        font-weight: bold;
+        /* Hace el texto en negrita */
+        text-align: center;
+        /* Opcional: Centra el texto horizontalmente */
+
     }
+
     .fecha {
-        font-size: 18px; /* Tamaño más pequeño para la fecha */
-        font-weight: normal; /* No tan pesado como el título */
-        color: #f8f0f0; /* Un color más tenue para distinguirlo */
-        margin-top: 5px; /* Espacio adicional arriba */
-        margin-top: 20px; /* Espacio adicional arriba */
+        font-size: 18px;
+        /* Tamaño más pequeño para la fecha */
+        font-weight: normal;
+        /* No tan pesado como el título */
+        color: #f8f0f0;
+        /* Un color más tenue para distinguirlo */
+        margin-top: 5px;
+        /* Espacio adicional arriba */
+        margin-top: 20px;
+        /* Espacio adicional arriba */
     }
 
     #tarjeta1 {
         background-image: url(Images/evento_tecnologico.jpg);
-        
-       
+
+
     }
+
     #tarjeta2 {
         background-image: url(Images/ciber.jpg);
-        
+
     }
+
     #tarjeta3 {
         background-image: url(Images/progra.jpg);
 
     }
-    a{
+
+    a {
         text-decoration: none;
     }
 
@@ -383,7 +396,7 @@ section .section .usuarios {
 
 
 .section .eventos-grid {
-
+   
 
 
     .evento1 {
@@ -444,19 +457,29 @@ section .section .usuarios {
 
 
 
-    .evento1, .evento2, .evento3 {
+    .evento1,
+    .evento2,
+    .evento3 {
         padding: 20px;
         background-color: #f4f4f4;
         border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-        cursor: pointer; /* Cambia el cursor al pasar el ratón */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Sombra inicial */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Transición suave */
+        cursor: pointer;
+        /* Cambia el cursor al pasar el ratón */
     }
-    
-    .evento1:hover, .evento2:hover, .evento3:hover {
-        transform: scale(1.3); /* Aumenta ligeramente el tamaño */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+
+    .evento1:hover,
+    .evento2:hover,
+    .evento3:hover {
+        transform: scale(1.3);
+        /* Aumenta ligeramente el tamaño */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        /* Sombra más prominente */
     }
+
     display: grid;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
@@ -464,8 +487,12 @@ section .section .usuarios {
     gap: 15px;
     align-content: end;
     /* Agrupa los elementos hacia el final del contenedor */
-    height: 35vh
+    height: 45vh;
     /* Asegura que el contenedor tenga un alto suficiente */
+    @media screen and (min-width: 1024px) and (max-width: 1920px) {
+        font-size: 10px;
+        height: 40vh;
+    }
 
 }
 
@@ -481,6 +508,7 @@ section .section .usuarios {
     text-align: center;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 
