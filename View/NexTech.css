@@ -26,21 +26,6 @@ header .start .images {
     justify-content: space-between;
 }
 
-header .start .images .menu {
-    display: block;
-    background-color: rgb(17, 17, 205);
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.5em;
-    top: 15px;
-    right: 25px;
-}
-
 header .start .images .logo:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -111,7 +96,7 @@ header .login_register .register:hover {
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width:90px) {
     header .inicio {
         width: 200px;
     }
