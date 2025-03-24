@@ -453,6 +453,8 @@ section .section .message {
 }
 
 .eventos-grid>div {
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
