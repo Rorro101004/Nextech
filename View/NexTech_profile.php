@@ -19,13 +19,7 @@ session_start();
             <div class="inicio">
                 <div class="imagenes">
                     <div>
-                        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                        <label for="side_bar" class="menu">☰</label>
-                    </div>
-                    <div class="side_bar">
-                        <p>d</p>
-                        <p>d</p>
-                        <p>d</p>
+                        
                     </div>
                     <div class="logo">
                         <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
