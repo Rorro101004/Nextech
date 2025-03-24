@@ -10,7 +10,7 @@ header .header {
     border: 1px solid white;
 }
 
-header .inicio {
+header .start {
     width: 300px;
     display: flex;
     flex-direction: row;
@@ -19,6 +19,7 @@ header .inicio {
     padding-left: 20px;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1000px) and (min-width:90px) {
 
     header .inicio {
@@ -27,13 +28,16 @@ header .inicio {
 }
 
 header .inicio .imagenes {
+=======
+header .start .images {
+>>>>>>> 4a6b65e7332f59bf8222a9aab3964164e20e28fb
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-header .inicio .imagenes .menu {
+header .start .images .menu {
     display: block;
     background-color: rgb(17, 17, 205);
     color: white;
@@ -48,44 +52,12 @@ header .inicio .imagenes .menu {
     right: 25px;
 }
 
-header .inicio .imagenes .side_bar {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: black;
-    color: white;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    padding: 10px 0;
-}
-
-header .inicio .imagenes .side_bar {
-    p {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        color: white;
-        display: block;
-    }
-}
-
-.menu-toggle:checked+.menu+.side_bar {
-    display: flex;
-}
-
-
-header .inicio .imagenes .menu:hover {
+header .start .images .logo:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
 
-header .inicio .imagenes .logo:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-header .inicio .opciones {
+header .start .options {
     width: 200px;
     display: flex;
     flex-direction: row;
@@ -93,12 +65,12 @@ header .inicio .opciones {
     justify-content: space-between;
 }
 
-header .inicio .opciones .perfil:hover {
+header .start .options .perfil:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
 
-header .inicio .opciones .eventos:hover {
+header .start .options .eventos:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -230,7 +202,6 @@ section .section .forms .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 section .section .forms .form .inputs {
@@ -285,14 +256,13 @@ input[type="submit"]:hover {
     background-color: #0056b3;
     transition: transform 0.3s ease;
     transform: scale(1.1);
-
 }
 
 /*REGISTER*/
 
 
 /*MENU*/
-section .section .usuarios {
+section .section .message {
     margin-left: 5px;
 
     h1 {
@@ -306,7 +276,7 @@ section .section .usuarios {
     }
 }
 
-/*EVENTOS*/
+/*EVENTS*/
 #contentCarrusel {
 
     height: 30vh;
@@ -509,7 +479,6 @@ section .section .usuarios {
     text-align: center;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-
 }
 
 
@@ -524,15 +493,15 @@ section .section .perfil {
     h1 {
         font-family: "Montserrat_title", sans-serif;
         font-size: 65px;
-        color: purple;
+        color: rgb(0, 0, 0);
     }
 
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
-    }
+    }z
 
-    .foto {
+    .image {
         width: 10%;
         height: 10%;
         padding: 20px;
@@ -541,7 +510,7 @@ section .section .perfil {
 
 /*INFO*/
 
-/*OTROS*/
+/*OTHERS*/
 @font-face {
     font-family: "Montserrat_title";
     src: url("Fonts/Montserrat-Bold.ttf") format("truetype");

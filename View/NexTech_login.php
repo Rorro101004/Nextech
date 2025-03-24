@@ -15,21 +15,21 @@ session_start();
 <body>
     <header>
         <div class="header">
-            <div class="inicio">
-                <div class="imagenes">
+            <div class="start">
+                <div class="images">
                     <div>
-                    
+
                     </div>
                     <div class="logo">
                         <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
                                 width="100px"></a>
                     </div>
                 </div>
-                <div class="opciones">
-                    <div class="eventos">
+                <div class="options">
+                    <div class="events">
                         <a href="NexTech_events.html" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
-                    <div class="perfil">
+                    <div class="profile">
                         <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
                     </div>
                     <div class="info">
