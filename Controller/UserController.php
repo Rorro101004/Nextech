@@ -22,17 +22,68 @@ class UserController
 {
     private $conn;
 
-    public function __construct() {}
+    public function __construct()
+    {
+        /*
+        // Database connection
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "mp0487";
+
+        // Create connection
+        $this->conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($this->conn->connect_error) {
+            die("Connection failed: " . $this->conn->connect_error);
+        }
+        echo "Connected successfully";
+        */
+    }
 
     public function login()
     {
+        // Save the password and username from login
         $username = $_POST["username"];
         $password = $_POST["password"];
+        /*
+        // Check the database
+        $stmt = $this->conn->prepare("SELECT name, password FROM users   WHERE name=? AND password=?");
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
 
-        $passwordAdmin = 1234;
-        if ($_POST["password"] == $passwordAdmin) {
+        if ($stmt->fetch()) {
+            // Authentication successful
+            $_SESSION["logged"] = true;
+            $_SESSION["user"] = $username;
+
+            // Close connection
+            $this->conn->close();
+
+            // Redirect to home page
+            header("Locatiion: ../View/NexTech_profile.php");
+        }
+        */
+
+        //test
+        $_SESSION["error"] = "";
+        $usernameAdmin = "admin";
+        $passwordAdmin = "123";
+        $usernameUser = "user";
+        $passwordUser = "111";
+        if ($username == $usernameAdmin && $password == $passwordAdmin) {
+            $_SESSION["username"] = $username;
+            $_SESSION["password"] = $password;
             header("Location: ../View/NexTech_profile.php");
-        } else {
+            exit();
+        } else if ($username == $usernameUser && $password == $passwordUser) {
+            $_SESSION["username"] = $username;
+            $_SESSION["password"] = $password;
+            header("Location: ../View/NexTech_profile.php");
+            exit();
+        }else{
+            $_SESSION["error"] = "Incorrect Username/Password";
             header("Location: ../View/NexTech_login.php");
         }
     }

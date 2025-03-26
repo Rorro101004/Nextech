@@ -15,13 +15,13 @@
             <div class="start">
                 <div class="images">
                     <div class="logo">
-                        <a href="NexTech_index.html"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
+                        <a href="NexTech_index.php"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
                                 width="100px"></a>
                     </div>
                 </div>
                 <div class="options">
                     <div class="events">
-                        <a href="NexTech_events.html" style="color:rgb(94, 6, 130)"><b>Events</b></a>
+                        <a href="NexTech_events.php" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
                     <div class="profile">
                         <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
@@ -33,7 +33,7 @@
             </div>
             <div class="login_register">
                 <div class="register">
-                    <a href="NexTech_register.html">Register</a>
+                    <a href="NexTech_register.php">Register</a>
                 </div>
                 <div class="login">
                     <a href="NexTech_login.php">Login</a>

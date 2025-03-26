@@ -152,8 +152,9 @@ section .section .forms {
 
 section .section .forms .error {
     margin-top: 100px;
-
+    font-family: "Lexend_text", sans-serif;
     p {
+        font-size: 5px;
         color: red;
     }
 }
@@ -229,7 +230,21 @@ input[type="submit"]:hover {
 }
 
 /*REGISTER*/
+section .section .forms .register {
+    font-family: "BladeRunner_title", sans-serif;
+    color: rgb(11, 11, 137);
+    font-size: 100px;
 
+    p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .forms .register {
+        font-size: 70px;
+    }
+}
 
 /*MENU*/
 section .section .message {
@@ -248,19 +263,14 @@ section .section .message {
 
 /*EVENTS*/
 #contentCarrusel {
-
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
 
 .evento_destacado {
-
-
     color: purple;
     height: 100%;
-
-
     position: relative;
 
     .tarjeta {
@@ -285,8 +295,6 @@ section .section .message {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-
     }
 
     .titulo {
@@ -296,7 +304,6 @@ section .section .message {
         /* Hace el texto en negrita */
         text-align: center;
         /* Opcional: Centra el texto horizontalmente */
-
     }
 
     .fecha {
@@ -314,18 +321,14 @@ section .section .message {
 
     #tarjeta1 {
         background-image: url(Images/evento_tecnologico.jpg);
-
-
     }
 
     #tarjeta2 {
         background-image: url(Images/ciber.jpg);
-
     }
 
     #tarjeta3 {
         background-image: url(Images/progra.jpg);
-
     }
 
     a {
@@ -456,7 +459,7 @@ section .section .message {
 
 
 /*PERFIL*/
-section .section .perfil {
+section .section .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
