@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(!isset($_POST["type"])){
+        $_POST["type"] = "";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,29 +56,33 @@
                 <div class="register">
                     <p>rEGISTEr</p>
                 </div>
-                <div class="form">
-                    <form action="../Controller/UserController.php" method="post">
-                        <div class="inputs">
-                            <label>
-                                ADMINISTRATOR<input type="radio" name="option" value="administrator" required>
-                            </label>
-                            <label>
-                                USER<input type="radio" name="option" value="user">
-                            </label><br>
-                            <label for="name">NAME</label>
-                            <input type="text" name="name" required><br>
-                            <label for="username">SURNAME</label>
-                            <input type="text" name="surname" required><br>
-                            <label for="username">USERNAME</label>
-                            <input type="text" name="username" required><br>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" required><br>
-                        </div>
-                        <div>
-                            <input type="submit" name="register" value="Register">
-                        </div>
+                <div>
+                    <form method="post">
+                        <input type="submit" name="type" value="User">
+                        <input type="submit" name="type" value="Administrator">
                     </form>
                 </div>
+                    <div class="form">
+                        <form action="../Controller/UserController.php" method="post">
+                            <div class="inputs">
+                                <label for="name">NAME</label>
+                                <input type="text" name="name" required><br>
+                                <label for="username">SURNAME</label>
+                                <input type="text" name="surname" required><br>
+                                <label for="username">USERNAME</label>
+                                <input type="text" name="username" required><br>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="password" required><br>
+                                <?php if ($_POST["type"] == "Administrator") { ?>
+                                    <label for="profile_image" class="image">PROFILE IMAGE</label>
+                                    <input type="file" name="profile_image">
+                                <?php } ?>
+                            </div>
+                            <div>
+                                <input type="submit" name="register" value="Register">
+                            </div>
+                        </form>
+                    </div>
             </div>
         </div>
     </section>
