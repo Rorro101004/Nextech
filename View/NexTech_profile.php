@@ -64,7 +64,7 @@ if (!isset($_SESSION["logged"])) {
                 <!-- Irá el nombre de la persona, correo ,cantidad de eventos apuntados-->
                 <div class="left">
                     <p>Foto </p>
-                    <img class="foto_perfil" src="/Lenguaje_de_marcas/new%20Nextech/Nextech/View/Images/perfil_generico.png" alt="foto generica">
+                    <img class="foto_perfil" src="Images/perfil_generico.png" alt="foto generica">
                     <p>Nombre generico Calderón Ye</p>
                 </div>
                 <div class="right">

@@ -308,6 +308,7 @@ section .section .forms .form_register input[type="submit"] {
     cursor: pointer;
     margin-left: 120px;
 }
+
 section .section .forms .form_register input[type="submit"]:hover {
     background-color: #0056b3;
     transition: transform 0.3s ease;
@@ -548,20 +549,16 @@ section .section .message {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
 /*PERFIL*/
-.perfil{
-
-        position: relative;
-        font-size: 65px;
-        color: rgb(0, 0, 0);
-        right: -40%;
-        top: 0%;
-        margin: 10px;
-    
+.perfil {
+    position: relative;
+    font-size: 65px;
+    color: rgb(0, 0, 0);
+    right: -40%;
+    top: 0%;
+    margin: 10px;
 }
+
 section .section .profile {
     display: flex;
     flex-direction: column;
@@ -569,40 +566,44 @@ section .section .profile {
     height: 60vh;
     width: 100%;
     position: relative;
-   
 
-    .right, .left {
+    .right,
+    .left {
         position: absolute;
         height: 80%;
     }
+
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
 
     .foto_perfil {
-        
-            width: 150px;
-            height: auto; /* Mantén la proporción de la imagen */
-            min-height: 150px; /* Opcional: limita la altura máxima */
-            padding: 20px;
+        width: 150px;
+        height: auto;
+        /* Mantén la proporción de la imagen */
+        min-height: 150px;
+        /* Opcional: limita la altura máxima */
+        padding: 20px;
     }
 
     .right {
         right: 20%;
-        display: flex; 
+        display: flex;
         flex-direction: column;
-        align-items: flex-end; /* Esto alineará los elementos al lado derecho del contenedor */
+        align-items: flex-end;
+        /* Esto alineará los elementos al lado derecho del contenedor */
         width: 50%;
     }
 
     .left {
         left: 20%;
-        display: flex; 
+        display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Esto alineará los elementos al lado izquierdo del contenedor */
+        align-items: flex-start;
+        /* Esto alineará los elementos al lado izquierdo del contenedor */
         width: 50%;
-    
+
     }
 }
 
