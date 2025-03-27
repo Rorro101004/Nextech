@@ -63,13 +63,14 @@ if (!isset($_SESSION["logged"])) {
             <div class="profile">
                 <!-- Irá el nombre de la persona, correo ,cantidad de eventos apuntados-->
                 <div class="left">
+                    <p>Nombre generico Calderón Ye</p>
+                <p>Correo generico</p>
+                <p>Eventos apuntados: 2</p>
+            </div>
+            <div class="right">
                     <p>Foto </p>
                     <img class="foto_perfil" src="Images/perfil_generico.png" alt="foto generica">
-                    <p>Nombre generico Calderón Ye</p>
-                </div>
-                <div class="right">
-                    <p>Correo generico</p>
-                    <p>Eventos apuntados: 2</p>
+                    
                 </div>
             </div>
         </div>
