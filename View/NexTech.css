@@ -19,7 +19,7 @@ header .start {
     margin-left: 20px;
 }
 
-header .inicio .imagenes {
+header .start .images {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -120,7 +120,7 @@ header .login_register .logout:hover {
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
-    header .inicio {
+    header .start {
         width: 200px;
     }
 
@@ -133,12 +133,12 @@ header .login_register .logout:hover {
         font-size: 0.8rem;
     }
 
-    header .opciones div,
+    header .options div,
     header .login_register div {
         padding: 5px;
     }
 
-    header .imagenes .logo img {
+    header .images .logo img {
         width: 70px;
     }
 }
@@ -207,17 +207,17 @@ section .section .forms .form_login .inputs {
     margin-bottom: 20px;
 }
 
-input[type="text"] {
+section .section .forms .form_login input[type="text"] {
     width: 200px;
 }
 
-input:focus {
+section .section .forms .form_login input:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-input[type="password"] {
+section .section .forms .form_login input[type="password"] {
     width: 200px;
 }
 
@@ -232,7 +232,7 @@ section .section .forms .form_login input[type="submit"] {
     margin-left: 150px;
 }
 
-input[type="submit"]:hover {
+section .section .forms .form_login input[type="submit"]:hover {
     background-color: #0056b3;
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -243,15 +243,16 @@ input[type="submit"]:hover {
         font-size: 80px;
     }
 
-    section .section .forms .form .inputs {
+    section .section .forms .form_login .inputs {
         font-size: 25px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
 
-    input[type="submit"] {
+    section .section .forms .form_login input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
+        margin-left: 140px;
     }
 }
 
@@ -266,7 +267,7 @@ section .section .forms .register {
     }
 }
 
-section .section .forms .type input[type="submit"]{
+section .section .forms .type input[type="submit"] {
     background-color: #007BFF;
     color: white;
     padding: 10px 30px;
@@ -277,6 +278,11 @@ section .section .forms .type input[type="submit"]{
     margin-left: 50px;
 }
 
+section .section .forms .type input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
 
 section .section .forms .form_register {
     display: flex;
@@ -300,12 +306,36 @@ section .section .forms .form_register input[type="submit"] {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 150px;
+    margin-left: 120px;
+}
+section .section .forms .form_register input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .forms .register {
         font-size: 70px;
+    }
+
+    section .section .forms .type input[type="submit"] {
+        padding: 8px 25px;
+        font-size: 13px;
+        margin-left: 140px;
+        margin-left: 25px;
+    }
+
+    section .section .forms .form_register .inputs {
+        font-size: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    section .section .forms .form_register input[type="submit"] {
+        padding: 8px 25px;
+        font-size: 13px;
+        margin-left: 110px;
     }
 }
 
@@ -543,28 +573,33 @@ section .section .profile {
         height: 10%;
         padding: 20px;
     }
+
     .right {
-        display: flex; /* Necesario para usar justify-content */
+        display: flex;
+        /* Necesario para usar justify-content */
         flex-direction: column;
         justify-content: flex-start;
         height: 80vh;
         width: 50%;
     }
-    
+
     .left {
-        display: flex; /* Necesario para usar justify-content */
+        display: flex;
+        /* Necesario para usar justify-content */
         flex-direction: column;
         justify-content: flex-end;
         height: 80vh;
         width: 50%;
     }
-    
+
     .foto_perfil {
-        width: 15vw; /* Propiedad correcta para definir tamaño */
-        height: 15vh; /* Propiedad correcta para definir tamaño */
+        width: 15vw;
+        /* Propiedad correcta para definir tamaño */
+        height: 15vh;
+        /* Propiedad correcta para definir tamaño */
         border: #0056b3 solid 5px;
     }
-    
+
 }
 
 /*INFO*/
