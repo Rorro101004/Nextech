@@ -57,7 +57,7 @@ if (!isset($_SESSION["error"])) {
                 <div class="login">
                     <p>lOGIN</p>
                 </div>
-                <div class="form">
+                <div class="form_login">
                     <form action="../Controller/UserController.php" method="post">
                         <div class="inputs">
                             <label for="username">USERNAME</label>

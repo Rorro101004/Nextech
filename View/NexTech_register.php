@@ -56,13 +56,13 @@
                 <div class="register">
                     <p>rEGISTEr</p>
                 </div>
-                <div>
+                <div class="type">
                     <form method="post">
                         <input type="submit" name="type" value="User">
                         <input type="submit" name="type" value="Administrator">
                     </form>
                 </div>
-                    <div class="form">
+                    <div class="form_register">
                         <form action="../Controller/UserController.php" method="post">
                             <div class="inputs">
                                 <label for="name">NAME</label>
