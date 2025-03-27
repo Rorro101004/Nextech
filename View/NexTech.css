@@ -443,6 +443,19 @@ a {
 
 
 .section .eventos-grid {
+
+    font-family: "Lexend_text",
+    sans-serif;
+    color: aliceblue;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas */
+    gap: 15px;
+    align-content: end;
+    /* Agrupa los elementos hacia el final del contenedor */
+    height: 45vh;
+
     .evento1 {
         background-image: url(Images/ciber.jpg);
         background-size: cover;
@@ -550,26 +563,21 @@ a {
 
 
 /*PERFIL*/
+.perfil {
+    position: relative;
+    font-size: 65px;
+    color: rgb(0, 0, 0);
+    right: -40%;
+    top: 0%;
+    margin: 10px;
+}
+
 section .section .profile {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-section .section .profile .title {
-    h1 {
-        position: relative;
-        font-size: 65px;
-        color: rgb(0, 0, 0);
-        margin-top: 20px;
-    }
-}
-
-section .section .profile .sides{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    width: 50%;
+    height: 60vh;
+    width: 100%;
     position: relative;
 
     .right,
