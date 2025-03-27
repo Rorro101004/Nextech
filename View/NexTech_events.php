@@ -16,7 +16,7 @@ if (!isset($_SESSION["logged"])) {
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="start">
                 <div class="images">
@@ -81,7 +81,7 @@ if (!isset($_SESSION["logged"])) {
                 <div class="evento_destacado" id="eventoDes3">
                     <div class="tarjeta" id="tarjeta3">
                         <p class="titulo">DevNext:
-                            
+
                         </p>
                         <p class="fecha">Fecha: 04 de julio de 2025</p>
                     </div>
@@ -93,7 +93,7 @@ if (!isset($_SESSION["logged"])) {
             </div>
 
             <div class="eventos-grid">
-                <div class="evento1" class="evento">
+                <div class="evento1 evento">
                     <h3>CiberNext: <br> Internacional de Seguridad Cibernética </h3>
                     <p> <span> Fecha: </span> 04 de julio de 2025</p>
                     <p><span>Lugar:</span> Centro Tecnológico de Innovación, Barcelona, España</p>
@@ -102,18 +102,20 @@ if (!isset($_SESSION["logged"])) {
                     <p>Ciberdelitos emergentes</p>
                     <p>Blockchain en ciberseguridad</p>
                 </div>
-                <a class="">
-                    <div class="evento2" class="evento">
-                        <h3> DevNext: <br> Cumbre Internacional de Desarrollo de Software </h3>
-                        <p> <span> Fecha: </span> 04 de julio de 2025 </p>
+                
+                    <div class="evento2 evento">
+                    <a class="event_des" href="Nextech_event_1.php">
+                        <h3>DevNext: <br> Cumbre Internacional de Desarrollo de Software</h3>
+                        <p><span>Fecha:</span> 04 de julio de 2025</p>
                         <p><span>Lugar:</span> Centro Tecnológico de Innovación, Barcelona, España</p>
                         <span>Temas</span>
-                        <p> Arquitectura de Software Escalable</p>
+                        <p>Arquitectura de Software Escalable</p>
                         <p>Programación de Interfaces Interactivas</p>
                         <p>Desarrollo Ágil y DevOps</p>
+                    </a>
                     </div>
-                </a>
-                <div class="evento3" class="evento">
+
+                <div class="evento3 evento">
                     <h3> AIMinds:<br> Cumbre Internacional de Inteligencia Artificial </h3>
                     <p> <span> Fecha: </span> 25 de noviembre de 2025</p>
                     <p><span>Lugar:</span> Centro de Futuro Tecnologico, Madrid, España</p>

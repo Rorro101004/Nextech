@@ -366,7 +366,9 @@ section .section .message {
     color: purple;
     height: 100%;
     position: relative;
-
+a {
+        text-decoration: none;
+    }
     .tarjeta {
         display: flex;
         flex-direction: column;
@@ -389,6 +391,14 @@ section .section .message {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        i {
+            font-size: 3em;
+            color: #f3f9ff; 
+            transition: transform 0.2s; 
+        }
+        i:hover {
+            transform: scale(1.2); 
+        }
     }
 
     .titulo {
@@ -434,13 +444,22 @@ section .section .message {
 
 .section .eventos-grid {
 
-
+    font-family: "Lexend_text",
+    sans-serif;
+    color: aliceblue;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas */
+    gap: 15px;
+    align-content: end;
+    /* Agrupa los elementos hacia el final del contenedor */
+    height: 45vh;
 
     .evento1 {
         background-image: url(Images/ciber.jpg);
         background-size: cover;
         background-position: center;
-        /* Imagen de fondo */
     }
 
     .evento2 {
@@ -465,11 +484,6 @@ section .section .message {
         /* Texto en negrita */
     }
 
-    font-family: "Lexend_text",
-    sans-serif;
-    /* Fuente personalizada */
-    color: aliceblue;
-    /* Color del texto */
 
     .evento2 h3 {
         color: rgb(173, 216, 230);
@@ -516,14 +530,6 @@ section .section .message {
         /* Sombra más prominente */
     }
 
-    display: grid;
-    margin: auto;
-    grid-template-columns: repeat(3, 1fr);
-    /* Tres columnas */
-    gap: 15px;
-    align-content: end;
-    /* Agrupa los elementos hacia el final del contenedor */
-    height: 45vh;
 
     /* Asegura que el contenedor tenga un alto suficiente */
     @media screen and (min-width: 1024px) and (max-width: 1920px) {
@@ -532,22 +538,29 @@ section .section .message {
     }
 
 }
-
-.eventos-grid>div {
+    a{
+        display: flex;
+        flex-direction: column;
+        justify-content: safe;
+        text-decoration: none;  
+        color: inherit; 
+    }
+.eventos-grid > div, 
+.eventos-grid > a > div {
     margin-left: 10px;
     margin-right: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    /* Alinea el contenido de cada elemento hacia abajo */
+    justify-content: safe;
     background-color: #f3f3f3;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 15px;
+    
     text-align: center;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 /*PERFIL*/
 .perfil {

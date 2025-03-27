@@ -53,9 +53,9 @@ if (!isset($_SESSION["logged"])) {
         </div>
     </header>
 
-    <section>
-        <div>
-
+    <section >
+        <div class="section">
+            <p>Hola</p>
         </div>
     </section>
 
