@@ -59,9 +59,9 @@ if (!isset($_SESSION["logged"])) {
 
     <section>
         <div class="section">
+            <h1 class="perfil">User Profile</h1>
             <div class="profile">
                 <!-- Irá el nombre de la persona, correo ,cantidad de eventos apuntados-->
-                <h1>Profile</h1>
                 <div class="left">
                     <p>Foto </p>
                     <img class="foto_perfil" src="/Lenguaje_de_marcas/new%20Nextech/Nextech/View/Images/perfil_generico.png" alt="foto generica">
@@ -74,7 +74,6 @@ if (!isset($_SESSION["logged"])) {
             </div>
         </div>
     </section>
-
     <footer>
         <div class="contact-info">
             <p>&copy; 2025 NexTech.com. All rights reserved.</p>
