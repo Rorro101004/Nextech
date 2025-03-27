@@ -522,32 +522,40 @@ section .section .message {
 
 
 /*PERFIL*/
+.perfil{
+
+        position: relative;
+        font-size: 65px;
+        color: rgb(0, 0, 0);
+        right: -40%;
+        top: 0%;
+        margin: 10px;
+    
+}
 section .section .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80vh;
+    height: 60vh;
     width: 100%;
     position: relative;
-    h1 {
-        font-family: "Montserrat_title", sans-serif;
-        font-size: 65px;
-        color: rgb(0, 0, 0);
-        justify-content: flex-start;
-    }
+   
 
     .right, .left {
         position: absolute;
+        height: 80%;
     }
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
 
-    .image {
-        width: 10%;
-        height: 10%;
-        padding: 20px;
+    .foto_perfil {
+        
+            width: 150px;
+            height: auto; /* Mantén la proporción de la imagen */
+            min-height: 150px; /* Opcional: limita la altura máxima */
+            padding: 20px;
     }
     .right {
         right: 20%;
@@ -563,14 +571,8 @@ section .section .profile {
         flex-direction: column;
         align-items: flex-start; /* Esto alineará los elementos al lado izquierdo del contenedor */
         width: 50%;
-    }
     
-    img{
-        width: auto;
-        height: 10%;
-        border: #0056b3 solid 5px;
     }
-    
 }
 
 /*INFO*/
