@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION["logged"])) {
+    $_SESSION["logged"] = false;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+<header>
         <div class="header">
             <div class="start">
                 <div class="images">
@@ -31,19 +37,26 @@
                     </div>
                 </div>
             </div>
-            <div class="login_register">
-                <div class="register">
-                    <a href="NexTech_register.php">Register</a>
+            <?php if ($_SESSION["logged"] == false) { ?>
+                <div class="login_register">
+                    <div class="register">
+                        <a href="NexTech_register.php">Register</a>
+                    </div>
+                    <div class="login">
+                        <a href="NexTech_login.php">Login</a>
+                    </div>
                 </div>
-                <div class="login">
-                    <a href="NexTech_login.php">Login</a>
+            <?php } else if ($_SESSION["logged"] == true) { ?>
+                <div class="logout">
+                    <form action="../Controller/UserController.php" method="post">
+                        <input type="submit" name="logout" value="Log out">
+                    </form>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </header>
 
     <section>
-
         <div class="section">
             <div id="contentCarrusel">
                 <div class="evento_destacado" id="eventoDes1">

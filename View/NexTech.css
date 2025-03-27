@@ -16,7 +16,7 @@ header .start {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 header .inicio .imagenes {
@@ -55,7 +55,7 @@ header .login_register {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 header .login_register .login {
@@ -69,6 +69,7 @@ header .login_register .login {
 
     a {
         color: white;
+        text-decoration: none
     }
 }
 
@@ -88,10 +89,32 @@ header .login_register .register {
 
     a {
         color: white;
+        text-decoration: none
     }
 }
 
 header .login_register .register:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+header .logout input[type="submit"] {
+    font-family: "Lexend_text", sans-serif;
+    border: 1px solid rgb(12, 10, 88);
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(12, 10, 88);
+    color: white;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+header .login_register .logout:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -170,13 +193,13 @@ section .section .forms .login {
     }
 }
 
-section .section .forms .form {
+section .section .forms .form_login {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-section .section .forms .form .inputs {
+section .section .forms .form_login .inputs {
     font-family: "SynthekLDR_text", sans-serif;
     font-size: 30px;
     color: rgb(5, 87, 220);
@@ -198,7 +221,7 @@ input[type="password"] {
     width: 200px;
 }
 
-input[type="submit"] {
+section .section .forms .form_login input[type="submit"] {
     background-color: #007BFF;
     color: white;
     padding: 10px 30px;
@@ -241,6 +264,43 @@ section .section .forms .register {
     p {
         margin: 0;
     }
+}
+
+section .section .forms .type input[type="submit"]{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+
+section .section .forms .form_register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .section .forms .form_register .inputs {
+    font-family: "SynthekLDR_text", sans-serif;
+    font-size: 30px;
+    color: rgb(5, 87, 220);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section .section .forms .form_register input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 150px;
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
