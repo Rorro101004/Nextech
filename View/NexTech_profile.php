@@ -3,6 +3,12 @@ session_start();
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
 }
+if (!isset($_SESSION["username"])) {
+    $_SESSION["username"] = "";
+}
+if (!isset($_SESSION["email"])) {
+    $_SESSION["email"] = "";
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +23,7 @@ if (!isset($_SESSION["logged"])) {
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="start">
                 <div class="images">
@@ -59,18 +65,20 @@ if (!isset($_SESSION["logged"])) {
 
     <section>
         <div class="section">
-            <h1 class="perfil">User Profile</h1>
             <div class="profile">
+                <div class="title">
+                    <h1>User Profile</h1>
+                </div>
                 <!-- Irá el nombre de la persona, correo ,cantidad de eventos apuntados-->
-                <div class="left">
-                    <p>Nombre generico Calderón Ye</p>
-                <p>Correo generico</p>
-                <p>Eventos apuntados: 2</p>
-            </div>
-            <div class="right">
-                    <p>Foto </p>
-                    <img class="foto_perfil" src="Images/perfil_generico.png" alt="foto generica">
-                    
+                <div class="sides">
+                    <div class="left">
+                        <p>Username: <?php $_SESSION["username"] ?> </p>
+                        <p>Email: <?php $_SESSION["email"] ?></p>
+                    </div>
+                    <div class="right">
+                        <p>Image</p>
+                        <img class="foto_perfil" src="Images/perfil_generico.png" alt="foto generica">
+                    </div>
                 </div>
             </div>
         </div>
