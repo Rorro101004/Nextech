@@ -480,6 +480,28 @@ section .section .profile {
         height: 10%;
         padding: 20px;
     }
+    .right {
+        display: flex; /* Necesario para usar justify-content */
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 80vh;
+        width: 50%;
+    }
+    
+    .left {
+        display: flex; /* Necesario para usar justify-content */
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 80vh;
+        width: 50%;
+    }
+    
+    .foto_perfil {
+        width: 15vw; /* Propiedad correcta para definir tamaño */
+        height: 15vh; /* Propiedad correcta para definir tamaño */
+        border: #0056b3 solid 5px;
+    }
+    
 }
 
 /*INFO*/

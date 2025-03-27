@@ -42,6 +42,9 @@ session_start();
                 <div class="login">
                     <a href="NexTech_login.php">Login</a>
                 </div>
+                <!-- <div class="logout">
+                    <a href="NexTech_logout.php">Logout</a>
+                </div> -->
             </div>
         </div>
     </header>
@@ -49,7 +52,17 @@ session_start();
     <section>
         <div class="section">
             <div class="profile">
+                <!-- Irá el nombre de la persona, correo ,cantidad de eventos apuntados-->
                 <h1>Profile</h1>
+                <div class="left">
+                    <p>Foto </p>
+                    <img class="foto_perfil" src="/Lenguaje_de_marcas/new%20Nextech/Nextech/View/Images/perfil_generico.png" alt="foto generica">
+                    <p>Nombre generico Calderón Ye</p>
+                </div>
+                <div class="right">
+                    <p>Correo generico</p>
+                    <p>Eventos apuntados: 2</p>
+                </div>
             </div>
         </div>
     </section>

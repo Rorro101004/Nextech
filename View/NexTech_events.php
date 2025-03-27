@@ -67,7 +67,9 @@
                 </div>
                 <div class="evento_destacado" id="eventoDes3">
                     <div class="tarjeta" id="tarjeta3">
-                        <p class="titulo">DevNext:</p>
+                        <p class="titulo">DevNext:
+                            
+                        </p>
                         <p class="fecha">Fecha: 04 de julio de 2025</p>
                     </div>
                     <div class="flechas">
