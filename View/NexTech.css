@@ -153,6 +153,7 @@ section .section .forms {
 section .section .forms .error {
     margin-top: 100px;
     font-family: "Lexend_text", sans-serif;
+
     p {
         font-size: 5px;
         color: red;
@@ -218,11 +219,13 @@ input[type="submit"]:hover {
     section .section .forms .login {
         font-size: 80px;
     }
+
     section .section .forms .form .inputs {
         font-size: 25px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
+
     input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
