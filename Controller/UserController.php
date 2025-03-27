@@ -47,21 +47,21 @@ class UserController
         $password = $_POST["password"];
 
         // Check the database
-        $stmt = $this->conn->prepare("SELECT name, password FROM user   WHERE name=? AND password=?");
+        $stmt = $this->conn->prepare("SELECT username, password FROM user   WHERE username=? AND password=?");
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
-        
+
         if ($stmt->fetch()) {
             // Authentication successful
             $_SESSION["logged"] = true;
-            $_SESSION["user"] = $username;    
+            $_SESSION["username"] = $username;
             echo "1";
             // Close connection
             $this->conn->close();
 
             // Redirect to home page
             header("Location: ../View/NexTech_profile.php");
-        }else{
+        } else {
             header("Location: ../View/NexTech_login.php");
         }
 
@@ -89,7 +89,13 @@ class UserController
         */
     }
 
-    public function logout() {}
+    public function logout()
+    {
+        $_SESSION["logged"] = false;
+        unset($_SESSION["username"]);
+        header("Location: ../View/NexTech_index.php");
+    }
+
 
     public function register() {}
 }

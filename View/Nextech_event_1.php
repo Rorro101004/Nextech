@@ -1,25 +1,19 @@
 <?php
 session_start();
-if (!isset($_SESSION["error"])) {
-    $_SESSION["error"] = "";
-}
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexTech Login</title>
+    <title>Event</title>
     <link rel="stylesheet" href="NexTech.css">
 </head>
-
 <body>
-    <header>
+<header>
         <div class="header">
             <div class="start">
                 <div class="images">
@@ -60,28 +54,8 @@ if (!isset($_SESSION["logged"])) {
     </header>
 
     <section>
-        <div class="section">
-            <div class="forms">
-                <div class="error">
-                    <p> <?php echo $_SESSION["error"] ?> </p>
-                </div>
-                <div class="login">
-                    <p>lOGIN</p>
-                </div>
-                <div class="form_login">
-                    <form action="../Controller/UserController.php" method="post">
-                        <div class="inputs">
-                            <label for="username">USERNAME</label>
-                            <input type="text" name="username" required><br>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" required><br>
-                        </div>
-                        <div>
-                            <input type="submit" name="login" value="Login">
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div>
+
         </div>
     </section>
 
@@ -94,5 +68,4 @@ if (!isset($_SESSION["logged"])) {
         </div>
     </footer>
 </body>
-
 </html>

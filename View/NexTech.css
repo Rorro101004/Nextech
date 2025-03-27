@@ -16,7 +16,7 @@ header .start {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 header .inicio .imagenes {
@@ -55,7 +55,7 @@ header .login_register {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 header .login_register .login {
@@ -69,6 +69,7 @@ header .login_register .login {
 
     a {
         color: white;
+        text-decoration: none
     }
 }
 
@@ -88,10 +89,32 @@ header .login_register .register {
 
     a {
         color: white;
+        text-decoration: none
     }
 }
 
 header .login_register .register:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+header .logout input[type="submit"] {
+    font-family: "Lexend_text", sans-serif;
+    border: 1px solid rgb(12, 10, 88);
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(12, 10, 88);
+    color: white;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+header .login_register .logout:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
