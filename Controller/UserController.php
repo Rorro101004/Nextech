@@ -107,6 +107,8 @@ class UserController
         $_SESSION["logged"] = false;
         unset($_SESSION["username"]);
         unset($_SESSION["email"]);
+        unset($_SESSION["name"]);
+        unset($_SESSION["surname"]);
         header("Location: ../View/NexTech_index.php");
     }
 

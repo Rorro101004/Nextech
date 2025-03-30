@@ -1,3 +1,10 @@
+/*DIVS BORDER*/
+/*
+div {
+    border: 1px solid;
+}
+*/
+
 /*HEADER*/
 header .header {
     display: flex;
@@ -97,6 +104,10 @@ header .login_register .register:hover {
     transform: scale(1.1);
 }
 
+header .logout {
+    margin-right: 20px;
+}
+
 header .logout input[type="submit"] {
     font-family: "Lexend_text", sans-serif;
     border: 1px solid rgb(12, 10, 88);
@@ -109,7 +120,6 @@ header .logout input[type="submit"] {
     padding-right: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
-    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -301,7 +311,7 @@ section .section .forms .form_register input[type="submit"] {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 150px;
+    margin-left: 170px;
 }
 
 section .section .forms .form_register input[type="submit"]:hover {
@@ -475,14 +485,10 @@ section .section .message .explore {
     a {
         text-decoration: none;
     }
-
 }
 
-
 .section .eventos-grid {
-
-    font-family: "Lexend_text",
-        sans-serif;
+    font-family: "Lexend_text", sans-serif;
     color: aliceblue;
     display: grid;
     margin: auto;
@@ -521,7 +527,6 @@ section .section .message .explore {
         /* Texto en negrita */
     }
 
-
     .evento2 h3 {
         color: rgb(173, 216, 230);
         /* Color específico del texto en h3 */
@@ -532,7 +537,6 @@ section .section .message .explore {
         /* Texto en negrita */
     }
 
-
     .evento1 h3 {
         color: rgb(144, 238, 144);
         /* Color específico del texto en h3 */
@@ -542,8 +546,6 @@ section .section .message .explore {
         font-weight: bold;
         /* Texto en negrita */
     }
-
-
 
     .evento1,
     .evento2,
@@ -567,13 +569,11 @@ section .section .message .explore {
         /* Sombra más prominente */
     }
 
-
     /* Asegura que el contenedor tenga un alto suficiente */
     @media screen and (min-width: 1024px) and (max-width: 1920px) {
         font-size: 10px;
         height: 40vh;
     }
-
 }
 
 a {
@@ -609,7 +609,6 @@ a {
     padding: 10px !important;
     /* Espaciado interno opcional para mejorar la apariencia */
 }
-
 
 /*PROFILE*/
 section .section .profile {
