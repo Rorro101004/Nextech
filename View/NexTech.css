@@ -366,9 +366,11 @@ section .section .message {
     color: purple;
     height: 100%;
     position: relative;
-a {
+
+    a {
         text-decoration: none;
     }
+
     .tarjeta {
         display: flex;
         flex-direction: column;
@@ -391,13 +393,15 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         i {
             font-size: 3em;
-            color: #f3f9ff; 
-            transition: transform 0.2s; 
+            color: #f3f9ff;
+            transition: transform 0.2s;
         }
+
         i:hover {
-            transform: scale(1.2); 
+            transform: scale(1.2);
         }
     }
 
@@ -445,7 +449,7 @@ a {
 .section .eventos-grid {
 
     font-family: "Lexend_text",
-    sans-serif;
+        sans-serif;
     color: aliceblue;
     display: grid;
     margin: auto;
@@ -538,15 +542,17 @@ a {
     }
 
 }
-    a{
-        display: flex;
-        flex-direction: column;
-        justify-content: safe;
-        text-decoration: none;  
-        color: inherit; 
-    }
-.eventos-grid > div, 
-.eventos-grid > a > div {
+
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    text-decoration: none;
+    color: inherit;
+}
+
+.eventos-grid>div,
+.eventos-grid>a>div {
     margin-left: 10px;
     margin-right: 10px;
     display: flex;
@@ -555,11 +561,27 @@ a {
     background-color: #f3f3f3;
     border: 1px solid #ccc;
     border-radius: 8px;
-    
+
     text-align: center;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+
+/*EVENT DEV*/
+.section .tit {
+    border: 2px solid red !important;
+    /* Borde rojo con 2px de grosor */
+    background-color: black !important;
+    /* Fondo negro */
+    padding: 10px !important;
+    /* Espaciado interno opcional para mejorar la apariencia */
+}
+
+
+
+
+
 
 
 /*PERFIL*/
