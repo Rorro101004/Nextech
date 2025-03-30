@@ -341,7 +341,7 @@ section .section .forms .form_register input[type="submit"]:hover {
     section .section .forms .form_register input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
-        margin-left: 110px;
+        margin-left: 145px;
     }
 }
 
