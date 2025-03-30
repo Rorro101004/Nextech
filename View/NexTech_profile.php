@@ -9,6 +9,12 @@ if (!isset($_SESSION["username"])) {
 if (!isset($_SESSION["email"])) {
     $_SESSION["email"] = "";
 }
+if (!isset($_SESSION["name"])) {
+    $_SESSION["name"] = "";
+}
+if (!isset($_SESSION["surname"])) {
+    $_SESSION["surname"] = "";
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,15 +75,28 @@ if (!isset($_SESSION["email"])) {
                 <div class="title">
                     <h1>User Profile</h1>
                 </div>
-                <!-- Irá el nombre de la persona, correo ,cantidad de eventos apuntados-->
                 <div class="sides">
                     <div class="left">
-                        <p>Username: <?php $_SESSION["username"] ?> </p>
-                        <p>Email: <?php $_SESSION["email"] ?></p>
+                        <div>
+                            <p>Username: <?php echo $_SESSION["username"] ?> </p>
+                        </div>
+                        <div>
+                            <p>Email: <?php echo $_SESSION["email"] ?></p>
+                        </div>
+                        <div>
+                            <p>Name: <?php echo $_SESSION["name"] ?></p>
+                        </div>
+                        <div>
+                            <p>Surname: <?php echo $_SESSION["surname"] ?></p>
+                        </div>
                     </div>
                     <div class="right">
-                        <p>Image</p>
-                        <img class="foto_perfil" src="Images/perfil_generico.png" alt="foto generica">
+                        <div>
+                            <p>Image</p>
+                        </div>
+                        <div>
+                            <img class="profile_image" src="Images/generic_profile.png" alt="generic_image">
+                        </div>
                     </div>
                 </div>
             </div>

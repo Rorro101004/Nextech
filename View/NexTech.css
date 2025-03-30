@@ -7,7 +7,6 @@ header .header {
     padding-top: 15px;
     padding-bottom: 15px;
     font-family: "Lexend_text", sans-serif;
-    border: 1px solid white;
 }
 
 header .start {
@@ -39,12 +38,12 @@ header .start .options {
     justify-content: space-between;
 }
 
-header .start .options .perfil:hover {
+header .start .options .profile:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
 
-header .start .options .eventos:hover {
+header .start .options .events:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -129,13 +128,9 @@ header .login_register .logout:hover {
         padding-right: 10px;
     }
 
-    header .header {
-        font-size: 0.8rem;
-    }
-
-    header .options div,
-    header .login_register div {
-        padding: 5px;
+    header .header,
+    header .header .logout input[type="submit"] {
+        font-size: 13px;
     }
 
     header .images .logo img {
@@ -174,11 +169,10 @@ section .section .forms {
 }
 
 section .section .forms .error {
-    margin-top: 100px;
     font-family: "Lexend_text", sans-serif;
 
     p {
-        font-size: 5px;
+        font-size: 15px;
         color: red;
     }
 }
@@ -187,6 +181,7 @@ section .section .forms .login {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
+    margin-top: 130px;
 
     p {
         margin: 0;
@@ -203,8 +198,7 @@ section .section .forms .form_login .inputs {
     font-family: "SynthekLDR_text", sans-serif;
     font-size: 30px;
     color: rgb(5, 87, 220);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px
 }
 
 section .section .forms .form_login input[type="text"] {
@@ -261,6 +255,7 @@ section .section .forms .register {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
+    margin-top: 50px;
 
     p {
         margin: 0;
@@ -294,8 +289,8 @@ section .section .forms .form_register .inputs {
     font-family: "SynthekLDR_text", sans-serif;
     font-size: 30px;
     color: rgb(5, 87, 220);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 section .section .forms .form_register input[type="submit"] {
@@ -306,7 +301,7 @@ section .section .forms .form_register input[type="submit"] {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 120px;
+    margin-left: 150px;
 }
 
 section .section .forms .form_register input[type="submit"]:hover {
@@ -340,9 +335,10 @@ section .section .forms .form_register input[type="submit"]:hover {
     }
 }
 
-/*MENU*/
+/*INDEX*/
 section .section .message {
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     h1 {
         font-family: "Montserrat_title", sans-serif;
@@ -353,6 +349,43 @@ section .section .message {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
+
+    a {
+        color: blue;
+        font-size: 25px;
+    }
+}
+
+section .section .message .links {
+    display: flex;
+    align-items: center;
+    height: 0px;
+}
+
+section .section .message .explore {
+    display: flex;
+    align-items: center;
+    height: 15px;
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .message {
+        margin-left: 5x;
+        margin-right: 5px;
+
+        h1 {
+            font-size: 34px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+    }
+
 }
 
 /*EVENTS*/
@@ -567,7 +600,6 @@ a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 /*EVENT DEV*/
 .section .tit {
     border: 2px solid red !important;
@@ -579,67 +611,65 @@ a {
 }
 
 
-
-
-
-
-
-/*PERFIL*/
-.perfil {
-    position: relative;
-    font-size: 65px;
-    color: rgb(0, 0, 0);
-    right: -40%;
-    top: 0%;
-    margin: 10px;
-}
-
+/*PROFILE*/
 section .section .profile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 60vh;
-    width: 100%;
-    position: relative;
+    align-items: center;
+}
 
-    .right,
-    .left {
-        position: absolute;
-        height: 80%;
+section .section .profile .title {
+
+    h1 {
+        font-size: 65px;
+        color: rgb(0, 0, 0);
+        margin-top: 20px;
     }
+}
+
+section .section .profile .sides {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
 
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
 
-    .foto_perfil {
+    .profile_image {
         width: 150px;
-        height: auto;
-        /* Mantén la proporción de la imagen */
-        min-height: 150px;
-        /* Opcional: limita la altura máxima */
-        padding: 20px;
+        height: 150px;
     }
 
     .right {
-        right: 20%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        /* Esto alineará los elementos al lado derecho del contenedor */
-        width: 50%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+
+    section .section .profile .title {
+        h1 {
+            font-size: 50px;
+        }
     }
 
-    .left {
-        left: 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* Esto alineará los elementos al lado izquierdo del contenedor */
-        width: 50%;
+    section .section .profile .sides {
+        width: 75%;
 
+        p {
+            font-size: 15px;
+        }
+
+        .profile_image {
+            width: 80px;
+            height: 80px;
+        }
     }
+
 }
 
 /*INFO*/

@@ -16,7 +16,7 @@ if (!isset($_SESSION["logged"])) {
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="start">
                 <div class="images">
@@ -59,7 +59,37 @@ if (!isset($_SESSION["logged"])) {
     <section>
         <div class="section">
             <div class="message">
-                <h1>¡Welcome!</h1>
+                <?php if ($_SESSION["logged"] == false) { ?>
+                    <h1>¡Welcome to NexTech!</h1>
+                    <p>The future of technology is waiting for you. At NexTech, we are passionate about connecting industry leaders with the brightest minds.
+                        Here, you'll find the most exciting tech events designed to inspire, educate, and connect.</p>
+                    <p>Join us and be part of the digital transformation shaping tomorrow.
+                        You're just one click away from experiencing the next big technological revolution!</p>
+                    <p><b>Not registered or logged in?</b></p>
+                    <div class="links">
+                        <div>
+                            <a href="NexTech_register.php"><strong>Register</strong></a>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;<p>|</p>&nbsp;&nbsp;&nbsp;
+                        <div>
+                            <a href="NexTech_login.php"><strong>Login</strong></a>
+                        </div>
+                    </div>
+                <?php } else { ?>
+                    <h1>¡Welcome back to NexTech!</h1>
+                    <p>We're thrilled to have you with us. Explore the latest and most exciting technology events available to you.
+                        Stay ahead of the curve and connect with industry leaders, innovators, and enthusiasts.</p>
+                    <div class="explore">
+                        <div>
+                            <p>Check out the upcoming events and be part of the future of technology!</p>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div>
+                            <a href="NexTech_events.php"><strong>Explore</strong></a>
+                        </div>
+                    </div>
+                <?php } ?>
+
             </div>
         </div>
     </section>

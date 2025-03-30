@@ -1,10 +1,13 @@
 <?php
 session_start();
-if (!isset($_SESSION["error"])) {
-    $_SESSION["error"] = "";
-}
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
+}
+if (!isset($_SESSION["error_login"])) {
+    $_SESSION["error_login"] = "";
+}
+if (!isset($_SESSION["register_succes"])) {
+    $_SESSION["register_succes"] = "";
 }
 ?>
 
@@ -62,11 +65,14 @@ if (!isset($_SESSION["logged"])) {
     <section>
         <div class="section">
             <div class="forms">
-                <div class="error">
-                    <p> <?php echo $_SESSION["error"] ?> </p>
-                </div>
                 <div class="login">
                     <p>lOGIN</p>
+                </div>
+                <div class="error">
+                    <p><b><?php echo $_SESSION["error_login"];
+                        unset($_SESSION["error_login"]);
+                        echo $_SESSION["register_succes"];
+                        unset($_SESSION["register_succes"]); ?></b></p>
                 </div>
                 <div class="form_login">
                     <form action="../Controller/UserController.php" method="post">

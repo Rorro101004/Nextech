@@ -6,6 +6,9 @@
     if (!isset($_SESSION["logged"])) {
         $_SESSION["logged"] = false;
     }
+    if(!isset($_SESSION["error_register"])){
+        $_SESSION["error_register"] = "";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,11 +64,11 @@
     <section>
         <div class="section">
             <div class="forms">
-                <div class="error">
-                    <p></p>
-                </div>
                 <div class="register">
                     <p>rEGISTEr</p>
+                </div>
+                <div class="error">
+                    <p><b><?php echo $_SESSION["error_register"]; unset($_SESSION["error_register"]); ?></b></p>
                 </div>
                 <div class="type">
                     <form method="post">
@@ -76,16 +79,18 @@
                     <div class="form_register">
                         <form action="../Controller/UserController.php" method="post">
                             <div class="inputs">
-                                <label for="name">USERNAME</label>
+                                <label for="username">USERNAME</label>
                                 <input type="text" name="username" required><br>
+                                <label for="email">EMAIL</label>
+                                <input type="email" name="email" required><br>
                                 <label for="name">NAME</label>
                                 <input type="text" name="name" required><br>
                                 <label for="username">SURNAME</label>
                                 <input type="text" name="surname" required><br>
-                                <label for="username">USERNAME</label>
-                                <input type="text" name="username" required><br>
                                 <label for="password">PASSWORD</label>
                                 <input type="password" name="password" required><br>
+                                <label for="conf_password">CONF PASSWORD</label>
+                                <input type="password" name="conf_password" required><br>
                                 <?php if ($_POST["type"] == "Administrator") { ?>
                                     <label for="profile_image" class="image">PROFILE IMAGE</label>
                                     <input type="file" name="profile_image">
