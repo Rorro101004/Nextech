@@ -77,29 +77,6 @@ class UserController
             header("Location: ../View/NexTech_login.php");
             exit();
         }
-
-        /*
-        //test
-        $_SESSION["error"] = "";
-        $usernameAdmin = "admin";
-        $passwordAdmin = "123";
-        $usernameUser = "user";
-        $passwordUser = "111";
-        if ($username == $usernameAdmin && $password == $passwordAdmin) {
-            $_SESSION["username"] = $username;
-            $_SESSION["password"] = $password;
-            header("Location: ../View/NexTech_profile.php");
-            exit();
-        } else if ($username == $usernameUser && $password == $passwordUser) {
-            $_SESSION["username"] = $username;
-            $_SESSION["password"] = $password;
-            header("Location: ../View/NexTech_profile.php");
-            exit();
-        }else{
-            $_SESSION["error"] = "Incorrect Username/Password";
-            header("Location: ../View/NexTech_login.php");
-        }
-        */
     }
 
     public function logout()
