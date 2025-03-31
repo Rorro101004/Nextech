@@ -153,11 +153,13 @@ footer .contact-info {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
         flex-wrap: wrap;
+        
     }
 }
 
@@ -601,14 +603,9 @@ a {
 }
 
 /*EVENT DEV*/
-.section .tit {
-    border: 2px solid red !important;
-    /* Borde rojo con 2px de grosor */
-    background-color: black !important;
-    /* Fondo negro */
-    padding: 10px !important;
-    /* Espaciado interno opcional para mejorar la apariencia */
-}
+
+
+
 
 /*PROFILE*/
 section .section .profile {
