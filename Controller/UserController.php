@@ -63,12 +63,9 @@ class UserController
             $_SESSION["email"] = $email;
             $_SESSION["name"] = $name;
             $_SESSION["surname"] = $surname;
-
-            echo "1";
             // Close connection
             $stmt->close();
             $this->conn->close();
-
             // Redirect to home page
             header("Location: ../View/NexTech_profile.php");
             exit();
@@ -118,7 +115,6 @@ class UserController
         if ($stmt->execute()) {
             // Authentication successful
             $_SESSION["register_succes"] = "REGISTRATION SUCCESS";
-            echo "1";
             // Close connection
             $stmt->close();
             $this->conn->close();
