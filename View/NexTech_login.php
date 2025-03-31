@@ -77,8 +77,8 @@ if (!isset($_SESSION["register_succes"])) {
                 <div class="form_login">
                     <form action="../Controller/UserController.php" method="post">
                         <div class="inputs">
-                            <label for="username">USERNAME</label>
-                            <input type="text" name="username" required><br>
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" required><br>
                             <label for="password">PASSWORD</label>
                             <input type="password" name="password" required><br>
                         </div>

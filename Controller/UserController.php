@@ -43,15 +43,15 @@ class UserController
     public function login()
     {
         // Save the password and username from login
-        $username = $_POST["username"];
+        $email = $_POST["email"];
         $password = $_POST["password"];
-        $email = "";
+        $username = "";
         $name = "";
         $surname = "";
 
         // Check the database
-        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname FROM user WHERE username=? AND password=?");
-        $stmt->bind_param("ss", $username, $password);
+        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname FROM user WHERE email=? AND password=?");
+        $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
 
         $stmt->bind_result($username, $password, $email, $name, $surname);
@@ -99,13 +99,26 @@ class UserController
         $password = $_POST["password"];
         $conf_password = $_POST["conf_password"];
         $email = $_POST["email"];
+        $db_email = "";
+
+        $stmt_email = $this->conn->prepare("SELECT email FROM user WHERE email=?");
+        $stmt_email->bind_param("s", $email);
+        $stmt_email->execute();
+
+        $stmt_email->bind_result($db_email);
+        if ($stmt_email->fetch()) {
+            if ($email == $db_email) {
+                header("Location: ../View/NexTech_register.php");
+                $_SESSION["error_register"] = "THIS EMAIL IS ALREADY USED";
+                exit();
+            }
+        }
+        $stmt_email->close();
 
         if ($password != $conf_password) {
             $_SESSION["error_register"] = "THE PASSWORDS ARE NOT THE SAME";
             header("Location: ../View/NexTech_register.php");
             exit();
-        }else{
-            $passwordHash = password_hash($password, PASSWORD_BCRYPT);
         }
 
         // Check the database
@@ -132,7 +145,7 @@ class UserController
         }
     }
 }
-?>  
+?>
 
 <!DOCTYPE html>
 <html lang="en">
