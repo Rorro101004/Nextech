@@ -59,12 +59,12 @@ if (!isset($_SESSION["logged"])) {
         <div class="section">
             <div class="event_unic">
                 <div class="tit">
-                    <h3>DevNext: </h3>
+                    <h2>DevNext: </h2>
                     <p class="generico"> Conoce programadores destacados en el ámbito teconologico </p>
                 </div>
                 <div class="topico">
                     <div class="izquierda">
-                        <h2>Objetivos : </h2>
+                        <h3>Objetivos : </h3>
                         <ul>
                             <li>Aprender de expertos de renombre mediante charlas y talleres.</li>
                             <li>Descubrir herramientas innovadoras y estrategias prácticas para mejorar tus proyectos.</li>
@@ -72,7 +72,7 @@ if (!isset($_SESSION["logged"])) {
                             <li>Además, puede ser una excelente ocasión para inspirarte.</li>
                         </ul>
                         <img src="Images/OIP.jpg" alt="desarrolladores">
-                        <h2>Temáticas a tocar</h2>
+                        <h3>Temáticas a tocar</h3>
                         <ul>
                             <li>
                                 <span>Desarrollo ágil y metodologías de gestión de proyectos:</span>
@@ -103,7 +103,7 @@ if (!isset($_SESSION["logged"])) {
                     </div>
                     <div class="linea"></div>
                     <div class="derecha">
-                        <h2>Lugar:</h2>
+                        <h3>Lugar:</h3>
                         <p><span>Centro Tecnológico de Innovación, Barcelona </span>, cerca del parque Jardines de Torre Girona</p>
                         <img src="Images/ubicacion.png" alt="ubicacion">
                         </p>
@@ -122,7 +122,7 @@ if (!isset($_SESSION["logged"])) {
     </section>
 
     <footer>
-        <div class="contact-info" class="only">
+        <div class="contact-info only">
             <p>&copy; 2025 NexTech.com. All rights reserved.</p>
             <p>Address: Calle Pelai 123, Barcelona, Spain</p>
             <p>Phone number: +123 456 789</p>
