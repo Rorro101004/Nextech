@@ -59,20 +59,20 @@ if (!isset($_SESSION["logged"])) {
         <div class="section">
             <div class="event_unic">
                 <div class="tit">
-                    <h2>DevNext: </h2>
+                    <h1>DevNext: </h1>
                     <p class="generico"> Conoce programadores destacados en el ámbito teconologico </p>
                 </div>
                 <div class="topico">
                     <div class="izquierda">
-                        <h3>Objetivos : </h3>
+                        <h2>Objetivos : </h2>
                         <ul>
-                            <li>Aprender de expertos de renombre mediante charlas y talleres.</li>
-                            <li>Descubrir herramientas innovadoras y estrategias prácticas para mejorar tus proyectos.</li>
-                            <li>Establecer contactos clave con otros profesionales del sector, generando colaboraciones y oportunidades laborales.</li>
-                            <li>Además, puede ser una excelente ocasión para inspirarte.</li>
+                            <li><span>Aprender </span> de expertos de renombre mediante charlas y talleres.</li>
+                            <li> <span>Descubrir</span>  herramientas innovadoras y estrategias prácticas para mejorar tus proyectos.</li>
+                            <li> <span>Establecer</span> contactos clave con otros profesionales del sector, generando colaboraciones y oportunidades laborales.</li>
+                            Además, puede ser una excelente ocasión para inspirarte.
                         </ul>
                         <img src="Images/OIP.jpg" alt="desarrolladores">
-                        <h3>Temáticas a tocar</h3>
+                        <h2>Temáticas a tocar</h2>
                         <ul>
                             <li>
                                 <span>Desarrollo ágil y metodologías de gestión de proyectos:</span>
@@ -103,7 +103,7 @@ if (!isset($_SESSION["logged"])) {
                     </div>
                     <div class="linea"></div>
                     <div class="derecha">
-                        <h3>Lugar:</h3>
+                        <h2>Lugar:</h2>
                         <p><span>Centro Tecnológico de Innovación, Barcelona </span>, cerca del parque Jardines de Torre Girona</p>
                         <img src="Images/ubicacion.png" alt="ubicacion">
                         </p>

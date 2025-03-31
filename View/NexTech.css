@@ -153,6 +153,7 @@ footer .contact-info {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
@@ -604,10 +605,16 @@ a {
 /*EVENT DEV*/
 
 .event_unic {
-    border: #0056b3 10px solid;
     min-height: 75vh;
     margin: 5px;
-    
+    font-family: "Montserrat_title", sans-serif;
+    h2{
+        color: purple;
+    }
+    span{
+        color: blue;
+        text-decoration: underline;
+    }
 }
 
 .tit {
@@ -633,8 +640,8 @@ a {
 
 }
 .topico img {
-    max-width: 40%;
-    max-height: 20vh;
+    max-width: 60%;
+    max-height: 30vh;
     align-self: center;
     margin: auto 0;
     /* Centra la imagen verticalmente */
@@ -679,7 +686,31 @@ a {
     padding: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .topico {
+        flex-direction: column; /* Cambia las columnas a filas */
+        align-items: center; /* Alinea todo al centro */
+    }
 
+    .izquierda,
+    .derecha {
+        width: 100%; /* Cada columna ocupa toda la anchura */
+    }
+
+    .linea {
+        display: none; /* Oculta la línea en dispositivos móviles */
+    }
+
+    .tit {
+        gap: 5px; /* Ajusta el espaciado si es necesario */
+    }
+
+    .izquierda img,
+    .derecha img {
+        max-width: 80%; /* Reduce el tamaño de las imágenes */
+        height: auto;
+    }
+}
 /*PROFILE*/
 section .section .profile {
     display: flex;
