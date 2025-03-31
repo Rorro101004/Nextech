@@ -73,6 +73,9 @@ class UserController
             header("Location: ../View/NexTech_profile.php");
             exit();
         } else {
+            // Close connection
+            $stmt->close();
+            $this->conn->close();
             $_SESSION["error_login"] = "WRONG USERNAME OR PASSWORD";
             header("Location: ../View/NexTech_login.php");
             exit();
@@ -124,6 +127,9 @@ class UserController
             header("Location: ../View/NexTech_login.php");
             exit();
         } else {
+            // Close connection
+            $stmt->close();
+            $this->conn->close();
             $_SESSION["error_register"] = "ERROR WHILE REGISTERING";
             header("Location: ../View/NexTech_register.php");
             exit();
