@@ -56,69 +56,70 @@ if (!isset($_SESSION["logged"])) {
     </header>
 
     <section>
-        <div class="section">
-            <div class="event_unic">
-                <div class="tit">
-                    <h1>DevNext: </h1>
-                    <p class="generico"> Conoce programadores destacados en el ámbito teconologico </p>
-                </div>
-                <div class="topico">
-                    <div class="izquierda">
-                        <h2>Objetivos : </h2>
-                        <ul>
-                            <li><span>Aprender </span> de expertos de renombre mediante charlas y talleres.</li>
-                            <li> <span>Descubrir</span>  herramientas innovadoras y estrategias prácticas para mejorar tus proyectos.</li>
-                            <li> <span>Establecer</span> contactos clave con otros profesionales del sector, generando colaboraciones y oportunidades laborales.</li>
-                            Además, puede ser una excelente ocasión para inspirarte.
-                        </ul>
-                        <img src="Images/OIP.jpg" alt="desarrolladores">
-                        <h2>Temáticas a tocar</h2>
-                        <ul>
-                            <li>
-                                <span>Desarrollo ágil y metodologías de gestión de proyectos:</span>
-                                <br>
-                                Exploraremos cómo mejorar la eficiencia y colaboración en equipos mediante enfoques ágiles como Scrum o Kanban.
-                            </li>
-                            <li>
-                                <span>Inteligencia artificial aplicada en el desarrollo de software:</span>
-                                <br>
-                                Descubre cómo integrar herramientas de IA en tus proyectos para optimizar procesos y tomar decisiones más inteligentes.
-                            </li>
-                            <li>
-                                <span>Seguridad y privacidad en aplicaciones modernas:</span>
-                                <br>
-                                Aprende las mejores prácticas para proteger datos sensibles y cumplir con regulaciones de seguridad en el software.
-                            </li>
-                            <li>
-                                <span>Herramientas avanzadas para desarrolladores:</span>
-                                <br>
-                                Conoce las últimas herramientas y entornos de desarrollo que facilitan la creación y mantenimiento de aplicaciones.
-                            </li>
-                            <li>
-                                <span>Innovación y tendencias en lenguajes de programación:</span>
-                                <br>
-                                Mantente actualizado sobre los lenguajes emergentes y cómo pueden transformar el futuro del desarrollo de software.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="linea"></div>
-                    <div class="derecha">
-                        <h2>Lugar:</h2>
-                        <p><span>Centro Tecnológico de Innovación, Barcelona </span>, cerca del parque Jardines de Torre Girona</p>
-                        <img src="Images/ubicacion.png" alt="ubicacion">
-                        </p>
-                        <h2>Fecha</h2>
-                        <p>
-                            04 de julio de 2025
-                        </p>
-                        <p>
-                            <span>18:00</span>
-                        </p>
-                        <img src="Images/fecha.png" alt="fecha">
-                    </div>
-                </div>
+    <div class="section">
+    <div class="event_unic">
+        <div class="tit">
+            <h1>DevNext: </h1>
+            <p class="generico"> Meet outstanding programmers in the technological field </p>
+        </div>
+        <div class="topico">
+            <div class="izquierda">
+                <h2>Objectives: </h2>
+                <ul>
+                    <li><span>Learn</span> from renowned experts through talks and workshops.</li>
+                    <li><span>Discover</span> innovative tools and practical strategies to improve your projects.</li>
+                    <li><span>Establish</span> key contacts with other professionals in the sector, generating collaborations and job opportunities.</li>
+                    In addition, it can be an excellent occasion to get inspired.
+                </ul>
+                <img src="Images/OIP.jpg" alt="developers">
+                <h2>Topics to cover</h2>
+                <ul>
+                    <li>
+                        <span>Agile development and project management methodologies:</span>
+                        <br>
+                        We will explore how to improve efficiency and collaboration in teams through agile approaches such as Scrum or Kanban.
+                    </li>
+                    <li>
+                        <span>Artificial intelligence applied to software development:</span>
+                        <br>
+                        Discover how to integrate AI tools into your projects to optimize processes and make smarter decisions.
+                    </li>
+                    <li>
+                        <span>Security and privacy in modern applications:</span>
+                        <br>
+                        Learn best practices for protecting sensitive data and complying with software security regulations.
+                    </li>
+                    <li>
+                        <span>Advanced tools for developers:</span>
+                        <br>
+                        Get to know the latest tools and development environments that facilitate the creation and maintenance of applications.
+                    </li>
+                    <li>
+                        <span>Innovation and trends in programming languages:</span>
+                        <br>
+                        Stay updated on emerging languages and how they can transform the future of software development.
+                    </li>
+                </ul>
+            </div>
+            <div class="linea"></div>
+            <div class="derecha">
+                <h2>Place:</h2>
+                <p><span>Center for Technological Innovation, Barcelona </span>, near the Jardines de Torre Girona park</p>
+                <img src="Images/ubicacion.png" alt="location">
+                </p>
+                <h2>Date</h2>
+                <p>
+                    July 4, 2025
+                </p>
+                <p>
+                    <span>18:00</span>
+                </p>
+                <img src="Images/fecha.png" alt="date">
             </div>
         </div>
+    </div>
+</div>
+
     </section>
 
     <footer>

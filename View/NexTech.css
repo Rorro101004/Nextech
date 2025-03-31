@@ -402,12 +402,14 @@ section .section .message .explore {
 
 /*EVENTS*/
 #contentCarrusel {
+
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
 
 .evento_destacado {
+    
     color: purple;
     height: 100%;
     position: relative;
@@ -417,6 +419,7 @@ section .section .message .explore {
     }
 
     .tarjeta {
+        
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -451,6 +454,8 @@ section .section .message .explore {
     }
 
     .titulo {
+        font-family: "Montserrat_title", sans-serif;
+
         font-size: 5rem;
         /* Tamaño más grande del texto */
         font-weight: bold;
@@ -490,6 +495,7 @@ section .section .message .explore {
 }
 
 .section .eventos-grid {
+    
     font-family: "Lexend_text", sans-serif;
     color: aliceblue;
     display: grid;
@@ -608,10 +614,17 @@ a {
     min-height: 75vh;
     margin: 5px;
     font-family: "Montserrat_title", sans-serif;
-    h2{
+
+    h1 {
+        font-size: 50px;
+        text-decoration: underline;
+    }
+
+    h2 {
         color: purple;
     }
-    span{
+
+    span {
         color: blue;
         text-decoration: underline;
     }
@@ -628,7 +641,7 @@ a {
     color: purple;
     gap: 2px;
 }
-    
+
 .topico {
     display: flex;
     height: 100%;
@@ -636,9 +649,10 @@ a {
     margin: 10px;
     align-items: stretch;
     position: relative;
-    
+
 
 }
+
 .topico img {
     max-width: 60%;
     max-height: 30vh;
@@ -646,13 +660,14 @@ a {
     margin: auto 0;
     /* Centra la imagen verticalmente */
 }
+
 .topico span {
     font-weight: bold;
 }
 
 .izquierda,
 .derecha {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -662,6 +677,7 @@ a {
     padding: 10px;
     width: 40%;
 }
+
 .linea {
     width: 10px;
     background-color: #ccc;
@@ -670,47 +686,59 @@ a {
     position: relative;
     /* Extiende la línea a la altura completa del contenedor */
 }
+
 .derecha {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Cambia la distribución del contenido */
-    align-items: center; /* Alinea el contenido hacia la derecha */
+    justify-content: center;
+    /* Cambia la distribución del contenido */
+    align-items: center;
+    /* Alinea el contenido hacia la derecha */
     padding: 10px;
 }
 
 .izquierda {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Alinea contenido al principio */
-    align-items: center; /* Alinea contenido hacia la izquierda */
+    justify-content: center;
+    /* Alinea contenido al principio */
+    align-items: center;
+    /* Alinea contenido hacia la izquierda */
     padding: 10px;
 }
 
 @media screen and (max-width: 768px) {
     .topico {
-        flex-direction: column; /* Cambia las columnas a filas */
-        align-items: center; /* Alinea todo al centro */
+        flex-direction: column;
+        /* Cambia las columnas a filas */
+        align-items: center;
+        /* Alinea todo al centro */
     }
 
     .izquierda,
     .derecha {
-        width: 100%; /* Cada columna ocupa toda la anchura */
+        width: 100%;
+        /* Cada columna ocupa toda la anchura */
     }
 
     .linea {
-        display: none; /* Oculta la línea en dispositivos móviles */
+        display: none;
+        /* Oculta la línea en dispositivos móviles */
     }
 
     .tit {
-        gap: 5px; /* Ajusta el espaciado si es necesario */
+        gap: 5px;
+        /* Ajusta el espaciado si es necesario */
     }
 
     .izquierda img,
     .derecha img {
-        max-width: 80%; /* Reduce el tamaño de las imágenes */
+        max-width: 80%;
+        /* Reduce el tamaño de las imágenes */
         height: auto;
     }
 }
+
 /*PROFILE*/
 section .section .profile {
     display: flex;
