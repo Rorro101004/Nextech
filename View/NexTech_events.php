@@ -93,7 +93,7 @@ if (!isset($_SESSION["logged"])) {
     <div class="eventos-grid">
         <div class="evento1 evento">
             <h3>CiberNext: <br> International Cybersecurity Summit </h3>
-            <p> <span>Date:</span> July 4, 2025</p>
+            <p> <span>Date:</span>  June 15 and 16, 2025</p>
             <p><span>Place:</span> Center for Technological Innovation, Barcelona, Spain</p>
             <span>Topics</span>
             <p>Cyber defense and resilience</p>

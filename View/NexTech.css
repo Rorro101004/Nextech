@@ -585,7 +585,57 @@ a {
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 768px) {
+    #contentCarrusel {
+        max-width: fit-content;
+        min-height: 50vh;
+    }
 
+    .titulo {
+        font-size: 3rem;
+
+    }
+
+    .fecha {
+        font-size: 14px;
+    }
+
+    .section .eventos-grid {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        width: 80%; 
+       margin: auto;
+        position: relative; 
+        z-index: 10;
+        min-height: 155vh;
+        justify-content: space-around;
+    }
+
+    .eventos-grid .evento1,
+    .eventos-grid .evento2,
+    .eventos-grid .evento3 {
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+    }
+
+    .eventos-grid .evento1:hover,
+    .eventos-grid .evento2:hover,
+    .eventos-grid .evento3:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
+    .flechas i {
+        font-size: 2em;
+    }
+}
 /*EVENT DEV*/
 
 .event_unic {
