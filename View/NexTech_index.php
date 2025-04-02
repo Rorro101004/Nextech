@@ -87,9 +87,25 @@ if (!isset($_SESSION["logged"])) {
                         <div>
                             <a href="NexTech_events.php"><strong>Explore</strong></a>
                         </div>
+                    </div><br>
+                    <div class="next_events">
+                        <p>NEXT EVENTS</p>
+                    </div>
+                    <div class="events">
+                        <div class="event1">
+                            <p>CiberNext</p>
+                            <a href=""><img src="Images/ciber.jpg" alt="Image of CiberNext"></a>
+                        </div>
+                        <div class="event2">
+                            <p>DevNext</p>
+                            <a href="Nextech_event_1.php"><img src="Images/progra.jpg" alt="Image of DevNext"></a>
+                        </div>
+                        <div class="event3">
+                            <p>AIMinds</p>
+                            <a href=""><img src="Images/IA.jpg" alt="Image of AIMinds"></a>
+                        </div>
                     </div>
                 <?php } ?>
-
             </div>
         </div>
     </section>
