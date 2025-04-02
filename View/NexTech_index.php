@@ -74,9 +74,6 @@ if (!isset($_SESSION["logged"])) {
                         <div>
                             <a href="NexTech_login.php"><strong>Login</strong></a>
                         </div>
-                    </div><br>
-                    <div class="next_events">
-                        <p>NEXT EVENTS</p>
                     </div>
                 <?php } else { ?>
                     <h1>¡Welcome back to NexTech!</h1>
@@ -90,7 +87,7 @@ if (!isset($_SESSION["logged"])) {
                         <div>
                             <a href="NexTech_events.php"><strong>Explore</strong></a>
                         </div>
-                    </div><br>
+                    </div>
                 <?php } ?>
             </div>
         </div>
