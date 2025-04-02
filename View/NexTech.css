@@ -471,6 +471,7 @@ section .section .profile .title {
         font-size: 65px;
         color: rgb(0, 0, 0);
         margin-top: 20px;
+        font-family: "Lexend_text", sans-serif;
     }
 }
 
