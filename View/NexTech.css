@@ -159,6 +159,7 @@ footer .contact-info {
 @media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
         flex-direction: column;
+        line-height: 5px;
     }
 }
 
@@ -454,6 +455,66 @@ section .section .message .explore {
         }
     }
 
+}
+
+/*PROFILE*/
+section .section .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+section .section .profile .title {
+
+    h1 {
+        font-size: 65px;
+        color: rgb(0, 0, 0);
+        margin-top: 20px;
+    }
+}
+
+section .section .profile .sides {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+
+    p {
+        font-family: "Lexend_text", sans-serif;
+        font-size: 25px;
+    }
+
+    .profile_image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .profile .title {
+        h1 {
+            font-size: 50px;
+        }
+    }
+
+    section .section .profile .sides {
+        width: 75%;
+
+        p {
+            font-size: 15px;
+        }
+
+        .profile_image {
+            width: 80px;
+            height: 80px;
+        }
+    }
 }
 
 /*EVENTS*/
@@ -809,68 +870,6 @@ a {
         max-width: 80%;
         height: auto;
     }
-}
-
-/*PROFILE*/
-section .section .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-section .section .profile .title {
-
-    h1 {
-        font-size: 65px;
-        color: rgb(0, 0, 0);
-        margin-top: 20px;
-    }
-}
-
-section .section .profile .sides {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-
-    p {
-        font-family: "Lexend_text", sans-serif;
-        font-size: 25px;
-    }
-
-    .profile_image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 1000px) and (min-width:90px) {
-
-    section .section .profile .title {
-        h1 {
-            font-size: 50px;
-        }
-    }
-
-    section .section .profile .sides {
-        width: 75%;
-
-        p {
-            font-size: 15px;
-        }
-
-        .profile_image {
-            width: 80px;
-            height: 80px;
-        }
-    }
-
 }
 
 /*INFO*/

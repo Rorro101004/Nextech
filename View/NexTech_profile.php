@@ -102,6 +102,7 @@ if (!isset($_SESSION["surname"])) {
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="contact-info">
             <p>&copy; 2025 NexTech.com. All rights reserved.</p>
