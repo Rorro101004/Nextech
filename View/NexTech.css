@@ -562,14 +562,12 @@ section .section .profile .sides {
 
 /*EVENTS*/
 #contentCarrusel {
-
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
 
 .evento_destacado {
-
     color: purple;
     height: 100%;
     position: relative;
@@ -579,7 +577,6 @@ section .section .profile .sides {
     }
 
     .tarjeta {
-
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -615,7 +612,6 @@ section .section .profile .sides {
 
     .titulo {
         font-family: "Montserrat_title", sans-serif;
-
         font-size: 5rem;
         font-weight: bold;
         text-align: center;

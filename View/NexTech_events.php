@@ -57,74 +57,71 @@ if (!isset($_SESSION["logged"])) {
     </header>
 
     <section>
-    <div class="section">
-    <div id="contentCarrusel">
-        <div class="evento_destacado" id="eventoDes1">
-            <div class="tarjeta" id="tarjeta1">
-                <p class="titulo">Upcoming events</p>
+        <div class="section">
+            <div id="contentCarrusel">
+                <div class="evento_destacado" id="eventoDes1">
+                    <div class="tarjeta" id="tarjeta1">
+                        <p class="titulo">Upcoming events</p>
+                    </div>
+                    <div class="flechas">
+                        <a href="#eventoDes3"><i class="fa-solid fa-arrow-left"></i></a>
+                        <a href="#eventoDes2"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="evento_destacado" id="eventoDes2">
+                    <div class="tarjeta" id="tarjeta2">
+                        <p class="titulo">CiberNext</p>
+                        <p class="fecha">Date: June 15 and 16, 2025</p>
+                    </div>
+                    <div class="flechas">
+                        <a href="#eventoDes1"><i class="fa-solid fa-arrow-left"></i></a>
+                        <a href="#eventoDes3"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="evento_destacado" id="eventoDes3">
+                    <div class="tarjeta" id="tarjeta3">
+                        <p class="titulo">DevNext:</p>
+                        <p class="fecha">Date: July 4, 2025</p>
+                    </div>
+                    <div class="flechas">
+                        <a href="#eventoDes2"><i class="fa-solid fa-arrow-left"></i></a>
+                        <a href="#eventoDes1"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="flechas">
-                <a href="#eventoDes3"><i class="fa-solid fa-arrow-left"></i></a>
-                <a href="#eventoDes2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="evento_destacado" id="eventoDes2">
-            <div class="tarjeta" id="tarjeta2">
-                <p class="titulo">CiberNext</p>
-                <p class="fecha">Date: June 15 and 16, 2025</p>
-            </div>
-            <div class="flechas">
-                <a href="#eventoDes1"><i class="fa-solid fa-arrow-left"></i></a>
-                <a href="#eventoDes3"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="evento_destacado" id="eventoDes3">
-            <div class="tarjeta" id="tarjeta3">
-                <p class="titulo">DevNext:</p>
-                <p class="fecha">Date: July 4, 2025</p>
-            </div>
-            <div class="flechas">
-                <a href="#eventoDes2"><i class="fa-solid fa-arrow-left"></i></a>
-                <a href="#eventoDes1"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
 
-    <div class="eventos-grid">
-        <div class="evento1 evento">
-            <h3>CiberNext: <br> International Cybersecurity Summit </h3>
-            <p> <span>Date:</span>  June 15 and 16, 2025</p>
-            <p><span>Place:</span> Center for Technological Innovation, Barcelona, Spain</p>
-            <span>Topics</span>
-            <p>Cyber defense and resilience</p>
-            <p>Emerging cybercrimes</p>
-            <p>Blockchain in cybersecurity</p>
+            <div class="eventos-grid">
+                <div class="evento1 evento">
+                    <h3>CiberNext: <br> International Cybersecurity Summit </h3>
+                    <p> <span>Date:</span> June 15 and 16, 2025</p>
+                    <p><span>Place:</span> Center for Technological Innovation, Barcelona, Spain</p>
+                    <span>Topics</span>
+                    <p>Cyber defense and resilience</p>
+                    <p>Emerging cybercrimes</p>
+                    <p>Blockchain in cybersecurity</p>
+                </div>
+                <div class="evento2 evento">
+                    <a class="event_des" href="Nextech_event_1.php">
+                        <h3>DevNext: <br> International Software Development Summit</h3>
+                        <p><span>Date:</span> July 4, 2025</p>
+                        <p><span>Place:</span> Center for Technological Innovation, Barcelona, Spain</p>
+                        <span>Topics</span>
+                        <p>Scalable Software Architecture</p>
+                        <p>Interactive Interface Programming</p>
+                        <p>Agile Development and DevOps</p>
+                    </a>
+                </div>
+                <div class="evento3 evento">
+                    <h3>AIMinds:<br> International Artificial Intelligence Summit</h3>
+                    <p> <span>Date:</span> November 25, 2025</p>
+                    <p><span>Place:</span> Center for Technological Future, Madrid, Spain</p>
+                    <span>Topics</span>
+                    <p>AI in Digital Transformation</p>
+                    <p>Machine Learning and Big Data:</p>
+                    <p>Ethics in Artificial Intelligence</p>
+                </div>
+            </div>
         </div>
-
-        <div class="evento2 evento">
-            <a class="event_des" href="Nextech_event_1.php">
-                <h3>DevNext: <br> International Software Development Summit</h3>
-                <p><span>Date:</span> July 4, 2025</p>
-                <p><span>Place:</span> Center for Technological Innovation, Barcelona, Spain</p>
-                <span>Topics</span>
-                <p>Scalable Software Architecture</p>
-                <p>Interactive Interface Programming</p>
-                <p>Agile Development and DevOps</p>
-            </a>
-        </div>
-
-        <div class="evento3 evento">
-            <h3>AIMinds:<br> International Artificial Intelligence Summit</h3>
-            <p> <span>Date:</span> November 25, 2025</p>
-            <p><span>Place:</span> Center for Technological Future, Madrid, Spain</p>
-            <span>Topics</span>
-            <p>AI in Digital Transformation</p>
-            <p>Machine Learning and Big Data:</p>
-            <p>Ethics in Artificial Intelligence</p>
-        </div>
-    </div>
-</div>
-
     </section>
 
     <footer>
