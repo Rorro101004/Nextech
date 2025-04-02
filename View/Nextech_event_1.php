@@ -123,7 +123,7 @@ if (!isset($_SESSION["logged"])) {
     </section>
 
     <footer>
-        <div class="contact-info only">
+        <div class="contact-info">
             <p>&copy; 2025 NexTech.com. All rights reserved.</p>
             <p>Address: Calle Pelai 123, Barcelona, Spain</p>
             <p>Phone number: +123 456 789</p>

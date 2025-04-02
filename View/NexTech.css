@@ -158,7 +158,6 @@ footer .contact-info {
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
-        flex-wrap: wrap;
         flex-direction: column;
     }
 }
@@ -223,7 +222,11 @@ section .section .forms .form_login input:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-section .section .forms .form_login input[type="password"] {
+section .section .forms .form_login input[name="email"] {
+    width: 284px;
+}
+
+section .section .forms .form_login input[name="password"] {
     width: 200px;
 }
 
@@ -267,11 +270,36 @@ section .section .forms .register {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
-    margin-top: 50px;
+    margin-top: 30px;
 
     p {
         margin: 0;
     }
+}
+
+section .section .forms .form_register input[name="username"] {
+    width: 250px;
+}
+
+section .section .forms .form_register input[name="email"] {
+    width: 334px;
+}
+
+section .section .forms .form_register input[name="name"] {
+    width: 340px;
+}
+
+section .section .forms .form_register input[name="surname"] {
+    width: 272px;
+}
+
+section .section .forms .form_register input[name="password"]{
+    width: 250px;
+}
+
+
+section .section .forms .form_register input[name="conf_password"] {
+    width: 150px;
 }
 
 section .section .forms .type input[type="submit"] {
