@@ -212,10 +212,6 @@ section .section .forms .form_login .inputs {
     margin-bottom: 10px
 }
 
-section .section .forms .form_login input[type="text"] {
-    width: 200px;
-}
-
 section .section .forms .form_login input:focus {
     outline: none;
     border-color: #007bff;
@@ -258,6 +254,14 @@ section .section .forms .form_login input[type="submit"]:hover {
         margin-bottom: 15px;
     }
 
+    section .section .forms .form_login input[name="email"] {
+        width: 221px;
+    }
+    
+    section .section .forms .form_login input[name="password"] {
+        width: 150px;
+    }
+
     section .section .forms .form_login input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
@@ -296,7 +300,6 @@ section .section .forms .form_register input[name="surname"] {
 section .section .forms .form_register input[name="password"]{
     width: 250px;
 }
-
 
 section .section .forms .form_register input[name="conf_password"] {
     width: 150px;
@@ -366,6 +369,31 @@ section .section .forms .form_register input[type="submit"]:hover {
         font-size: 25px;
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+
+    section .section .forms .form_register input[name="username"] {
+        width: 219px;
+    }
+    
+    section .section .forms .form_register input[name="email"] {
+        width: 289px;
+    }
+    
+    section .section .forms .form_register input[name="name"] {
+        width: 294px;
+    }
+    
+    section .section .forms .form_register input[name="surname"] {
+        width: 238px;
+    }
+    
+    section .section .forms .form_register input[name="password"]{
+        width: 219px;
+    }
+    
+    
+    section .section .forms .form_register input[name="conf_password"] {
+        width: 135px;
     }
 
     section .section .forms .form_register input[type="submit"] {
