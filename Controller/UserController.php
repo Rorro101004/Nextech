@@ -81,11 +81,8 @@ class UserController
 
     public function logout()
     {
-        $_SESSION["logged"] = false;
-        unset($_SESSION["username"]);
-        unset($_SESSION["email"]);
-        unset($_SESSION["name"]);
-        unset($_SESSION["surname"]);
+        session_unset();
+        session_destroy();
         header("Location: ../View/NexTech_index.php");
     }
 
@@ -114,6 +111,18 @@ class UserController
             }
         }
         $stmt_email->close();
+        
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION["error_register"] = "INVALID FORMAT OF THE EMAIL";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
+
+        if (!preg_match("/^[a-zA-Z0-9]{5,}$/", $username)) {
+            $_SESSION["error_register"] = "THE USERNAME MUST BE AT LEAST 5 CHARACTERS LONG AND CANNOT CONTAIN SPECIAL CHARACTERS";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
 
         if ($password != $conf_password) {
             $_SESSION["error_register"] = "THE PASSWORDS ARE NOT THE SAME";
@@ -121,6 +130,31 @@ class UserController
             exit();
         }
 
+        if (strlen($password) < 8) {
+            $_SESSION["error_register"] = "THE PASSWORD MUST BE AT LEAST 8 CHARACTERS LONG";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
+        
+        if (!preg_match("/[A-Z]/", $password)) {
+            $_SESSION["error_register"] = "THE PASSWORD MUST CONTAIN A CAPITAL LETTER";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
+
+        if (!preg_match("/\d/", $password)) {
+            $_SESSION["error_register"] = "THE PASSWORD MUST CONTAIN A NUMBER";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
+        
+        // Validar si no tiene caracteres especiales
+        if (preg_match("/[^A-Za-z0-9]/", $password)) {
+            $_SESSION["error_register"] = "THE PASSWORD CANNOT CONTAIN SPECIAL CHARACTERS";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
+        
         // Check the database
         $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email) values (?, ?, ?, ?, ?);");
         $stmt->bind_param("sssss", $username, $name, $surname, $password, $email);
@@ -133,7 +167,7 @@ class UserController
             $this->conn->close();
 
             // Redirect to home page
-            header("Location: ../View/NexTech_login.php");
+            header("Location: ../View/NexTech_index.php");
             exit();
         } else {
             // Close connection
