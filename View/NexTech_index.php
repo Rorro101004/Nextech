@@ -75,11 +75,17 @@ if (!isset($_SESSION["logged"])) {
                             <a href="NexTech_login.php"><strong>Login</strong></a>
                         </div>
                     </div>
+                    <div class="video">
+                        <video controls loop preload="auto">
+                            <source src="Videos/PresentationVideo.mp4" type="video/mp4"
+                            Your browser does not support the video tag
+                        </video>
+                    </div>
                 <?php } else { ?>
                     <h1>¡Welcome back to NexTech!</h1>
                     <p>We're thrilled to have you with us. Explore the latest and most exciting technology events available to you.
                         Stay ahead of the curve and connect with industry leaders, innovators, and enthusiasts.</p>
-                    <div class="explore">
+                    < class="explore">
                         <div>
                             <p>Check out the upcoming events and be part of the future of technology!</p>
                         </div>
@@ -87,6 +93,11 @@ if (!isset($_SESSION["logged"])) {
                         <div>
                             <a href="NexTech_events.php"><strong>Explore</strong></a>
                         </div>
+
+                        <video controls autoplay loop preload="auto">
+                            <source src="Videos/PresentationVideo.mp4" type="video/mp4"
+                            Your browser does not support the video tag
+                        </video>
                     </div>
                 <?php } ?>
             </div>

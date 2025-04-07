@@ -428,7 +428,6 @@ section .section .message {
 section .section .message .links {
     display: flex;
     align-items: center;
-    height: 0px;
 }
 
 section .section .message .explore {
@@ -437,47 +436,14 @@ section .section .message .explore {
     height: 15px;
 }
 
-section .section .message .next_events {
-    line-height: 0px;
-    p {
-        font-size: 40px;
+section .section .message .video {
+    margin-bottom: 5px;
+    video {
+        width: 480px;
+
     }
 }
 
-section .section .message .events {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    line-height: 0px;
-}
-
-section .section .message .events .event1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-        width: 250px;
-        
-    }
-}
-
-section .section .message .events .event2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-        width: 300px;
-    }
-}
-
-section .section .message .events .event3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-        width: 300px;
-    }
-}
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .message {
@@ -494,6 +460,11 @@ section .section .message .events .event3 {
 
         a {
             font-size: 18px;
+        }
+    }
+    section .section .message .video {
+        video {
+            width: 280px;
         }
     }
 
