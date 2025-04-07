@@ -95,9 +95,9 @@ if (!isset($_SESSION["logged"])) {
                         </div>
 
                         <video controls autoplay loop preload="auto">
-                            <source src="Videos/PresentationVideo.mp4" type="video/mp4"
+                            <source src="Videos/PresentationVideo.mp4" type="video/mp4">
                             Your browser does not support the video tag
-                        </video>
+                        <video>
                     </div>
                 <?php } ?>
             </div>
