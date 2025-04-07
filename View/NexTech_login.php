@@ -64,28 +64,30 @@ if (!isset($_SESSION["register_succes"])) {
 
     <section>
         <div class="section">
-            <div class="forms">
-                <div class="login">
-                    <p>lOGIN</p>
-                </div>
-                <div class="error">
-                    <p><b><?php echo $_SESSION["error_login"];
-                        unset($_SESSION["error_login"]);
-                        echo $_SESSION["register_succes"];
-                        unset($_SESSION["register_succes"]); ?></b></p>
-                </div>
-                <div class="form_login">
-                    <form action="../Controller/UserController.php" method="post">
-                        <div class="inputs">
-                            <label for="email">EMAIL</label>
-                            <input type="email" name="email" required><br>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" required><br>
-                        </div>
-                        <div>
-                            <input type="submit" name="login" value="Login">
-                        </div>
-                    </form>
+            <div class="box">
+                <div class="forms">
+                    <div class="login">
+                        <p>lOGIN</p>
+                    </div>
+                    <div class="error">
+                        <p><b><?php echo $_SESSION["error_login"];
+                                unset($_SESSION["error_login"]);
+                                echo $_SESSION["register_succes"];
+                                unset($_SESSION["register_succes"]); ?></b></p>
+                    </div>
+                    <div class="form_login">
+                        <form action="../Controller/UserController.php" method="post">
+                            <div class="inputs">
+                                <label for="email">EMAIL</label>
+                                <input type="email" name="email" required><br>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="password" required><br>
+                            </div>
+                            <div>
+                                <input type="submit" name="login" value="Login">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
