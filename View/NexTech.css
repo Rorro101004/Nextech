@@ -4,7 +4,7 @@ div {
     border: 1px solid;
 }
 */
-
+ 
 /*HEADER*/
 header .header {
     display: flex;
@@ -15,7 +15,7 @@ header .header {
     padding-bottom: 15px;
     font-family: "Lexend_text", sans-serif;
 }
-
+ 
 header .start {
     width: 300px;
     display: flex;
@@ -24,19 +24,19 @@ header .start {
     justify-content: space-between;
     margin-left: 20px;
 }
-
+ 
 header .start .images {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 header .start .images .logo:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 header .start .options {
     width: 200px;
     display: flex;
@@ -44,17 +44,17 @@ header .start .options {
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 header .start .options .profile:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 header .start .options .events:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 header .login_register {
     width: 200px;
     display: flex;
@@ -63,7 +63,7 @@ header .login_register {
     justify-content: space-between;
     margin-right: 20px;
 }
-
+ 
 header .login_register .login {
     border: 1px solid rgb(12, 10, 88);
     background-color: rgb(12, 10, 88);
@@ -72,18 +72,18 @@ header .login_register .login {
     padding-right: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
-
+ 
     a {
         color: white;
         text-decoration: none
     }
 }
-
+ 
 header .login_register .login:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 header .login_register .register {
     border: 1px solid rgb(5, 87, 220);
     background-color: rgb(5, 87, 220);
@@ -92,22 +92,22 @@ header .login_register .register {
     padding-right: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
-
+ 
     a {
         color: white;
         text-decoration: none
     }
 }
-
+ 
 header .login_register .register:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 header .logout {
     margin-right: 20px;
 }
-
+ 
 header .logout input[type="submit"] {
     font-family: "Lexend_text", sans-serif;
     border: 1px solid rgb(12, 10, 88);
@@ -122,32 +122,32 @@ header .logout input[type="submit"] {
     padding-bottom: 8px;
     cursor: pointer;
 }
-
+ 
 header .login_register .logout:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     header .start {
         width: 200px;
     }
-
+ 
     header .login_register {
         width: 160px;
         padding-right: 10px;
     }
-
+ 
     header .header,
     header .header .logout input[type="submit"] {
         font-size: 13px;
     }
-
+ 
     header .images .logo img {
         width: 70px;
     }
 }
-
+ 
 /*FOOTER*/
 footer .contact-info {
     width: 100%;
@@ -155,14 +155,14 @@ footer .contact-info {
     justify-content: space-around;
     align-items: center;
 }
-
+ 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
         flex-direction: column;
         line-height: 5px;
     }
 }
-
+ 
 /*SECTION*/
 section .section {
     border: 1px solid white;
@@ -170,7 +170,7 @@ section .section {
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
     min-height: 80vh;
 }
-
+ 
 /*LOGIN*/
 section .section .forms {
     display: flex;
@@ -179,54 +179,54 @@ section .section .forms {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+ 
 section .section .forms .error {
     font-family: "Lexend_text", sans-serif;
-
+ 
     p {
         font-size: 15px;
         color: red;
     }
 }
-
+ 
 section .section .forms .login {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
     margin-top: 130px;
-
+ 
     p {
         margin: 0;
     }
 }
-
+ 
 section .section .forms .form_login {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+ 
 section .section .forms .form_login .inputs {
     font-family: "SynthekLDR_text", sans-serif;
     font-size: 30px;
     color: rgb(5, 87, 220);
     margin-bottom: 10px
 }
-
+ 
 section .section .forms .form_login input:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-
+ 
 section .section .forms .form_login input[name="email"] {
     width: 284px;
 }
-
+ 
 section .section .forms .form_login input[name="password"] {
     width: 200px;
 }
-
+ 
 section .section .forms .form_login input[type="submit"] {
     background-color: #007BFF;
     color: white;
@@ -237,75 +237,75 @@ section .section .forms .form_login input[type="submit"] {
     cursor: pointer;
     margin-left: 150px;
 }
-
+ 
 section .section .forms .form_login input[type="submit"]:hover {
     background-color: #0056b3;
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .forms .login {
         font-size: 80px;
     }
-
+ 
     section .section .forms .form_login .inputs {
         font-size: 25px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
-
+ 
     section .section .forms .form_login input[name="email"] {
         width: 221px;
     }
-
+ 
     section .section .forms .form_login input[name="password"] {
         width: 150px;
     }
-
+ 
     section .section .forms .form_login input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
         margin-left: 140px;
     }
 }
-
+ 
 /*REGISTER*/
 section .section .forms .register {
     font-family: "BladeRunner_title", sans-serif;
     color: rgb(11, 11, 137);
     font-size: 100px;
     margin-top: 30px;
-
+ 
     p {
         margin: 0;
     }
 }
-
+ 
 section .section .forms .form_register input[name="username"] {
     width: 250px;
 }
-
+ 
 section .section .forms .form_register input[name="email"] {
     width: 334px;
 }
-
+ 
 section .section .forms .form_register input[name="name"] {
     width: 340px;
 }
-
+ 
 section .section .forms .form_register input[name="surname"] {
     width: 272px;
 }
-
+ 
 section .section .forms .form_register input[name="password"] {
     width: 250px;
 }
-
+ 
 section .section .forms .form_register input[name="conf_password"] {
     width: 150px;
 }
-
+ 
 section .section .forms .type input[type="submit"] {
     background-color: #007BFF;
     color: white;
@@ -316,19 +316,19 @@ section .section .forms .type input[type="submit"] {
     cursor: pointer;
     margin-left: 50px;
 }
-
+ 
 section .section .forms .type input[type="submit"]:hover {
     background-color: #0056b3;
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 section .section .forms .form_register {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+ 
 section .section .forms .form_register .inputs {
     font-family: "SynthekLDR_text", sans-serif;
     font-size: 30px;
@@ -336,7 +336,7 @@ section .section .forms .form_register .inputs {
     margin-top: 10px;
     margin-bottom: 15px;
 }
-
+ 
 section .section .forms .form_register input[type="submit"] {
     background-color: #007BFF;
     color: white;
@@ -347,129 +347,144 @@ section .section .forms .form_register input[type="submit"] {
     cursor: pointer;
     margin-left: 170px;
 }
-
+ 
 section .section .forms .form_register input[type="submit"]:hover {
     background-color: #0056b3;
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-
+ 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .forms .register {
         font-size: 70px;
     }
-
+ 
     section .section .forms .type input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
         margin-left: 140px;
         margin-left: 25px;
     }
-
+ 
     section .section .forms .form_register .inputs {
         font-size: 25px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
-
+ 
     section .section .forms .form_register input[name="username"] {
         width: 219px;
     }
-
+ 
     section .section .forms .form_register input[name="email"] {
         width: 289px;
     }
-
+ 
     section .section .forms .form_register input[name="name"] {
         width: 294px;
     }
-
+ 
     section .section .forms .form_register input[name="surname"] {
         width: 238px;
     }
-
+ 
     section .section .forms .form_register input[name="password"] {
         width: 219px;
     }
-
-
+ 
+ 
     section .section .forms .form_register input[name="conf_password"] {
         width: 135px;
     }
-
+ 
     section .section .forms .form_register input[type="submit"] {
         padding: 8px 25px;
         font-size: 13px;
         margin-left: 145px;
     }
 }
-
+ 
 /*INDEX*/
 section .section .message {
     margin-left: 10px;
     margin-right: 10px;
-
+ 
     h1 {
         font-family: "Montserrat_title", sans-serif;
         font-size: 65px;
     }
-
+ 
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
-
+ 
     a {
         color: blue;
         font-size: 25px;
     }
 }
-
+ 
+section .section .message .body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ 
 section .section .message .links {
     display: flex;
     align-items: center;
+    line-height: 0px;
+    margin-bottom: 10px;
 }
-
+ 
 section .section .message .explore {
     display: flex;
     align-items: center;
-    height: 15px;
-}
-
-section .section .message .video {
     margin-bottom: 5px;
+}
+ 
+section .section .message .video {
+    margin-left: 10px;
+    margin-right: 10px;
     video {
         width: 480px;
-
     }
 }
-
-
+ 
+ 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .message {
         margin-left: 5x;
         margin-right: 5px;
-
+ 
         h1 {
             font-size: 34px;
         }
-
+ 
         p {
             font-size: 18px;
         }
-
+ 
         a {
             font-size: 18px;
         }
     }
+ 
+    section .section .message .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
     section .section .message .video {
         video {
             width: 280px;
         }
     }
-
+ 
 }
-
+ 
 /*PROFILE*/
 section .section .profile {
     display: flex;
@@ -477,9 +492,9 @@ section .section .profile {
     align-items: center;
     margin-top: 30px;
 }
-
+ 
 section .section .profile .title {
-
+ 
     h1 {
         font-size: 65px;
         color: rgb(0, 0, 0);
@@ -487,66 +502,66 @@ section .section .profile .title {
         font-family: "Lexend_text", sans-serif;
     }
 }
-
+ 
 section .section .profile .sides {
     display: flex;
     justify-content: space-between;
     width: 50%;
-
+ 
     p {
         font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
-
+ 
     .profile_image {
         width: 150px;
         height: 150px;
     }
-
+ 
     .right {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
-
+ 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .profile .title {
         h1 {
             font-size: 50px;
         }
     }
-
+ 
     section .section .profile .sides {
         width: 75%;
-
+ 
         p {
             font-size: 15px;
         }
-
+ 
         .profile_image {
             width: 80px;
             height: 80px;
         }
     }
 }
-
+ 
 /*EVENTS*/
 #contentCarrusel {
     height: 30vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
-
+ 
 .evento_destacado {
     color: purple;
     height: 100%;
     position: relative;
-
+ 
     a {
         text-decoration: none;
     }
-
+ 
     .tarjeta {
         display: flex;
         flex-direction: column;
@@ -560,7 +575,7 @@ section .section .profile .sides {
         background-position: center;
         text-align: center;
     }
-
+ 
     .flechas {
         height: 18%;
         position: absolute;
@@ -569,25 +584,25 @@ section .section .profile .sides {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+ 
         i {
             font-size: 3em;
             color: #f3f9ff;
             transition: transform 0.2s;
         }
-
+ 
         i:hover {
             transform: scale(1.2);
         }
     }
-
+ 
     .titulo {
         font-family: "Montserrat_title", sans-serif;
         font-size: 5rem;
         font-weight: bold;
         text-align: center;
     }
-
+ 
     .fecha {
         font-size: 18px;
         font-weight: normal;
@@ -595,26 +610,26 @@ section .section .profile .sides {
         margin-top: 5px;
         margin-top: 20px;
     }
-
+ 
     #tarjeta1 {
         background-image: url(Images/evento_tecnologico.jpg);
     }
-
+ 
     #tarjeta2 {
         background-image: url(Images/ciber.jpg);
     }
-
+ 
     #tarjeta3 {
         background-image: url(Images/progra.jpg);
     }
-
+ 
     a {
         text-decoration: none;
     }
 }
-
+ 
 .section .eventos-grid {
-
+ 
     font-family: "Lexend_text", sans-serif;
     color: aliceblue;
     display: grid;
@@ -623,49 +638,49 @@ section .section .profile .sides {
     gap: 15px;
     align-content: end;
     height: 45vh;
-
+ 
     .evento1 {
         background-image: url(Images/ciber.jpg);
         background-size: cover;
         background-position: center;
     }
-
+ 
     .evento2 {
         background-image: url(Images/progra.jpg);
         background-size: cover;
         background-position: center;
     }
-
+ 
     .evento3 {
         background-image: url(Images/IA.jpg);
         background-size: cover;
         background-position: center;
     }
-
+ 
     .evento3 h3 {
         color: rgb(216, 191, 216);
     }
-
+ 
     .evento3 span {
         font-weight: bold;
     }
-
+ 
     .evento2 h3 {
         color: rgb(173, 216, 230);
     }
-
+ 
     .evento2 span {
         font-weight: bold;
     }
-
+ 
     .evento1 h3 {
         color: rgb(144, 238, 144);
     }
-
+ 
     .evento1 span {
         font-weight: bold;
     }
-
+ 
     .evento1,
     .evento2,
     .evento3 {
@@ -675,20 +690,20 @@ section .section .profile .sides {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
     }
-
+ 
     .evento1:hover,
     .evento2:hover,
     .evento3:hover {
         transform: scale(1.3);
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     }
-
+ 
     @media screen and (min-width: 1024px) and (max-width: 1920px) {
         font-size: 10px;
         height: 40vh;
     }
 }
-
+ 
 a {
     display: flex;
     flex-direction: column;
@@ -696,7 +711,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+ 
 .eventos-grid>div,
 .eventos-grid>a>div {
     margin-left: 10px;
@@ -707,27 +722,27 @@ a {
     background-color: #f3f3f3;
     border: 1px solid #ccc;
     border-radius: 8px;
-
+ 
     text-align: center;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+ 
 @media screen and (max-width: 768px) {
     #contentCarrusel {
         max-width: fit-content;
         min-height: 50vh;
     }
-
+ 
     .titulo {
         font-size: 3rem;
-
+ 
     }
-
+ 
     .fecha {
         font-size: 14px;
     }
-
+ 
     .section .eventos-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -739,7 +754,7 @@ a {
         min-height: 205vh;
         justify-content: space-around;
     }
-
+ 
     .eventos-grid .evento1,
     .eventos-grid .evento2,
     .eventos-grid .evento3 {
@@ -750,9 +765,9 @@ a {
         background-position: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+ 
     }
-
+ 
     .eventos-grid .evento1:hover,
     .eventos-grid .evento2:hover,
     .eventos-grid .evento3:hover {
@@ -760,34 +775,34 @@ a {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         opacity: 1;
     }
-
+ 
     .flechas i {
         font-size: 2em;
     }
 }
-
+ 
 /*EVENT DEV*/
-
+ 
 .event_unic {
     min-height: 75vh;
     margin: 5px;
     font-family: "Montserrat_title", sans-serif;
-
+ 
     h1 {
         font-size: 50px;
         text-decoration: underline;
     }
-
+ 
     h2 {
         color: purple;
     }
-
+ 
     span {
         color: blue;
         text-decoration: underline;
     }
 }
-
+ 
 .tit {
     display: flex;
     flex-direction: column;
@@ -799,7 +814,7 @@ a {
     color: purple;
     gap: 2px;
 }
-
+ 
 .topico {
     display: flex;
     height: 100%;
@@ -807,24 +822,24 @@ a {
     margin: 10px;
     align-items: stretch;
     position: relative;
-
-
+ 
+ 
 }
-
+ 
 .topico img {
     max-width: 60%;
     max-height: 30vh;
     align-self: center;
     margin: auto 0;
 }
-
+ 
 .topico span {
     font-weight: bold;
 }
-
+ 
 .izquierda,
 .derecha {
-
+ 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -834,7 +849,7 @@ a {
     padding: 10px;
     width: 40%;
 }
-
+ 
 .linea {
     width: 10px;
     background-color: #ccc;
@@ -842,7 +857,7 @@ a {
     align-self: stretch;
     position: relative;
 }
-
+ 
 .derecha {
     display: flex;
     flex-direction: column;
@@ -850,7 +865,7 @@ a {
     align-items: center;
     padding: 10px;
 }
-
+ 
 .izquierda {
     display: flex;
     flex-direction: column;
@@ -858,68 +873,68 @@ a {
     align-items: center;
     padding: 10px;
 }
-
+ 
 @media screen and (max-width: 768px) {
     .topico {
         flex-direction: column;
         align-items: center;
     }
-
+ 
     .izquierda,
     .derecha {
         width: 100%;
     }
-
+ 
     .linea {
         display: none;
     }
-
+ 
     .tit {
         gap: 5px;
     }
-
+ 
     .izquierda img,
     .derecha img {
         max-width: 80%;
         height: auto;
     }
 }
-
+ 
 /*INFO*/
-
+ 
 /*OTHERS*/
 @font-face {
     font-family: "Montserrat_title";
     src: url("Fonts/Montserrat-Bold.ttf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "Lexend_text";
     src: url("Fonts/Lexend-Light.ttf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "BladeRunner_title";
     src: url("Fonts/BLADRMF_.TTF") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "SynthekLDR_text";
     src: url("Fonts/synthekR_ldr.ttf") format("truetype");
 }
-
+ 
 body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
 }
-
+ 
 header {
     margin: 0;
     padding: 0;
 }
-
+ 
 section {
     margin: 0;
     padding: 0;
