@@ -76,7 +76,7 @@ if (!isset($_SESSION["logged"])) {
                         </div>
                     </div>
                     <div class="video">
-                        <video controls loop preload="auto">
+                        <video controls autoplay loop preload="auto">
                             <source src="Videos/PresentationVideo.mp4" type="video/mp4">
                             Your browser does not support the video tag
                         </video>
