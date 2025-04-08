@@ -1,5 +1,154 @@
-body{
+/*  GLOBAL CSS 
 
-    background-image: url(View/SVG/BackgroundFondo_0.svg);
+    
+*/
 
+@font-face {
+    font-family: 'Lexend' ;
+    src: url(Fonts/Lexend-Light.ttf);
+}
+/*
+    ====================
+        BODY
+    =====================
+*/
+
+
+body {
+    /* Fuente de la pagina */
+    font-family: 'Lexend';
+}
+
+nav {
+
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.figma-Background {
+/*  Background-image => selects svg as the element for the bg
+    Background-size => pretty self explanatory
+    Background-position => This changes svg position in the next order, X and Y, 50% both is as close to the figma*/
+
+    background-image: url("SVG/BackgroundFondo_0.svg");
+    background-size: 200% ;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+
+.links-container{
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.Login-Register{
+    display: flex;
+    justify-content: end;
+}
+
+nav a{
+
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #4e33e9;
+    text-shadow: 0 0 10px #ff0da2, 0 0 20px #0dfff3, 0 0 30px #ff0dd7, 0 0 40px #0ddbff;
+
+}
+
+
+#sidebar-active{
+
+    display: none;
+}
+
+.open-sidebar-button{
+    padding: 0 25px;
+}
+
+.close-sidebar-button{
+    padding: 0 10px;
+    display: none;
+}
+
+nav svg{
+    fill: rgb(44, 15, 68);
+}
+
+@media (max-width: 823px) {
+
+    .open-sidebar-button {
+        position: absolute; 
+        left: -5px; 
+        
+    }
+
+    .figma-Background{
+            background-size: auto ;
+            background-position: 50% 50%;
+            background-attachment: fixed;
+    }
+
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 10;
+        width: 200px;
+
+        background-color: white;
+        box-shadow: 5px 0 5px rgba(0, 0, 0, 0.35);
+
+        transition: 0.5s ease-in-out ;
+    }
+
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+
+    }
+
+    .open-sidebar-button{
+        display: block;
+
+    }
+    
+    .close-sidebar-button{
+        padding: 20px;
+        display: block;
+    }
+
+    #sidebar-active:checked ~ .links-container{
+        left: 0;
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        /* background-color: red;  linea para comprobar que funciona*/
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9;
+
+    }
 }
