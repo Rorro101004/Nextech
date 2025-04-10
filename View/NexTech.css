@@ -498,7 +498,7 @@ section .section .profile {
 }
  
 section .section .profile .title {
-    
+
     h1 {
         font-size: 65px;
         color: rgb(0, 0, 0);
@@ -507,7 +507,7 @@ section .section .profile .title {
     }
 }
  
-section .section .profile .sides {
+section .section .profile .information {
     display: flex;
     justify-content: space-between;
     width: 50%;
@@ -522,7 +522,7 @@ section .section .profile .sides {
         height: 150px;
     }
  
-    .right {
+    .image {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -536,7 +536,7 @@ section .section .profile .sides {
         }
     }
  
-    section .section .profile .sides {
+    section .section .profile .information {
         width: 75%;
  
         p {

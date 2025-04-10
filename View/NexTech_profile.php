@@ -3,6 +3,10 @@ session_start();
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
 }
+if($_SESSION["logged"] == false){
+    header("Location: NexTech_index.php");
+    exit();
+}
 if (!isset($_SESSION["username"])) {
     $_SESSION["username"] = "";
 }
@@ -81,8 +85,8 @@ if (!isset($_SESSION["surname"])) {
                 <div class="title">
                     <h1>User Profile</h1>
                 </div>
-                <div class="sides">
-                    <div class="left">
+                <div class="information">
+                    <div class="data">
                         <div>
                             <p>Username: <?php echo $_SESSION["username"] ?> </p>
                         </div>
@@ -96,7 +100,7 @@ if (!isset($_SESSION["surname"])) {
                             <p>Surname: <?php echo $_SESSION["surname"] ?></p>
                         </div>
                     </div>
-                    <div class="right">
+                    <div class="image">
                         <div>
                             <p>Image</p>
                         </div>
