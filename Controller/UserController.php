@@ -48,13 +48,14 @@ class UserController
         $username = "";
         $name = "";
         $surname = "";
+        $admin = 0;
 
         // Check the database
-        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname FROM user WHERE email=? AND password=?");
+        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin FROM user WHERE email=? AND password=?");
         $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
 
-        $stmt->bind_result($username, $password, $email, $name, $surname);
+        $stmt->bind_result($username, $password, $email, $name, $surname, $admin);
 
         if ($stmt->fetch()) {
             // Authentication successful
@@ -63,6 +64,7 @@ class UserController
             $_SESSION["email"] = $email;
             $_SESSION["name"] = $name;
             $_SESSION["surname"] = $surname;
+            $_SESSION["admin"] = $admin;
             // Close connection
             $stmt->close();
             $this->conn->close();
