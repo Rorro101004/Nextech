@@ -70,7 +70,7 @@ if (!isset($_SESSION["error_register"])) {
     <section>
         <div class="section">
             <div class="box">
-                <div class="forms">
+                <div class="forms_register">
                     <div class="register">
                         <p>REGISTER</p>
                     </div>

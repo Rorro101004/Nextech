@@ -71,7 +71,7 @@ if (!isset($_SESSION["register_success"])) {
     <section>
         <div class="section">
             <div class="box">
-                <div class="forms">
+                <div class="forms_login">
                     <div class="login">
                         <p>LOGIN</p>
                     </div>
