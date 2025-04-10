@@ -1,4 +1,4 @@
-<?php
+<a?php
 session_start();
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
@@ -56,7 +56,7 @@ if (!isset($_SESSION["surname"])) {
                         </div>
                     <?php } ?>
                     <div class="info">
-                        <p style="color:rgb(147, 0, 233)">Info</p>
+                        <a href="Nextech_about_us.php" style="color:rgb(147, 0, 233)">About us</a>
                     </div>
                 </div>
             </div>
