@@ -45,7 +45,7 @@ header .start .options {
     justify-content: space-between;
 }
  
-header .start .options .profile:hover {
+header .start .options .profile_logged:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -181,7 +181,6 @@ section .section .box .forms {
     display: inline-flex;
     align-items: center;
     flex-direction: column;
-    background-color: white;
     border-radius: 50px;
 }
  
@@ -460,7 +459,7 @@ section .section .message .video {
  
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .message {
-        margin-left: 5x;
+        margin-left: 5px;
         margin-right: 5px;
  
         h1 {
@@ -499,7 +498,7 @@ section .section .profile {
 }
  
 section .section .profile .title {
- 
+    
     h1 {
         font-size: 65px;
         color: rgb(0, 0, 0);

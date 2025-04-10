@@ -42,9 +42,15 @@ if (!isset($_SESSION["surname"])) {
                     <div class="events">
                         <a href="NexTech_events.php" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
-                    <div class="profile">
-                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
-                    </div>
+                    <?php if ($_SESSION["logged"] == false) { ?>
+                        <div class="profile_no_logged">
+                            <p style="color: rgb(147, 0, 233)">Profile</p>
+                        </div>
+                    <?php } else if ($_SESSION["logged"] == true) { ?>
+                        <div class="profile_logged">
+                            <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
+                        </div>
+                    <?php } ?>
                     <div class="info">
                         <p style="color:rgb(147, 0, 233)">Info</p>
                     </div>
@@ -102,7 +108,7 @@ if (!isset($_SESSION["surname"])) {
             </div>
         </div>
     </section>
-    
+
     <footer>
         <div class="contact-info">
             <p>&copy; 2025 NexTech.com. All rights reserved.</p>

@@ -1,14 +1,14 @@
-<?php 
-    session_start();
-    if(!isset($_POST["type"])){
-        $_POST["type"] = "";
-    }
-    if (!isset($_SESSION["logged"])) {
-        $_SESSION["logged"] = false;
-    }
-    if(!isset($_SESSION["error_register"])){
-        $_SESSION["error_register"] = "";
-    }
+<?php
+session_start();
+if (!isset($_POST["type"])) {
+    $_POST["type"] = "";
+}
+if (!isset($_SESSION["logged"])) {
+    $_SESSION["logged"] = false;
+}
+if (!isset($_SESSION["error_register"])) {
+    $_SESSION["error_register"] = "";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="start">
                 <div class="images">
@@ -34,9 +34,15 @@
                     <div class="events">
                         <a href="NexTech_events.php" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
-                    <div class="profile">
-                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
-                    </div>
+                    <?php if ($_SESSION["logged"] == false) { ?>
+                        <div class="profile_no_logged">
+                            <p style="color: rgb(147, 0, 233)">Profile</p>
+                        </div>
+                    <?php } else if ($_SESSION["logged"] == true) { ?>
+                        <div class="profile_logged">
+                            <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
+                        </div>
+                    <?php } ?>
                     <div class="info">
                         <p style="color:rgb(147, 0, 233)">Info</p>
                     </div>
@@ -63,19 +69,21 @@
 
     <section>
         <div class="section">
-            <div class="forms">
-                <div class="register">
-                    <p>rEGISTEr</p>
-                </div>
-                <div class="error">
-                    <p><b><?php echo $_SESSION["error_register"]; unset($_SESSION["error_register"]); ?></b></p>
-                </div>
-                <div class="type">
-                    <form method="post">
-                        <input type="submit" name="type" value="User">
-                        <input type="submit" name="type" value="Administrator">
-                    </form>
-                </div>
+            <div class="box">
+                <div class="forms">
+                    <div class="register">
+                        <p>REGISTER</p>
+                    </div>
+                    <div class="error">
+                        <p><b><?php echo $_SESSION["error_register"];
+                                unset($_SESSION["error_register"]); ?></b></p>
+                    </div>
+                    <div class="type">
+                        <form method="post">
+                            <input type="submit" name="type" value="User">
+                            <input type="submit" name="type" value="Administrator">
+                        </form>
+                    </div>
                     <div class="form_register">
                         <form action="../Controller/UserController.php" method="post">
                             <div class="inputs">
@@ -93,7 +101,8 @@
                                 <input type="password" name="conf_password" required><br>
                                 <?php if ($_POST["type"] == "Administrator") { ?>
                                     <label for="profile_image" class="image">PROFILE IMAGE</label>
-                                    <input type="file" name="profile_image">
+                                    <input type="file" name="profile_image" required>
+                                    <input type="hidden" name="admin">
                                 <?php } ?>
                             </div>
                             <div>
@@ -101,6 +110,7 @@
                             </div>
                         </form>
                     </div>
+                </div>
             </div>
         </div>
     </section>

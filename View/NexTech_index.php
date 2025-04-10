@@ -6,15 +6,15 @@ if (!isset($_SESSION["logged"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexTech Menu</title>
     <link rel="stylesheet" href="NexTech.css">
- 
+
 </head>
- 
+
 <body>
     <header>
         <div class="header">
@@ -29,9 +29,15 @@ if (!isset($_SESSION["logged"])) {
                     <div class="events">
                         <a href="NexTech_events.php" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
-                    <div class="profile">
-                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
-                    </div>
+                    <?php if ($_SESSION["logged"] == false) { ?>
+                        <div class="profile_no_logged">
+                            <p style="color: rgb(147, 0, 233)">Profile</p>
+                        </div>
+                    <?php } else if ($_SESSION["logged"] == true) { ?>
+                        <div class="profile_logged">
+                            <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
+                        </div>
+                    <?php } ?>
                     <div class="info">
                         <p style="color:rgb(147, 0, 233)">Info</p>
                     </div>
@@ -55,7 +61,7 @@ if (!isset($_SESSION["logged"])) {
             <?php } ?>
         </div>
     </header>
- 
+
     <section>
         <div class="section">
             <div class="message">
@@ -115,7 +121,7 @@ if (!isset($_SESSION["logged"])) {
             </div>
         </div>
     </section>
- 
+
     <footer>
         <div class="contact-info">
             <p>&copy; 2025 NexTech.com. All rights reserved.</p>
@@ -125,5 +131,5 @@ if (!isset($_SESSION["logged"])) {
         </div>
     </footer>
 </body>
- 
+
 </html>

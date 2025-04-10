@@ -97,6 +97,10 @@ class UserController
         $conf_password = $_POST["conf_password"];
         $email = $_POST["email"];
         $db_email = "";
+        $admin = false;
+        if (isset($_POST["admin"])) {
+            $admin = true;
+        }
 
         $stmt_email = $this->conn->prepare("SELECT email FROM user WHERE email=?");
         $stmt_email->bind_param("s", $email);
@@ -111,7 +115,7 @@ class UserController
             }
         }
         $stmt_email->close();
-        
+
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $_SESSION["error_register"] = "INVALID FORMAT OF THE EMAIL";
             header("Location: ../View/NexTech_register.php");
@@ -135,7 +139,7 @@ class UserController
             header("Location: ../View/NexTech_register.php");
             exit();
         }
-        
+
         if (!preg_match("/[A-Z]/", $password)) {
             $_SESSION["error_register"] = "THE PASSWORD MUST CONTAIN A CAPITAL LETTER";
             header("Location: ../View/NexTech_register.php");
@@ -147,35 +151,59 @@ class UserController
             header("Location: ../View/NexTech_register.php");
             exit();
         }
-        
+
         // Validar si no tiene caracteres especiales
         if (preg_match("/[^A-Za-z0-9]/", $password)) {
             $_SESSION["error_register"] = "THE PASSWORD CANNOT CONTAIN SPECIAL CHARACTERS";
             header("Location: ../View/NexTech_register.php");
             exit();
         }
-        
+
         // Check the database
-        $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email) values (?, ?, ?, ?, ?);");
-        $stmt->bind_param("sssss", $username, $name, $surname, $password, $email);
+        if ($admin == false) {
+            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email) values (?, ?, ?, ?, ?);");
+            $stmt->bind_param("sssss", $username, $name, $surname, $password, $email);
 
-        if ($stmt->execute()) {
-            // Authentication successful
-            $_SESSION["register_succes"] = "REGISTRATION SUCCESS";
-            // Close connection
-            $stmt->close();
-            $this->conn->close();
+            if ($stmt->execute()) {
+                // Authentication successful
+                $_SESSION["register_success"] = "REGISTRATION SUCCESS";
+                // Close connection
+                $stmt->close();
+                $this->conn->close();
 
-            // Redirect to home page
-            header("Location: ../View/NexTech_index.php");
-            exit();
-        } else {
-            // Close connection
-            $stmt->close();
-            $this->conn->close();
-            $_SESSION["error_register"] = "ERROR WHILE REGISTERING";
-            header("Location: ../View/NexTech_register.php");
-            exit();
+                // Redirect to home page
+                header("Location: ../View/NexTech_index.php");
+                exit();
+            } else {
+                // Close connection
+                $stmt->close();
+                $this->conn->close();
+                $_SESSION["error_register"] = "ERROR WHILE REGISTERING";
+                header("Location: ../View/NexTech_register.php");
+                exit();
+            }
+        } else if ($admin == true) {
+            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email) values (?, ?, ?, ?, ?);");
+            $stmt->bind_param("sssss", $username, $name, $surname, $password, $email);
+
+            if ($stmt->execute()) {
+                // Authentication successful
+                $_SESSION["register_success"] = "REGISTRATION SUCCESS";
+                // Close connection
+                $stmt->close();
+                $this->conn->close();
+
+                // Redirect to home page
+                header("Location: ../View/NexTech_index.php");
+                exit();
+            } else {
+                // Close connection
+                $stmt->close();
+                $this->conn->close();
+                $_SESSION["error_register"] = "ERROR WHILE REGISTERING";
+                header("Location: ../View/NexTech_register.php");
+                exit();
+            }
         }
     }
 }

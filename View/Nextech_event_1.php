@@ -28,9 +28,15 @@ if (!isset($_SESSION["logged"])) {
                     <div class="events">
                         <a href="NexTech_events.php" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
-                    <div class="profile">
-                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
-                    </div>
+                    <?php if ($_SESSION["logged"] == false) { ?>
+                        <div class="profile_no_logged">
+                            <p style="color: rgb(147, 0, 233)">Profile</p>
+                        </div>
+                    <?php } else if ($_SESSION["logged"] == true) { ?>
+                        <div class="profile_logged">
+                            <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
+                        </div>
+                    <?php } ?>
                     <div class="info">
                         <p style="color:rgb(147, 0, 233)">Info</p>
                     </div>
@@ -56,69 +62,69 @@ if (!isset($_SESSION["logged"])) {
     </header>
 
     <section>
-    <div class="section">
-    <div class="event_unic">
-        <div class="tit">
-            <h1>DevNext: </h1>
-            <p class="generico"> Meet outstanding programmers in the technological field </p>
-        </div>
-        <div class="topico">
-            <div class="izquierda">
-                <h2>Objectives: </h2>
-                <ul>
-                    <li><span>Learn</span> from renowned experts through talks and workshops.</li>
-                    <li><span>Discover</span> innovative tools and practical strategies to improve your projects.</li>
-                    <li><span>Establish</span> key contacts with other professionals in the sector, generating collaborations and job opportunities.</li>
-                    In addition, it can be an excellent occasion to get inspired.
-                </ul>
-                <img src="Images/OIP.jpg" alt="developers">
-                <h2>Topics to cover</h2>
-                <ul>
-                    <li>
-                        <span>Agile development and project management methodologies:</span>
-                        <br>
-                        We will explore how to improve efficiency and collaboration in teams through agile approaches such as Scrum or Kanban.
-                    </li>
-                    <li>
-                        <span>Artificial intelligence applied to software development:</span>
-                        <br>
-                        Discover how to integrate AI tools into your projects to optimize processes and make smarter decisions.
-                    </li>
-                    <li>
-                        <span>Security and privacy in modern applications:</span>
-                        <br>
-                        Learn best practices for protecting sensitive data and complying with software security regulations.
-                    </li>
-                    <li>
-                        <span>Advanced tools for developers:</span>
-                        <br>
-                        Get to know the latest tools and development environments that facilitate the creation and maintenance of applications.
-                    </li>
-                    <li>
-                        <span>Innovation and trends in programming languages:</span>
-                        <br>
-                        Stay updated on emerging languages and how they can transform the future of software development.
-                    </li>
-                </ul>
+        <div class="section">
+            <div class="event_unic">
+                <div class="tit">
+                    <h1>DevNext: </h1>
+                    <p class="generico"> Meet outstanding programmers in the technological field </p>
+                </div>
+                <div class="topico">
+                    <div class="izquierda">
+                        <h2>Objectives: </h2>
+                        <ul>
+                            <li><span>Learn</span> from renowned experts through talks and workshops.</li>
+                            <li><span>Discover</span> innovative tools and practical strategies to improve your projects.</li>
+                            <li><span>Establish</span> key contacts with other professionals in the sector, generating collaborations and job opportunities.</li>
+                            In addition, it can be an excellent occasion to get inspired.
+                        </ul>
+                        <img src="Images/OIP.jpg" alt="developers">
+                        <h2>Topics to cover</h2>
+                        <ul>
+                            <li>
+                                <span>Agile development and project management methodologies:</span>
+                                <br>
+                                We will explore how to improve efficiency and collaboration in teams through agile approaches such as Scrum or Kanban.
+                            </li>
+                            <li>
+                                <span>Artificial intelligence applied to software development:</span>
+                                <br>
+                                Discover how to integrate AI tools into your projects to optimize processes and make smarter decisions.
+                            </li>
+                            <li>
+                                <span>Security and privacy in modern applications:</span>
+                                <br>
+                                Learn best practices for protecting sensitive data and complying with software security regulations.
+                            </li>
+                            <li>
+                                <span>Advanced tools for developers:</span>
+                                <br>
+                                Get to know the latest tools and development environments that facilitate the creation and maintenance of applications.
+                            </li>
+                            <li>
+                                <span>Innovation and trends in programming languages:</span>
+                                <br>
+                                Stay updated on emerging languages and how they can transform the future of software development.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="linea"></div>
+                    <div class="derecha">
+                        <h2>Place:</h2>
+                        <p><span>Center for Technological Innovation, Barcelona </span>, near the Jardines de Torre Girona park</p>
+                        <img src="Images/ubicacion.png" alt="location">
+                        </p>
+                        <h2>Date</h2>
+                        <p>
+                            July 4, 2025
+                        </p>
+                        <p>
+                            <span>18:00</span>
+                        </p>
+                        <img src="Images/fecha.png" alt="date">
+                    </div>
+                </div>
             </div>
-            <div class="linea"></div>
-            <div class="derecha">
-                <h2>Place:</h2>
-                <p><span>Center for Technological Innovation, Barcelona </span>, near the Jardines de Torre Girona park</p>
-                <img src="Images/ubicacion.png" alt="location">
-                </p>
-                <h2>Date</h2>
-                <p>
-                    July 4, 2025
-                </p>
-                <p>
-                    <span>18:00</span>
-                </p>
-                <img src="Images/fecha.png" alt="date">
-            </div>
         </div>
-    </div>
-</div>
 
     </section>
 
