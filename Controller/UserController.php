@@ -48,7 +48,7 @@ class UserController
         $username = "";
         $name = "";
         $surname = "";
-        $admin = 0;
+        
 
         // Check the database
         $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin FROM user WHERE email=? AND password=?");
@@ -102,6 +102,7 @@ class UserController
         $admin = false;
         if (isset($_POST["admin"])) {
             $admin = true;
+            $image = "";    
         }
 
         $stmt_email = $this->conn->prepare("SELECT email FROM user WHERE email=?");
