@@ -39,7 +39,7 @@ if (!isset($_SESSION["logged"])) {
                         </div>
                     <?php } ?>
                     <div class="info">
-                    <a href="Nextech_about_us.php" style="color:rgb(147, 0, 233)">About us</a>
+                        <a href="Nextech_about_us.php" style="color:rgb(147, 0, 233)">About us</a>
                     </div>
                 </div>
             </div>
