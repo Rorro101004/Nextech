@@ -63,8 +63,9 @@ if (!isset($_SESSION["logged"])) {
     </header>
     <section>
         <div class="section">
+            <div class="us">
             <h2>About Us</h2>
-            <p>Welcome to <strong>[Company Name]</strong>, your go-to platform for discovering the most important technology events in Spain. We bring visibility to conferences, workshops, and networking opportunities that shape the future of innovation.</p>
+            <p>Welcome to <strong>NexTech</strong>, your go-to platform for discovering the most important technology events in Spain. We bring visibility to conferences, workshops, and networking opportunities that shape the future of innovation.</p>
 
             <h2>Our Mission</h2>
             <p>Technology events drive inspiration, collaboration, and progress. Our mission is to <strong>connect people with the best tech events</strong>, helping professionals, businesses, and enthusiasts find opportunities to engage with the industry’s most influential gatherings.</p>
@@ -82,7 +83,9 @@ if (!isset($_SESSION["logged"])) {
             <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
 
             <h2>Join Us</h2>
-            <p>Looking for the sonnest big event in tech ? <strong>[Company Name]</strong> is here to keep you informed and connected. Start exploring today!</p>
+            <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. Start exploring today!</p>
+            </div>
+            
         </div>
     </section>
     <footer>

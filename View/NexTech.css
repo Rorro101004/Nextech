@@ -925,7 +925,13 @@ a {
     }
 }
 
-/*INFO*/
+/*ABOUT US*/
+.us{
+    font-family: "Lexend_text";
+}
+
+
+
 
 /*OTHERS*/
 @font-face {
