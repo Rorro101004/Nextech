@@ -48,6 +48,10 @@ header .start .options .profile_logged:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
+header .start .options .info:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
 
 header .start .options .events:hover {
     transition: transform 0.3s ease;
@@ -933,7 +937,13 @@ a {
     }
 }
 
-/*INFO*/
+/*ABOUT US*/
+.us{
+    font-family: "Lexend_text";
+}
+
+
+
 
 /*OTHERS*/
 @font-face {
