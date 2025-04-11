@@ -48,7 +48,7 @@ class UserController
         $username = "";
         $name = "";
         $surname = "";
-        
+        $admin = 0;
 
         // Check the database
         $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin FROM user WHERE email=? AND password=?");
@@ -64,7 +64,11 @@ class UserController
             $_SESSION["email"] = $email;
             $_SESSION["name"] = $name;
             $_SESSION["surname"] = $surname;
-            $_SESSION["admin"] = $admin;
+            if ($admin = 1) {
+                $_SESSION["admin"] = true;
+            } else {
+                $_SESSION["admin"] = false;
+            }
             // Close connection
             $stmt->close();
             $this->conn->close();
@@ -102,7 +106,7 @@ class UserController
         $admin = false;
         if (isset($_POST["admin"])) {
             $admin = true;
-            $image = "";    
+            $image = "";
         }
 
         $stmt_email = $this->conn->prepare("SELECT email FROM user WHERE email=?");
@@ -186,8 +190,8 @@ class UserController
                 exit();
             }
         } else if ($admin == true) {
-            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email) values (?, ?, ?, ?, ?);");
-            $stmt->bind_param("sssss", $username, $name, $surname, $password, $email);
+            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email, admin) values (?, ?, ?, ?, ?);");
+            $stmt->bind_param("sssss", $username, $name, $surname, $password, $email, $admin);
 
             if ($stmt->execute()) {
                 // Authentication successful
