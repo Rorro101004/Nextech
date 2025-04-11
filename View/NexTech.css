@@ -21,7 +21,6 @@ header .start {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     margin-left: 20px;
 }
 
@@ -42,7 +41,7 @@ header .start .options {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 header .start .options .profile_logged:hover {
@@ -159,12 +158,16 @@ footer .contact-info {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 7px;
+    font-family: "Lexend_text", sans-serif;
+    font-size: 0.9em;
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     footer .contact-info {
         flex-direction: column;
         line-height: 5px;
+        font-size: 0.7em;
     }
 }
 
@@ -288,6 +291,15 @@ section .section .box .forms_register {
     flex-direction: column;
     margin-top: 10px;
     border-radius: 50px;
+}
+
+section .section .box .forms_register .error {
+    font-family: "Lexend_text", sans-serif;
+
+    p {
+        font-size: 15px;
+        color: red;
+    }
 }
 
 section .section .box .forms_register .register {

@@ -29,18 +29,14 @@ if (!isset($_SESSION["logged"])) {
                     <div class="events">
                         <a href="NexTech_events.php" style="color:rgb(94, 6, 130)"><b>Events</b></a>
                     </div>
-                    <?php if ($_SESSION["logged"] == false) { ?>
-                        <div class="profile_no_logged">
-                            <p style="color: rgb(147, 0, 233)">Profile</p>
-                        </div>
-                    <?php } else if ($_SESSION["logged"] == true) { ?>
+                    <div class="info">
+                        <a href="Nextech_about_us.php" style="color:rgb(147, 0, 233)">About us</a>
+                    </div>
+                    <?php if ($_SESSION["logged"] == true) { ?>
                         <div class="profile_logged">
                             <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
                         </div>
                     <?php } ?>
-                    <div class="info">
-                    <a href="Nextech_about_us.php" style="color:rgb(147, 0, 233)">About us</a>
-                    </div>
                 </div>
             </div>
             <?php if ($_SESSION["logged"] == false) { ?>
@@ -61,6 +57,7 @@ if (!isset($_SESSION["logged"])) {
             <?php } ?>
         </div>
     </header>
+
     <section>
         <div class="section">
             <h2>About Us</h2>
@@ -85,6 +82,7 @@ if (!isset($_SESSION["logged"])) {
             <p>Looking for the sonnest big event in tech ? <strong>[Company Name]</strong> is here to keep you informed and connected. Start exploring today!</p>
         </div>
     </section>
+    
     <footer>
         <div class="contact-info">
             <p>&copy; 2025 NexTech.com. All rights reserved.</p>

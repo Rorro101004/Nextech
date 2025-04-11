@@ -168,8 +168,8 @@ class UserController
 
         // Check the database
         if ($admin == false) {
-            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email) values (?, ?, ?, ?, ?);");
-            $stmt->bind_param("sssss", $username, $name, $surname, $password, $email);
+            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email, admin, image) values (?, ?, ?, ?, ?, ?, ?);");
+            $stmt->bind_param("sssssss", $username, $name, $surname, $password, $email, $admin, $image);
 
             if ($stmt->execute()) {
                 // Authentication successful
