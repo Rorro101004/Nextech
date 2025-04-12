@@ -82,6 +82,10 @@ if (!isset($_SESSION["logged"])) {
             <h2>Join Us</h2>
             <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. Start exploring today!</p>
             </div>
+            <video muted autoplay loop preload="auto">
+                                <source src="Videos/RPReplay_Final1744481644.mp4" type="video/mp4">
+                                Your browser does not support the video tag
+                            </video>
             
         </div>
     </section>
