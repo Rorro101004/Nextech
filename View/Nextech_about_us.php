@@ -61,7 +61,8 @@ if (!isset($_SESSION["logged"])) {
     <section>
         <div class="section">
             <div class="us">
-                <h2>About Us</h2>
+                <div class="left">
+                <h1>About Us</h1>
                 <p>Welcome to <strong>NexTech</strong>, your go-to platform for discovering the most important technology events in Spain. We bring visibility to conferences, workshops, and networking opportunities that shape the future of innovation.</p>
 
                 <h2>Our Mission</h2>
@@ -82,6 +83,13 @@ if (!isset($_SESSION["logged"])) {
                 <h2>Join Us</h2>
                 <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. Start exploring today!</p>
 
+                </div>
+                <div class="right">
+                    <img class="image" src="Images/generic_profile.png" alt="RodrigoC">
+                    <img class="image" src="Images/generic_profile.png" alt="Joan">
+                    <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
+                </div>
+                
                 <video muted autoplay loop preload="auto" id="fondo">
                     <source src="Videos/RPReplay_Final1744481644.mp4" type="video/mp4">
                     Your browser does not support the video tag

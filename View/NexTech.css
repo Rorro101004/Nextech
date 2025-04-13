@@ -168,12 +168,10 @@ footer .contact-info {
     padding-top: 7px;
     font-family: "Lexend_text", sans-serif;
     font-size: 0.9em;
-    position: relative;
     z-index: 10;
     background-color: white;
     min-height: 10vh;
     position: relative;
-    bottom: 0;
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
@@ -885,7 +883,7 @@ a {
 
 .izquierda,
 .derecha {
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -948,12 +946,29 @@ a {
 
 /*ABOUT US*/
 .us{
+    h1 , h2{
+        font-size: 1.5rem;
+        color: #FF1493;
+    }
+    p,li {
+        font-size: 1.2rem;
+        color: #00BFFF;
+    }
+    strong{
+        text-decoration: underline #00BFFF;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-family: "Lexend_text";
     position: relative;
     z-index: 1; 
     color: white;
-    text-align: center;
+    text-align: justify;
     padding: 50px;
+    gap: 10px;
+    min-height: 100%;
+    min-width: 100%;
 }
 #fondo {
     position: fixed;
@@ -974,7 +989,31 @@ a {
     opacity: 0.8; /* Ajusta la opacidad para mejor visibilidad */
     z-index: -1;
 }
-
+.left,
+.right {
+    height: 100%;
+    flex: 1;
+    padding: 10px;
+    width: 40%;   
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: safe;
+    padding: 10px;
+}
+.right{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); /* 3 filas de igual tamaño */
+    gap: 35px; /* Espacio entre las imágenes */
+    width: 100%;
+    justify-content: center;
+}
+.image{
+    max-width: 100%; /* Hace que cada imagen ocupe toda la anchura del contenedor */
+    height: 35vh;
+    align-items: center;
+}
 
 /*OTHERS*/
 @font-face {
