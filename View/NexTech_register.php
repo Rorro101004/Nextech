@@ -81,7 +81,7 @@ if (!isset($_SESSION["error_register"])) {
                         </form>
                     </div>
                     <div class="form_register">
-                        <form action="../Controller/UserController.php" method="post">
+                        <form action="../Controller/UserController.php" method="post" enctype="multipart/form-data">
                             <div class="inputs">
                                 <label for="username">USERNAME</label>
                                 <input type="text" name="username" required><br>
@@ -96,8 +96,9 @@ if (!isset($_SESSION["error_register"])) {
                                 <label for="conf_password">CONF PASSWORD</label>
                                 <input type="password" name="conf_password" required><br>
                                 <?php if ($_POST["type"] == "Administrator") { ?>
-                                    <label for="profile_image" class="image">PROFILE IMAGE</label>
-                                    <input type="file" name="profile_image" required>
+                                    <label for="profile_image" class="image " >PROFILE IMAGE</label>
+                                    <input type="file" name="profile_image" accept="image/*" required>
+                                    <!--Seguir aquí -->
                                     <input type="hidden" name="admin">
                                 <?php } ?>
                             </div>

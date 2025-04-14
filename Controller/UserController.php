@@ -49,13 +49,13 @@ class UserController
         $name = "";
         $surname = "";
         $admin = 0;
-
+        $image = ""; 
         // Check the database
-        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin FROM user WHERE email=? AND password=?");
+        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin,image FROM user WHERE email=? AND password=?");
         $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
 
-        $stmt->bind_result($username, $password, $email, $name, $surname, $admin);
+        $stmt->bind_result($username, $password, $email, $name, $surname, $admin, $image);
 
         if ($stmt->fetch()) {
             // Authentication successful
@@ -64,8 +64,10 @@ class UserController
             $_SESSION["email"] = $email;
             $_SESSION["name"] = $name;
             $_SESSION["surname"] = $surname;
+            $_SESSION["profile_image"] = $image;
             if ($admin = 1) {
                 $_SESSION["admin"] = true;
+               
             } else {
                 $_SESSION["admin"] = false;
             }
@@ -106,7 +108,6 @@ class UserController
         $admin = false;
         if (isset($_POST["admin"])) {
             $admin = true;
-            $image = "";
         }
 
         $stmt_email = $this->conn->prepare("SELECT email FROM user WHERE email=?");
@@ -167,7 +168,13 @@ class UserController
         }
 
         // Check the database
-        if ($admin == false) {
+        if ($admin == true) {
+            if (isset($_FILES["profile_image"]) && $_FILES["profile_image"]["error"] == 0) {
+                var_dump($_FILES["profile_image"]);
+                $image = file_get_contents($_FILES["profile_image"]["tmp_name"]); // Convierte la imagen en datos binarios
+            } else {
+                $image = ""; // Si no se sube una imagen, deja el campo como NULL
+            }
             $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email, admin, image) values (?, ?, ?, ?, ?, ?, ?);");
             $stmt->bind_param("sssssss", $username, $name, $surname, $password, $email, $admin, $image);
 
@@ -189,7 +196,7 @@ class UserController
                 header("Location: ../View/NexTech_register.php");
                 exit();
             }
-        } else if ($admin == true) {
+        } else if ($admin == false) {
             $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email, admin) values (?, ?, ?, ?, ?);");
             $stmt->bind_param("sssss", $username, $name, $surname, $password, $email, $admin);
 

@@ -101,7 +101,12 @@ if (!isset($_SESSION["surname"])) {
                             <p>Image</p>
                         </div>
                         <div>
-                            <img class="profile_image" src="Images/generic_profile.png" alt="generic_image">
+                            <?php
+                            if (!empty($_SESSION["profile_image"])) {
+                                echo '<img src="data:image/jpeg;base64,' . base64_encode($_SESSION["profile_image"]) . '" alt="Profile Image" style="width: 150px; height: 150px; border-radius: 50%;">';
+                            } else {
+                                echo '<p>No image uploaded.</p>';
+                            } ?>
                         </div>
                     </div>
                 </div>
