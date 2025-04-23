@@ -1090,12 +1090,6 @@ a {
     justify-content: center;
 }
 
-.image {
-    max-width: 100%;
-    /* Hace que cada imagen ocupe toda la anchura del contenedor */
-    height: 35vh;
-    align-items: center;
-}
 
 /*OTHERS*/
 @font-face {
