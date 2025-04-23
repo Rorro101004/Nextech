@@ -14,9 +14,9 @@ header .header {
     padding-top: 15px;
     padding-bottom: 15px;
     font-family: "Lexend_text", sans-serif;
+    background-color: white;
     z-index: 10;
     position: relative;
-    background-color: white;
 }
 
 header .start {
@@ -51,6 +51,7 @@ header .start .options .profile_logged:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
+
 header .start .options .info:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -168,9 +169,8 @@ footer .contact-info {
     padding-top: 7px;
     font-family: "Lexend_text", sans-serif;
     font-size: 0.9em;
-    z-index: 10;
     background-color: white;
-    min-height: 10vh;
+    z-index: 10;
     position: relative;
 }
 
@@ -492,10 +492,9 @@ section .section .message .video {
     margin-right: 10px;
 
     video {
-        width: 480px;
+        width: 450px;
     }
 }
-
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .message {
@@ -673,7 +672,6 @@ section .section .profile .information {
 }
 
 .section .eventos-grid {
-
     font-family: "Lexend_text", sans-serif;
     color: aliceblue;
     display: grid;
@@ -774,6 +772,7 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+
     #contentCarrusel {
         max-width: fit-content;
         min-height: 50vh;
@@ -791,7 +790,7 @@ a {
     .section .eventos-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 30px; 
+        gap: 30px;
         width: 80%;
         margin: auto;
         position: relative;
@@ -819,56 +818,72 @@ a {
         transform: scale(1.1);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         opacity: 1;
-        z-index: 1; /* Asegura que el elemento esté por encima de los demás */
-                .section .eventos-grid {
+        z-index: 1;
+
+        /* Asegura que el elemento esté por encima de los demás */
+        .section .eventos-grid {
             display: grid;
-            grid-template-areas: 
-                "evento1 evento2 evento3"; /* Define las áreas iniciales */
-            grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-            grid-template-rows: auto; /* Altura automática para las filas */
-            gap: 15px; /* Espaciado entre los elementos */
+            grid-template-areas:
+                "evento1 evento2 evento3";
+            /* Define las áreas iniciales */
+            grid-template-columns: repeat(3, 1fr);
+            /* Tres columnas iguales */
+            grid-template-rows: auto;
+            /* Altura automática para las filas */
+            gap: 15px;
+            /* Espaciado entre los elementos */
             width: 100%;
             height: auto;
         }
-        
+
         .section .eventos-grid .evento1 {
-            grid-area: evento1; /* Asigna el área específica */
+            grid-area: evento1;
+            /* Asigna el área específica */
             background-image: url(Images/ciber.jpg);
             background-size: cover;
             background-position: center;
             transition: all 0.3s ease;
         }
-        
+
         .section .eventos-grid .evento2 {
-            grid-area: evento2; /* Asigna el área específica */
+            grid-area: evento2;
+            /* Asigna el área específica */
             background-image: url(Images/progra.jpg);
             background-size: cover;
             background-position: center;
             transition: all 0.3s ease;
         }
-        
+
         .section .eventos-grid .evento3 {
-            grid-area: evento3; /* Asigna el área específica */
+            grid-area: evento3;
+            /* Asigna el área específica */
             background-image: url(Images/IA.jpg);
             background-size: cover;
             background-position: center;
             transition: all 0.3s ease;
         }
-        
+
         .section .eventos-grid .evento1:hover {
-            grid-area: evento1 / evento1 / evento3 / evento3; /* Expande el elemento */
-            z-index: 1; /* Asegura que esté por encima de los demás */
+            grid-area: evento1 / evento1 / evento3 / evento3;
+            /* Expande el elemento */
+            z-index: 1;
+            /* Asegura que esté por encima de los demás */
         }
-        
+
         .section .eventos-grid .evento2:hover {
-            grid-area: evento1 / evento2 / evento3 / evento4; /* Expande el elemento */
+            grid-area: evento1 / evento2 / evento3 / evento4;
+            /* Expande el elemento */
             z-index: 1;
         }
-        
+
         .section .eventos-grid .evento3:hover {
-            grid-area: evento2 / evento3 / evento4 / evento4; /* Expande el elemento */
+            grid-area: evento2 / evento3 / evento4 / evento4;
+            /* Expande el elemento */
             z-index: 1;
-        }position: relative; /* Evita que afecte a otros elementos */
+        }
+
+        position: relative;
+        /* Evita que afecte a otros elementos */
     }
 
     .flechas i {
@@ -934,7 +949,7 @@ a {
 
 .izquierda,
 .derecha {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -996,24 +1011,30 @@ a {
 }
 
 /*ABOUT US*/
-.us{
-    h1 , h2{
+.us {
+
+    h1,
+    h2 {
         font-size: 1.5rem;
         color: #FF1493;
     }
-    p,li {
+
+    p,
+    li {
         font-size: 1.2rem;
         color: #00BFFF;
     }
-    strong{
+
+    strong {
         text-decoration: underline #00BFFF;
     }
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-family: "Lexend_text";
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     color: white;
     text-align: justify;
     padding: 50px;
@@ -1021,6 +1042,7 @@ a {
     min-height: 100%;
     min-width: 100%;
 }
+
 #fondo {
     position: fixed;
     top: 0;
@@ -1028,40 +1050,49 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; 
+    z-index: -1;
 }
-.us::before{
+
+.us::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.8; /* Ajusta la opacidad para mejor visibilidad */
+    opacity: 0.8;
+    /* Ajusta la opacidad para mejor visibilidad */
     z-index: -1;
 }
+
 .left,
 .right {
     height: 100%;
     flex: 1;
     padding: 10px;
-    width: 40%;   
+    width: 40%;
 }
+
 .left {
     display: flex;
     flex-direction: column;
     align-items: safe;
     padding: 10px;
 }
-.right{
+
+.right {
     display: grid;
-    grid-template-rows: repeat(3, 1fr); /* 3 filas de igual tamaño */
-    gap: 35px; /* Espacio entre las imágenes */
+    grid-template-rows: repeat(3, 1fr);
+    /* 3 filas de igual tamaño */
+    gap: 35px;
+    /* Espacio entre las imágenes */
     width: 100%;
     justify-content: center;
 }
-.image{
-    max-width: 100%; /* Hace que cada imagen ocupe toda la anchura del contenedor */
+
+.image {
+    max-width: 100%;
+    /* Hace que cada imagen ocupe toda la anchura del contenedor */
     height: 35vh;
     align-items: center;
 }

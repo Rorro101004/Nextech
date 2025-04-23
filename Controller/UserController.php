@@ -167,6 +167,7 @@ class UserController
             exit();
         }
 
+        // Corregir
         // Check the database
         if ($admin == true) {
             if (isset($_FILES["profile_image"]) && $_FILES["profile_image"]["error"] == 0) {
@@ -197,8 +198,8 @@ class UserController
                 exit();
             }
         } else if ($admin == false) {
-            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email, admin) values (?, ?, ?, ?, ?);");
-            $stmt->bind_param("sssss", $username, $name, $surname, $password, $email, $admin);
+            $stmt = $this->conn->prepare("INSERT INTO user (username, name, surname, password, email, admin) values (?, ?, ?, ?, ?, ?);");
+            $stmt->bind_param("ssssss", $username, $name, $surname, $password, $email, $admin);
 
             if ($stmt->execute()) {
                 // Authentication successful
