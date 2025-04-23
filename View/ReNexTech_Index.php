@@ -27,7 +27,7 @@
                     <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                 </svg>
             </label>
-        <!-- Replace # with the .php files -->
+            <!-- Replace # with the .php files -->
             <a class="home-link" href="#">Home</a>
             <a href="#">Events</a>
             <a href="#">About Us</a>
@@ -40,13 +40,23 @@
 
     </nav>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea unde optio ipsam. Quibusdam, modi quaerat.
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea unde optio ipsam. Quibusdam, modi quaerat.
+    </section>
+
+    <article>
+
+    </article>
+    
     <footer>
-        <div class="footer-content"> 
+        <div class="footer-content">
             <h3>TestTitulo</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa expedita autem veritatis adipisci nemo quis!</p>
         </div>
     </footer>
+
+
+
 </body>
 
 </html>
