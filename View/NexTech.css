@@ -1020,6 +1020,11 @@ a {
     gap: 10px;
     min-height: 100%;
     min-width: 100%;
+    .image{
+        max-width: 100%; /* Hace que cada imagen ocupe toda la anchura del contenedor */
+        height: 35vh;
+        align-items: center;
+    }
 }
 #fondo {
     position: fixed;
@@ -1060,11 +1065,7 @@ a {
     width: 100%;
     justify-content: center;
 }
-.image{
-    max-width: 100%; /* Hace que cada imagen ocupe toda la anchura del contenedor */
-    height: 35vh;
-    align-items: center;
-}
+
 
 /*OTHERS*/
 @font-face {
