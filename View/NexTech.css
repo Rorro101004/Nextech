@@ -466,12 +466,23 @@ section .section .message {
         color: blue;
         font-size: 25px;
     }
+    #fondo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
 }
 
 section .section .message .body {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 section .section .message .links {
@@ -487,13 +498,10 @@ section .section .message .explore {
     margin-bottom: 5px;
 }
 
-section .section .message .video {
+section .section .message  {
     margin-left: 10px;
     margin-right: 10px;
 
-    video {
-        width: 450px;
-    }
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
