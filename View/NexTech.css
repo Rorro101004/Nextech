@@ -618,6 +618,7 @@ section .section .profile {
 }
 
 .evento_destacado {
+    font-size: 20px;
     color: purple;
     height: 100%;
     position: relative;
@@ -702,11 +703,15 @@ section .section .profile {
     align-content: end;
     height: 45vh;
     width: 100%;
+    .evento{
+        font-size: 1.12em;
+    }
 
     .evento1 {
         background-image: url(Images/ciber.jpg);
         background-size: cover;
         background-position: center;
+       
     }
 
     .evento2 {
