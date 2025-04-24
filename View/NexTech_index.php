@@ -65,6 +65,10 @@ if (!isset($_SESSION["logged"])) {
                     <div>
                         <h1>¡Welcome to NexTech!</h1>
                     </div>
+                    <video muted autoplay loop preload="auto" id="fondo">
+                                <source src="Videos/PresentationVideo.mp4" type="video/mp4">
+                                Your browser does not support the video tag
+                            </video>
                     <div class="body">
                         <div>
                             <p>The future of technology is waiting for you. At NexTech, we are passionate about connecting industry leaders with the brightest minds.
@@ -72,11 +76,7 @@ if (!isset($_SESSION["logged"])) {
                             <p>Join us and be part of the digital transformation shaping tomorrow.
                                 You're just one click away from experiencing the next big technological revolution!</p>
                         </div>
-                        <div class="video">
-                            <video muted autoplay loop preload="auto" id="fondo">
-                                <source src="Videos/PresentationVideo.mp4" type="video/mp4">
-                                Your browser does not support the video tag
-                            </video>
+
                         </div>
                     </div>
                     <p><b>Not registered or logged in?</b></p>
