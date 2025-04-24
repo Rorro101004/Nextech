@@ -49,7 +49,7 @@ class UserController
         $name = "";
         $surname = "";
         $admin = 0;
-        $image = ""; 
+        $image = "";
         // Check the database
         $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin,image FROM user WHERE email=? AND password=?");
         $stmt->bind_param("ss", $email, $password);
@@ -67,7 +67,6 @@ class UserController
             $_SESSION["profile_image"] = $image;
             if ($admin = 1) {
                 $_SESSION["admin"] = true;
-               
             } else {
                 $_SESSION["admin"] = false;
             }
@@ -166,8 +165,7 @@ class UserController
             header("Location: ../View/NexTech_register.php");
             exit();
         }
-
-        // Corregir
+        
         // Check the database
         if ($admin == true) {
             if (isset($_FILES["profile_image"]) && $_FILES["profile_image"]["error"] == 0) {

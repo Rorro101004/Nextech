@@ -564,10 +564,10 @@ section .section .profile {
             font-size: 25px;
         }
 
-    .profile_image {
-        width: 200px; 
-        height: 200px;
-    }
+        .profile_image {
+            width: 200px;
+            height: 200px;
+        }
 
         .image {
             display: flex;
@@ -1034,7 +1034,7 @@ section .section .us {
     color: white;
     text-align: justify;
     margin-left: 50px;
-  
+
     h1,
     h2 {
         font-size: 1.5rem;
@@ -1060,6 +1060,7 @@ section .section .us {
         align-items: safe;
         margin-left: 15px;
         margin-right: 15px;
+        margin-bottom: 15px;
     }
 
     .right {
@@ -1074,7 +1075,7 @@ section .section .us {
 
         .image {
             width: 200px;
-            height: 20px;
+            height: 200px;
             /* Hace que cada imagen ocupe toda la anchura del contenedor */
             align-items: center;
         }

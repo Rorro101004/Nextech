@@ -96,7 +96,7 @@ if (!isset($_SESSION["error_register"])) {
                                 <label for="conf_password">CONF PASSWORD</label>
                                 <input type="password" name="conf_password" required><br>
                                 <?php if ($_POST["type"] == "Administrator") { ?>
-                                    <label for="profile_image" class="image " >PROFILE IMAGE</label>
+                                    <label for="profile_image" class="image ">PROFILE IMAGE</label>
                                     <input type="file" name="profile_image" accept="image/*" required>
                                     <!--Seguir aquí -->
                                     <input type="hidden" name="admin">
