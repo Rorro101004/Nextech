@@ -97,10 +97,6 @@ if (!isset($_SESSION["admin"])) {
                     <img class="image" src="Images/generic_profile.png" alt="Joan">
                     <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
                 </div>
-                <video muted autoplay loop preload="auto" id="fondo">
-                    <source src="Videos/AboutUsBg.mp4" type="video/mp4">
-                    Your browser does not support the video tag
-                </video>
             </div>
         </div>
     </section>
