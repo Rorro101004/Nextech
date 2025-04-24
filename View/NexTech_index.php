@@ -73,7 +73,7 @@ if (!isset($_SESSION["logged"])) {
                                 You're just one click away from experiencing the next big technological revolution!</p>
                         </div>
                         <div class="video">
-                            <video muted autoplay loop preload="auto">
+                            <video muted autoplay loop preload="auto" id="fondo">
                                 <source src="Videos/PresentationVideo.mp4" type="video/mp4">
                                 Your browser does not support the video tag
                             </video>
@@ -105,12 +105,6 @@ if (!isset($_SESSION["logged"])) {
                                     <a href="NexTech_events.php"><strong>Explore</strong></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="video">
-                            <video muted autoplay loop preload="auto">
-                                <source src="Videos/PresentationVideo.mp4" type="video/mp4">
-                                Your browser does not support the video tag
-                            </video>
                         </div>
                     </div>
                 <?php } ?>

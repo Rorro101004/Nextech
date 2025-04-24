@@ -68,14 +68,14 @@ if (!isset($_SESSION["logged"])) {
                     <h2>Our Mission</h2>
                     <p>Technology events drive inspiration, collaboration, and progress. Our mission is to <strong>connect people with the best tech events</strong>, helping professionals, businesses, and enthusiasts find opportunities to engage with the industry’s most influential gatherings.</p>
 
-                    <h2>What Do We Do</h2>
-                    <p>We specialize in promoting:</p>
-                    <ul>
-                        <li>Tech conferences featuring leading industry speakers.</li>
-                        <li>Startup showcases highlighting innovative companies.</li>
-                        <li>Workshops and hackathons that boost creativity and technical skills.</li>
-                        <li>Networking events that bring together professionals and visionaries.</li>
-                    </ul>
+                <h2>What We Do</h2>
+                <p>We specialize in promoting:</p>
+                <ul>
+                    <li> <u>Tech conferences</u>  featuring leading industry speakers.</li>
+                    <li><u>Startup showcases</u> highlighting innovative companies.</li>
+                    <li><u>Workshops and hackathons</u> that boost creativity and technical skills.</li>
+                    <li><u>Networking events</u> that bring together professionals and visionaries.</li>
+                </ul>
 
                     <h2>Why Choose Us?</h2>
                     <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
