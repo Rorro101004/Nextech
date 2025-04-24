@@ -65,9 +65,9 @@ class UserController
             $_SESSION["name"] = $name;
             $_SESSION["surname"] = $surname;
             $_SESSION["profile_image"] = $image;
-            if ($admin = 1) {
+            if ($admin == 1) {
                 $_SESSION["admin"] = true;
-            } else {
+            } else if ($admin == 0) {
                 $_SESSION["admin"] = false;
             }
             // Close connection
@@ -165,7 +165,7 @@ class UserController
             header("Location: ../View/NexTech_register.php");
             exit();
         }
-        
+
         // Check the database
         if ($admin == true) {
             if (isset($_FILES["profile_image"]) && $_FILES["profile_image"]["error"] == 0) {
