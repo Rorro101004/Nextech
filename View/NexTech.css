@@ -47,7 +47,7 @@ header .header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin-right: 20px;
+        margin-right: 20px; 
 
         .login {
             border: 1px solid rgb(12, 10, 88);
@@ -62,7 +62,7 @@ header .header {
                 color: white;
                 text-decoration: none
             }
-        }
+        }   
 
         .register {
             font-family: "Lexend_text", sans-serif;
@@ -149,8 +149,7 @@ header .login_register .logout:hover {
         }
 
         .login_register {
-            width: 160px;
-            padding-right: 10px;
+            width: 160px;   
         }
 
         .logout input[type="submit"] {
@@ -460,7 +459,8 @@ section .section .box .forms_register .form_register input[type="submit"]:hover 
 
 /*INDEX*/
 section .section .message {
-    margin: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 
     h1 {
         font-family: "Montserrat_title", sans-serif;
@@ -476,6 +476,7 @@ section .section .message {
         color: blue;
         font-size: 25px;
     }
+
     #fondo {
         position: fixed;
         top: 0;
@@ -486,41 +487,29 @@ section .section .message {
         z-index: -1;
     }
 
-}
+    .body {
 
-section .section .message .body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+        .links {
+            display: flex;
+            align-items: center;
+            line-height: 0px;
+        }
 
-}
-
-    .links {
-        display: flex;
-        align-items: center;
-        line-height: 0px;
-        margin-bottom: 10px;
-    }
-
-    .explore {
-        display: flex;
-        align-items: center;
-        margin-bottom: 5px;
-    }
-
-section .section .message  {
-    margin-left: 10px;
-    margin-right: 10px;
-
+        .explore {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+    }   
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .message {
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
 
         h1 {
-            font-size: 34px;
+            font-size: 33px;
         }
 
         p {
@@ -535,12 +524,6 @@ section .section .message  {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .video {
-            video {
-                width: 280px;
-            }
         }
     }
 }

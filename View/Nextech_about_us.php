@@ -90,7 +90,7 @@ if (!isset($_SESSION["logged"])) {
                     <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
                 </div>
                 <video muted autoplay loop preload="auto" id="fondo">
-                    <source src="Videos/RPReplay_Final1744481644.mp4" type="video/mp4">
+                    <source src="Videos/AboutUsBg.mp4" type="video/mp4">
                     Your browser does not support the video tag
                 </video>
             </div>

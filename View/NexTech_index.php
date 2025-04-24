@@ -72,22 +72,23 @@ if (!isset($_SESSION["logged"])) {
                             <p>Join us and be part of the digital transformation shaping tomorrow.
                                 You're just one click away from experiencing the next big technological revolution!</p>
                         </div>
-                        <div class="video">
-                            <video muted autoplay loop preload="auto" id="fondo">
-                                <source src="Videos/PresentationVideo.mp4" type="video/mp4">
-                                Your browser does not support the video tag
-                            </video>
+
+                        <p><b>Not registered or logged in?</b></p>
+                        <div class="links">
+                            <div>
+                                <a href="NexTech_register.php"><strong>Register</strong></a>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;<p>|</p>&nbsp;&nbsp;&nbsp;
+                            <div>
+                                <a href="NexTech_login.php"><strong>Login</strong></a>
+                            </div>
                         </div>
                     </div>
-                    <p><b>Not registered or logged in?</b></p>
-                    <div class="links">
-                        <div>
-                            <a href="NexTech_register.php"><strong>Register</strong></a>
-                        </div>
-                        &nbsp;&nbsp;&nbsp;<p>|</p>&nbsp;&nbsp;&nbsp;
-                        <div>
-                            <a href="NexTech_login.php"><strong>Login</strong></a>
-                        </div>
+                    <div>
+                        <video muted autoplay loop preload="auto" id="fondo">
+                            <source src="Videos/PresentationVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag
+                        </video>
                     </div>
                 <?php } else { ?>
                     <div>
