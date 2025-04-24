@@ -3,6 +3,9 @@ session_start();
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
 }
+if (!isset($_SESSION["admin"])){
+    $_SESSION["admin"] = false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +40,11 @@ if (!isset($_SESSION["logged"])) {
                             <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
                         </div>
                     <?php } ?>
+                    <?php if ($_SESSION["admin"] == true) { ?>
+                        <div class="create_event">
+                            <a href="NexTech_create_event.php" style="color:rgb(147, 0, 233)">Create event</a>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
             <?php if ($_SESSION["logged"] == false) { ?>
@@ -61,6 +69,10 @@ if (!isset($_SESSION["logged"])) {
     <section>
         <div class="section">
             <div class="message">
+                <video muted autoplay loop preload="auto" id="fondo">
+                    <source src="Videos/PresentationVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag
+                </video>
                 <?php if ($_SESSION["logged"] == false) { ?>
                     <div>
                         <h1>¡Welcome to NexTech!</h1>
@@ -83,10 +95,7 @@ if (!isset($_SESSION["logged"])) {
                             </div>
                         </div>
                     </div>
-                    <video muted autoplay loop preload="auto" id="fondo">
-                        <source src="Videos/PresentationVideo.mp4" type="video/mp4">
-                        Your browser does not support the video tag
-                    </video>
+
                 <?php } else { ?>
                     <div>
                         <h1>¡Welcome back to NexTech!</h1>

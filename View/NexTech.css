@@ -19,7 +19,6 @@ header .header {
     position: relative;
 
     .start {
-        width: 300px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -33,7 +32,7 @@ header .header {
         }
 
         .options {
-            width: 200px;
+            gap: 20px;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -47,7 +46,7 @@ header .header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin-right: 20px; 
+        margin-right: 20px;
 
         .login {
             border: 1px solid rgb(12, 10, 88);
@@ -62,7 +61,7 @@ header .header {
                 color: white;
                 text-decoration: none
             }
-        }   
+        }
 
         .register {
             font-family: "Lexend_text", sans-serif;
@@ -141,15 +140,19 @@ header .login_register .logout:hover {
         font-size: 13px;
 
         .start {
-            width: 200px;
+            margin-left: 10px;
 
             .images .logo img {
                 width: 70px;
             }
+            .options {
+                gap: 10px;
+            }
         }
 
         .login_register {
-            width: 160px;   
+            width: 160px;
+            margin-right: 10px;
         }
 
         .logout input[type="submit"] {
@@ -500,7 +503,7 @@ section .section .message {
             align-items: center;
             margin-bottom: 5px;
         }
-    }   
+    }
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {

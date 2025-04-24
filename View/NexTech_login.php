@@ -3,6 +3,9 @@ session_start();
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
 }
+if (!isset($_SESSION["admin"])) {
+    $_SESSION["admin"] = false;
+}
 if (!isset($_SESSION["error_login"])) {
     $_SESSION["error_login"] = "";
 }
@@ -41,6 +44,11 @@ if (!isset($_SESSION["register_success"])) {
                     <?php if ($_SESSION["logged"] == true) { ?>
                         <div class="profile_logged">
                             <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
+                        </div>
+                    <?php } ?>
+                    <?php if ($_SESSION["admin"] == true) { ?>
+                        <div class="create_event">
+                            <a href="NexTech_create_event.php" style="color:rgb(147, 0, 233)">Create event</a>
                         </div>
                     <?php } ?>
                 </div>
