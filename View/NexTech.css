@@ -101,7 +101,7 @@ header .header {
     }
 }
 
-header .start header .start .images .logo:hover {
+header .start .images .logo:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
