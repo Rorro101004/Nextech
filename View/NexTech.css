@@ -564,10 +564,10 @@ section .section .profile {
             font-size: 25px;
         }
 
-        .profile_image {
-            width: 150px;
-            height: 150px;
-        }
+    .profile_image {
+        width: 200px; 
+        height: 200px;
+    }
 
         .image {
             display: flex;
