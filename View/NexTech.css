@@ -17,34 +17,93 @@ header .header {
     background-color: white;
     z-index: 10;
     position: relative;
+
+    .start {
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 20px;
+
+        .images {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .options {
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+
+    .login_register {
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+
+        .login {
+            border: 1px solid rgb(12, 10, 88);
+            background-color: rgb(12, 10, 88);
+            border-radius: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+            a {
+                color: white;
+                text-decoration: none
+            }
+        }
+
+        .register {
+            font-family: "Lexend_text", sans-serif;
+            border: 1px solid rgb(5, 87, 220);
+            background-color: rgb(5, 87, 220);
+            border-radius: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+            a {
+                color: white;
+                text-decoration: none
+            }
+        }
+    }
+
+    .logout {
+        margin-right: 20px;
+
+        input[type="submit"] {
+            font-family: "Lexend_text", sans-serif;
+            border: 1px solid rgb(12, 10, 88);
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(12, 10, 88);
+            color: white;
+            font-size: 16px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            cursor: pointer;
+        }
+    }
 }
 
-header .start {
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 20px;
-}
-
-header .start .images {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .start .images .logo:hover {
+header .start header .start .images .logo:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
-}
-
-header .start .options {
-    width: 200px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
 }
 
 header .start .options .profile_logged:hover {
@@ -62,49 +121,9 @@ header .start .options .events:hover {
     transform: scale(1.1);
 }
 
-header .login_register {
-    width: 200px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 20px;
-}
-
-header .login_register .login {
-    border: 1px solid rgb(12, 10, 88);
-    background-color: rgb(12, 10, 88);
-    border-radius: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-
-    a {
-        color: white;
-        text-decoration: none
-    }
-}
-
 header .login_register .login:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
-}
-
-header .login_register .register {
-    font-family: "Lexend_text", sans-serif;
-    border: 1px solid rgb(5, 87, 220);
-    background-color: rgb(5, 87, 220);
-    border-radius: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-
-    a {
-        color: white;
-        text-decoration: none
-    }
 }
 
 header .login_register .register:hover {
@@ -112,51 +131,31 @@ header .login_register .register:hover {
     transform: scale(1.1);
 }
 
-header .logout {
-    margin-right: 20px;
-}
-
-header .logout input[type="submit"] {
-    font-family: "Lexend_text", sans-serif;
-    border: 1px solid rgb(12, 10, 88);
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(12, 10, 88);
-    color: white;
-    font-size: 16px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    cursor: pointer;
-}
-
 header .login_register .logout:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
 
-header .header .logout input[type="submit"] {
-    font-family: "Lexend_text", sans-serif;
-}
-
 @media screen and (max-width: 1000px) and (min-width:90px) {
-    header .start {
-        width: 200px;
-    }
-
-    header .login_register {
-        width: 160px;
-        padding-right: 10px;
-    }
-
-    header .header,
-    header .header .logout input[type="submit"] {
+    header .header {
         font-size: 13px;
-    }
 
-    header .images .logo img {
-        width: 70px;
+        .start {
+            width: 200px;
+
+            .images .logo img {
+                width: 70px;
+            }
+        }
+
+        .login_register {
+            width: 160px;
+            padding-right: 10px;
+        }
+
+        .logout input[type="submit"] {
+            font-size: 13px;
+        }
     }
 }
 
@@ -188,12 +187,12 @@ section .section {
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
     min-height: 80vh;
-}
 
-section .section .box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    .box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 /*LOGIN*/
@@ -203,64 +202,64 @@ section .section .box .forms_login {
     flex-direction: column;
     border-radius: 50px;
     margin-top: 130px;
-}
 
-section .section .box .forms_login .error {
-    font-family: "Lexend_text", sans-serif;
+    .error {
+        font-family: "Lexend_text", sans-serif;
 
-    p {
-        font-size: 15px;
-        color: red;
+        p {
+            font-size: 15px;
+            color: red;
+        }
     }
-}
 
-section .section .box .forms_login .login {
-    font-family: "Montserrat_title", sans-serif;
-    color: rgb(11, 11, 137);
-    font-size: 100px;
+    .login {
+        font-family: "Montserrat_title", sans-serif;
+        color: rgb(11, 11, 137);
+        font-size: 100px;
 
-    p {
-        margin: 0;
+        p {
+            margin: 0;
+        }
     }
-}
 
-section .section .box .forms_login .form_login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .form_login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-section .section .box .forms_login .form_login .inputs {
-    font-family: "Lexend_text", sans-serif;
-    font-size: 30px;
-    color: rgb(5, 87, 220);
-    margin-bottom: 10px
+        .inputs {
+            font-family: "Lexend_text", sans-serif;
+            font-size: 30px;
+            color: rgb(5, 87, 220);
+            margin-bottom: 10px
+        }
+
+        input[name="email"] {
+            width: 273px;
+        }
+
+        input[name="password"] {
+            width: 200px;
+        }
+
+        input[type="submit"] {
+            font-family: "Lexend_text", sans-serif;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 150px;
+        }
+    }
 }
 
 section .section .box .forms_login .form_login input:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-section .section .box .forms_login .form_login input[name="email"] {
-    width: 273px;
-}
-
-section .section .box .forms_login .form_login input[name="password"] {
-    width: 200px;
-}
-
-section .section .box .forms_login .form_login input[type="submit"] {
-    font-family: "Lexend_text", sans-serif;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 150px;
 }
 
 section .section .box .forms_login .form_login input[type="submit"]:hover {
@@ -270,28 +269,34 @@ section .section .box .forms_login .form_login input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
-    section .section .forms .login {
-        font-size: 80px;
-    }
+    section .section .box .forms_login {
 
-    section .section .box .forms_login .form_login .inputs {
-        font-size: 25px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
+        .login {
+            font-size: 70px;
+        }
 
-    section .section .box .forms_login .form_login input[name="email"] {
-        width: 211px;
-    }
+        .form_login {
 
-    section .section .box .forms_login .form_login input[name="password"] {
-        width: 150px;
-    }
+            .inputs {
+                font-size: 25px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
 
-    section .section .box .forms_login .form_login input[type="submit"] {
-        padding: 8px 25px;
-        font-size: 13px;
-        margin-left: 110px;
+            input[name="email"] {
+                width: 211px;
+            }
+
+            input[name="password"] {
+                width: 150px;
+            }
+
+            input[type="submit"] {
+                padding: 8px 25px;
+                font-size: 13px;
+                margin-left: 110px;
+            }
+        }
     }
 }
 
@@ -302,62 +307,88 @@ section .section .box .forms_register {
     flex-direction: column;
     margin-top: 10px;
     border-radius: 50px;
-}
 
-section .section .box .forms_register .error {
-    font-family: "Lexend_text", sans-serif;
+    .register {
+        font-family: "Montserrat_title", sans-serif;
+        color: rgb(11, 11, 137);
+        font-size: 100px;
+        margin-top: 30px;
 
-    p {
-        font-size: 15px;
-        color: red;
+        p {
+            margin: 0;
+        }
     }
-}
 
-section .section .box .forms_register .register {
-    font-family: "Montserrat_title", sans-serif;
-    color: rgb(11, 11, 137);
-    font-size: 100px;
-    margin-top: 30px;
+    .error {
+        font-family: "Lexend_text", sans-serif;
 
-    p {
-        margin: 0;
+        p {
+            font-size: 15px;
+            color: red;
+        }
     }
-}
 
-section .section .box .forms_register .form_register input[name="username"] {
-    width: 250px;
-}
+    .type input[type="submit"] {
+        font-family: "Lexend_text", sans-serif;
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 40px;
+    }
 
-section .section .box .forms_register .form_register input[name="email"] {
-    width: 321px;
-}
+    .form_register {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-section .section .box .forms_register .form_register input[name="name"] {
-    width: 328px;
-}
+        .inputs {
+            font-family: "Lexend_text", sans-serif;
+            font-size: 30px;
+            color: rgb(5, 87, 220);
+            margin-top: 10px;
+            margin-bottom: 15px;
 
-section .section .box .forms_register .form_register input[name="surname"] {
-    width: 268px;
-}
+            input[name="username"] {
+                width: 250px;
+            }
 
-section .section .box .forms_register .form_register input[name="password"] {
-    width: 249px;
-}
+            input[name="email"] {
+                width: 321px;
+            }
 
-section .section .box .forms_register .form_register input[name="conf_password"] {
-    width: 155px;
-}
+            input[name="name"] {
+                width: 328px;
+            }
 
-section .section .box .forms_register .type input[type="submit"] {
-    font-family: "Lexend_text", sans-serif;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 40px;
+            input[name="surname"] {
+                width: 268px;
+            }
+
+            input[name="password"] {
+                width: 249px;
+            }
+
+            input[name="conf_password"] {
+                width: 155px;
+            }
+        }
+
+        input[type="submit"] {
+            font-family: "Lexend_text", sans-serif;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 150px;
+        }
+    }
 }
 
 section .section .box .forms_register .type input[type="submit"]:hover {
@@ -366,31 +397,6 @@ section .section .box .forms_register .type input[type="submit"]:hover {
     transform: scale(1.1);
 }
 
-section .section .box .forms_register .form_register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section .section .box .forms_register .form_register .inputs {
-    font-family: "Lexend_text", sans-serif;
-    font-size: 30px;
-    color: rgb(5, 87, 220);
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-section .section .box .forms_register .form_register input[type="submit"] {
-    font-family: "Lexend_text", sans-serif;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 150px;
-}
 
 section .section .box .forms_register .form_register input[type="submit"]:hover {
     background-color: #0056b3;
@@ -399,58 +405,62 @@ section .section .box .forms_register .form_register input[type="submit"]:hover 
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
-    section .section .box .forms_register .register {
-        font-size: 70px;
-    }
+    section .section .box .forms_register {
 
-    section .section .box .forms_register .type input[type="submit"] {
-        padding: 8px 25px;
-        font-size: 13px;
-        margin-left: 30px;
-    }
+        .register {
+            font-size: 70px;
+        }
 
-    section .section .box .forms_register .form_register .inputs {
-        font-size: 25px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
+        .type input[type="submit"] {
+            padding: 8px 25px;
+            font-size: 13px;
+            margin-left: 30px;
+        }
 
-    section .section .box .forms_register .form_register input[name="username"] {
-        width: 220px;
-    }
+        .form_register {
 
-    section .section .box .forms_register .form_register input[name="email"] {
-        width: 280px;
-    }
+            .inputs {
+                font-size: 25px;
+                margin-top: 15px;
+                margin-bottom: 15px;
 
-    section .section .box .forms_register .form_register input[name="name"] {
-        width: 286px;
-    }
+                input[name="username"] {
+                    width: 220px;
+                }
 
-    section .section .box .forms_register .form_register input[name="surname"] {
-        width: 235px;
-    }
+                input[name="email"] {
+                    width: 280px;
+                }
 
-    section .section .box .forms_register .form_register input[name="password"] {
-        width: 219px;
-    }
+                input[name="name"] {
+                    width: 286px;
+                }
 
+                input[name="surname"] {
+                    width: 235px;
+                }
 
-    section .section .box .forms_register .form_register input[name="conf_password"] {
-        width: 140px;
-    }
+                input[name="password"] {
+                    width: 219px;
+                }
 
-    section .section .box .forms_register .form_register input[type="submit"] {
-        padding: 8px 25px;
-        font-size: 13px;
-        margin-left: 130px;
+                input[name="conf_password"] {
+                    width: 140px;
+                }
+            }
+
+            input[type="submit"] {
+                padding: 8px 25px;
+                font-size: 13px;
+                margin-left: 130px;
+            }
+        }
     }
 }
 
 /*INDEX*/
 section .section .message {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 30px;
 
     h1 {
         font-family: "Montserrat_title", sans-serif;
@@ -485,18 +495,18 @@ section .section .message .body {
 
 }
 
-section .section .message .links {
-    display: flex;
-    align-items: center;
-    line-height: 0px;
-    margin-bottom: 10px;
-}
+    .links {
+        display: flex;
+        align-items: center;
+        line-height: 0px;
+        margin-bottom: 10px;
+    }
 
-section .section .message .explore {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
+    .explore {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
 
 section .section .message  {
     margin-left: 10px;
@@ -520,20 +530,19 @@ section .section .message  {
         a {
             font-size: 18px;
         }
-    }
 
-    section .section .message .body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        .body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    section .section .message .video {
-        video {
-            width: 280px;
+        .video {
+            video {
+                width: 280px;
+            }
         }
     }
-
 }
 
 /*PROFILE*/
@@ -542,57 +551,61 @@ section .section .profile {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-}
 
-section .section .profile .title {
+    .title {
 
-    h1 {
-        font-size: 65px;
-        color: rgb(0, 0, 0);
-        margin-top: 20px;
-        font-family: "Monsterrat_title", sans-serif;
+        h1 {
+            font-size: 65px;
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+            font-family: "Monsterrat_title", sans-serif;
+        }
     }
-}
 
-section .section .profile .information {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
+    .information {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
 
-    p {
-        font-family: "Lexend_text", sans-serif;
-        font-size: 25px;
-    }
+        p {
+            font-family: "Lexend_text", sans-serif;
+            font-size: 25px;
+        }
 
     .profile_image {
         width: 200px; 
         height: 200px;
     }
 
-    .image {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        .image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
+
 @media screen and (max-width: 1000px) and (min-width:90px) {
-    section .section .profile .title {
-        h1 {
-            font-size: 50px;
-        }
-    }
+    section .section .profile {
 
-    section .section .profile .information {
-        width: 75%;
-
-        p {
-            font-size: 15px;
+        .title {
+            h1 {
+                font-size: 50px;
+            }
         }
 
-        .profile_image {
-            width: 80px;
-            height: 80px;
+        .information {
+            width: 75%;
+
+            p {
+                font-size: 15px;
+            }
+
+            .profile_image {
+                width: 80px;
+                height: 80px;
+            }
         }
     }
 }
@@ -1028,9 +1041,8 @@ section .section .us {
     z-index: 1;
     color: white;
     text-align: justify;
-    padding: 50px;
-    gap: 10px;
-
+    margin-left: 50px;
+  
     h1,
     h2 {
         font-size: 1.5rem;
@@ -1049,32 +1061,29 @@ section .section .us {
 
     .left,
     .right {
-        height: 100%;
         flex: 1;
-        padding: 10px;
-        width: 40%;
     }
 
     .left {
-        display: flex;
-        flex-direction: column;
         align-items: safe;
-        padding: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .right {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        /* 3 filas de igual tamaño */
-        gap: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
         /* Espacio entre las imágenes */
-        width: 100%;
         justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
 
         .image {
-            max-width: 100%;
+            width: 200px;
+            height: 20px;
             /* Hace que cada imagen ocupe toda la anchura del contenedor */
-            height: 35vh;
             align-items: center;
         }
     }
@@ -1090,7 +1099,7 @@ section .section .us {
     }
 }
 
-.us::before {
+section .section .us::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1100,6 +1109,23 @@ section .section .us {
     opacity: 0.8;
     /* Ajusta la opacidad para mejor visibilidad */
     z-index: -1;
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .us {
+        flex-direction: column;
+        margin: 0px;
+
+        .right {
+            display: flex;
+            flex-direction: row;
+
+            .image {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
 }
 
 /*OTHERS*/

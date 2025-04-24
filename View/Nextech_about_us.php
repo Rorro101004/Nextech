@@ -62,11 +62,11 @@ if (!isset($_SESSION["logged"])) {
         <div class="section">
             <div class="us">
                 <div class="left">
-                <h1>About Us</h1>
-                <p>Welcome to <strong>NexTech</strong>, your go-to platform for discovering the most important technology events in Spain. We bring visibility to conferences, workshops, and networking opportunities that shape the future of innovation.</p>
+                    <h1>About Us</h1>
+                    <p>Welcome to <strong>NexTech</strong>, your go-to platform for discovering the most important technology events in Spain. We bring visibility to conferences, workshops, and networking opportunities that shape the future of innovation.</p>
 
-                <h2>Our Mission</h2>
-                <p>Technology events drive inspiration, collaboration, and progress. Our mission is to <strong>connect people with the best tech events</strong>, helping professionals, businesses, and enthusiasts find opportunities to engage with the industry’s most influential gatherings.</p>
+                    <h2>Our Mission</h2>
+                    <p>Technology events drive inspiration, collaboration, and progress. Our mission is to <strong>connect people with the best tech events</strong>, helping professionals, businesses, and enthusiasts find opportunities to engage with the industry’s most influential gatherings.</p>
 
                 <h2>What We Do</h2>
                 <p>We specialize in promoting:</p>
@@ -77,11 +77,11 @@ if (!isset($_SESSION["logged"])) {
                     <li><u>Networking events</u> that bring together professionals and visionaries.</li>
                 </ul>
 
-                <h2>Why Choose Us?</h2>
-                <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
+                    <h2>Why Choose Us?</h2>
+                    <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
 
-                <h2>Join Us</h2>
-                <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. Start exploring today!</p>
+                    <h2>Join Us</h2>
+                    <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. Start exploring today!</p>
 
                 </div>
                 <div class="right">
@@ -89,7 +89,6 @@ if (!isset($_SESSION["logged"])) {
                     <img class="image" src="Images/generic_profile.png" alt="Joan">
                     <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
                 </div>
-                
                 <video muted autoplay loop preload="auto" id="fondo">
                     <source src="Videos/RPReplay_Final1744481644.mp4" type="video/mp4">
                     Your browser does not support the video tag
