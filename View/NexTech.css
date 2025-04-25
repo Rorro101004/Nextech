@@ -1037,13 +1037,13 @@ section .section .us {
     h1,
     h2 {
         font-size: 1.5rem;
-        color: #FF1493;
+        color: #a31f66;
     }
 
     p,
     li {
         font-size: 1.2rem;
-        color: #00BFFF;
+        color: #090909;
     }
 
     strong {
@@ -1060,19 +1060,20 @@ section .section .us {
         margin-left: 15px;
         margin-right: 15px;
         margin-bottom: 15px;
+        min-width: 60%;
     }
 
     .right {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
         /* Espacio entre las imágenes */
         justify-content: center;
         align-items: center;
         margin-top: 20px;
         margin-bottom: 20px;
+        min-width: 60%;
 
         .image {
+            flex-wrap: wrap;
+            gap: 20px;
             width: 200px;
             height: 200px;
             /* Hace que cada imagen ocupe toda la anchura del contenedor */
