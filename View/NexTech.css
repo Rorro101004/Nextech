@@ -1050,34 +1050,28 @@ section .section .us {
         text-decoration: underline #00BFFF;
     }
 
-    .left,
-    .right {
-        flex: 1;
-    }
+
 
     .left {
         align-items: safe;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 15px;
+        margin: 10px;
         min-width: 60%;
     }
 
     .right {
         /* Espacio entre las imágenes */
-        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 5px;
         align-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        min-width: 60%;
+        margin: 15px;
+        width: 40%;
 
         .image {
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 200px;
-            height: 200px;
+           
+
+            width: 45%;
             /* Hace que cada imagen ocupe toda la anchura del contenedor */
-            align-items: center;
         }
     }
 
