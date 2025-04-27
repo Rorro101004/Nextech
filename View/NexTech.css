@@ -1033,11 +1033,40 @@ section .section .us {
     color: white;
     text-align: justify;
     margin-left: 50px;
-    .image {
-           
-
-        max-width: 40%;
-        /* Hace que cada imagen ocupe toda la anchura del contenedor */
+    .video-sticky {
+        position: relative;
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+    }
+    
+    .images{
+            margin: 20px;
+            width: 100%;
+           display: flex;
+           flex-direction: row;
+           gap: 15px;
+           align-items: center;
+           justify-content: space-around;
+       
+        .member{
+            width: 28%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            p{
+                margin: 0 auto;
+            }
+            img{
+                width: 100%;
+                 height: auto;
+               }
+            
+        }
+               
+        
     }
     .fotos_genericas{
         margin: 20px;
@@ -1046,7 +1075,6 @@ section .section .us {
     }
     h1,
     h2 {
-        font-size: 1.5rem;
         color: #a31f66;
         
     }
@@ -1070,17 +1098,6 @@ section .section .us {
 
 }
 
-section .section .us::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    /* Ajusta la opacidad para mejor visibilidad */
-    z-index: -1;
-}
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .us {

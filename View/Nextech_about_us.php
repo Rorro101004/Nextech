@@ -87,20 +87,42 @@ if (!isset($_SESSION["admin"])) {
                     <img class="fotos_genericas" src="Images/grupo-programadores-senior-hablando-amigos_988095-3223.jpg" alt="foto programadores">
                 </div>
                 <div class="part">
-                <img src="Images/planificadores-eventos-que-organizan-evento-corporativo-marina-antecedentes-tecnologicos_879736-14218.jpg" alt="organizers" class="fotos_genericas">
+                    <img src="Images/planificadores-eventos-que-organizan-evento-corporativo-marina-antecedentes-tecnologicos_879736-14218.jpg" alt="organizers" class="fotos_genericas">
                     <div>
-                    <h2>Why Choose Us?</h2>
-                    <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
-                    <h2>Join Us</h2>
-                    <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <u>Start exploring today!</u></p>
+                        <h2>Why Choose Us?</h2>
+                        <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
+                        <h2>Join Us</h2>
+                        <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <u>Start exploring today!</u></p>
                     </div>
-                    
+
+                </div>
+                <video muted autoplay loop preload="auto" class="video-sticky">
+                    <source src="Videos/AboutUsBg.mp4" type="video/mp4">
+                    Your browser does not support the video tag
+                </video>
+                <div style="text-align: center;">
+                <h1>Founders of Nextech</h1>
                 </div>
                 
-                <div>
-                    <img class="image" src="Images/generic_profile.png" alt="RodrigoC">
+                <div class="images">
+                    <div class="member">
+                        <img class="image" src="Images/generic_profile.png" alt="RodrigoC">
+                        <p>RodrigoC</p>
+                        <p>Especialist Backend</p>
+                    </div>
+                    <div class="member">
                     <img class="image" src="Images/generic_profile.png" alt="Joan">
+                    <p>Joan</p>
+                    <p>Product Manager</p>
+                    </div>
+                    <div class="member">
                     <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
+                    <p>RodrigoM</p>
+                    <p>Especialist Backend</p>
+                    </div>
+
+                    
+                    
                 </div>
             </div>
         </div>
