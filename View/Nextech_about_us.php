@@ -118,7 +118,7 @@ if (!isset($_SESSION["admin"])) {
                     <div class="member">
                     <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
                     <p>RodrigoM</p>
-                    <p>Especialist Backend</p>
+                    <p>Especialist Frontend</p>
                     </div>
 
                     
