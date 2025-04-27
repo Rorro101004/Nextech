@@ -69,30 +69,35 @@ if (!isset($_SESSION["admin"])) {
     <section>
         <div class="section">
             <div class="us">
-                <div class="left">
-                    <h1>About Us</h1>
-                    <p>Welcome to <strong>NexTech</strong>, your go-to platform for discovering the most important technology events in Spain. We bring visibility to conferences, workshops, and networking opportunities that shape the future of innovation.</p>
+                <div class="part">
+                    <div>
+                        <h2>Our Mission</h2>
+                        <p>Technology events drive inspiration, collaboration, and progress. Our mission is to <strong>connect people with the best tech events</strong>, helping professionals, businesses, and enthusiasts find opportunities to engage with the industry’s most influential gatherings.</p>
 
-                    <h2>Our Mission</h2>
-                    <p>Technology events drive inspiration, collaboration, and progress. Our mission is to <strong>connect people with the best tech events</strong>, helping professionals, businesses, and enthusiasts find opportunities to engage with the industry’s most influential gatherings.</p>
+                        <h2>What We Do</h2>
+                        <p>We specialize in promoting:</p>
+                        <ul>
+                            <li>Tech conferences featuring leading industry speakers.</li>
+                            <li>Startup showcases highlighting innovative companies.</li>
+                            <li>Workshops and hackathons that boost creativity and technical skills.</li>
+                            <li>Networking events that bring together professionals and visionaries.</li>
+                        </ul>
+                    </div>
 
-                    <h2>What We Do</h2>
-                    <p>We specialize in promoting:</p>
-                    <ul>
-                        <li>Tech conferences featuring leading industry speakers.</li>
-                        <li>Startup showcases highlighting innovative companies.</li>
-                        <li>Workshops and hackathons that boost creativity and technical skills.</li>
-                        <li>Networking events that bring together professionals and visionaries.</li>
-                    </ul>
-
+                    <img class="fotos_genericas" src="Images/grupo-programadores-senior-hablando-amigos_988095-3223.jpg" alt="foto programadores">
+                </div>
+                <div class="part">
+                <img src="Images/planificadores-eventos-que-organizan-evento-corporativo-marina-antecedentes-tecnologicos_879736-14218.jpg" alt="organizers" class="fotos_genericas">
+                    <div>
                     <h2>Why Choose Us?</h2>
                     <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
-
                     <h2>Join Us</h2>
-                    <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. Start exploring today!</p>
-
+                    <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <u>Start exploring today!</u></p>
+                    </div>
+                    
                 </div>
-                <div class="right">
+                
+                <div>
                     <img class="image" src="Images/generic_profile.png" alt="RodrigoC">
                     <img class="image" src="Images/generic_profile.png" alt="Joan">
                     <img class="image" src="Images/generic_profile.png" alt="RodrigoM">

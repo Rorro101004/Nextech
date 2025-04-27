@@ -1025,7 +1025,7 @@ a {
 /*ABOUT US*/
 section .section .us {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     font-family: "Lexend_text";
     position: relative;
@@ -1033,57 +1033,41 @@ section .section .us {
     color: white;
     text-align: justify;
     margin-left: 50px;
+    .image {
+           
 
+        max-width: 40%;
+        /* Hace que cada imagen ocupe toda la anchura del contenedor */
+    }
+    .fotos_genericas{
+        margin: 20px;
+        max-height: 250px;
+        width: auto;
+    }
     h1,
     h2 {
         font-size: 1.5rem;
         color: #a31f66;
+        
     }
 
     p,
     li {
         font-size: 1.2rem;
         color: #090909;
+        text-align: justify;
     }
 
     strong {
         text-decoration: underline #00BFFF;
     }
-
-
-
-    .left {
-        align-items: safe;
-        margin: 10px;
-        min-width: 60%;
-    }
-
-    .right {
-        /* Espacio entre las imágenes */
-        flex-wrap: wrap;
+    .part{
+        display: flex;
         flex-direction: row;
-        gap: 5px;
         align-items: center;
         margin: 15px;
-        width: 40%;
-
-        .image {
-           
-
-            width: 45%;
-            /* Hace que cada imagen ocupe toda la anchura del contenedor */
-        }
     }
 
-    #fondo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
 }
 
 section .section .us::before {
