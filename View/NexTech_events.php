@@ -68,67 +68,100 @@ if (!isset($_SESSION["admin"])) {
 
     <section>
         <div class="section">
-            <div id="contentCarrusel">
-                <div class="evento_destacado" id="eventoDes1">
-                    <div class="tarjeta" id="tarjeta1">
-                        <p class="titulo">Upcoming events</p>
+            <div class="body">
+                <div class="carousel">
+                    <div class="featured_event" id="upcoming">
+                        <div class="background" id="background1">
+                            <div class="title">
+                                <p>Upcoming events</p>
+                            </div>
+                        </div>
+                        <div class="arrow">
+                            <a href="#devnext"><i class="fa-solid fa-arrow-left"></i></a>
+                            <a href="#cibernext"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
                     </div>
-                    <div class="flechas">
-                        <a href="#eventoDes3"><i class="fa-solid fa-arrow-left"></i></a>
-                        <a href="#eventoDes2"><i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="featured_event" id="cibernext">
+                        <div class="background" id="background2">
+                            <p class="title">CiberNext</p>
+                        </div>
+                        <div class="arrow">
+                            <a href="#upcoming"><i class="fa-solid fa-arrow-left"></i></a>
+                            <a href="#devnext"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="featured_event" id="devnext">
+                        <div class="background" id="background3">
+                            <p class="title">DevNext</p>
+                        </div>
+                        <div class="arrow">
+                            <a href="#cibernext"><i class="fa-solid fa-arrow-left"></i></a>
+                            <a href="#upcoming"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="evento_destacado" id="eventoDes2">
-                    <div class="tarjeta" id="tarjeta2">
-                        <p class="titulo">CiberNext</p>
-                        <p class="fecha">Date: June 15 and 16, 2025</p>
-                    </div>
-                    <div class="flechas">
-                        <a href="#eventoDes1"><i class="fa-solid fa-arrow-left"></i></a>
-                        <a href="#eventoDes3"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="evento_destacado" id="eventoDes3">
-                    <div class="tarjeta" id="tarjeta3">
-                        <p class="titulo">DevNext:</p>
-                        <p class="fecha">Date: July 4, 2025</p>
-                    </div>
-                    <div class="flechas">
-                        <a href="#eventoDes2"><i class="fa-solid fa-arrow-left"></i></a>
-                        <a href="#eventoDes1"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="eventos-grid">
-                <div class="evento1 evento">
-                    <h3>CiberNext: <br> International Cybersecurity Summit </h3>
-                    <p> <span>Date:</span> June 15 and 16, 2025</p>
-                    <p><span>Place:</span> Center for Technological Innovation, Barcelona, Spain</p>
-                    <span>Topics</span>
-                    <p>Cyber defense and resilience</p>
-                    <p>Emerging cybercrimes</p>
-                    <p>Blockchain in cybersecurity</p>
-                </div>
-                <div class="evento2 evento">
-                    <a class="event_des" href="Nextech_event_1.php">
-                        <h3>DevNext: <br> International Software Development Summit</h3>
-                        <p><span>Date:</span> July 4, 2025</p>
-                        <p><span>Place:</span> Center for Technological Innovation, Barcelona, Spain</p>
-                        <span>Topics</span>
-                        <p>Scalable Software Architecture</p>
-                        <p>Interactive Interface Programming</p>
-                        <p>Agile Development and DevOps</p>
-                    </a>
-                </div>
-                <div class="evento3 evento">
-                    <h3>AIMinds:<br> International Artificial Intelligence Summit</h3>
-                    <p> <span>Date:</span> November 25, 2025</p>
-                    <p><span>Place:</span> Center for Technological Future, Madrid, Spain</p>
-                    <span>Topics</span>
-                    <p>AI in Digital Transformation</p>
-                    <p>Machine Learning and Big Data:</p>
-                    <p>Ethics in Artificial Intelligence</p>
+                <div class="events">
+                    <div class="event1">
+                        <a href="">
+                            <div>
+                                <h2>CiberNext</h2>
+                                <h2>International Cybersecurity Summit</h2>
+                            </div>
+                            <div>
+                                <b>Topics</b>
+                            </div>
+                            <div>
+                                <p>Cyber defense and resilience</p>
+                            </div>
+                            <div>
+                                <p>Emerging cybercrimes</p>
+                            </div>
+                            <div>
+                                <p>Blockchain in cybersecurity</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="event2">
+                        <a class="event_des" href="Nextech_event_1.php">
+                            <div>
+                                <h2>DevNext</h2>
+                                <h2>International Software Development Summit</h2>
+                            </div>
+                            <div>
+                                <b>Topics</b>
+                            </div>
+                            <div>
+                                <p>Scalable Software Architecture</p>
+                            </div>
+                            <div>
+                                <p>Interactive Interface Programming</p>
+                            </div>
+                            <div>
+                                <p>Agile Development and DevOps</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="event3">
+                        <a href="">
+                            <div>
+                                <h2>AIMinds</h2>
+                                <h2>International Artificial Intelligence Summit</h2>
+                            </div>
+                            <div>
+                                <b>Topics</b>
+                            </div>
+                            <div>
+                                <p>AI in Digital Transformation</p>
+                            </div>
+                            <div>
+                                <p>Machine Learning and Big Data:</p>
+                            </div>
+                            <div>
+                                <p>Ethics in Artificial Intelligence</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

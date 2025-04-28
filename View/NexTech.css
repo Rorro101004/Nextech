@@ -145,6 +145,7 @@ header .login_register .logout:hover {
             .images .logo img {
                 width: 70px;
             }
+
             .options {
                 gap: 10px;
             }
@@ -597,178 +598,156 @@ section .section .profile {
 }
 
 /*EVENTS*/
-#contentCarrusel {
-    height: 30vh;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
-}
+section .section .body {
 
-.evento_destacado {
-    font-size: 20px;
-    color: purple;
-    height: 100%;
-    position: relative;
+    .carousel {
+        height: 30vh;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out;
 
-    a {
-        text-decoration: none;
+        .featured_event {
+            font-size: 20px;
+            color: purple;
+            height: 100%;
+            position: relative;
+
+            a {
+                text-decoration: none;
+            }
+
+            .background {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                .title {
+                    font-family: "Montserrat_title", sans-serif;
+                    font-size: 5rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+
+            .arrow {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: absolute;
+                height: 100%;
+                width: 98.5%;
+                bottom: 0;
+                margin-left: 10px;
+
+                i {
+                    font-size: 3em;
+                    color: #f3f9ff;
+                    transition: transform 0.2s;
+                }
+
+                i:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            #background1 {
+                background-image: url(Images/evento_tecnologico.jpg);
+            }
+
+            #background2 {
+                background-image: url(Images/ciber.jpg);
+            }
+
+            #background3 {
+                background-image: url(Images/progra.jpg);
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
     }
 
-    .tarjeta {
+    .events {
+        font-family: "Lexend_text", sans-serif;
         display: flex;
-        flex-direction: column;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        text-align: center;
-    }
-
-    .flechas {
-        height: 18%;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        display: flex;
-        align-items: center;
+        flex-direction: row;
         justify-content: space-between;
+        color: aliceblue;
+        margin-top: 40px;
+        margin-left: 30px;
+        margin-right: 30px;
 
-        i {
-            font-size: 3em;
-            color: #f3f9ff;
-            transition: transform 0.2s;
+        .event1,
+        .event2,
+        .event3 {
+            width: 29%;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p,
+            b {
+                font-size: 0.9rem;
+            }
         }
 
-        i:hover {
-            transform: scale(1.2);
+        .event1 {
+            background-image: url(Images/ciber.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+
+            h2 {
+                color: rgb(144, 238, 144);
+            }
         }
-    }
 
-    .titulo {
-        font-family: "Montserrat_title", sans-serif;
-        font-size: 5rem;
-        font-weight: bold;
-        text-align: center;
-    }
+        .event2 {
+            background-image: url(Images/progra.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
 
-    .fecha {
-        font-size: 18px;
-        font-weight: normal;
-        color: #f8f0f0;
-        margin-top: 5px;
-        margin-top: 20px;
-    }
+            h2 {
+                color: rgb(173, 216, 230);
+            }
+        }
 
-    #tarjeta1 {
-        background-image: url(Images/evento_tecnologico.jpg);
-    }
+        .event3 {
+            background-image: url(Images/IA.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
 
-    #tarjeta2 {
-        background-image: url(Images/ciber.jpg);
-    }
+            h2 {
+                color: rgb(216, 191, 216);
+            }
+        }
 
-    #tarjeta3 {
-        background-image: url(Images/progra.jpg);
-    }
+        .event1:hover,
+        .event2:hover,
+        .event3:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
 
-    a {
-        text-decoration: none;
-    }
-}
 
-.section .eventos-grid {
-    font-family: "Lexend_text", sans-serif;
-    color: aliceblue;
-    display: grid;
-    margin: auto;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    align-content: end;
-    height: 45vh;
-    width: 100%;
-    .evento{
-        font-size: 1.12em;
-    }
-
-    .evento1 {
-        background-image: url(Images/ciber.jpg);
-        background-size: cover;
-        background-position: center;
-       
-    }
-
-    .evento2 {
-        background-image: url(Images/progra.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .evento3 {
-        background-image: url(Images/IA.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .evento3 h3 {
-        color: rgb(216, 191, 216);
-    }
-
-    .evento3 span {
-        font-weight: bold;
-    }
-
-    .evento2 h3 {
-        color: rgb(173, 216, 230);
-    }
-
-    .evento2 span {
-        font-weight: bold;
-    }
-
-    .evento1 h3 {
-        color: rgb(144, 238, 144);
-    }
-
-    .evento1 span {
-        font-weight: bold;
-    }
-
-    .evento1,
-    .evento2,
-    .evento3 {
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-    }
-
-    .evento1:hover,
-    .evento2:hover,
-    .evento3:hover {
-        transform: scale(1.15);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    @media screen and (min-width: 1024px) and (max-width: 1920px) {
-        font-size: 10px;
-        height: 40vh;
     }
 }
 
-a {
-    display: flex;
-    flex-direction: column;
-    justify-content: safe;
-    text-decoration: none;
-    color: inherit;
-}
-
-.eventos-grid>div,
-.eventos-grid>a>div {
+.event>div,
+.event>a>div {
     margin-left: 10px;
     margin-right: 10px;
     display: flex;
@@ -777,26 +756,35 @@ a {
     background-color: #f3f3f3;
     border: 1px solid #ccc;
     border-radius: 8px;
-
     text-align: center;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
 
-    #contentCarrusel {
-        max-width: fit-content;
-        min-height: 50vh;
-    }
+    section .section .body {
 
-    .titulo {
-        font-size: 3rem;
+        .carousel {
+            height: 20vh;
 
-    }
+            .featured_event {
 
-    .fecha {
-        font-size: 14px;
+                .background {
+                    .title {
+                        font-size: 3rem;
+                    }
+                }
+
+                .arrow {
+                    width: 98%;
+
+                    i {
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
     }
 
     .section .eventos-grid {
@@ -1147,3 +1135,11 @@ section {
     margin: 0;
     padding: 0;
 }
+
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    text-decoration: none;
+    color: inherit;
+}   
