@@ -90,7 +90,7 @@ class UserController
     {
         session_unset();
         session_destroy();
-        header("Location: ../View/NexTech_index.php");
+        header("Location: ../View/NexTech_login.php");
     }
 
 
