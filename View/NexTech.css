@@ -478,6 +478,7 @@ section .section .message {
 
     a {
         color: blue;
+        font-family: "Lexend_text", sans-serif;
         font-size: 25px;
     }
 
