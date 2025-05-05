@@ -6,6 +6,10 @@ if (!isset($_SESSION["logged"])) {
 if (!isset($_SESSION["admin"])) {
     $_SESSION["admin"] = false;
 }
+if ($_SESSION["admin"] == false) {
+    header("Location: NexTech_index.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
