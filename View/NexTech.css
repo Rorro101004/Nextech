@@ -1082,6 +1082,11 @@ section .section .us {
         flex-direction: row;
         align-items: center;
         margin: 15px;
+        a{
+            text-decoration: none;
+            color: #2200ff;
+            font-weight: bold;
+        }
     }
 
 }
