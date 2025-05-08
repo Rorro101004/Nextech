@@ -90,7 +90,7 @@ if (!isset($_SESSION["admin"])) {
                         <h2>Why Choose Us?</h2>
                         <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
                         <h2>Join Us</h2>
-                        <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <u>Start exploring today!</u></p>
+                        <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <a href="NexTech_events.php">Start exploring today!</></a>
                     </div>
                 </div>
                 <div style="text-align: center;">
