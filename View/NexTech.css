@@ -5,6 +5,12 @@ div {
 }
 */
 
+/* TO DO  
+Change background 
+Change login and register inputs and the cappital letter of the text.
+Change main page: less text and add an event.
+*/
+
 /*HEADER*/
 header .header {
     display: flex;
@@ -187,10 +193,15 @@ footer .contact-info {
 /*SECTION*/
 section .section {
     border: 1px solid white;
+    
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
+    /*
+    background-color: rgb(33, 73, 195);
+    background: linear-gradient(180deg, rgb(3, 30, 109) 20%, rgb(3, 41, 157) 50%, rgb(1, 65, 255) 100%);
+    */
     min-height: 80.8vh;
-
+    
     .box {
         display: flex;
         align-items: center;
