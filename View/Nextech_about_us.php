@@ -88,27 +88,43 @@ if (!isset($_SESSION["admin"])) {
                     <img src="Images/planificadores-eventos-que-organizan-evento-corporativo-marina-antecedentes-tecnologicos_879736-14218.jpg" alt="organizers" class="fotos_genericas">
                     <div>
                         <h2>Why Choose Us?</h2>
-                        <p>We provide a curated selection of **top-tier technology events**, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
+                        <p>We provide a curated selection of top-tier technology events, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
                         <h2>Join Us</h2>
                         <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <a href="NexTech_events.php">Start exploring today!</></a>
                     </div>
+                </div>
+                <div class="part">
+                    <div>
+                        <h2>Our Values</h2>
+                        <p>At <strong>NexTech</strong>, we are guided by a set of core values that define who we are and how we operate:</p>
+                        <ul>
+                            <li><strong>Innovation:</strong> We embrace events that foment creativity and forward-thinking to drive technological progress.</li>
+                            <li><strong>Collaboration:</strong> We believe in the power of teamwork and partnerships to achieve great things.</li>
+                            <!--<li><strong>Integrity:</strong> We are committed to transparency, honesty, and ethical practices in everything we do.</li> -->
+                            <!--<li><strong>Inclusion:</strong> We strive to create an environment where everyone feels welcome and valued.</li>-->
+                            <li><strong>Excellence:</strong> We aim to deliver the highest quality experiences for our community.</li>
+                            
+                        </ul>
+                        
+                    </div>
+                    <img src="Images/Data_Services_Constellation1.webp" alt="values" class="fotos_genericas">
                 </div>
                 <div style="text-align: center;">
                     <h1>Founders of Nextech</h1>
                 </div>
                 <div class="images">
                     <div class="member">
-                        <img class="image" src="Images/generic_profile.png" alt="RodrigoC">
+                        <img class="image" src="Images/imagen_rodrigo_curriculum_nou.png" alt="RodrigoC">
                         <p>RodrigoC</p>
                         <p>Especialist Backend</p>
                     </div>
                     <div class="member">
-                        <img class="image" src="Images/generic_profile.png" alt="Joan">
+                        <img class="image" src="Images/imagen_rodrigo_curriculum_nou.png" alt="Joan">
                         <p>Joan</p>
                         <p>Product Manager</p>
                     </div>
                     <div class="member">
-                        <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
+                        <img class="image" src="Images/imagen_rodrigo_curriculum_nou.png" alt="RodrigoM">
                         <p>RodrigoM</p>
                         <p>Especialist Frontend</p>
                     </div>

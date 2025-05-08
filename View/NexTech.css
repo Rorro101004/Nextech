@@ -1020,15 +1020,7 @@ section .section .us {
     position: relative;
     z-index: 1;
     color: white;
-    text-align: justify;
-    margin-left: 50px;
-    .video-sticky {
-        position: relative;
-        margin: 0 auto;
-        width: 80%;
-        height: auto;
-    }
-    
+    text-align: justify;    
     .images{
             margin: 20px;
             width: 100%;
@@ -1059,8 +1051,9 @@ section .section .us {
     }
     .fotos_genericas{
         margin: 20px;
-        max-height: 250px;
+        max-height: 300px;
         width: auto;
+        min-width: 30%;
     }
     h1,
     h2 {
@@ -1081,7 +1074,10 @@ section .section .us {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 15px;
+        margin: 20px;
+        text-align: justify;    
+        max-width: 100%;
+        justify-content: space-between;
         a{
             text-decoration: none;
             color: #2200ff;
