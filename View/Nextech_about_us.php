@@ -121,23 +121,23 @@ if (!isset($_SESSION["admin"])) {
                     
                 </div>
                 <div style="text-align: center;">
-                    <h1>Founders of Nextech</h1>
+                    <h1 style="color: blue;">Founders of Nextech</h1>
                 </div>
                 <div class="images">
                     <div class="member">
                         <img class="image" src="Images/imagen_rodrigo_curriculum_nou.png" alt="RodrigoC">
-                        <p>RodrigoC</p>
-                        <p>Especialist Backend</p>
+                        <h2>RodrigoC</h2>
+                        <h3 style="color: rgb(127, 255, 212);">Especialist Backend</h3>
                     </div>
                     <div class="member">
                         <img class="image" src="Images/imagen_rodrigo_curriculum_nou.png" alt="Joan">
-                        <p>Joan</p>
-                        <p>Product Manager</p>
+                        <h2>Joan</h2>
+                        <h3 style="color: rgb(127, 255, 212);">Product Manager</h3>
                     </div>
                     <div class="member">
                         <img class="image" src="Images/imagen_rodrigo_curriculum_nou.png" alt="RodrigoM">
-                        <p>RodrigoM</p>
-                        <p>Especialist Frontend</p>
+                        <h2>RodrigoM</>
+                        <h3 style="color: rgb(127, 255, 212);">Especialist Frontend</h3>
                     </div>
                 </div>
             </div>
