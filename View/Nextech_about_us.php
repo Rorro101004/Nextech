@@ -70,7 +70,7 @@ if (!isset($_SESSION["admin"])) {
         <div class="section">
             <div class="us">
                 <div class="part">
-                    <div>
+                    <div class="text">
                         <h2>Our Mission</h2>
                         <p>Technology events drive inspiration, collaboration, and progress. Our mission is to <strong>connect people with the best tech events</strong>, helping professionals, businesses, and enthusiasts find opportunities to engage with the industry’s most influential gatherings.</p>
                         <h2>What We Do</h2>
@@ -86,15 +86,7 @@ if (!isset($_SESSION["admin"])) {
                 </div>
                 <div class="part">
                     <img src="Images/planificadores-eventos-que-organizan-evento-corporativo-marina-antecedentes-tecnologicos_879736-14218.jpg" alt="organizers" class="fotos_genericas">
-                    <div>
-                        <h2>Why Choose Us?</h2>
-                        <p>We provide a curated selection of top-tier technology events, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
-                        <h2>Join Us</h2>
-                        <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <a href="NexTech_events.php">Start exploring today!</></a>
-                    </div>
-                </div>
-                <div class="part">
-                    <div>
+                    <div class="text">
                         <h2>Our Values</h2>
                         <p>At <strong>NexTech</strong>, we are guided by a set of core values that define who we are and how we operate:</p>
                         <ul>
@@ -103,11 +95,30 @@ if (!isset($_SESSION["admin"])) {
                             <!--<li><strong>Integrity:</strong> We are committed to transparency, honesty, and ethical practices in everything we do.</li> -->
                             <!--<li><strong>Inclusion:</strong> We strive to create an environment where everyone feels welcome and valued.</li>-->
                             <li><strong>Excellence:</strong> We aim to deliver the highest quality experiences for our community.</li>
-                            
+
                         </ul>
-                        
+
                     </div>
-                    <img src="Images/Data_Services_Constellation1.webp" alt="values" class="fotos_genericas">
+                </div>
+                <div class="part">
+                    <div class="text">
+                        <h2>Our Story</h2>
+                        <p>NexTech started as a passion project in Barcelona, where Rodrigo Calderón, Joan Ye, and Rodrigo Mullizac, three developers,meeted in STUCOM, wanted to create a space where programmers could connect, collaborate, and grow.</p>
+                        <p>Frustrated by how scattered tech communities were, they built NexTech: a platform designed to bring developers together through networking events, hackathons, and industry gatherings. Today, NexTech is a thriving hub where coders, engineers, and tech enthusiasts find inspiration, opportunities, and meaningful connections.</p>
+
+                    </div>        
+                    <img src="Images/Student-IT-and-Tech-Support.png" alt="values" class="fotos_genericas">
+                </div>
+                <div class="part">
+                <img src="Images/Data_Services_Constellation1.webp" alt="values" class="fotos_genericas">
+                    <div class="text">
+                        <h2>Why Choose Us?</h2>
+                        <p>We provide a curated selection of top-tier technology events, ensuring that individuals and organizations can easily find and participate in **transformative experiences**. Our platform makes discovering opportunities simple and accessible.</p>
+                        <h2>Join Us</h2>
+                        <p>Looking for the sonnest big event in tech ? <strong>Nextech</strong> is here to keep you informed and connected. <a href="NexTech_events.php">Start exploring today!</></a>
+
+                    </div>
+                    
                 </div>
                 <div style="text-align: center;">
                     <h1>Founders of Nextech</h1>
