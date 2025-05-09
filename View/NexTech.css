@@ -193,7 +193,7 @@ footer .contact-info {
 /*SECTION*/
 section .section {
     border: 1px solid white;
-    
+
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
     /*
@@ -201,7 +201,7 @@ section .section {
     background: linear-gradient(180deg, rgb(3, 30, 109) 20%, rgb(3, 41, 157) 50%, rgb(1, 65, 255) 100%);
     */
     min-height: 80.8vh;
-    
+
     .box {
         display: flex;
         align-items: center;
@@ -1031,45 +1031,49 @@ section .section .us {
     position: relative;
     z-index: 1;
     color: white;
-    text-align: justify;    
-    .images{
-            margin: 20px;
-            width: 100%;
-           display: flex;
-           flex-direction: row;
-           gap: 15px;
-           align-items: center;
-           justify-content: space-around;
-       
-        .member{
+    text-align: justify;
+    margin: 10px;
+
+    .images {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        justify-content: space-around;
+
+        .member {
             width: 28%;
             display: flex;
             flex-direction: column;
             align-content: center;
             justify-content: center;
             text-align: center;
-            p{
+
+            p {
                 margin: 0 auto;
             }
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
-               }
-            
+            }
+
         }
-               
-        
+
+
     }
-    .fotos_genericas{
+
+    .fotos_genericas {
         margin: 0px;
         max-height: 300px;
         width: auto;
         min-width: 30%;
     }
+
     h1,
     h2 {
         color: #a31f66;
-        
+
     }
 
     p,
@@ -1081,20 +1085,23 @@ section .section .us {
     strong {
         text-decoration: underline #00BFFF;
     }
-    .part{
+
+    .part {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin: 20px;
-        text-align: justify;    
+        text-align: justify;
         max-width: 100%;
         justify-content: center;
-        a{
+
+        a {
             text-decoration: none;
             color: #2200ff;
             font-weight: bold;
         }
-        .text{
+
+        .text {
             margin: auto 15px;
         }
     }
@@ -1153,4 +1160,4 @@ a {
     justify-content: safe;
     text-decoration: none;
     color: inherit;
-}   
+}
