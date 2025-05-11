@@ -1023,107 +1023,96 @@ section .section .body {
 }
 
 /*ABOUT US*/
-section .section .us {
+section .section .about_us {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    font-family: "Lexend_text";
-    position: relative;
-    z-index: 1;
     color: white;
-    text-align: justify;
-    margin: 10px;
+    margin: 40px;
 
-    .images {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        align-items: center;
-        justify-content: space-around;
+    .info {
 
-        .member {
-            width: 28%;
+        .part {
             display: flex;
-            flex-direction: column;
-            align-content: center;
-            justify-content: center;
+            flex-direction: row;
+            gap: 50px;
+            margin-bottom: 60px;
+
+            .text {
+                align-content: center;
+            }
+
+            .image {
+                align-content: center;
+
+                img {
+                    width: 450px;
+                }
+            }
+
+            a {
+                font-family: "Lexend_text";
+                text-decoration: none;
+                color: #2200ff;
+                font-weight: bold;
+            }
+        }
+
+        h2 {
+            font-family: "Lexend_text";
+            color: #a31f66;
+        }
+
+        p,
+        li {
+            font-family: "Lexend_text";
+            color: #090909;
+            text-align: justify;
+        }
+    }
+
+    .founders {
+
+        h1 {
+            font-family: "Montserrat_title";
             text-align: center;
+            font-size: 40px;
+            color: rgb(46, 58, 140);
+        }
 
-            p {
-                margin: 0 auto;
+        .images {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .member {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                font-family: "Lexend_text";
+
+                h2 {
+                    color: black;
+                    font-size: 25px;
+                }
+
+                h3 {
+                    color: rgb(127, 255, 212);
+                    font-size: 20px;
+                }
+
+                img {
+                    width: 400px;
+                    height: auto;
+                }
             }
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-
-        }
-
-
-    }
-
-    .fotos_genericas {
-        margin: 0px;
-        max-height: 300px;
-        width: auto;
-        min-width: 30%;
-    }
-
-    h1,
-    h2 {
-        color: #a31f66;
-
-    }
-
-    p,
-    li {
-        color: #090909;
-        text-align: justify;
-    }
-
-    strong {
-        text-decoration: underline #00BFFF;
-    }
-
-    .part {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 20px;
-        text-align: justify;
-        max-width: 100%;
-        justify-content: center;
-
-        a {
-            text-decoration: none;
-            color: #2200ff;
-            font-weight: bold;
-        }
-
-        .text {
-            margin: auto 15px;
         }
     }
-
 }
 
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
-    section .section .us {
-        flex-direction: column;
-        margin: 0px;
 
-        .right {
-            display: flex;
-            flex-direction: row;
-
-            .image {
-                width: 100px;
-                height: 100px;
-            }
-        }
-    }
 }
 
 /*OTHERS*/
