@@ -1102,8 +1102,7 @@ section .section .about_us {
                 }
 
                 img {
-                    width: 400px;
-                    height: auto;
+                    width: 350px;
                 }
             }
         }
