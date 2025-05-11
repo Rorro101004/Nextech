@@ -143,7 +143,7 @@ if (!isset($_SESSION["admin"])) {
                             <h3>Full stack Especialist</h3>
                         </div>
                         <div class="member">
-                            <img class="image" src="Images/generic_profile.png" alt="RodrigoM">
+                            <img class="image" src="Images/FrontendEspecialist.png" alt="RodrigoM">
                             <h2>RodrigoM</h2>
                             <h3>Frontend Especialist</h3>
                         </div>

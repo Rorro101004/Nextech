@@ -1103,6 +1103,9 @@ section .section .about_us {
 
                 img {
                     width: 350px;
+                    mask-image: linear-gradient(
+                        black  75%,
+                        transparent)
                 }
             }
         }
@@ -1110,9 +1113,7 @@ section .section .about_us {
 }
 
 
-@media screen and (max-width: 1000px) and (min-width:90px) {
-
-}
+@media screen and (max-width: 1000px) and (min-width:90px) {}
 
 /*OTHERS*/
 @font-face {
