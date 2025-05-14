@@ -220,7 +220,7 @@ section .section .box .forms_login {
     align-items: center;
     flex-direction: column;
     border-radius: 50px;
-    margin-top: 130px;
+    margin-top: 100px;
 
     .error {
         font-family: "Lexend_text", sans-serif;
@@ -245,20 +245,23 @@ section .section .box .forms_login {
         display: flex;
         flex-direction: column;
         align-items: center;
+        line-height: 35px;
 
         .inputs {
             font-family: "Lexend_text", sans-serif;
             font-size: 30px;
             color: rgb(5, 87, 220);
-            margin-bottom: 10px
-        }
+            margin-bottom: 10px;
+            line-height: 25px;
 
-        input[name="email"] {
-            width: 273px;
-        }
+            input[name="email"] {
+                width: 300px;
+                margin-bottom: 5px;
+            }
 
-        input[name="password"] {
-            width: 200px;
+            input[name="password"] {
+                width: 300px;
+            }
         }
 
         input[type="submit"] {
@@ -270,7 +273,8 @@ section .section .box .forms_login {
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            margin-left: 150px;
+            margin-top: 15px;
+            margin-left: 105px;
         }
     }
 }
@@ -289,6 +293,7 @@ section .section .box .forms_login .form_login input[type="submit"]:hover {
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .box .forms_login {
+        line-height: 70px;
 
         .login {
             font-size: 70px;
@@ -297,34 +302,42 @@ section .section .box .forms_login .form_login input[type="submit"]:hover {
         .form_login {
 
             .inputs {
-                font-size: 25px;
-                margin-top: 15px;
-                margin-bottom: 15px;
+                font-size: 23px;
+
+                input {
+                    margin-bottom: 5px;
+                }
+
+                input[name="email"] {
+                    width: 200px;
+                }
+
+                input[name="password"] {
+                    width: 200px;
+                }
             }
 
-            input[name="email"] {
-                width: 211px;
-            }
 
-            input[name="password"] {
-                width: 150px;
-            }
 
             input[type="submit"] {
-                padding: 8px 25px;
+                margin-top: 5px;
+                padding: 8px 20px;
                 font-size: 13px;
-                margin-left: 110px;
+                margin-left: 65px;
             }
         }
     }
 }
 
+
+
 /*REGISTER*/
 section .section .box .forms_register {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
+    margin-bottom: 30px;
     border-radius: 50px;
 
     .register {
@@ -356,7 +369,7 @@ section .section .box .forms_register {
         border-radius: 5px;
         font-size: 16px;
         cursor: pointer;
-        margin-left: 40px;
+        margin-left: 25px;
     }
 
     .form_register {
@@ -370,29 +383,34 @@ section .section .box .forms_register {
             color: rgb(5, 87, 220);
             margin-top: 10px;
             margin-bottom: 15px;
+            line-height: 25px;
+
+            input {
+                margin-bottom: 5px;
+            }
 
             input[name="username"] {
-                width: 250px;
+                width: 300px;
             }
 
             input[name="email"] {
-                width: 321px;
+                width: 300px;
             }
 
             input[name="name"] {
-                width: 328px;
+                width: 300px;
             }
 
             input[name="surname"] {
-                width: 268px;
+                width: 300px;
             }
 
             input[name="password"] {
-                width: 249px;
+                width: 300px;
             }
 
             input[name="conf_password"] {
-                width: 155px;
+                width: 300px;
             }
         }
 
@@ -405,7 +423,7 @@ section .section .box .forms_register {
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            margin-left: 150px;
+            margin-left: 100px;
         }
     }
 }
