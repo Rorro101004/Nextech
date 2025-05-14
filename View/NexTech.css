@@ -8,7 +8,7 @@ div {
 /* TO DO  
 Change background 
 Change login and register inputs and the cappital letter of the text.
-Change main page: less text and add an event.
+Change main page: less text and add an event or image.
 */
 
 /*HEADER*/
@@ -116,6 +116,11 @@ header .start .options .profile_logged:hover {
     transform: scale(1.1);
 }
 
+header .start .options .event_manager:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
 header .start .options .info:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -136,7 +141,7 @@ header .login_register .register:hover {
     transform: scale(1.1);
 }
 
-header .login_register .logout:hover {
+header .logout:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
@@ -1103,9 +1108,8 @@ section .section .about_us {
 
                 img {
                     width: 350px;
-                    mask-image: linear-gradient(
-                        black  75%,
-                        transparent)
+                    mask-image: linear-gradient(black 75%,
+                            transparent)
                 }
             }
         }

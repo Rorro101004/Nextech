@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
 }
-if (!isset($_SESSION["admin"])){
+if (!isset($_SESSION["admin"])) {
     $_SESSION["admin"] = false;
 }
 if (!isset($_SESSION["error_register"])) {
@@ -24,7 +24,7 @@ if (!isset($_POST["type"])) {
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="start">
                 <div class="images">
@@ -46,7 +46,7 @@ if (!isset($_POST["type"])) {
                         </div>
                     <?php } ?>
                     <?php if ($_SESSION["admin"] == true) { ?>
-                        <div class="create_event">
+                        <div class="event_manager">
                             <a href="NexTech_event_manager.php" style="color:rgb(147, 0, 233)">Event manager</a>
                         </div>
                     <?php } ?>

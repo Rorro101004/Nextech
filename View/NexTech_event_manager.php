@@ -45,7 +45,7 @@ if ($_SESSION["admin"] == false) {
                         </div>
                     <?php } ?>
                     <?php if ($_SESSION["admin"] == true) { ?>
-                        <div class="create_event">
+                        <div class="event_manager">
                             <a href="NexTech_event_manager.php" style="color:rgb(147, 0, 233)">Event manager</a>
                         </div>
                     <?php } ?>
