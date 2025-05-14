@@ -451,45 +451,45 @@ section .section .box .forms_register .form_register input[type="submit"]:hover 
         .type input[type="submit"] {
             padding: 8px 25px;
             font-size: 13px;
-            margin-left: 30px;
+            margin-left: 20px;
         }
 
         .form_register {
 
             .inputs {
-                font-size: 25px;
+                font-size: 23px;
                 margin-top: 15px;
                 margin-bottom: 15px;
 
                 input[name="username"] {
-                    width: 220px;
+                    width: 240px;
                 }
 
                 input[name="email"] {
-                    width: 280px;
+                    width: 240px;
                 }
 
                 input[name="name"] {
-                    width: 286px;
+                    width: 240px;
                 }
 
                 input[name="surname"] {
-                    width: 235px;
+                    width: 240px;
                 }
 
                 input[name="password"] {
-                    width: 219px;
+                    width: 240px;
                 }
 
                 input[name="conf_password"] {
-                    width: 140px;
+                    width: 240px;
                 }
             }
 
             input[type="submit"] {
                 padding: 8px 25px;
                 font-size: 13px;
-                margin-left: 130px;
+                margin-left: 70px;
             }
         }
     }
