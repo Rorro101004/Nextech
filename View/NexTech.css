@@ -149,27 +149,151 @@ header .logout:hover {
     }
 }
 
-/*FOOTER*/
-footer .contact-info {
-    width: 100%;
+/*====================          FOOTER BEGIN       ========================*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 7px;
-    font-family: "Lexend_text", sans-serif;
-    font-size: 0.9em;
-    background-color: white;
-    z-index: 10;
-    position: relative;
+    flex-direction: column;
+    background-color: rgb(255, 110, 110);
 }
 
-@media screen and (max-width: 1000px) and (min-width:90px) {
-    footer .contact-info {
-        flex-direction: column;
-        line-height: 5px;
-        font-size: 0.7em;
+
+/* Footer-only styles */
+footer,
+footer * {
+    box-sizing: border-box;
+    font-family: "Lexend_text", sans-serif;
+}
+
+footer {
+    position: sticky;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    background-color: rgba(255, 255, 255);
+    /* Footer Color*/
+    display: block;
+    margin-top: auto;
+}
+
+footer .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer .footer-widget {
+    width: calc(20% - 30px);
+    padding: 0 12px;
+}
+
+footer .footer-widget:nth-child(1) {
+    width: calc(40% - 50px);
+    margin-right: 15px;
+}
+
+footer .footer-widget .logo {
+    margin-bottom: 30px;
+    vertical-align: middle;
+    width: 50%;
+    height: auto;
+}
+
+footer .footer-widget .desc {
+    font-size: 13px;
+
+}
+
+footer .footer-widget h6 {
+    color: #585978;
+    margin: 10px 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer .footer-widget .links li {
+    list-style: none;
+    color: #585978;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 25px;
+}
+
+footer .footer-widget .links li a {
+    color: #585978;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 25px;
+    transition: all 0.3s ease-out;
+}
+
+footer .footer-widget .links li a:hover {
+    color: #2703f3;
+}
+
+footer .copyright-wrapper {
+    border-top: 1px solid rgba(88, 89, 120, 0.4);
+}
+
+footer .copyright-wrapper p {
+    color: rgba(88, 89, 120, 0.6);
+    font-size: 14px;
+    font-weight: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer .copyright-wrapper p a {
+    color: inherit;
+    font-weight: 500;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+footer .copyright-wrapper p a:hover {
+    color: #a867fd;
+}
+
+/* Responsive queries for footer only */
+@media (max-width: 992px) {
+    footer .container {
+        max-width: 960px;
+    }
+
+    footer .wrapper .footer-widget,
+    footer .wrapper .footer-widget:nth-child(1) {
+        width: calc(50% - 30px);
     }
 }
+
+@media (max-width: 768px) {
+    footer .container {
+        max-width: 720px;
+    }
+
+    footer .wrapper .footer-widget,
+    footer .wrapper .footer-widget:nth-child(1) {
+        width: 100%;
+        margin: 0 10px 50px;
+    }
+}
+
+/*====================          FOOTER END       ========================*/
+
 
 /*SECTION*/
 section .section {
@@ -200,6 +324,7 @@ section .section {
         flex-direction: column;
     }
 }
+
 
 /*LOGIN*/
 section .section .box .forms_login {
@@ -266,6 +391,39 @@ section .section .box .forms_login {
     }
 }
 
+section .section .body .index {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    /* Esto empuja el contenido (incluido el SVG) a la derecha */
+    
+    .rocket-img {
+        width: 50rem;
+        height: auto;
+        animation: tilt-n-move-shaking 0.2s infinite linear; /* small values = slow ; large values = fast*/
+
+        
+    }
+}
+
+@keyframes tilt-n-move-shaking {
+            0% {
+                transform: translate(0, 0) ;
+            }
+            25% {
+                transform: translate(5px, 5px) ;
+            }
+            50% {
+                transform: translate(0, 0) ;
+            }
+            75% {
+                transform: translate(-5px, 5px) ;
+            }
+            100% {
+                transform: translate(0, 0) ;
+            }
+        }
 section .section .box .forms_login .form_login input:focus {
     outline: none;
     border-color: #007bff;
@@ -524,6 +682,8 @@ section .section .message {
             align-items: center;
             margin-bottom: 5px;
         }
+
+
     }
 }
 
