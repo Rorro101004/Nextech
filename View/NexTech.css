@@ -105,44 +105,21 @@ header .header {
     }
 }
 
-header .start .images .logo:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-header .start .options .profile_logged:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-header .start .options .event_manager:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-header .start .options .info:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-header .start .options .events:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-header .login_register .login:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-header .login_register .register:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
+/* Simplified: grouped header navigation and action buttons hover scale animation */
+header .start .images .logo:hover,
+header .start .options .profile_logged:hover,
+header .start .options .event_manager:hover,
+header .start .options .info:hover,
+header .start .options .events:hover,
+header .login_register .login:hover,
+header .login_register .register:hover,
 header .logout:hover {
     transition: transform 0.3s ease;
     transform: scale(1.1);
+
+    color: #4e33e9;
+    text-shadow: 0 0 10px #ff0da2, 0 0 20px #0dfff3, 0 0 30px #ff0dd7, 0 0 40px #0ddbff;
+
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
@@ -202,7 +179,7 @@ section .section {
     Background-position => This changes svg position in the next order, X and Y, 50% both is as close to the figma*/
 
     background-image: url("SVG/BackgroundFondo_0.svg");
-    background-size: 200% ;
+    background-size: 200%;
     background-position: 50% 50%;
     background-attachment: scroll;
     background-color: #ffb4be;
@@ -210,7 +187,7 @@ section .section {
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
     */
-    
+
     /*
     background-color: rgb(33, 73, 195);
     background: linear-gradient(180deg, rgb(3, 30, 109) 20%, rgb(3, 41, 157) 50%, rgb(1, 65, 255) 100%);
