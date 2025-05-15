@@ -24,12 +24,13 @@ class UserController
 
     public function __construct()
     {
-        // Database connection
+        // Database connection data
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "nextech";
 
+        /* MySQLi connection
         // Create connection
         $this->conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -38,6 +39,18 @@ class UserController
             die("Connection failed: " . $this->conn->connect_error);
         }
         echo "Connected successfully";
+        */
+
+        // PDO connection
+        try {
+            // Create connection
+            $this->conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            // set the PDO error mode to exception
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully";
+        } catch (PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+        }
     }
 
     public function login()
@@ -45,41 +58,35 @@ class UserController
         // Save the password and username from login
         $email = $_POST["email"];
         $password = $_POST["password"];
-        $username = "";
-        $name = "";
-        $surname = "";
-        $admin = 0;
-        $image = "";
         // Check the database
-        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin,image FROM user WHERE email=? AND password=?");
-        $stmt->bind_param("ss", $email, $password);
+        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin, image FROM user WHERE email=:email AND password=:password");
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
         $stmt->execute();
 
-        $stmt->bind_result($username, $password, $email, $name, $surname, $admin, $image);
+        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($stmt->fetch()) {
+        if ($userData) {
             // Authentication successful
             $_SESSION["logged"] = true;
-            $_SESSION["username"] = $username;
-            $_SESSION["email"] = $email;
-            $_SESSION["name"] = $name;
-            $_SESSION["surname"] = $surname;
-            $_SESSION["profile_image"] = $image;
-            if ($admin == 1) {
+            $_SESSION["username"] = $userData["username"];
+            $_SESSION["email"] = $userData["email"];
+            $_SESSION["name"] = $userData["name"];
+            $_SESSION["surname"] = $userData["surname"];
+            $_SESSION["profile_image"] = $userData["image"];
+            if ($userData["admin"] == 1) {
                 $_SESSION["admin"] = true;
-            } else if ($admin == 0) {
+            } else if ($userData["admin"] == 0) {
                 $_SESSION["admin"] = false;
             }
             // Close connection
-            $stmt->close();
-            $this->conn->close();
+            $this->conn = null;
             // Redirect to home page
             header("Location: ../View/NexTech_profile.php");
             exit();
         } else {
             // Close connection
-            $stmt->close();
-            $this->conn->close();
+            $this->conn = null;
             $_SESSION["error_login"] = "WRONG USERNAME OR PASSWORD";
             header("Location: ../View/NexTech_login.php");
             exit();
@@ -109,19 +116,20 @@ class UserController
             $admin = true;
         }
 
-        $stmt_email = $this->conn->prepare("SELECT email FROM user WHERE email=?");
-        $stmt_email->bind_param("s", $email);
+        $stmt_email = $this->conn->prepare("SELECT email FROM user WHERE email=:email");
+        $stmt_email->bindParam(":email", $email);
         $stmt_email->execute();
 
-        $stmt_email->bind_result($db_email);
-        if ($stmt_email->fetch()) {
-            if ($email == $db_email) {
-                header("Location: ../View/NexTech_register.php");
-                $_SESSION["error_register"] = "THIS EMAIL IS ALREADY USED";
-                exit();
-            }
+        // Get the email if exists
+        $db_email = $stmt_email->fetchColumn();
+
+        if ($db_email !== false) {
+            header("Location: ../View/NexTech_register.php");
+            $_SESSION["error_register"] = "THIS EMAIL IS ALREADY USED";
+            exit();
         }
-        $stmt_email->close();
+
+        $stmt_email = null;
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $_SESSION["error_register"] = "INVALID FORMAT OF THE EMAIL";
@@ -174,45 +182,54 @@ class UserController
             } else {
                 $image = ""; // Si no se sube una imagen, deja el campo como NULL
             }
-            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email, admin, image) values (?, ?, ?, ?, ?, ?, ?);");
-            $stmt->bind_param("sssssss", $username, $name, $surname, $password, $email, $admin, $image);
+            $stmt = $this->conn->prepare("INSERT INTO user(username, name, surname, password, email, admin, image) values 
+            (:username, :name, :surname, :password, :email, :admin, :image);");
+            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':surname', $surname);
+            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':admin', $admin);
+            $stmt->bindParam(':image', $image);
 
             if ($stmt->execute()) {
                 // Authentication successful
                 $_SESSION["register_success"] = "REGISTRATION SUCCESS";
                 // Close connection
-                $stmt->close();
-                $this->conn->close();
+                $this->conn = null;
 
                 // Redirect to home page
                 header("Location: ../View/NexTech_index.php");
                 exit();
             } else {
                 // Close connection
-                $stmt->close();
-                $this->conn->close();
+                $this->conn = null;
                 $_SESSION["error_register"] = "ERROR WHILE REGISTERING";
                 header("Location: ../View/NexTech_register.php");
                 exit();
             }
         } else if ($admin == false) {
-            $stmt = $this->conn->prepare("INSERT INTO user (username, name, surname, password, email, admin) values (?, ?, ?, ?, ?, ?);");
-            $stmt->bind_param("ssssss", $username, $name, $surname, $password, $email, $admin);
+            $stmt = $this->conn->prepare("INSERT INTO user (username, name, surname, password, email, admin) values 
+            (:username, :name, :surname, :password, :email, :admin);");
+            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':surname', $surname);
+            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':admin', $admin);
 
             if ($stmt->execute()) {
                 // Authentication successful
                 $_SESSION["register_success"] = "REGISTRATION SUCCESS";
                 // Close connection
-                $stmt->close();
-                $this->conn->close();
+                $this->conn = null;
 
                 // Redirect to home page
                 header("Location: ../View/NexTech_index.php");
                 exit();
             } else {
                 // Close connection
-                $stmt->close();
-                $this->conn->close();
+                $this->conn = null;
                 $_SESSION["error_register"] = "ERROR WHILE REGISTERING";
                 header("Location: ../View/NexTech_register.php");
                 exit();
