@@ -7,7 +7,6 @@ div {
 
 /* TO DO  
 Change background 
-Change login and register inputs and the cappital letter of the text.
 Change main page: less text and add an event or image.
 */
 
@@ -329,8 +328,6 @@ section .section .box .forms_login .form_login input[type="submit"]:hover {
     }
 }
 
-
-
 /*REGISTER*/
 section .section .box .forms_register {
     display: flex;
@@ -584,25 +581,68 @@ section .section .profile {
         }
     }
 
-    .information {
-        display: flex;
-        justify-content: space-between;
+    .box {
         width: 50%;
+        gap: 30px;
 
-        p {
-            font-family: "Lexend_text", sans-serif;
-            font-size: 25px;
-        }
-
-        .profile_image {
-            width: 200px;
-            height: 200px;
-        }
-
-        .image {
+        .information {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            p {
+                font-family: "Lexend_text", sans-serif;
+                font-size: 25px;
+            }
+
+            .image {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .profile_image {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+
+        .dataManipulation {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .update {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                input[type="submit"] {
+                    font-family: "Lexend_text", sans-serif;
+                    background-color: #007BFF;
+                    color: white;
+                    padding: 10px 30px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+            }
+
+            .delete {
+
+                input[type="submit"] {
+                    font-family: "Lexend_text", sans-serif;
+                    background-color: #ff0000;
+                    color: white;
+                    padding: 10px 30px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

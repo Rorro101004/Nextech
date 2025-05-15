@@ -89,32 +89,56 @@ if (!isset($_SESSION["surname"])) {
                 <div class="title">
                     <h1>User Profile</h1>
                 </div>
-                <div class="information">
-                    <div class="data">
-                        <div>
-                            <p>Username: <?php echo $_SESSION["username"] ?> </p>
+                <div class="box">
+                    <div class="information">
+                        <div class="data">
+                            <div>
+                                <p>Username: <?php echo $_SESSION["username"] ?> </p>
+                            </div>
+                            <div>
+                                <p>Email: <?php echo $_SESSION["email"] ?></p>
+                            </div>
+                            <div>
+                                <p>Name: <?php echo $_SESSION["name"] ?></p>
+                            </div>
+                            <div>
+                                <p>Surname: <?php echo $_SESSION["surname"] ?></p>
+                            </div>
                         </div>
-                        <div>
-                            <p>Email: <?php echo $_SESSION["email"] ?></p>
-                        </div>
-                        <div>
-                            <p>Name: <?php echo $_SESSION["name"] ?></p>
-                        </div>
-                        <div>
-                            <p>Surname: <?php echo $_SESSION["surname"] ?></p>
+                        <div class="image">
+                            <div>
+
+                            </div>
+                            <div>
+                                <p>Image</p>
+                            </div>
+                            <div>
+                                <?php
+                                if (!empty($_SESSION["profile_image"])) {
+                                    echo '<img class="profile_image" src="data:image/jpeg;base64,' . base64_encode($_SESSION["profile_image"]) . '" alt="Profile Image" >';
+                                } else {
+                                    echo '<p>No image uploaded.</p>';
+                                } ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="image">
-                        <div>
-                            <p>Image</p>
+                    <div class="dataManipulation">
+                        <div class="update">
+                            <div>
+                                <form action="../Controller/UserController.php" method="post">
+                                    <input type="submit" name="updateData" value="Update data">
+                                </form>
+                            </div>
+                            <div>
+                                <form action="../Controller/UserController.php" method="post">
+                                    <input type="submit" name="updatePassword" value="Update password">
+                                </form>
+                            </div>
                         </div>
-                        <div>
-                            <?php
-                            if (!empty($_SESSION["profile_image"])) {
-                                echo '<img class="profile_image"src="data:image/jpeg;base64,' . base64_encode($_SESSION["profile_image"]) . '" alt="Profile Image" >';
-                            } else {
-                                echo '<p>No image uploaded.</p>';
-                            } ?>
+                        <div class="delete">
+                            <form action="../Controller/UserController.php" method="post">
+                                <input type="submit" name="deleteUser" value="Delete account">
+                            </form>
                         </div>
                     </div>
                 </div>
