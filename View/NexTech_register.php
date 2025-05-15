@@ -91,20 +91,20 @@ if (!isset($_POST["type"])) {
                     <div class="form_register">
                         <form action="../Controller/UserController.php" method="post" enctype="multipart/form-data">
                             <div class="inputs">
-                                <label for="username">USERNAME</label>
+                                <label for="username">Username</label><br>
                                 <input type="text" name="username" required><br>
-                                <label for="email">EMAIL</label>
+                                <label for="email">Email</label><br>
                                 <input type="email" name="email" required><br>
-                                <label for="name">NAME</label>
+                                <label for="name">Name</label><br>
                                 <input type="text" name="name" required><br>
-                                <label for="username">SURNAME</label>
+                                <label for="username">Surname</label><br>
                                 <input type="text" name="surname" required><br>
-                                <label for="password">PASSWORD</label>
+                                <label for="password">Password</label><br>
                                 <input type="password" name="password" required><br>
-                                <label for="conf_password">CONF PASSWORD</label>
+                                <label for="conf_password">Confirm password</label><br>
                                 <input type="password" name="conf_password" required><br>
                                 <?php if ($_POST["type"] == "Administrator") { ?>
-                                    <label for="profile_image" class="image ">PROFILE IMAGE</label>
+                                    <label for="profile_image" class="image ">Profile image</label><br>
                                     <input type="file" name="profile_image" accept="image/*" required>
                                     <!--Seguir aquí -->
                                     <input type="hidden" name="admin">
