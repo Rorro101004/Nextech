@@ -197,9 +197,20 @@ footer .contact-info {
 /*SECTION*/
 section .section {
     border: 1px solid white;
+    /*  Background-image => selects svg as the element for the bg
+    Background-size => pretty self explanatory
+    Background-position => This changes svg position in the next order, X and Y, 50% both is as close to the figma*/
 
+    background-image: url("SVG/BackgroundFondo_0.svg");
+    background-size: 200% ;
+    background-position: 50% 50%;
+    background-attachment: scroll;
+    background-color: #ffb4be;
+    /*
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
+    */
+    
     /*
     background-color: rgb(33, 73, 195);
     background: linear-gradient(180deg, rgb(3, 30, 109) 20%, rgb(3, 41, 157) 50%, rgb(1, 65, 255) 100%);
