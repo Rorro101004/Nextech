@@ -16,4 +16,54 @@ class EventController
       echo "Connection failed: " . $e->getMessage();
     }
   }
+  public function insertEvent()
+  {
+    $eventName = $_POST["eventName"];
+    $eventDate = $_POST["eventDate"];
+    $eventLocation = $_POST["eventLocation"];
+    $eventDescription = $_POST["eventDescription"];
+    $eventStart = $_POST["eventStart"];
+    $eventEnd = $_POST["eventEnd"];
+    $eventPrice = $_POST["eventPrice"];
+    $eventUrl = $_POST["eventUrl"];
+
+    $stmt = $this->conn->prepare("INSERT INTO events (name, description, start_date, end_date, location, price , url) VALUES (:name, :description, :start_date, :end_date, :location, :price, :url)");
+    $result = $stmt->execute([
+      ':name' => $eventName,
+      ':description' => $eventDescription,
+      ':start_date' => $eventStart,
+      ':end_date' => $eventEnd,
+      ':location' => $eventLocation,
+      ':price' => $eventPrice,
+      ':url' => $eventUrl
+    ]);
+
+    if ($result) {
+      // Authentication successful
+      $_SESSION["register_success"] = "EVENT CREATED SUCCESS";
+      // Close connection
+      $this->conn = null;
+
+      header("Location: ../View/NexTech_index.php");
+      exit();
+    } else {
+      // Close connection
+      $this->conn = null;
+      $_SESSION["error_register"] = "ERROR WHILE CREATING EVENT";
+      header("Location: ../View/NexTech_register.php");
+      exit();
+    }
+  }
+  public function readEvents()
+  {
+    try {
+      $stmt = $this->conn->prepare("SELECT * FROM events");
+    $stmt->execute();
+    $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $events;
+    } catch (PDOException $e) {
+      echo "Error while reading events: " . $e->getMessage();
+    } 
+    $conn = null;
+  }
 }
