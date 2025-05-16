@@ -75,25 +75,26 @@ if (!isset($_SESSION["admin"])) {
                 </video>
                 <?php if ($_SESSION["logged"] == false) { ?>
                     <div>
-                        <h1>¡Welcome to NexTech!</h1>
+                        <h1>¡Welcome back to NexTech!</h1>
                     </div>
                     <div class="body">
-                        <div>
-                            <p>The future of technology is waiting for you. At NexTech, we are passionate about connecting industry leaders with the brightest minds.
-                                Here, you'll find the most exciting tech events designed to inspire, educate, and connect.</p>
-                            <p>Join us and be part of the digital transformation shaping tomorrow.
-                                You're just one click away from experiencing the next big technological revolution!</p>
-                        </div>
-                        <p><b>Not registered or logged in?</b></p>
-                        <div class="links">
+                        <div class="index">
+
+
                             <div>
-                                <a href="NexTech_register.php"><strong>Register</strong></a>
+                                <p>We're thrilled to have you with us. Explore the latest and most exciting technology events available to you.
+                                    Stay ahead of the curve and connect with industry leaders, innovators, and enthusiasts.</p>
+                                <div class="explore">
+                                    <div>
+                                        <p>Check out the upcoming events and be part of the future of technology!</p>
+                                        <a href="NexTech_events.php"><strong>Explore</strong></a>
+                                    </div>
+                                </div>
                             </div>
-                            &nbsp;&nbsp;&nbsp;<p>|</p>&nbsp;&nbsp;&nbsp;
-                            <div>
-                                <a href="NexTech_login.php"><strong>Login</strong></a>
-                            </div>
+
+                            <img src="SVG/Rocket.svg" class="rocket-img" />
                         </div>
+
                     </div>
 
                 <?php } else { ?>
@@ -118,8 +119,8 @@ if (!isset($_SESSION["admin"])) {
                             <img src="SVG/Rocket.svg" class="rocket-img" />
                         </div>
 
-                    <?php } ?>
                     </div>
+                    <?php } ?>
 
             </div>
     </section>
