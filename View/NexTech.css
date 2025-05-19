@@ -3,12 +3,17 @@
 div {
     border: 1px solid;
 }
-*/
+
 
 /* TO DO  
 Change background 
 Change main page: less text and add an event or image.
 */
+
+/*FONT-SIZE*/ 
+p{
+    font-size: 16px;
+}
 
 /*HEADER*/
 header .header {
@@ -119,7 +124,6 @@ header .logout:hover {
 
     color: #4e33e9;
     text-shadow: 0 0 10px #ff0da2, 0 0 20px #0dfff3, 0 0 30px #ff0dd7, 0 0 40px #0ddbff;
-
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
@@ -391,39 +395,28 @@ section .section .box .forms_login {
     }
 }
 
-section .section .body .index {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+@keyframes tilt-n-move-shaking {
+    0% {
+        transform: translate(0, 0);
+    }
 
-    /* Esto empuja el contenido (incluido el SVG) a la derecha */
-    
-    .rocket-img {
-        width: 50rem;
-        height: auto;
-        animation: tilt-n-move-shaking 0.2s infinite linear; /* small values = slow ; large values = fast*/
+    25% {
+        transform: translate(5px, 5px);
+    }
 
-        
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(-5px, 5px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
 
-@keyframes tilt-n-move-shaking {
-            0% {
-                transform: translate(0, 0) ;
-            }
-            25% {
-                transform: translate(5px, 5px) ;
-            }
-            50% {
-                transform: translate(0, 0) ;
-            }
-            75% {
-                transform: translate(-5px, 5px) ;
-            }
-            100% {
-                transform: translate(0, 0) ;
-            }
-        }
 section .section .box .forms_login .form_login input:focus {
     outline: none;
     border-color: #007bff;
@@ -671,19 +664,31 @@ section .section .message {
 
     .body {
 
-        .links {
+        .index {
             display: flex;
-            align-items: center;
-            line-height: 0px;
+            flex-direction: row;
+
+            .explore {
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+            }
+
+            .rocket {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+                /* Esto empuja el contenido (incluido el SVG) a la derecha */
+
+                .rocket-img {
+                    width: 40rem;
+                    height: auto;
+                    animation: tilt-n-move-shaking 0.2s infinite linear;
+                    /* small values = slow ; large values = fast*/
+                }
+            }
         }
-
-        .explore {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-
     }
 }
 

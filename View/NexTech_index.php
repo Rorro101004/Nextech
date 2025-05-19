@@ -74,14 +74,12 @@ if (!isset($_SESSION["admin"])) {
                     Your browser does not support the video tag
                 </video>
                 <?php if ($_SESSION["logged"] == false) { ?>
-                    <div>
-                        <h1>¡Welcome back to NexTech!</h1>
-                    </div>
                     <div class="body">
                         <div class="index">
-
-
                             <div>
+                                <div>
+                                    <h1>¡Welcome to NexTech!</h1>
+                                </div>
                                 <p>We're thrilled to have you with us. Explore the latest and most exciting technology events available to you.
                                     Stay ahead of the curve and connect with industry leaders, innovators, and enthusiasts.</p>
                                 <div class="explore">
@@ -91,21 +89,18 @@ if (!isset($_SESSION["admin"])) {
                                     </div>
                                 </div>
                             </div>
-
-                            <img src="SVG/Rocket.svg" class="rocket-img" />
+                            <div class="rocket">
+                                <img src="SVG/Rocket.svg" class="rocket-img" />
+                            </div>
                         </div>
-
                     </div>
-
                 <?php } else { ?>
-                    <div>
-                        <h1>¡Welcome back to NexTech!</h1>
-                    </div>
                     <div class="body">
                         <div class="index">
-
-
                             <div>
+                                <div>
+                                    <h1 style="font-size: 55px;">¡Welcome back to NexTech!</h1>
+                                </div>
                                 <p>We're thrilled to have you with us. Explore the latest and most exciting technology events available to you.
                                     Stay ahead of the curve and connect with industry leaders, innovators, and enthusiasts.</p>
                                 <div class="explore">
@@ -115,14 +110,14 @@ if (!isset($_SESSION["admin"])) {
                                     </div>
                                 </div>
                             </div>
-
-                            <img src="SVG/Rocket.svg" class="rocket-img" />
+                            <div class="rocket">
+                                <img src="SVG/Rocket.svg" class="rocket-img" />
+                            </div>
                         </div>
-
                     </div>
-                    <?php } ?>
-
+                <?php } ?>
             </div>
+        </div>
     </section>
 
     <footer>
