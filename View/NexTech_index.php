@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION["logged"])) {
     $_SESSION["logged"] = false;
 }
-if (!isset($_SESSION["admin"])){
+if (!isset($_SESSION["admin"])) {
     $_SESSION["admin"] = false;
 }
 ?>
@@ -75,25 +75,26 @@ if (!isset($_SESSION["admin"])){
                 </video>
                 <?php if ($_SESSION["logged"] == false) { ?>
                     <div>
-                        <h1>¡Welcome to NexTech!</h1>
+                        <h1>¡Welcome back to NexTech!</h1>
                     </div>
                     <div class="body">
-                        <div>
-                            <p>The future of technology is waiting for you. At NexTech, we are passionate about connecting industry leaders with the brightest minds.
-                                Here, you'll find the most exciting tech events designed to inspire, educate, and connect.</p>
-                            <p>Join us and be part of the digital transformation shaping tomorrow.
-                                You're just one click away from experiencing the next big technological revolution!</p>
-                        </div>
-                        <p><b>Not registered or logged in?</b></p>
-                        <div class="links">
+                        <div class="index">
+
+
                             <div>
-                                <a href="NexTech_register.php"><strong>Register</strong></a>
+                                <p>We're thrilled to have you with us. Explore the latest and most exciting technology events available to you.
+                                    Stay ahead of the curve and connect with industry leaders, innovators, and enthusiasts.</p>
+                                <div class="explore">
+                                    <div>
+                                        <p>Check out the upcoming events and be part of the future of technology!</p>
+                                        <a href="NexTech_events.php"><strong>Explore</strong></a>
+                                    </div>
+                                </div>
                             </div>
-                            &nbsp;&nbsp;&nbsp;<p>|</p>&nbsp;&nbsp;&nbsp;
-                            <div>
-                                <a href="NexTech_login.php"><strong>Login</strong></a>
-                            </div>
+
+                            <img src="SVG/Rocket.svg" class="rocket-img" />
                         </div>
+
                     </div>
 
                 <?php } else { ?>
@@ -101,30 +102,59 @@ if (!isset($_SESSION["admin"])){
                         <h1>¡Welcome back to NexTech!</h1>
                     </div>
                     <div class="body">
-                        <div>
+                        <div class="index">
+
+
                             <div>
                                 <p>We're thrilled to have you with us. Explore the latest and most exciting technology events available to you.
                                     Stay ahead of the curve and connect with industry leaders, innovators, and enthusiasts.</p>
-                            </div>
-                            <div class="explore">
-                                <div>
-                                    <p>Check out the upcoming events and be part of the future of technology!</p>
-                                    <a href="NexTech_events.php"><strong>Explore</strong></a>
+                                <div class="explore">
+                                    <div>
+                                        <p>Check out the upcoming events and be part of the future of technology!</p>
+                                        <a href="NexTech_events.php"><strong>Explore</strong></a>
+                                    </div>
                                 </div>
                             </div>
+
+                            <img src="SVG/Rocket.svg" class="rocket-img" />
                         </div>
+
                     </div>
-                <?php } ?>
+                    <?php } ?>
+
             </div>
-        </div>
     </section>
 
     <footer>
-        <div class="contact-info">
-            <p>&copy; 2025 NexTech.com. All rights reserved.</p>
-            <p>Address: Calle Pelai 123, Barcelona, Spain</p>
-            <p>Phone number: +123 456 789</p>
-            <p>Email: infonextech@gmail.com</p>
+        <div class="container">
+            <div class="wrapper">
+                <div class="footer-widget">
+                    <a href="#">
+                        <img src="images/footerLogo.png" class="logo" />
+                    </a>
+                    <p class="desc">
+                        NexTech connects you with the latest tech events, resources, and support. Explore, learn, and grow with our community!
+                    </p>
+                </div>
+                <div class="footer-widget">
+                    <h6>Quick Link</h6>
+                    <ul class="links">
+                        <li><a href="NexTech_events.php">Events</a></li>
+                        <li><a href="Nextech_about_us.php">About us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h6>Help &amp; Support</h6>
+                    <ul class="links">
+                        <li>Address: Calle Pelai 123, Barcelona, Spain</li>
+                        <li>Phone number: +123 456 789</li>
+                        <li>Email: infonextech@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright-wrapper">
+                <p>Design and Developed by <a href="#" target="blank">NexTech</a> 2024/2025</p>
+            </div>
         </div>
     </footer>
 </body>
