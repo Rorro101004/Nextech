@@ -15,6 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Register button is clicked.</p>";
         $user->register();
     }
+    if (isset($_POST["updateData"])) {
+        echo "<p>Update Data button is clicked.</p>";
+        $user->updateData();
+    }
 }
 
 
@@ -234,7 +238,12 @@ class UserController
                 header("Location: ../View/NexTech_register.php");
                 exit();
             }
-        }
+        }   
+    }
+
+    public function updateData()
+    {
+
     }
 }
 ?>

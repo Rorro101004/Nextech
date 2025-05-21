@@ -6,12 +6,17 @@ if (!isset($_SESSION["logged"])) {
 if (!isset($_SESSION["admin"])) {
     $_SESSION["admin"] = false;
 }
-if (!isset($_SESSION["error_register"])) {
-    $_SESSION["error_register"] = "";
+if (!isset($_SESSION["error_updateData"])) {
+    $_SESSION["error_updateData"] = "";
 }
 if (!isset($_POST["type"])) {
     $_POST["type"] = "";
 }
+if (!isset($_POST["updatedata"]) && !isset($_POST["updatepassword"])) {
+    header("Location: NexTech_profile.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,48 +79,61 @@ if (!isset($_POST["type"])) {
     <section>
         <div class="section">
             <div class="box">
-                <div class="forms_register">
-                    <div class="register">
-                        <p>REGISTER</p>
+                <?php if (isset($_POST["updatedata"])) { ?>
+                    <div class="forms_updateData">
+                        <div class="updateData">
+                            <h1>UPDATE DATA</h1>
+                        </div>
+                        <div class="error">
+                            <p><b><?php echo $_SESSION["error_updateData"];
+                                    unset($_SESSION["error_updateData"]); ?></b></p>
+                        </div>
+                        <div class="form_updateData">
+                            <form action="../Controller/UserController.php" method="post" enctype="multipart/form-data">
+                                <div class="inputs">
+                                    <label for="username">Username</label><br>
+                                    <input type="text" name="username" value="<?php echo $_SESSION["username"] ?>" required><br>
+                                    <label for="email">Email</label><br>
+                                    <input type="email" name="email" value="<?php echo $_SESSION["email"] ?>" required><br>
+                                    <label for="name">Name</label><br>
+                                    <input type="text" name="name" value="<?php echo $_SESSION["name"] ?>" required><br>
+                                    <label for="username">Surname</label><br>
+                                    <input type="text" name="surname" value="<?php echo $_SESSION["surname"] ?>" required><br>
+                                </div>
+                                <div>
+                                    <input type="submit" name="updateData" value="Update Data">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="error">
-                        <p><b><?php echo $_SESSION["error_register"];
-                                unset($_SESSION["error_register"]); ?></b></p>
+                <?php } else if (isset($_POST["updatepassword"])) { ?>
+                    <div class="forms_updateData">
+                        <div class="updateData">
+                            <h1>UPDATE DATA</h1>
+                        </div>
+                        <div class="error">
+                            <p><b><?php echo $_SESSION["error_updateData"];
+                                    unset($_SESSION["error_updateData"]); ?></b></p>
+                        </div>
+                        <div class="form_updateData">
+                            <form action="../Controller/UserController.php" method="post" enctype="multipart/form-data">
+                                <div class="inputs">
+                                    <label for="username">Username</label><br>
+                                    <input type="text" name="username" value="<?php echo $_SESSION["username"] ?>" required><br>
+                                    <label for="email">Email</label><br>
+                                    <input type="email" name="email" value="<?php echo $_SESSION["email"] ?>" required><br>
+                                    <label for="name">Name</label><br>
+                                    <input type="text" name="name" value="<?php echo $_SESSION["name"] ?>" required><br>
+                                    <label for="username">Surname</label><br>
+                                    <input type="text" name="surname" value="<?php echo $_SESSION["surname"] ?>" required><br>
+                                </div>
+                                <div>
+                                    <input type="submit" name="updateData" value="Update Data">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="type">
-                        <form method="post">
-                            <input type="submit" name="type" value="User">
-                            <input type="submit" name="type" value="Administrator">
-                        </form>
-                    </div>
-                    <div class="form_register">
-                        <form action="../Controller/UserController.php" method="post" enctype="multipart/form-data">
-                            <div class="inputs">
-                                <label for="username">Username</label><br>
-                                <input type="text" name="username" required><br>
-                                <label for="email">Email</label><br>
-                                <input type="email" name="email" required><br>
-                                <label for="name">Name</label><br>
-                                <input type="text" name="name" required><br>
-                                <label for="username">Surname</label><br>
-                                <input type="text" name="surname" required><br>
-                                <label for="password">Password</label><br>
-                                <input type="password" name="password" required><br>
-                                <label for="conf_password">Confirm password</label><br>
-                                <input type="password" name="conf_password" required><br>
-                                <?php if ($_POST["type"] == "Administrator") { ?>
-                                    <label for="profile_image" class="image ">Profile image</label><br>
-                                    <input type="file" name="profile_image" accept="image/*" required>
-                                    <!--Seguir aquí -->
-                                    <input type="hidden" name="admin">
-                                <?php } ?>
-                            </div>
-                            <div>
-                                <input type="submit" name="register" value="Register">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>

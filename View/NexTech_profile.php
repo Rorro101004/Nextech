@@ -125,13 +125,13 @@ if (!isset($_SESSION["surname"])) {
                     <div class="dataManipulation">
                         <div class="update">
                             <div>
-                                <form action="../Controller/UserController.php" method="post">
-                                    <input type="submit" name="updateData" value="Update data">
+                                <form action="NexTech_updateUser.php" method="post">
+                                    <input type="submit" name="updatedata" value="Update data">
                                 </form>
                             </div>
                             <div>
-                                <form action="../Controller/UserController.php" method="post">
-                                    <input type="submit" name="updatePassword" value="Update password">
+                                <form action="NexTech_updateUser.php" method="post">
+                                    <input type="submit" name="updatepassword" value="Update password">
                                 </form>
                             </div>
                         </div>
