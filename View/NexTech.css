@@ -181,25 +181,91 @@ footer {
     /* Footer Color*/
     display: block;
     margin-top: auto;
-}
 
-footer .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 12px;
-}
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 12px;
+    }
 
-footer .wrapper {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-footer .footer-widget {
-    width: calc(20% - 30px);
-    padding: 0 12px;
+    .footer-widget {
+        width: calc(20% - 30px);
+        padding: 0 12px;
+
+        img {
+            margin-top: 20px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+            vertical-align: middle;
+            width: 50%;
+            height: auto;
+        }
+
+        .desc {
+            font-size: 13px;
+        }
+
+        h6 {
+            color: #585978;
+            margin: 10px 0 35px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .links {
+
+            p {
+                margin-left: 0px;
+                list-style: none;
+                color: #585978;
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: capitalize;
+                line-height: 20px;
+            }
+
+            a {
+                margin-left: 0px;
+                color: #585978;
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: capitalize;
+                line-height: 20px;
+                transition: all 0.3s ease-out;
+            }
+
+        }
+    }
+
+    .copyright-wrapper {
+        border-top: 1px solid rgba(88, 89, 120, 0.4);
+
+        p {
+            color: rgba(88, 89, 120, 0.6);
+            font-size: 14px;
+            font-weight: 100%;
+            font-weight: bold;
+            text-align: center;
+
+            a {
+                color: inherit;
+                font-weight: 500;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
 }
 
 footer .footer-widget:nth-child(1) {
@@ -207,67 +273,8 @@ footer .footer-widget:nth-child(1) {
     margin-right: 15px;
 }
 
-footer .footer-widget .logo {
-    margin-bottom: 30px;
-    vertical-align: middle;
-    width: 50%;
-    height: auto;
-}
-
-footer .footer-widget .desc {
-    font-size: 13px;
-
-}
-
-footer .footer-widget h6 {
-    color: #585978;
-    margin: 10px 0 35px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-footer .footer-widget .links p {
-    margin-left: 20px;
-    list-style: none;
-    color: #585978;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: capitalize;
-    line-height: 25px;
-}
-
-footer .footer-widget .links a {
-    margin-left: 20px;
-    color: #585978;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: capitalize;
-    line-height: 25px;
-    transition: all 0.3s ease-out;
-}
-
 footer .footer-widget .links a:hover {
     color: #2703f3;
-}
-
-footer .copyright-wrapper {
-    border-top: 1px solid rgba(88, 89, 120, 0.4);
-}
-
-footer .copyright-wrapper p {
-    color: rgba(88, 89, 120, 0.6);
-    font-size: 14px;
-    font-weight: 100%;
-    font-weight: bold;
-    text-align: center;
-}
-
-footer .copyright-wrapper p a {
-    color: inherit;
-    font-weight: 500;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease-out;
 }
 
 footer .copyright-wrapper p a:hover {
@@ -435,7 +442,7 @@ section .section .box .forms_login .form_login input[type="submit"]:hover {
     section .section .box .forms_login {
         line-height: 70px;
 
-        .login {
+        .login h1{
             font-size: 70px;
         }
 
@@ -582,7 +589,7 @@ section .section .box .forms_register .form_register input[type="submit"]:hover 
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .box .forms_register {
 
-        .register {
+        .register h1{
             font-size: 70px;
         }
 

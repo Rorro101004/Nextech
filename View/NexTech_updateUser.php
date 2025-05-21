@@ -121,11 +121,35 @@ if (!isset($_POST["type"])) {
     </section>
 
     <footer>
-        <div class="contact-info">
-            <p>&copy; 2025 NexTech.com. All rights reserved.</p>
-            <p>Address: Calle Pelai 123, Barcelona, Spain</p>
-            <p>Phone number: +123 456 789</p>
-            <p>Email: infonextech@gmail.com</p>
+        <div class="container">
+            <div class="wrapper">
+                <div class="footer-widget">
+                    <a href="#">
+                        <img src="images/footerLogo.png" class="logo" />
+                    </a>
+                    <p class="desc">
+                        NexTech connects you with the latest tech events, resources, and support. Explore, learn, and grow with our community!
+                    </p>
+                </div>
+                <div class="footer-widget">
+                    <h6>Quick Link</h6>
+                    <div class="links">
+                        <a href="NexTech_events.php">Events</a>
+                        <a href="Nextech_about_us.php">About us</a>
+                    </div>
+                </div>
+                <div class="footer-widget">
+                    <h6>Help &amp; Support</h6>
+                    <div class="links">
+                        <p>Address: Calle Pelai 123, Barcelona, Spain</p>
+                        <p>Phone number: +123 456 789</p>
+                        <p>Email: infonextech@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-wrapper">
+                <p>Design and Developed by <a href="#" target="blank">NexTech</a> 2024/2025</p>
+            </div>
         </div>
     </footer>
 </body>
