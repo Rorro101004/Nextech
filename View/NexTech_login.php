@@ -77,7 +77,7 @@ if (!isset($_SESSION["register_success"])) {
             <div class="box">
                 <div class="forms_login">
                     <div class="login">
-                        <p>LOGIN</p>
+                        <h1>LOGIN</h1>
                     </div>
                     <div class="error">
                         <p><b><?php echo $_SESSION["error_login"];

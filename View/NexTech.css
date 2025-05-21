@@ -10,8 +10,8 @@ Change background
 Change main page: less text and add an event or image.
 */
 
-/*FONT-SIZE*/ 
-p{
+/*FONT-SIZE*/
+p {
     font-size: 16px;
 }
 
@@ -226,7 +226,8 @@ footer .footer-widget h6 {
     font-weight: 600;
 }
 
-footer .footer-widget .links li {
+footer .footer-widget .links p {
+    margin-left: 20px;
     list-style: none;
     color: #585978;
     font-size: 16px;
@@ -235,7 +236,8 @@ footer .footer-widget .links li {
     line-height: 25px;
 }
 
-footer .footer-widget .links li a {
+footer .footer-widget .links a {
+    margin-left: 20px;
     color: #585978;
     font-size: 16px;
     text-decoration: none;
@@ -244,7 +246,7 @@ footer .footer-widget .links li a {
     transition: all 0.3s ease-out;
 }
 
-footer .footer-widget .links li a:hover {
+footer .footer-widget .links a:hover {
     color: #2703f3;
 }
 
@@ -350,9 +352,9 @@ section .section .box .forms_login {
     .login {
         font-family: "Montserrat_title", sans-serif;
         color: rgb(11, 11, 137);
-        font-size: 100px;
 
-        p {
+        h1 {
+            font-size: 100px;
             margin: 0;
         }
     }
@@ -479,10 +481,10 @@ section .section .box .forms_register {
     .register {
         font-family: "Montserrat_title", sans-serif;
         color: rgb(11, 11, 137);
-        font-size: 100px;
         margin-top: 30px;
 
-        p {
+        h1 {
+            font-size: 100px;
             margin: 0;
         }
     }

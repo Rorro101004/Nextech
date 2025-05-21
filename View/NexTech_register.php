@@ -76,7 +76,7 @@ if (!isset($_POST["type"])) {
             <div class="box">
                 <div class="forms_register">
                     <div class="register">
-                        <p>REGISTER</p>
+                        <h1>REGISTER</h1>
                     </div>
                     <div class="error">
                         <p><b><?php echo $_SESSION["error_register"];
