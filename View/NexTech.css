@@ -191,7 +191,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 110, 110);
 }
 
 
@@ -347,7 +346,8 @@ section .section {
     background-size: 200%;
     background-position: 50% 50%;
     background-attachment: scroll;
-    background-color: #ffb4be;
+    background-color: #ffb4be ; 
+    
     /*
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
@@ -1507,9 +1507,9 @@ section .section .body {
 }
 
 .linea {
-    width: 10px;
-    background-color: #ccc;
-    margin: 0;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 50%);
+    margin: 5;
     align-self: stretch;
     position: relative;
 }
@@ -1579,6 +1579,7 @@ section .section .about_us {
                 align-content: center;
 
                 img {
+                    border-radius: 15% 10%;
                     width: 450px;
                 }
             }
