@@ -10,6 +10,12 @@ if ($_SESSION["logged"] == false) {
     header("Location: NexTech_index.php");
     exit();
 }
+if (!isset($_SESSION["updatePassword_success"])) {
+    $_SESSION["updatePassword_success"] = "";
+}
+if (!isset($_SESSION["updateData_success"])) {
+    $_SESSION["updateData_success"] = "";
+}
 if (!isset($_SESSION["username"])) {
     $_SESSION["username"] = "";
 }
@@ -106,9 +112,6 @@ if (!isset($_SESSION["surname"])) {
                         </div>
                         <div class="image">
                             <div>
-
-                            </div>
-                            <div>
                                 <p>Image</p>
                             </div>
                             <div>
@@ -120,6 +123,12 @@ if (!isset($_SESSION["surname"])) {
                                 } ?>
                             </div>
                         </div>
+                    </div>
+                    <div class="message">
+                        <p> <?php echo $_SESSION["updatePassword_success"];
+                            unset($_SESSION["updatePassword_success"]) ?> </p>
+                        <p> <?php echo $_SESSION["updateData_success"];
+                            unset($_SESSION["updateData_success"]) ?> </p>
                     </div>
                     <div class="dataManipulation">
                         <div class="update">

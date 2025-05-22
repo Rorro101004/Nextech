@@ -19,6 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Update Data button is clicked.</p>";
         $user->updateData();
     }
+    if (isset($_POST["updatePassword"])) {
+        echo "<p>Update Password button is clicked.</p>";
+        $user->updatePassword();
+    }
+    if (isset($_POST["deleteAccount"])) {
+        echo "<p>Delete Account button is clicked.</p>";
+        $user->deleteAccount();
+    }
 }
 
 
@@ -238,13 +246,124 @@ class UserController
                 header("Location: ../View/NexTech_register.php");
                 exit();
             }
-        }   
+        }
     }
 
     public function updateData()
     {
+        // Save the data
+        $username = $_POST["username"];
+        $name = $_POST["name"];
+        $surname = $_POST["surname"];
+        $email = $_POST["email"];
 
+        if (!preg_match("/^[a-zA-Z0-9]{5,}$/", $username)) {
+            $_SESSION["error_register"] = "THE USERNAME MUST BE AT LEAST 5 CHARACTERS LONG AND CANNOT CONTAIN SPECIAL CHARACTERS";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION["error_register"] = "INVALID FORMAT OF THE EMAIL";
+            header("Location: ../View/NexTech_register.php");
+            exit();
+        }
+
+        $stmt = $this->conn->prepare("UPDATE user SET username = :username, name = :name, surname = :surname, email = :email WHERE email = :email2");
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':surname', $surname);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':email2', $_SESSION["email"]);
+
+        if ($stmt->execute()) {
+            // Authentication successful
+            $_SESSION["updateData_success"] = "SUCCESSFUL DATA CHANGE";
+            $_SESSION["username"] = $username;
+            $_SESSION["name"] = $name;
+            $_SESSION["surname"] = $surname;
+            $_SESSION["email"] = $email;
+            // Close connection
+            $this->conn = null;
+
+            // Redirect to home page
+            header("Location: ../View/NexTech_profile.php");
+            exit();
+        } else {
+            // Close connection
+            $this->conn = null;
+            $_SESSION["error_register"] = "ERROR WHILE CHANGING THE USER DATA";
+            $_SESSION["updatedata"] = true;
+            header("Location: ../View/NexTech_updateUser.php");
+            exit();
+        }
     }
+
+    public function updatePassword()
+    {
+        $new_password = $_POST["new_password"];
+        $conf_new_password = $_POST["conf_new_password"];
+
+        if ($new_password != $conf_new_password) {
+            $_SESSION["error_updatePassword"] = "THE PASSWORDS ARE NOT THE SAME";
+            $_SESSION["updatepassword"] = true;
+            header("Location: ../View/NexTech_updateUser.php");
+            exit();
+        }
+
+        if (strlen($new_password) < 8) {
+            $_SESSION["error_updatePassword"] = "THE PASSWORD MUST BE AT LEAST 8 CHARACTERS LONG";
+            $_SESSION["updatepassword"] = true;
+            header("Location: ../View/NexTech_updateUser.php");
+            exit();
+        }
+
+        if (!preg_match("/[A-Z]/", $new_password)) {
+            $_SESSION["error_updatePassword"] = "THE PASSWORD MUST CONTAIN A CAPITAL LETTER";
+            $_SESSION["updatepassword"] = true;
+            header("Location: ../View/NexTech_updateUser.php");
+            exit();
+        }
+
+        if (!preg_match("/\d/", $new_password)) {
+            $_SESSION["error_updatePassword"] = "THE PASSWORD MUST CONTAIN A NUMBER";
+            $_SESSION["updatepassword"] = true;
+            header("Location: ../View/NexTech_updateUser.php");
+            exit();
+        }
+
+        // Validar si no tiene caracteres especiales
+        if (preg_match("/[^A-Za-z0-9]/", $new_password)) {
+            $_SESSION["error_updatePassword"] = "THE PASSWORD CANNOT CONTAIN SPECIAL CHARACTERS";
+            $_SESSION["updatepassword"] = true;
+            header("Location: ../View/NexTech_updateUser.php");
+            exit();
+        }
+
+        $stmt = $this->conn->prepare("UPDATE user SET password = :password WHERE email = :email");
+        $stmt->bindParam(':password', $new_password);
+        $stmt->bindParam(':email', $_SESSION["email"]);
+
+        if ($stmt->execute()) {
+            // Authentication successful
+            $_SESSION["updatePassword_success"] = "SUCCESSFUL PASSWORD CHANGE";
+            // Close connection
+            $this->conn = null;
+
+            // Redirect to home page
+            header("Location: ../View/NexTech_profile.php");
+            exit();
+        } else {
+            // Close connection
+            $this->conn = null;
+            $_SESSION["error_register"] = "ERROR WHILE CHANGING THE PASSWORD";
+            $_SESSION["updatepassword"] = true;
+            header("Location: ../View/NexTech_updateUser.php");
+            exit();
+        }
+    }
+
+    public function deleteAccount() {}
 }
 ?>
 

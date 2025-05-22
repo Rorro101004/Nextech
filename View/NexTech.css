@@ -866,12 +866,12 @@ section .section .box .forms_updatePassword {
             margin-bottom: 10px;
             line-height: 25px;
 
-            input[name="password"] {
+            input[name="new_password"] {
                 width: 300px;
                 margin-bottom: 5px;
             }
 
-            input[name="conf_password"] {
+            input[name="conf_new_password"] {
                 width: 300px;
             }
         }
@@ -923,11 +923,11 @@ section .section .box .forms_updatePassword .form_updatePassword input[type="sub
                 font-size: 23px;
                 margin-bottom: 15px;
 
-                input[name="password"] {
+                input[name="new_password"] {
                     width: 240px;
                 }
 
-                input[name="conf_password"] {
+                input[name="conf_new_password"] {
                     width: 240px;
                 }
             }
@@ -1047,7 +1047,7 @@ section .section .profile {
 
     .box {
         width: 50%;
-        gap: 30px;
+        gap: 15px;
         background-color: rgba(255, 255, 255, 50%);
         border-radius: 10px;
         padding: 2%;
@@ -1067,14 +1067,26 @@ section .section .profile {
                 flex-direction: column;
                 align-items: center;
 
-                img { 
-                    border-radius: 50%; /*esto hace que la imagen sea circular */
+                img {
+                    border-radius: 50%;
+                    /*esto hace que la imagen sea circular */
                 }
 
                 .profile_image {
                     width: 200px;
                     height: 200px;
                 }
+            }
+        }
+
+        .message {
+            font-family: "Lexend_text", sans-serif;
+            color: green;
+            line-height: 0px;
+            width: 100%;
+            
+            p{
+                font-size: 20px;
             }
         }
 

@@ -12,13 +12,7 @@ if (!isset($_SESSION["error_updateData"])) {
 if (!isset($_SESSION["error_updatePassword"])) {
     $_SESSION["error_updatePassword"] = "";
 }
-if (!isset($_POST["type"])) {
-    $_POST["type"] = "";
-}
-if (!isset($_POST["updatedata"]) && !isset($_POST["updatepassword"])) {
-    header("Location: NexTech_profile.php");
-    exit();
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -81,7 +75,8 @@ if (!isset($_POST["updatedata"]) && !isset($_POST["updatepassword"])) {
     <section>
         <div class="section">
             <div class="box">
-                <?php if (isset($_POST["updatedata"])) { ?>
+                <?php if (isset($_POST["updatedata"]) || isset($_SESSION["udpatedata"])) {
+                    unset($_SESSION["updatedata"]) ?>
                     <div class="forms_updateData">
                         <div class="updateData">
                             <h1>UPDATE</h1>
@@ -109,7 +104,8 @@ if (!isset($_POST["updatedata"]) && !isset($_POST["updatepassword"])) {
                             </form>
                         </div>
                     </div>
-                <?php } else if (isset($_POST["updatepassword"])) { ?>
+                <?php } else if (isset($_POST["updatepassword"]) || isset($_SESSION["updatepassword"])) {
+                    unset($_SESSION["updatepassword"]) ?>
                     <div class="forms_updatePassword">
                         <div class="updatePassword">
                             <h1>UPDATE</h1>
@@ -123,9 +119,9 @@ if (!isset($_POST["updatedata"]) && !isset($_POST["updatepassword"])) {
                             <form action="../Controller/UserController.php" method="post" enctype="multipart/form-data">
                                 <div class="inputs">
                                     <label for="password">Password</label><br>
-                                    <input type="password" name="password" required><br>
+                                    <input type="password" name="new_password" required><br>
                                     <label for="conf_password">Confirm Password</label><br>
-                                    <input type="password" name="conf_password" required><br>
+                                    <input type="password" name="conf_new_password" required><br>
                                 </div>
                                 <div>
                                     <input type="submit" name="updatePassword" value="Update Password">
