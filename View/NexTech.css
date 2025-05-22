@@ -388,6 +388,14 @@ section .section .box .forms_login {
             input[name="password"] {
                 width: 300px;
             }
+            input[name="email"] {
+                width: 300px;
+                margin-bottom: 5px;
+            }
+
+            input[name="password"] {
+                width: 300px;
+            }
         }
 
         input[type="submit"] {
@@ -401,6 +409,9 @@ section .section .box .forms_login {
             cursor: pointer;
             margin-top: 15px;
             margin-left: 105px;
+        }
+        .inputs_event{
+            width: 500px;
         }
     }
 }

@@ -19,7 +19,6 @@ class EventController
   public function insertEvent()
   {
     $eventName = $_POST["eventName"];
-    $eventDate = $_POST["eventDate"];
     $eventLocation = $_POST["eventLocation"];
     $eventDescription = $_POST["eventDescription"];
     $eventStart = $_POST["eventStart"];
@@ -39,15 +38,11 @@ class EventController
     ]);
 
     if ($result) {
-      // Authentication successful
       $_SESSION["register_success"] = "EVENT CREATED SUCCESS";
-      // Close connection
       $this->conn = null;
-
       header("Location: ../View/NexTech_index.php");
       exit();
     } else {
-      // Close connection
       $this->conn = null;
       $_SESSION["error_register"] = "ERROR WHILE CREATING EVENT";
       header("Location: ../View/NexTech_register.php");
