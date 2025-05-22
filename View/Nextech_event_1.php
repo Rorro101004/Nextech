@@ -152,7 +152,62 @@ if (!isset($_SESSION["admin"])) {
                             <p>
                                 <span>18:00</span>
                             </p>
-                            <img src="Images/fecha.png" alt="date">
+                            <!-- Calendario estático -->
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <span>July 2025</span>
+                                </div>
+                                <div class="calendar-grid">
+                                    <div class="calendar-day calendar-label">Mon</div>
+                                    <div class="calendar-day calendar-label">Tue</div>
+                                    <div class="calendar-day calendar-label">Wed</div>
+                                    <div class="calendar-day calendar-label">Thu</div>
+                                    <div class="calendar-day calendar-label">Fri</div>
+                                    <div class="calendar-day calendar-label">Sat</div>
+                                    <div class="calendar-day calendar-label">Sun</div>
+                                    <!-- 1st row: July 1 is Tuesday, so Monday is empty -->
+                                    <div class="calendar-day"></div>
+                                    <div class="calendar-day calendar-num">1</div>
+                                    <div class="calendar-day calendar-num">2</div>
+                                    <div class="calendar-day calendar-num">3</div>
+                                    <div class="calendar-day calendar-num calendar-highlight">4</div>
+                                    <div class="calendar-day calendar-num">5</div>
+                                    <div class="calendar-day calendar-num">6</div>
+                                    <!-- 2nd row -->
+                                    <div class="calendar-day calendar-num">7</div>
+                                    <div class="calendar-day calendar-num">8</div>
+                                    <div class="calendar-day calendar-num">9</div>
+                                    <div class="calendar-day calendar-num">10</div>
+                                    <div class="calendar-day calendar-num">11</div>
+                                    <div class="calendar-day calendar-num">12</div>
+                                    <div class="calendar-day calendar-num">13</div>
+                                    <!-- 3rd row -->
+                                    <div class="calendar-day calendar-num">14</div>
+                                    <div class="calendar-day calendar-num">15</div>
+                                    <div class="calendar-day calendar-num">16</div>
+                                    <div class="calendar-day calendar-num">17</div>
+                                    <div class="calendar-day calendar-num">18</div>
+                                    <div class="calendar-day calendar-num">19</div>
+                                    <div class="calendar-day calendar-num">20</div>
+                                    <!-- 4th row -->
+                                    <div class="calendar-day calendar-num">21</div>
+                                    <div class="calendar-day calendar-num">22</div>
+                                    <div class="calendar-day calendar-num">23</div>
+                                    <div class="calendar-day calendar-num">24</div>
+                                    <div class="calendar-day calendar-num">25</div>
+                                    <div class="calendar-day calendar-num">26</div>
+                                    <div class="calendar-day calendar-num">27</div>
+                                    <!-- 5th row -->
+                                    <div class="calendar-day calendar-num">28</div>
+                                    <div class="calendar-day calendar-num">29</div>
+                                    <div class="calendar-day calendar-num">30</div>
+                                    <div class="calendar-day calendar-num">31</div>
+                                    <div class="calendar-day"></div>
+                                    <div class="calendar-day"></div>
+                                    <div class="calendar-day"></div>
+                                </div>
+                            </div>
+                            <!-- Fin calendario -->
                         </div>
                     </div>
                 </div>
