@@ -39,6 +39,10 @@ header .header {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+
+            .logo {
+                width: 100px;
+            }
         }
 
         .options {
@@ -94,24 +98,41 @@ header .header {
         }
     }
 
-    .logout {
-        margin-right: 20px;
+    .profile_logout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 190px;
 
-        input[type="submit"] {
-            font-family: "Lexend_text", sans-serif;
-            border: 1px solid rgb(12, 10, 88);
-            border: none;
-            border-radius: 5px;
-            background-color: rgb(12, 10, 88);
-            color: white;
-            font-size: 16px;
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            cursor: pointer;
+        .profile_logged {
+
+            img {
+                width: 55px;
+                border-radius: 50%;
+            }
+        }
+
+        .logout {
+            margin-right: 20px;
+
+            input[type="submit"] {
+                font-family: "Lexend_text", sans-serif;
+                border: 1px solid rgb(12, 10, 88);
+                border: none;
+                border-radius: 5px;
+                background-color: rgb(12, 10, 88);
+                color: white;
+                font-size: 16px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                cursor: pointer;
+            }
         }
     }
+
 }
 
 /* Simplified: grouped header navigation and action buttons hover scale animation */
@@ -128,6 +149,11 @@ header .logout:hover {
 
     color: #4e33e9;
     text-shadow: 0 0 10px #ff0da2, 0 0 20px #0dfff3, 0 0 30px #ff0dd7, 0 0 40px #0ddbff;
+}
+
+header .header .profile_logout .profile_logged img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 1000px) and (min-width:90px) {
@@ -1007,6 +1033,7 @@ section .section .profile {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    margin-bottom: 50px;
 
     .title {
 
@@ -1200,6 +1227,7 @@ section .section .body {
         margin-top: 40px;
         margin-left: 30px;
         margin-right: 30px;
+        margin-bottom: 40px;
 
         .event1,
         .event2,

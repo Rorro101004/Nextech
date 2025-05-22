@@ -23,8 +23,7 @@ if (!isset($_SESSION["admin"])) {
             <div class="start">
                 <div class="images">
                     <div class="logo">
-                        <a href="NexTech_index.php"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"
-                                width="100px"></a>
+                        <a href="NexTech_index.php"><img src="Images/NexTech logo.png" alt="Image Logo NexTech"></a>
                     </div>
                 </div>
                 <div class="options">
@@ -34,11 +33,6 @@ if (!isset($_SESSION["admin"])) {
                     <div class="info">
                         <a href="Nextech_about_us.php" style="color:rgb(147, 0, 233)">About us</a>
                     </div>
-                    <?php if ($_SESSION["logged"] == true) { ?>
-                        <div class="profile_logged">
-                            <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)">Profile</a>
-                        </div>
-                    <?php } ?>
                     <?php if ($_SESSION["admin"] == true) { ?>
                         <div class="event_manager">
                             <a href="NexTech_event_manager.php" style="color:rgb(147, 0, 233)">Event manager</a>
@@ -56,10 +50,15 @@ if (!isset($_SESSION["admin"])) {
                     </div>
                 </div>
             <?php } else if ($_SESSION["logged"] == true) { ?>
-                <div class="logout">
-                    <form action="../Controller/UserController.php" method="post">
-                        <input type="submit" name="logout" value="Log out">
-                    </form>
+                <div class="profile_logout">
+                    <div class="profile_logged">
+                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)"> <?php echo '<img class="profile_image" src="data:image/jpeg;base64,' . base64_encode($_SESSION["profile_image"]) . '" alt="Profile Image" >' ?></a>
+                    </div>
+                    <div class="logout">
+                        <form action="../Controller/UserController.php" method="post">
+                            <input type="submit" name="logout" value="Log out">
+                        </form>
+                    </div>
                 </div>
             <?php } ?>
         </div>
@@ -115,7 +114,7 @@ if (!isset($_SESSION["admin"])) {
                     <div class="derecha">
                         <h2>Place:</h2>
                         <p><span>Center for Technological Innovation, Barcelona </span>, near the Jardines de Torre Girona park</p>
-                        <iframe id="map-canvas" class="map_part" width="600"  height="450"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Center for Technological Innovation, Barcelona , near the Jardines de Torre Girona park&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://embedgooglemaps.com">how to embed google maps generator wordpress</a> and <a href="https://udenrofus.com/">online casino uden rofus</a></iframe>
+                        <iframe id="map-canvas" class="map_part" width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Center for Technological Innovation, Barcelona , near the Jardines de Torre Girona park&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://embedgooglemaps.com">how to embed google maps generator wordpress</a> and <a href="https://udenrofus.com/">online casino uden rofus</a></iframe>
                         <!-- Embed de google maps hecho con esta pagina https://embedgooglemaps.com/es/-->
                         <img src="Images/ubicacion.png" alt="location">
                         </p>
