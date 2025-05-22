@@ -1,8 +1,8 @@
 /*DIVS BORDER*/
 
-div {
+/* div {
     border: 1px solid;
-}
+} */
 
 /*
 TO DO  
@@ -1460,7 +1460,7 @@ section .section .body {
     }
 
     .tit {
-        color: rgb(255, 255, 255);
+        color: rgb(180, 170, 255);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1505,6 +1505,7 @@ section .section .body {
 
         }
         .izqObjectives {
+            
 
         }
 
@@ -1522,6 +1523,7 @@ section .section .body {
         height: 100%;
         flex: 1;
         padding: 10px;
+        margin: 30px;
         width: 40%;
 
         .derPlaceTitle {
