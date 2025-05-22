@@ -73,59 +73,87 @@ if (!isset($_SESSION["admin"])) {
                 </div>
                 <div class="topico">
                     <div class="izquierda">
-                        <h2>Objectives: </h2>
-                        <ul>
-                            <li><span>Learn</span> from renowned experts through talks and workshops.</li>
-                            <li><span>Discover</span> innovative tools and practical strategies to improve your projects.</li>
-                            <li><span>Establish</span> key contacts with other professionals in the sector, generating collaborations and job opportunities.</li>
-                            In addition, it can be an excellent occasion to get inspired.
-                        </ul>
+                        <div class="izqTitle">
+                            <h2>Objectives: </h2>
+                        </div>
+                        
+                        <div class="izqObjectives">
+                            <ul>
+                                <li><span>Learn</span> from renowned experts through talks and workshops.</li>
+                                <li><span>Discover</span> innovative tools and practical strategies to improve your projects.</li>
+                                <li><span>Establish</span> key contacts with other professionals in the sector, generating collaborations and job opportunities.</li>
+                                In addition, it can be an excellent occasion to get inspired.
+                            </ul>                        
+                        </div>
+                        
                         <img src="Images/OIP.jpg" alt="developers">
-                        <h2>Topics to cover</h2>
-                        <ul>
-                            <li>
-                                <span>Agile development and project management methodologies:</span>
-                                <br>
-                                We will explore how to improve efficiency and collaboration in teams through agile approaches such as Scrum or Kanban.
-                            </li>
-                            <li>
-                                <span>Artificial intelligence applied to software development:</span>
-                                <br>
-                                Discover how to integrate AI tools into your projects to optimize processes and make smarter decisions.
-                            </li>
-                            <li>
-                                <span>Security and privacy in modern applications:</span>
-                                <br>
-                                Learn best practices for protecting sensitive data and complying with software security regulations.
-                            </li>
-                            <li>
-                                <span>Advanced tools for developers:</span>
-                                <br>
-                                Get to know the latest tools and development environments that facilitate the creation and maintenance of applications.
-                            </li>
-                            <li>
-                                <span>Innovation and trends in programming languages:</span>
-                                <br>
-                                Stay updated on emerging languages and how they can transform the future of software development.
-                            </li>
-                        </ul>
+                        
+                        <div class="izqTopicsTitle">
+                            <h2>Topics to cover</h2>
+                        </div>
+                        <div class="izqTopics">
+                            <ul>
+                                <li>
+                                    <span>Agile development and project management methodologies:</span>
+                                    <br>
+                                    We will explore how to improve efficiency and collaboration in teams through agile approaches such as Scrum or Kanban.
+                                </li>
+                                <li>
+                                    <span>Artificial intelligence applied to software development:</span>
+                                    <br>
+                                    Discover how to integrate AI tools into your projects to optimize processes and make smarter decisions.
+                                </li>
+                                <li>
+                                    <span>Security and privacy in modern applications:</span>
+                                    <br>
+                                    Learn best practices for protecting sensitive data and complying with software security regulations.
+                                </li>
+                                <li>
+                                    <span>Advanced tools for developers:</span>
+                                    <br>
+                                    Get to know the latest tools and development environments that facilitate the creation and maintenance of applications.
+                                </li>
+                                <li>
+                                    <span>Innovation and trends in programming languages:</span>
+                                    <br>
+                                    Stay updated on emerging languages and how they can transform the future of software development.
+                                </li>
+                            </ul>
+                        </div>
+                        
                     </div>
                     <div class="linea"></div>
                     <div class="derecha">
-                        <h2>Place:</h2>
-                        <p><span>Center for Technological Innovation, Barcelona </span>, near the Jardines de Torre Girona park</p>
-                        <iframe id="map-canvas" class="map_part" width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Center for Technological Innovation, Barcelona , near the Jardines de Torre Girona park&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://embedgooglemaps.com">how to embed google maps generator wordpress</a> and <a href="https://udenrofus.com/">online casino uden rofus</a></iframe>
-                        <!-- Embed de google maps hecho con esta pagina https://embedgooglemaps.com/es/-->
+                        <div class="derPlaceTitle">
+                            <h2>Place:</h2>
+                        </div>
+
+                        <div class="derPlace">
+                            <p>
+                                <span>
+                                    Center for Technological Innovation, Barcelona 
+                                </span>, 
+                                near the Jardines de Torre Girona park</p>
+                            <iframe id="map-canvas" class="map_part" width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Center for Technological Innovation, Barcelona , near the Jardines de Torre Girona park&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://embedgooglemaps.com">how to embed google maps generator wordpress</a> and <a href="https://udenrofus.com/">online casino uden rofus</a></iframe>
+                            <!-- Embed de google maps hecho con esta pagina https://embedgooglemaps.com/es/-->
+                            </p>
+                        </div>
+
                         <img src="Images/ubicacion.png" alt="location">
-                        </p>
-                        <h2>Date</h2>
-                        <p>
-                            July 4, 2025
-                        </p>
-                        <p>
-                            <span>18:00</span>
-                        </p>
-                        <img src="Images/fecha.png" alt="date">
+                        
+                        <div class="derDateTitle">
+                            <h2>Date</h2>
+                        </div>
+
+                        <div class="derDate">
+                            <p>
+                                July 4, 2025
+                            </p>
+                            <p>
+                                <span>18:00</span>
+                            </p>
+                            <img src="Images/fecha.png" alt="date">
+                        </div>
                     </div>
                 </div>
             </div>
