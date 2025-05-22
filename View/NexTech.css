@@ -1,11 +1,11 @@
 /*DIVS BORDER*/
-/*
+
 div {
     border: 1px solid;
 }
 
-
-/* TO DO  
+/*
+TO DO  
 Change background 
 Change main page: less text and add an event or image.
 */
@@ -346,8 +346,8 @@ section .section {
     background-size: 200%;
     background-position: 50% 50%;
     background-attachment: scroll;
-    background-color: #ffb4be ; 
-    
+    background-color: #ffb4be;
+
     /*
     background: rgb(246, 91, 247);
     background: linear-gradient(24deg, rgba(246, 91, 247, 1) 20%, rgba(42, 255, 178, 0.7002450638458508) 50%, rgba(156, 78, 250, 1) 80%);
@@ -1067,8 +1067,9 @@ section .section .profile {
                 flex-direction: column;
                 align-items: center;
 
-                img { 
-                    border-radius: 50%; /*esto hace que la imagen sea circular */
+                img {
+                    border-radius: 50%;
+                    /*esto hace que la imagen sea circular */
                 }
 
                 .profile_image {
@@ -1442,7 +1443,7 @@ section .section .body {
 .event_unic {
     min-height: 75vh;
     margin: 5px;
-    font-family: "Montserrat_title", sans-serif;
+    font-family: "Lexend_text", sans-serif;
 
     h1 {
         font-size: 50px;
@@ -1457,78 +1458,104 @@ section .section .body {
         color: blue;
         text-decoration: underline;
     }
+
+    .tit {
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        background-image: url(Images/progra.jpg);
+        background-position: center;
+        background-size: cover;
+        gap: 2px;
+    }
+
+
+    .topico {
+        display: flex;
+        height: 100%;
+        justify-content: space-evenly;
+        margin: 10px;
+        align-items: stretch;
+        position: relative;
+
+
+    }
+
+    .topico img {
+        border-radius: 15px;
+        max-width: 60%;
+        max-height: 30vh;
+        align-self: center;
+        margin: auto 0;
+    }
+    .topico span {
+        font-weight: bold;
+    }
+
+    .izquierda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+        .izqTitle {
+
+        }
+        .izqObjectives {
+
+        }
+
+        .izqTopicsTitle {
+
+        }
+    }
+
+    .derecha {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        flex: 1;
+        padding: 10px;
+        width: 40%;
+
+        .derPlaceTitle {
+
+        }
+
+        .derPlace {
+
+        }
+
+        .derDateTitle {
+
+        }
+
+        .derDate {
+            
+        }
+    }
+
+    .linea {
+        width: 3px;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 50%);
+        margin: 5;
+        align-self: stretch;
+        position: relative;
+    }
 }
 
-.tit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    background-image: url(Images/progra.jpg);
-    background-position: center;
-    background-size: cover;
-    color: purple;
-    gap: 2px;
-}
-
-.topico {
-    display: flex;
-    height: 100%;
-    justify-content: space-evenly;
-    margin: 10px;
-    align-items: stretch;
-    position: relative;
 
 
-}
 
-.topico img {
-    max-width: 60%;
-    max-height: 30vh;
-    align-self: center;
-    margin: auto 0;
-}
 
-.topico span {
-    font-weight: bold;
-}
 
-.izquierda,
-.derecha {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    flex: 1;
-    padding: 10px;
-    width: 40%;
-}
-
-.linea {
-    width: 1px;
-    background-color: rgba(255, 255, 255, 50%);
-    margin: 5;
-    align-self: stretch;
-    position: relative;
-}
-
-.derecha {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.izquierda {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
 
 @media screen and (max-width: 768px) {
     .topico {
