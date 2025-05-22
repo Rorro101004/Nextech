@@ -76,7 +76,7 @@ if (!isset($_SESSION["surname"])) {
             <?php } else if ($_SESSION["logged"] == true) { ?>
                 <div class="profile_logout">
                     <div class="profile_logged">
-                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)"> <?php echo '<img class="profile_image" src="data:image/jpeg;base64,' . base64_encode($_SESSION["profile_image"]) . '" alt="Profile Image" >' ?></a>
+                        <a href="NexTech_profile.php" style="color:rgb(147, 0, 233)"> <?php echo '<img class="profile_image" src="data:image/jpeg;base64,' . base64_encode($_SESSION["profile_image"]) . '" alt="Profile" >' ?></a>
                     </div>
                     <div class="logout">
                         <form action="../Controller/UserController.php" method="post">
