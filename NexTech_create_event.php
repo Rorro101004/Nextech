@@ -72,8 +72,36 @@ if ($_SESSION["admin"] == false) {
 
     <section>
         <div class="section">
-            
-        
+                 <div class="box">
+                <div class="forms_login">
+                    <div class="login">
+                        <h1>CREATE EVENT</h1>
+                    </div>
+                    <div class="form_login">
+                        <form action="../Controller/EventController.php" method="post">
+                            <div class="inputs" class="inputs_event">
+                                <label>Name</label><br>
+                                <input type="text" name="name" required><br>
+                                <label>Description</label><br>
+                                <textarea name="description" style="height: 50px; width: 100%;" required></textarea><br>
+                                <label>Start Date</label><br>
+                                <input type="date"  name="start_date" required><br>
+                                <label>End Date</label><br>
+                                <input type="date"  name="end_date" required><br>
+                                <label>Location</label><br>
+                                <input type="text"  name="location" required><br>
+                                <label>Price</label><br>
+                                <input type="number"  name="price" required><br>
+                                <label>Url</label><br>
+                                <input type="Url"  name="location" required><br>
+                            </div>
+                            <div>
+                                <input type="submit" name="guardar" value="Save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
