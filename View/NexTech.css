@@ -1040,6 +1040,10 @@ section .section .profile {
                 flex-direction: column;
                 align-items: center;
 
+                img {
+                    border-radius: 50%;
+                }
+
                 .profile_image {
                     width: 200px;
                     height: 200px;
