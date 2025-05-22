@@ -115,6 +115,8 @@ if (!isset($_SESSION["admin"])) {
                     <div class="derecha">
                         <h2>Place:</h2>
                         <p><span>Center for Technological Innovation, Barcelona </span>, near the Jardines de Torre Girona park</p>
+                        <iframe id="map-canvas" class="map_part" width="600"  height="450"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Center for Technological Innovation, Barcelona , near the Jardines de Torre Girona park&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://embedgooglemaps.com">how to embed google maps generator wordpress</a> and <a href="https://udenrofus.com/">online casino uden rofus</a></iframe>
+                        <!-- Embed de google maps hecho con esta pagina https://embedgooglemaps.com/es/-->
                         <img src="Images/ubicacion.png" alt="location">
                         </p>
                         <h2>Date</h2>
