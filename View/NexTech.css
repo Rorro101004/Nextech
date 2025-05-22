@@ -48,7 +48,7 @@ header .header {
             align-items: center;
             justify-content: space-around;
 
-            a{
+            a {
                 text-align: center;
             }
         }
@@ -232,7 +232,6 @@ footer {
                 margin-left: 0px;
                 list-style: none;
                 color: #585978;
-                font-size: 16px;
                 text-decoration: none;
                 text-transform: capitalize;
                 line-height: 20px;
@@ -241,7 +240,6 @@ footer {
             a {
                 margin-left: 0px;
                 color: #585978;
-                font-size: 16px;
                 text-decoration: none;
                 text-transform: capitalize;
                 line-height: 20px;
@@ -355,7 +353,6 @@ section .section .box .forms_login {
         font-family: "Lexend_text", sans-serif;
 
         p {
-            font-size: 15px;
             color: red;
         }
     }
@@ -365,7 +362,7 @@ section .section .box .forms_login {
         color: rgb(11, 11, 137);
 
         h1 {
-            font-size: 100px;
+            font-size: 95px;
             margin: 0;
         }
     }
@@ -391,6 +388,14 @@ section .section .box .forms_login {
             input[name="password"] {
                 width: 300px;
             }
+            input[name="email"] {
+                width: 300px;
+                margin-bottom: 5px;
+            }
+
+            input[name="password"] {
+                width: 300px;
+            }
         }
 
         input[type="submit"] {
@@ -404,6 +409,9 @@ section .section .box .forms_login {
             cursor: pointer;
             margin-top: 15px;
             margin-left: 105px;
+        }
+        .inputs_event{
+            width: 500px;
         }
     }
 }
@@ -495,7 +503,7 @@ section .section .box .forms_register {
         margin-top: 30px;
 
         h1 {
-            font-size: 100px;
+            font-size: 70px;
             margin: 0;
         }
     }
@@ -504,7 +512,6 @@ section .section .box .forms_register {
         font-family: "Lexend_text", sans-serif;
 
         p {
-            font-size: 15px;
             color: red;
         }
     }
@@ -518,7 +525,8 @@ section .section .box .forms_register {
         border-radius: 5px;
         font-size: 16px;
         cursor: pointer;
-        margin-left: 25px;
+        margin-left: 22px;
+        margin-right: 22px;
     }
 
     .form_register {
@@ -572,7 +580,7 @@ section .section .box .forms_register {
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            margin-left: 100px;
+            margin-left: 95px;
         }
     }
 }
@@ -656,7 +664,6 @@ section .section .box .forms_updateData {
         font-family: "Lexend_text", sans-serif;
 
         p {
-            font-size: 15px;
             color: red;
         }
     }
@@ -666,7 +673,14 @@ section .section .box .forms_updateData {
         color: rgb(11, 11, 137);
 
         h1 {
-            font-size: 85px;
+            text-align: center;
+            font-size: 70px;
+            margin: 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 70px;
             margin: 0;
         }
     }
@@ -720,9 +734,15 @@ section .section .box .forms_updateData .form_updateData input[type="submit"]:ho
 @media screen and (max-width: 1000px) and (min-width:90px) {
     section .section .box .forms_updateData {
 
-        .updateData h1 {
-            font-size: 60px;
-            text-align: center;
+        .updateData {
+
+            h1 {
+                font-size: 55px;
+            }
+
+            p {
+                font-size: 55px;
+            }
         }
 
         .type input[type="submit"] {
@@ -758,6 +778,128 @@ section .section .box .forms_updateData .form_updateData input[type="submit"]:ho
                 padding: 8px 25px;
                 font-size: 13px;
                 margin-left: 60px;
+            }
+        }
+    }
+}
+
+/*UPDATE PASSWORD*/
+section .section .box .forms_updatePassword {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50px;
+    margin-top: 100px;
+
+    .error {
+        font-family: "Lexend_text", sans-serif;
+
+        p {
+            color: red;
+        }
+    }
+
+    .updatePassword {
+        font-family: "Montserrat_title", sans-serif;
+        color: rgb(11, 11, 137);
+
+        h1 {
+            text-align: center;
+            font-size: 70px;
+            margin: 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 55px;
+            margin: 0;
+        }
+    }
+
+    .form_updatePassword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 35px;
+        margin-top: 10px;
+
+        .inputs {
+            font-family: "Lexend_text", sans-serif;
+            font-size: 30px;
+            color: rgb(5, 87, 220);
+            margin-bottom: 10px;
+            line-height: 25px;
+
+            input[name="password"] {
+                width: 300px;
+                margin-bottom: 5px;
+            }
+
+            input[name="conf_password"] {
+                width: 300px;
+            }
+        }
+
+        input[type="submit"] {
+            font-family: "Lexend_text", sans-serif;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-left: 60px;
+        }
+    }
+}
+
+section .section .box .forms_updatePassword .form_updatePassword input[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) and (min-width:90px) {
+    section .section .box .forms_updatePassword {
+
+        .updatePassword {
+
+            h1 {
+                font-size: 55px;
+            }
+
+            p {
+                font-size: 45px;
+            }
+        }
+
+        .type input[type="submit"] {
+            padding: 8px 25px;
+            font-size: 13px;
+            margin-left: 20px;
+        }
+
+        .form_updatePassword {
+
+            .inputs {
+                font-size: 23px;
+                margin-bottom: 15px;
+
+                input[name="password"] {
+                    width: 240px;
+                }
+
+                input[name="conf_password"] {
+                    width: 240px;
+                }
+            }
+
+            input[type="submit"] {
+                padding: 8px 25px;
+                font-size: 13px;
+                margin-left: 45px;
             }
         }
     }
@@ -966,7 +1108,6 @@ section .section .body {
         transition: transform 0.5s ease-in-out;
 
         .featured_event {
-            font-size: 20px;
             color: purple;
             height: 100%;
             position: relative;
@@ -988,9 +1129,9 @@ section .section .body {
 
                 .title {
                     font-family: "Montserrat_title", sans-serif;
-                    font-size: 5rem;
                     font-weight: bold;
                     text-align: center;
+                    font-size: 5rem;
                 }
             }
 

@@ -9,6 +9,9 @@ if (!isset($_SESSION["admin"])) {
 if (!isset($_SESSION["error_updateData"])) {
     $_SESSION["error_updateData"] = "";
 }
+if (!isset($_SESSION["error_updatePassword"])) {
+    $_SESSION["error_updatePassword"] = "";
+}
 if (!isset($_POST["type"])) {
     $_POST["type"] = "";
 }
@@ -82,7 +85,8 @@ if (!isset($_POST["updatedata"]) && !isset($_POST["updatepassword"])) {
                 <?php if (isset($_POST["updatedata"])) { ?>
                     <div class="forms_updateData">
                         <div class="updateData">
-                            <h1>UPDATE DATA</h1>
+                            <h1>UPDATE</h1>
+                            <p>PROFILE</p>
                         </div>
                         <div class="error">
                             <p><b><?php echo $_SESSION["error_updateData"];
@@ -107,28 +111,25 @@ if (!isset($_POST["updatedata"]) && !isset($_POST["updatepassword"])) {
                         </div>
                     </div>
                 <?php } else if (isset($_POST["updatepassword"])) { ?>
-                    <div class="forms_updateData">
-                        <div class="updateData">
-                            <h1>UPDATE DATA</h1>
+                    <div class="forms_updatePassword">
+                        <div class="updatePassword">
+                            <h1>UPDATE</h1>
+                            <p>PASSWORD</p>
                         </div>
                         <div class="error">
-                            <p><b><?php echo $_SESSION["error_updateData"];
-                                    unset($_SESSION["error_updateData"]); ?></b></p>
+                            <p><b><?php echo $_SESSION["error_updatePassword"];
+                                    unset($_SESSION["error_updatePassword"]); ?></b></p>
                         </div>
-                        <div class="form_updateData">
+                        <div class="form_updatePassword">
                             <form action="../Controller/UserController.php" method="post" enctype="multipart/form-data">
                                 <div class="inputs">
-                                    <label for="username">Username</label><br>
-                                    <input type="text" name="username" value="<?php echo $_SESSION["username"] ?>" required><br>
-                                    <label for="email">Email</label><br>
-                                    <input type="email" name="email" value="<?php echo $_SESSION["email"] ?>" required><br>
-                                    <label for="name">Name</label><br>
-                                    <input type="text" name="name" value="<?php echo $_SESSION["name"] ?>" required><br>
-                                    <label for="username">Surname</label><br>
-                                    <input type="text" name="surname" value="<?php echo $_SESSION["surname"] ?>" required><br>
+                                    <label for="password">Password</label><br>
+                                    <input type="password" name="password" required><br>
+                                    <label for="conf_password">Confirm Password</label><br>
+                                    <input type="password" name="conf_password" required><br>
                                 </div>
                                 <div>
-                                    <input type="submit" name="updateData" value="Update Data">
+                                    <input type="submit" name="updatePassword" value="Update Password">
                                 </div>
                             </form>
                         </div>

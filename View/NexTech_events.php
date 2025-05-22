@@ -72,9 +72,7 @@ if (!isset($_SESSION["admin"])) {
                 <div class="carousel">
                     <div class="featured_event" id="upcoming">
                         <div class="background" id="background1">
-                            <div class="title">
-                                <p>Upcoming events</p>
-                            </div>
+                            <h1 class="title">Upcoming events</h1>
                         </div>
                         <div class="arrow">
                             <a href="#devnext"><i class="fa-solid fa-arrow-left"></i></a>
@@ -83,7 +81,7 @@ if (!isset($_SESSION["admin"])) {
                     </div>
                     <div class="featured_event" id="cibernext">
                         <div class="background" id="background2">
-                            <p class="title">CiberNext</p>
+                            <h1 class="title">CiberNext</h1>
                         </div>
                         <div class="arrow">
                             <a href="#upcoming"><i class="fa-solid fa-arrow-left"></i></a>
@@ -92,7 +90,7 @@ if (!isset($_SESSION["admin"])) {
                     </div>
                     <div class="featured_event" id="devnext">
                         <div class="background" id="background3">
-                            <p class="title">DevNext</p>
+                            <h1 class="title">DevNext</h1>
                         </div>
                         <div class="arrow">
                             <a href="#cibernext"><i class="fa-solid fa-arrow-left"></i></a>

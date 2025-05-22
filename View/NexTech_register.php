@@ -104,9 +104,8 @@ if (!isset($_POST["type"])) {
                                 <label for="conf_password">Confirm password</label><br>
                                 <input type="password" name="conf_password" required><br>
                                 <?php if ($_POST["type"] == "Administrator") { ?>
-                                    <label for="profile_image" class="image ">Profile image</label><br>
+                                    <label for="profile_image" class="image">Profile image</label><br>
                                     <input type="file" name="profile_image" accept="image/*" required>
-                                    <!--Seguir aquí -->
                                     <input type="hidden" name="admin">
                                 <?php } ?>
                             </div>
