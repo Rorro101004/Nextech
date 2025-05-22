@@ -1067,8 +1067,8 @@ section .section .profile {
                 flex-direction: column;
                 align-items: center;
 
-                img {
-                    border-radius: 50%;
+                img { 
+                    border-radius: 50%; /*esto hace que la imagen sea circular */
                 }
 
                 .profile_image {
