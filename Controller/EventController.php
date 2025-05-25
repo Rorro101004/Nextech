@@ -1,21 +1,32 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST["create"])) {
+      $event = new EventController();
+      $event->insertEvent();
+    } 
+}
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_GET["read"])) {
+      $event = new EventController();
+      $event->insertEvent();
+    } 
+}
 class EventController
 {
   private $conn;
-  public function __construct()
-  {
+public function __construct()
+{
     $servername = "localhost";
-    $username = "username";
-    $password = "password";
-
+    $username = "root";
+    $password = "";
     try {
-      $conn = new PDO("mysql:host=$servername;dbname=nextech", $username, $password);
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      echo "Connected successfully";
+        $this->conn = new PDO("mysql:host=$servername;dbname=nextech", $username, $password);
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // echo "Connected successfully";
     } catch (PDOException $e) {
-      echo "Connection failed: " . $e->getMessage();
+        echo "Connection failed: " . $e->getMessage();
     }
-  }
+}
   public function insertEvent()
   {
     $eventName = $_POST["eventName"];
@@ -26,7 +37,7 @@ class EventController
     $eventPrice = $_POST["eventPrice"];
     $eventUrl = $_POST["eventUrl"];
 
-    $stmt = $this->conn->prepare("INSERT INTO events (name, description, start_date, end_date, location, price , url) VALUES (:name, :description, :start_date, :end_date, :location, :price, :url)");
+    $stmt = $this->conn->prepare("INSERT INTO event (name, description, start_date, end_date, location, price , url) VALUES (:name, :description, :start_date, :end_date, :location, :price, :url)");
     $result = $stmt->execute([
       ':name' => $eventName,
       ':description' => $eventDescription,
@@ -52,7 +63,7 @@ class EventController
   public function readEvents()
   {
     try {
-      $stmt = $this->conn->prepare("SELECT * FROM events");
+      $stmt = $this->conn->prepare("SELECT * FROM event");
     $stmt->execute();
     $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $events;

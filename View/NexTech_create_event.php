@@ -81,22 +81,22 @@ if ($_SESSION["admin"] == false) {
                         <form action="../Controller/EventController.php" method="post">
                             <div class="inputs" class="inputs_event">
                                 <label>Name</label><br>
-                                <input type="text" name="name" required><br>
+                                <input type="text" name="eventName" required><br>
                                 <label>Description</label><br>
-                                <textarea name="description" style="height: 50px; width: 100%;" required></textarea><br>
+                                <textarea name="eventDescription" style="height: 50px; width: 100%;" required></textarea><br>
                                 <label>Start Date</label><br>
-                                <input type="date"  name="start_date" required><br>
+                                <input type="date"  name="eventStart" required><br>
                                 <label>End Date</label><br>
-                                <input type="date"  name="end_date" required><br>
+                                <input type="date"  name="eventEnd" required><br>
                                 <label>Location</label><br>
-                                <input type="text"  name="location" required><br>
+                                <input type="text"  name="eventLocation" required><br>
                                 <label>Price</label><br>
-                                <input type="number"  name="price" required><br>
+                                <input type="number"  name="eventPrice" required><br>
                                 <label>Url</label><br>
-                                <input type="Url"  name="location" required><br>
+                                <input type="Url"  name="eventUrl" required><br>
                             </div>
                             <div>
-                                <input type="submit" name="guardar" value="Save">
+                                <input type="submit" name="create" value="Save">
                             </div>
                         </form>
                     </div>

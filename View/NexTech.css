@@ -1578,12 +1578,16 @@ section .section .body {
 
 /*EVENT MANAGER*/
 section .evtManager {
+    height: 100%;
+    width: 100%;
+    
     h1 {
     color: #a31f66;
     font-family: "Lexend_text";
     font-size: 65px;
     text-align: center;
     }
+
     .topic {
         height: 100%;
         width: 100%;
@@ -1593,7 +1597,7 @@ section .evtManager {
             height: 100%;
             width: 50%;
             justify-content: center;
-            border: #090909 5px solid;
+            
         }
 
         .right {
@@ -1601,7 +1605,7 @@ section .evtManager {
             height: 100%;
             width: 50%;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
         }
     }
     .crud-buttons {

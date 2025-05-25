@@ -79,8 +79,12 @@ if ($_SESSION["admin"] == false) {
                 </div>
                 <div class="right">
                     <div class="crud-buttons">
-                        <button class="crud-btn create">Create</button>
-                        <button class="crud-btn read">Read</button>
+                        <form action="NexTech_create_event.php" method="get" >
+                            <button class="crud-btn create" type="submit">Create</button>
+                        </form>
+                        <form action="Nextech_read_event.php" method="get" >
+                            <button class="crud-btn read">Read</button>
+                        </form>
                         <button class="crud-btn update">Update</button>
                         <button class="crud-btn delete">Delete</button>
                     </div>
