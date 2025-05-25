@@ -14,7 +14,6 @@ require_once '../Controller/EventController.php';
 $eventController = new EventController();
 $events = $eventController->readEvents();
 ?>
-?>
 
 <!DOCTYPE html>
 <html lang="en">
