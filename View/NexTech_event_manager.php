@@ -69,9 +69,24 @@ if ($_SESSION["admin"] == false) {
         </div>
     </header>
     <section>
-        <div class="section">
+        <div class="section evtManager">
+            <h1>Event Manager</h1>
+            <div class="topic">
+                <div class="left">
+                    <div class="rocket">
+                        <img src="SVG/Rocket.svg" class="rocket-img" />
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="crud-buttons">
+                        <button class="crud-btn create">Create</button>
+                        <button class="crud-btn read">Read</button>
+                        <button class="crud-btn update">Update</button>
+                        <button class="crud-btn delete">Delete</button>
+                    </div>
+                </div>
 
-
+            </div>
         </div>
     </section>
 

@@ -72,7 +72,7 @@ if ($_SESSION["admin"] == false) {
 
     <section>
         <div class="section">
-                 <div class="box">
+                <div class="box">
                 <div class="forms_login">
                     <div class="login">
                         <h1>CREATE EVENT</h1>
