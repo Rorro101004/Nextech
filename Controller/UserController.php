@@ -373,7 +373,7 @@ class UserController
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexTech login process</title>
+    <title>NexTech User Controller</title>
 </head>
 
 <body>
