@@ -68,28 +68,36 @@ if ($_SESSION["admin"] == false) {
             <?php } ?>
         </div>
     </header>
+
     <section>
         <div class="section evtManager">
-            <h1>Event Manager</h1>
-            <div class="topic">
+            <div>
+                <h1>EVENT MANAGER</h1>
+            </div>
+            <div class="content">
                 <div class="left">
                     <div class="rocket">
                         <img src="SVG/Rocket.svg" class="rocket-img" />
                     </div>
                 </div>
                 <div class="right">
-                    <div class="crud-buttons">
-                        <form action="NexTech_create_event.php" method="get" >
+                    <div>
+                        <form action="NexTech_create_event.php" method="get">
                             <button class="crud-btn create" type="submit">Create</button>
                         </form>
-                        <form action="Nextech_read_event.php" method="get" >
+                    </div>
+                    <div>
+                        <form action="Nextech_read_event.php" method="get">
                             <button class="crud-btn read">Read</button>
                         </form>
+                    </div>
+                    <div>
                         <button class="crud-btn update">Update</button>
+                    </div>
+                    <div>
                         <button class="crud-btn delete">Delete</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
