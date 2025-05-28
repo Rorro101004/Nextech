@@ -97,7 +97,7 @@ $events = $eventController->readEvents();
                   <?php foreach ($events as $event) { ?>
                     <tr>
                       <td><?php echo htmlspecialchars($event['name']); ?></td>
-                      <td><?php echo htmlspecialchars($event['description']); ?></td>
+                      <td class="description-column"><?php echo htmlspecialchars($event['description']); ?></td>
                       <td><?php echo htmlspecialchars($event['start_date']); ?></td>
                       <td><?php echo htmlspecialchars($event['end_date']); ?></td>
                       <td><?php echo htmlspecialchars($event['location']); ?></td>

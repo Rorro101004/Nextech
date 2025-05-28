@@ -1696,6 +1696,11 @@ section .section .box .event-table-wrapper {
     color: #4e33e9;
     transition: background 0.2s;
 }
+.event-table-wrapper td.description-column {
+    max-width: 200px; 
+    word-break: break-word;
+    white-space: pre-line;
+}
 
 
 /* === CALENDARIO ESTÁTICO EVENTO === */
