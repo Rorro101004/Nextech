@@ -81,7 +81,7 @@ $events = $eventController->readEvents();
           </div>
           <?php if (!empty($events)) { ?>
             <div class="event-table-wrapper">
-              <table style="border: 1px solid green" cellpadding="8" cellspacing="0">
+              <table cellpadding="8" cellspacing="0">
                 <thead>
                   <tr>
                     <th>Name</th>

@@ -1636,6 +1636,68 @@ section .section .box .forms_create_event {
     }
 }
 
+/*READ EVENT*/
+section .section .box .event-table-wrapper {
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    max-width: 100%;
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        font-family: "Lexend_text";
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #a867fd;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #a867fd22;
+        overflow: hidden;
+        
+    }
+    
+}
+
+.event-table-wrapper th,
+.event-table-wrapper td {
+
+    border-right: 2px solid hsl(249, 100%, 91%);
+    border-bottom: 2px solid hsl(249, 100%, 91%);
+    padding: 12px 18px;
+    text-align: center;
+    font-family: "Lexend_text", sans-serif;
+    font-size: 1rem;
+    background: transparent;
+    
+}
+.event-table-wrapper th {
+    color: hsl(248, 50%, 28%);
+}
+
+.event-table-wrapper th:last-child,
+.event-table-wrapper td:last-child {
+    border-right: none;
+}
+
+.event-table-wrapper tr:last-child td {
+    border-bottom: none;
+}
+.event-table-wrapper tr:nth-child(even) td {
+    background: #f7f7ff;
+}
+
+.event-table-wrapper tr:nth-child(odd) td {
+    background: #f3eaff;
+}
+
+.event-table-wrapper tr:hover td {
+    background: #e6d6fa;
+    color: #4e33e9;
+    transition: background 0.2s;
+}
+
+
 /* === CALENDARIO ESTÁTICO EVENTO === */
 .calendar-container {
     margin-top: 20px;
