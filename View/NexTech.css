@@ -1689,6 +1689,9 @@ section .section .event_manager {
             margin-bottom: 30px;
             overflow-x: auto;
             max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             table {
                 border-collapse: separate;
