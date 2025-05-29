@@ -376,7 +376,8 @@ section .section .box .forms_login {
     display: inline-flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 0px;
+
 
     .error {
         font-family: "Lexend_text", sans-serif;
@@ -1636,6 +1637,128 @@ section .section .box .forms_create_event {
     }
 }
 
+/*READ EVENT*/
+section .section .box .forms_login,
+.read {
+    background-color: rgba(255, 255, 255, 50%);
+    border-radius: 10px;
+    padding: 1%;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0px;
+    width: 75%;
+    margin: 1%;
+
+    h1 {
+        font-size: 65px !important;
+        margin: 0;
+    }
+}
+
+section .section .box .container_event {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .crud-btn.create {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: "Lexend_text", sans-serif;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 20px 32px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #a867fd22;
+        width: auto;
+        transition: background 0.2s, transform 0.2s;
+        background: linear-gradient(90deg, #a867fd 60%, #ffb4be 100%);
+        color: #fff;
+        margin-left: 40%;
+    }
+    .button_rocket{
+        margin-top: 1%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 25%;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+section .section .box .event-table-wrapper {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    max-width: 100%;
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        font-family: "Lexend_text";
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #a867fd;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #a867fd22;
+        overflow: hidden;
+    }
+}
+
+.event-table-wrapper th,
+.event-table-wrapper td {
+
+    border-right: 2px solid hsl(249, 100%, 91%);
+    border-bottom: 2px solid hsl(249, 100%, 91%);
+    padding: 12px 18px;
+    text-align: center;
+    font-family: "Lexend_text", sans-serif;
+    font-size: 1rem;
+    background: transparent;
+
+}
+
+.event-table-wrapper th {
+    color: hsl(248, 50%, 28%);
+}
+
+.event-table-wrapper th:last-child,
+.event-table-wrapper td:last-child {
+    border-right: none;
+}
+
+.event-table-wrapper tr:last-child td {
+    border-bottom: none;
+}
+
+.event-table-wrapper tr:nth-child(even) td {
+    background: #f7f7ff;
+}
+
+.event-table-wrapper tr:nth-child(odd) td {
+    background: #f3eaff;
+}
+
+.event-table-wrapper tr:hover td {
+    background: #e6d6fa;
+    color: #4e33e9;
+    transition: background 0.2s;
+}
+
+.event-table-wrapper td.description-column {
+    max-width: 200px;
+    word-break: break-word;
+    white-space: pre-line;
+}
+
+
 /* === CALENDARIO ESTÁTICO EVENTO === */
 .calendar-container {
     margin-top: 20px;
@@ -1727,11 +1850,19 @@ section .section .box .forms_create_event {
 
 /*EVENT MANAGER*/
 section .evtManager {
+    .box {
+        background-color: rgba(255, 255, 255, 50%);
+        border-radius: 10px;
+        padding: 2%;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
     h1 {
         color: rgb(13, 39, 154);
         font-family: "Monsterrat_title", sans-serif;
-        font-size: 60px;
+        font-size: 100px;
         text-align: center;
     }
 
