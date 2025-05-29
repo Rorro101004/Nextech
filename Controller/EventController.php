@@ -7,7 +7,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $event->insertEvent();
   }
   if (isset($_POST["update"])) {
+    echo "<p>Update event button is clicked.</p>";
     $event->updateEvent();
+  }
+  if (isset($_POST["delete"])) {
+    echo "<p>Delete event button is clicked.</p>";
+    $event->deleteEvent();
   }
   if (isset($_GET["read"])) {
     echo "<p>Read event button is clicked.</p>";
@@ -123,6 +128,25 @@ class EventController
     } else {
         $this->conn = null;
         $_SESSION["error_update"] = "ERROR WHILE UPDATING EVENT";
+        header("Location: ../View/NexTech_event_manager.php");
+        exit();
+    }
+  }
+
+  public function deleteEvent()
+  {
+    $id_event = $_POST["id_event"];
+    $stmt = $this->conn->prepare("DELETE FROM event WHERE id_event = :id_event");
+    $result = $stmt->execute([':id_event' => $id_event]);
+
+    if ($result) {
+        $_SESSION["delete_success"] = "EVENT DELETED SUCCESSFULLY";
+        $this->conn = null;
+        header("Location: ../View/NexTech_event_manager.php");
+        exit();
+    } else {
+        $this->conn = null;
+        $_SESSION["error_delete"] = "ERROR WHILE DELETING EVENT";
         header("Location: ../View/NexTech_event_manager.php");
         exit();
     }

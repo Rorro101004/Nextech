@@ -1941,14 +1941,37 @@ section .evtManager {
 }
 
 .crud-btn.delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(90deg, #ff4e4e 60%, #a31f66 100%);
     color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ff4e4e33;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-left: 6px;
 }
 
-.crud-btn:hover {
+.crud-btn.delete:hover {
+    background: linear-gradient(90deg, #a31f66 60%, #ff4e4e 100%);
     transform: scale(1.07);
-    box-shadow: 0 4px 16px #a867fd44;
+    box-shadow: 0 4px 16px #ff4e4e44;
     opacity: 0.92;
+}
+
+.crud-btn.delete .delete-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.crud-btn.delete .delete-icon img {
+    filter: brightness(0) invert(1);
 }
 
 /*ABOUT US*/
@@ -2084,8 +2107,14 @@ a {
     /* small values = slow ; large values = fast*/
 }
 
-.create_button:hover {
-    background: linear-gradient(100deg,#a867fd 100%, #ffb4be 60%);
+section .section .event_manager .create .create_button {
+    background: linear-gradient(90deg, #a867fd 60%, #ffb4be 100%);
+    color: #fff;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+section .section .event_manager .create .create_button:hover {
+    background: linear-gradient(90deg, #ffb4be 60%, #a867fd 100%);
     transform: scale(1.07);
     box-shadow: 0 4px 16px #a867fd44;
     opacity: 0.92;
