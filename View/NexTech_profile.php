@@ -62,7 +62,7 @@ if (!isset($_SESSION["surname"])) {
                     </div>
                     <?php if ($_SESSION["admin"] == true) { ?>
                         <div class="event_manager">
-                            <a href="Nextech_read_eventMANAGER.php" style="color:rgb(147, 0, 233)">Event manager</a>
+                            <a href="NexTech_event_manager.php" style="color:rgb(147, 0, 233)">Event manager</a>
                         </div>
                     <?php } ?>
                 </div>

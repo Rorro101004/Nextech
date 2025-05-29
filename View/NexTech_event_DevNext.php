@@ -35,7 +35,7 @@ if (!isset($_SESSION["admin"])) {
                     </div>
                     <?php if ($_SESSION["admin"] == true) { ?>
                         <div class="event_manager">
-                            <a href="Nextech_read_eventMANAGER.php" style="color:rgb(147, 0, 233)">Event manager</a>
+                            <a href="NexTech_event_manager.php" style="color:rgb(147, 0, 233)">Event manager</a>
                         </div>
                     <?php } ?>
                 </div>
@@ -76,18 +76,18 @@ if (!isset($_SESSION["admin"])) {
                         <div class="izqTitle">
                             <h2>Objectives: </h2>
                         </div>
-                        
+
                         <div class="izqObjectives">
                             <ul>
                                 <li><span>Learn</span> from renowned experts through talks and workshops.</li>
                                 <li><span>Discover</span> innovative tools and practical strategies to improve your projects.</li>
                                 <li><span>Establish</span> key contacts with other professionals in the sector, generating collaborations and job opportunities.</li>
                                 In addition, it can be an excellent occasion to get inspired.
-                            </ul>                        
+                            </ul>
                         </div>
-                        
+
                         <img src="Images/OIP.jpg" alt="developers">
-                        
+
                         <div class="izqTopicsTitle">
                             <h2>Topics to cover</h2>
                         </div>
@@ -120,7 +120,7 @@ if (!isset($_SESSION["admin"])) {
                                 </li>
                             </ul>
                         </div>
-                        
+
                     </div>
                     <div class="linea"></div>
                     <div class="derecha">
@@ -131,16 +131,17 @@ if (!isset($_SESSION["admin"])) {
                         <div class="derPlace">
                             <p>
                                 <span>
-                                    Center for Technological Innovation, Barcelona 
-                                </span>, 
-                                near the Jardines de Torre Girona park</p>
+                                    Center for Technological Innovation, Barcelona
+                                </span>,
+                                near the Jardines de Torre Girona park
+                            </p>
                             <iframe id="map-canvas" class="map_part" width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Center for Technological Innovation, Barcelona , near the Jardines de Torre Girona park&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://embedgooglemaps.com">how to embed google maps generator wordpress</a> and <a href="https://udenrofus.com/">online casino uden rofus</a></iframe>
                             <!-- Embed de google maps hecho con esta pagina https://embedgooglemaps.com/es/-->
                             </p>
                         </div>
 
                         <img src="Images/ubicacion.png" alt="location">
-                        
+
                         <div class="derDateTitle">
                             <h2>Date</h2>
                         </div>
