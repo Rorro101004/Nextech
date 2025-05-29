@@ -348,8 +348,10 @@ class UserController
             exit();
         }
 
+        $hashedPassword = password_hash($new_password, PASSWORD_DEFAULT);
+
         $stmt = $this->conn->prepare("UPDATE user SET password = :password WHERE email = :email");
-        $stmt->bindParam(':password', $new_password);
+        $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':email', $_SESSION["email"]);
 
         if ($stmt->execute()) {
