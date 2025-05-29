@@ -134,17 +134,17 @@ if (!isset($_SESSION["admin"])) {
                         <div class="member">
                             <img class="image" src="Images/imagen_rodrigo_curriculum_nou.png" alt="RodrigoC">
                             <h2>RodrigoC</h2>
-                            <h3>Backend Especialist</h3>
+                            <h3>Backend Specialist</h3>
                         </div>
                         <div class="member">
                             <img class="image" src="Images/joan_image.png" alt="Joan">
                             <h2>Joan</h2>
-                            <h3>Full stack Especialist</h3>
+                            <h3>Full stack Specialist</h3>
                         </div>
                         <div class="member">
                             <img class="image" src="Images/FrontendEspecialist.png" alt="RodrigoM">
                             <h2>RodrigoM</h2>
-                            <h3>Frontend Especialist</h3>
+                            <h3>Frontend Specialist</h3>
                         </div>
                     </div>
                 </div>
