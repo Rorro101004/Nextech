@@ -1911,23 +1911,54 @@ section .evtManager {
                 color: #fff;
             }
 
-            .crud-btn.update {
-                background: linear-gradient(90deg, #ffb4be 60%, #a31f66 100%);
-                color: #fff;
-            }
 
-            .crud-btn.delete {
-                background: linear-gradient(90deg, #ff4e4e 60%, #a31f66 100%);
-                color: #fff;
-            }
-
-            .crud-btn:hover {
-                transform: scale(1.07);
-                box-shadow: 0 4px 16px #a867fd44;
-                opacity: 0.92;
-            }
         }
+
     }
+}
+
+.crud-btn.update {
+    background: linear-gradient(90deg, #1de9b6 60%, #00bcd4 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #1de9b633;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+}
+
+.crud-btn.update:hover {
+    background: linear-gradient(90deg, #00bcd4 60%, #1de9b6 100%);
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px #1de9b644;
+    opacity: 0.92;
+}
+
+.crud-btn.update .update-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.crud-btn.update .update-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.crud-btn.delete {
+    background: linear-gradient(90deg, #ff4e4e 60%, #a31f66 100%);
+    color: #fff;
+}
+
+.crud-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px #a867fd44;
+    opacity: 0.92;
 }
 
 /*ABOUT US*/

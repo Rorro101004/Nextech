@@ -94,6 +94,7 @@ $events = $eventController->readEvents();
                     <th>Location</th>
                     <th>Price</th>
                     <th>URL</th>
+                    <th>Update / Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -106,6 +107,16 @@ $events = $eventController->readEvents();
                       <td><?php echo htmlspecialchars($event['location']); ?></td>
                       <td><?php echo htmlspecialchars($event['price']); ?></td>
                       <td><?php echo htmlspecialchars($event['url']); ?></td>
+                      <td>
+                        <form action="NexTech_update_event.php" method="get" style="display:inline;">
+                          <input type="hidden" name="id_event" value="<?php echo $event['id_event']; ?>">
+                          <button type="submit" class="crud-btn update" title="Update">
+                            <span class="update-icon">
+                              <img src="SVG/update.svg" alt="Update Icon" class="update-icon">
+                            </span>
+                          </button>
+                        </form>
+                      </td>
                     </tr>
                   <?php } ?>
                 </tbody>
