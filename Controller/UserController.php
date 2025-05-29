@@ -71,12 +71,17 @@ class UserController
         $email = $_POST["email"];
         $password = $_POST["password"];
         // Check the database
-        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin, image FROM user WHERE email=:email AND password=:password");
+        $stmt = $this->conn->prepare("SELECT username, password, email, name, surname, admin, image FROM user WHERE email=:email");
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $password);
         $stmt->execute();
 
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if (!password_verify($password, $userData["password"])) {
+            $_SESSION["error_login"] = "WRONG USERNAME OR PASSWORD";
+            header("Location: ../View/NexTech_login.php");
+            exit();
+        }
 
         if ($userData) {
             // Authentication successful
@@ -136,8 +141,8 @@ class UserController
         $db_email = $stmt_email->fetchColumn();
 
         if ($db_email !== false) {
-            header("Location: ../View/NexTech_register.php");
             $_SESSION["error_register"] = "THIS EMAIL IS ALREADY USED";
+            header("Location: ../View/NexTech_register.php");
             exit();
         }
 
@@ -186,6 +191,9 @@ class UserController
             exit();
         }
 
+        // Hash the password
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
         // Check the database
         if ($admin == true) {
             if (isset($_FILES["profile_image"]) && $_FILES["profile_image"]["error"] == 0) {
@@ -199,7 +207,7 @@ class UserController
             $stmt->bindParam(':username', $username);
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':surname', $surname);
-            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':password', $hashedPassword);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':admin', $admin);
             $stmt->bindParam(':image', $image);
@@ -226,7 +234,7 @@ class UserController
             $stmt->bindParam(':username', $username);
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':surname', $surname);
-            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':password', $hashedPassword);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':admin', $admin);
 
@@ -258,13 +266,13 @@ class UserController
         $email = $_POST["email"];
 
         if (!preg_match("/^[a-zA-Z0-9]{5,}$/", $username)) {
-            $_SESSION["error_register"] = "THE USERNAME MUST BE AT LEAST 5 CHARACTERS LONG AND CANNOT CONTAIN SPECIAL CHARACTERS";
+            $_SESSION["error_updateData"] = "THE USERNAME MUST BE AT LEAST 5 CHARACTERS LONG AND CANNOT CONTAIN SPECIAL CHARACTERS";
             header("Location: ../View/NexTech_register.php");
             exit();
         }
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $_SESSION["error_register"] = "INVALID FORMAT OF THE EMAIL";
+            $_SESSION["error_updateData"] = "INVALID FORMAT OF THE EMAIL";
             header("Location: ../View/NexTech_register.php");
             exit();
         }
@@ -292,7 +300,7 @@ class UserController
         } else {
             // Close connection
             $this->conn = null;
-            $_SESSION["error_register"] = "ERROR WHILE CHANGING THE USER DATA";
+            $_SESSION["error_updateData"] = "ERROR WHILE CHANGING THE USER DATA";
             $_SESSION["updatedata"] = true;
             header("Location: ../View/NexTech_updateUser.php");
             exit();
@@ -356,14 +364,36 @@ class UserController
         } else {
             // Close connection
             $this->conn = null;
-            $_SESSION["error_register"] = "ERROR WHILE CHANGING THE PASSWORD";
+            $_SESSION["error_updatePassword"] = "ERROR WHILE CHANGING THE PASSWORD";
             $_SESSION["updatepassword"] = true;
             header("Location: ../View/NexTech_updateUser.php");
             exit();
         }
     }
 
-    public function deleteAccount() {}
+    public function deleteAccount()
+    {
+        $stmt = $this->conn->prepare("DELETE FROM user WHERE email = :email");
+        $stmt->bindParam(':email', $_SESSION["email"]);
+
+        if ($stmt->execute()) {
+            session_unset();
+            // Authentication successful
+            $_SESSION["deleteAccount_success"] = "ACCOUNT DELETED SUCCESSFULLY";
+            // Close connection
+            $this->conn = null;
+
+            // Redirect to home page
+            header("Location: ../View/NexTech_login.php");
+            exit();
+        } else {
+            // Close connection
+            $this->conn = null;
+            $_SESSION["error_deleteAccount"] = "ERROR WHILE DELETING THE ACCOUNT";
+            header("Location: ../View/NexTech_profile.php");
+            exit();
+        }
+    }
 }
 ?>
 

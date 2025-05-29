@@ -16,6 +16,9 @@ if (!isset($_SESSION["updatePassword_success"])) {
 if (!isset($_SESSION["updateData_success"])) {
     $_SESSION["updateData_success"] = "";
 }
+if (!isset($_SESSION["error_deleteAccount"])) {
+    $_SESSION["error_deleteAccount"] = "";
+}
 if (!isset($_SESSION["username"])) {
     $_SESSION["username"] = "";
 }
@@ -125,10 +128,12 @@ if (!isset($_SESSION["surname"])) {
                         </div>
                     </div>
                     <div class="message">
-                        <p> <?php echo $_SESSION["updatePassword_success"];
-                            unset($_SESSION["updatePassword_success"]) ?> </p>
-                        <p> <?php echo $_SESSION["updateData_success"];
-                            unset($_SESSION["updateData_success"]) ?> </p>
+                        <p><b><?php echo $_SESSION["updatePassword_success"];
+                                unset($_SESSION["updatePassword_success"]);
+                                echo $_SESSION["updateData_success"];
+                                unset($_SESSION["updateData_success"]);
+                                echo $_SESSION["error_deleteAccount"];
+                                unset($_SESSION["error_deleteAccount"]); ?></b></p>
                     </div>
                     <div class="dataManipulation">
                         <div class="update">
@@ -145,7 +150,7 @@ if (!isset($_SESSION["surname"])) {
                         </div>
                         <div class="delete">
                             <form action="../Controller/UserController.php" method="post">
-                                <input type="submit" name="deleteUser" value="Delete account">
+                                <input type="submit" name="deleteAccount" onclick="return confirm('Are you sure to delete your account?');" value="Delete account">
                             </form>
                         </div>
                     </div>

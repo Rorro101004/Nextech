@@ -13,7 +13,6 @@ if (!isset($_SESSION["error_updatePassword"])) {
     $_SESSION["error_updatePassword"] = "";
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

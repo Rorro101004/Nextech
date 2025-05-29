@@ -12,6 +12,9 @@ if (!isset($_SESSION["error_login"])) {
 if (!isset($_SESSION["register_success"])) {
     $_SESSION["register_success"] = "";
 }
+if (!isset($_SESSION["deleteAccount_success"])) {
+    $_SESSION["deleteAccount_success"] = "";
+}
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +85,9 @@ if (!isset($_SESSION["register_success"])) {
                         <p><b><?php echo $_SESSION["error_login"];
                                 unset($_SESSION["error_login"]);
                                 echo $_SESSION["register_success"];
-                                unset($_SESSION["register_success"]); ?></b></p>
+                                unset($_SESSION["register_success"]);
+                                echo $_SESSION["deleteAccount_success"];
+                                unset($_SESSION["deleteAccount_success"]); ?></b></p>
                     </div>
                     <div class="form_login">
                         <form action="../Controller/UserController.php" method="post">
