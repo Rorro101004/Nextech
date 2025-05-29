@@ -84,42 +84,41 @@ $events = $eventController->readEvents();
 					</form>
 				</div>
 				<div class="events">
-						<div>
-							<h1>EVENTS</h1>
-						</div>
-						<?php if (!empty($events)) { ?>
-							<div class="event-table-wrapper">
-								<table cellpadding="8" cellspacing="0">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Start Date</th>
-											<th>End Date</th>
-											<th>Location</th>
-											<th>Price</th>
-											<th>URL</th>
-										</tr>
-									</thead>
-									<tbody>
-										<?php foreach ($events as $event) { ?>
-											<tr>
-												<td><?php echo htmlspecialchars($event['name']); ?></td>
-												<td class="description-column"><?php echo htmlspecialchars($event['description']); ?></td>
-												<td><?php echo htmlspecialchars($event['start_date']); ?></td>
-												<td><?php echo htmlspecialchars($event['end_date']); ?></td>
-												<td><?php echo htmlspecialchars($event['location']); ?></td>
-												<td><?php echo htmlspecialchars($event['price']); ?></td>
-												<td><?php echo htmlspecialchars($event['url']); ?></td>
-											</tr>
-										<?php } ?>
-									</tbody>
-								</table>
-							</div>
-						<?php } else { ?>
-							<p>No events found.</p>
-						<?php } ?>
+					<div>
+						<h1>EVENTS</h1>
 					</div>
+					<?php if (!empty($events)) { ?>
+						<div class="event-table-wrapper">
+							<table cellpadding="8" cellspacing="0">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>Start Date</th>
+										<th>End Date</th>
+										<th>Location</th>
+										<th>Price</th>
+										<th>URL</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php foreach ($events as $event) { ?>
+										<tr>
+											<td><?php echo htmlspecialchars($event['name']); ?></td>
+											<td class="description-column"><?php echo htmlspecialchars($event['description']); ?></td>
+											<td><?php echo htmlspecialchars($event['start_date']); ?></td>
+											<td><?php echo htmlspecialchars($event['end_date']); ?></td>
+											<td><?php echo htmlspecialchars($event['location']); ?></td>
+											<td><?php echo htmlspecialchars($event['price']); ?></td>
+											<td><?php echo htmlspecialchars($event['url']); ?></td>
+										</tr>
+									<?php } ?>
+								</tbody>
+							</table>
+						</div>
+					<?php } else { ?>
+						<p>No events found.</p>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
