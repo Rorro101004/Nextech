@@ -74,7 +74,8 @@ if ($_SESSION["admin"] == false) {
             <div class="box">
                 <div class="forms_create_event">
                     <div class="title">
-                        <h1>CREATE EVENT</h1>
+                        <h1>CREATE</h1>
+                        <h2>EVENT</h2>
                     </div>
                     <div class="form_create_event">
                         <form action="../Controller/EventController.php" method="post">

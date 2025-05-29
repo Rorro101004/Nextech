@@ -441,10 +441,6 @@ section .section .box .forms_login {
             margin-top: 15px;
             margin-left: 105px;
         }
-
-        .inputs_event {
-            width: 500px;
-        }
     }
 }
 
@@ -1560,7 +1556,7 @@ section .section .body {
 section .section .box .forms_create_event {
     background-color: rgba(255, 255, 255, 50%);
     border-radius: 10px;
-    padding: 3%;
+    padding: 4%;
     display: inline-flex;
     align-items: center;
     flex-direction: column;
@@ -1574,6 +1570,13 @@ section .section .box .forms_create_event {
         h1 {
             font-size: 75px;
             margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 85px;
+            margin: 0;
+            text-align: center;
         }
     }
 
@@ -1637,85 +1640,74 @@ section .section .box .forms_create_event {
     }
 }
 
-/*READ EVENT*/
-section .section .container_event {
-    display: flex;
-    width: 100%;
-    height: 100%;
+/*EVENT MANAGER/READ EVENT*/
+section .section .event_manager {
 
-    .read {
+    .title h1 {
+        color: rgb(11, 11, 137);
+        font-family: "Monsterrat_title", sans-serif;
+        font-size: 100px;
+        text-align: center;
+        line-height: 10px;
+    }
+
+    .create {
+        text-align: center;
+
+        button {
+            font-family: "Lexend_text", sans-serif;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 20px 32px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #a867fd22;
+            background: linear-gradient(90deg, #a867fd 60%, #ffb4be 100%);
+            color: #fff;
+            transition: background 0.2s, transform 0.2s;
+        }
+    }
+
+    .events {
         background-color: rgba(255, 255, 255, 50%);
-        border-radius: 10px;
+        border-radius: 20px;
         padding: 1%;
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 0px;
-        width: 75%;
-        margin: 1%;
+        margin: 40px 30px;
 
         h1 {
-            font-size: 65px !important;
-            margin: 0;
+            color: rgb(6, 6, 106);
+            font-family: "Monsterrat_title", sans-serif;
+            font-size: 70px;
+            text-align: center;
+            line-height: 10px;
         }
-    }
 
-    .crud-btn.create {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        font-family: "Lexend_text", sans-serif;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 1.2rem;
-        padding: 20px 32px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px #a867fd22;
-        width: auto;
-        transition: background 0.2s, transform 0.2s;
-        background: linear-gradient(90deg, #a867fd 60%, #ffb4be 100%);
-        color: #fff;
-        margin-left: 40%;
-    }
-
-    .button_rocket {
-        margin-top: 1%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 25%;
-
-        img {
+        .event-table-wrapper {
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            overflow-x: auto;
             max-width: 100%;
+
+            table {
+                border-collapse: separate;
+                border-spacing: 0;
+                font-family: "Lexend_text";
+                border-collapse: separate;
+                border-spacing: 0;
+                background: #a867fd;
+                border-radius: 15px;
+                box-shadow: 0 2px 12px #a867fd22;
+                overflow: hidden;
+                margin: 0px 20px;
+            }
         }
-    }
-}
-
-section .section .box .event-table-wrapper {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    overflow-x: auto;
-    max-width: 100%;
-
-    table {
-        border-collapse: separate;
-        border-spacing: 0;
-        font-family: "Lexend_text";
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0;
-        background: #a867fd;
-        border-radius: 12px;
-        box-shadow: 0 2px 12px #a867fd22;
-        overflow: hidden;
     }
 }
 
 .event-table-wrapper th,
 .event-table-wrapper td {
-
     border-right: 2px solid hsl(249, 100%, 91%);
     border-bottom: 2px solid hsl(249, 100%, 91%);
     padding: 12px 18px;
@@ -1723,7 +1715,6 @@ section .section .box .event-table-wrapper {
     font-family: "Lexend_text", sans-serif;
     font-size: 1rem;
     background: transparent;
-
 }
 
 .event-table-wrapper th {
@@ -1758,7 +1749,6 @@ section .section .box .event-table-wrapper {
     word-break: break-word;
     white-space: pre-line;
 }
-
 
 /* === CALENDARIO ESTÁTICO EVENTO === */
 .calendar-container {
@@ -1846,87 +1836,6 @@ section .section .box .event-table-wrapper {
     .calendar-day {
         font-size: 0.85rem;
         padding: 5px 0;
-    }
-}
-
-/*EVENT MANAGER*/
-section .evtManager {
-    .box {
-        background-color: rgba(255, 255, 255, 50%);
-        border-radius: 10px;
-        padding: 2%;
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    h1 {
-        color: rgb(13, 39, 154);
-        font-family: "Monsterrat_title", sans-serif;
-        font-size: 100px;
-        text-align: center;
-    }
-
-    .content {
-        display: flex;
-        justify-content: space-around;
-
-        .left {
-
-            .rocket {
-
-                img {
-                    width: 25rem;
-                }
-            }
-        }
-
-        .right {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            margin-top: 20px;
-            width: 25rem;
-
-            .crud-btn {
-                font-family: "Lexend_text", sans-serif;
-                border: none;
-                cursor: pointer;
-                font-weight: bold;
-                font-size: 1.2rem;
-                padding: 20px 32px;
-                border-radius: 8px;
-                box-shadow: 0 2px 8px #a867fd22;
-                width: 180px;
-                transition: background 0.2s, transform 0.2s;
-            }
-
-            .crud-btn.create {
-                background: linear-gradient(90deg, #a867fd 60%, #ffb4be 100%);
-                color: #fff;
-            }
-
-            .crud-btn.read {
-                background: linear-gradient(90deg, #4e33e9 60%, #a867fd 100%);
-                color: #fff;
-            }
-
-            .crud-btn.update {
-                background: linear-gradient(90deg, #ffb4be 60%, #a31f66 100%);
-                color: #fff;
-            }
-
-            .crud-btn.delete {
-                background: linear-gradient(90deg, #ff4e4e 60%, #a31f66 100%);
-                color: #fff;
-            }
-
-            .crud-btn:hover {
-                transform: scale(1.07);
-                box-shadow: 0 4px 16px #a867fd44;
-                opacity: 0.92;
-            }
-        }
     }
 }
 
