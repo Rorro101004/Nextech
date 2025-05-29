@@ -80,7 +80,7 @@ $events = $eventController->readEvents();
 				</div>
 				<div class="create">
 					<form action="NexTech_create_event.php" method="post">
-						<button class="create_button" type="submit">Create a Event</button>
+						<button class="create_button" type="submit">Create an Event</button>
 					</form>
 				</div>
 				<div class="events">
@@ -99,6 +99,7 @@ $events = $eventController->readEvents();
 										<th>Location</th>
 										<th>Price</th>
 										<th>URL</th>
+										<th>Update / Delete</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -111,6 +112,27 @@ $events = $eventController->readEvents();
 											<td><?php echo htmlspecialchars($event['location']); ?></td>
 											<td><?php echo htmlspecialchars($event['price']); ?></td>
 											<td><?php echo htmlspecialchars($event['url']); ?></td>
+											<td>
+												<div style="display: flex; align-items: center; justify-content: center;">
+													<form action="NexTech_update_event.php" method="get" style="display:inline;">
+														<input type="hidden" name="id_event" value="<?php echo $event['id_event']; ?>">
+														<button type="submit" class="crud-btn update" title="Update">
+															<span class="update-icon">
+																<img src="SVG/update.svg" alt="Update Icon" class="update-icon">
+															</span>
+														</button>
+													</form>
+													<form action="../Controller/EventController.php" method="post" style="display:inline;">
+														<input type="hidden" name="id_event" value="<?php echo $event['id_event']; ?>">
+														<button type="submit" class="crud-btn delete" name="delete" title="Delete"
+															onclick="return confirm('Are you sure you want to delete this event?');">
+															<span class="delete-icon">
+																<img src="SVG/delete-icon.svg" alt="Delete Icon" class="delete-icon">
+															</span>
+														</button>
+													</form>
+												</div>
+											</td>
 										</tr>
 									<?php } ?>
 								</tbody>

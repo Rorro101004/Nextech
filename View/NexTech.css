@@ -1689,6 +1689,9 @@ section .section .event_manager {
             margin-bottom: 30px;
             overflow-x: auto;
             max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             table {
                 border-collapse: separate;
@@ -1839,6 +1842,141 @@ section .section .event_manager {
     }
 }
 
+/*EVENT MANAGER*/
+section .evtManager {
+    .box {
+        background-color: rgba(255, 255, 255, 50%);
+        border-radius: 10px;
+        padding: 2%;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        color: rgb(13, 39, 154);
+        font-family: "Monsterrat_title", sans-serif;
+        font-size: 100px;
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-around;
+
+        .left {
+
+            .rocket {
+
+                img {
+                    width: 25rem;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 20px;
+            width: 25rem;
+
+            .crud-btn {
+                font-family: "Lexend_text", sans-serif;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1.2rem;
+                padding: 20px 32px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px #a867fd22;
+                width: 180px;
+                transition: background 0.2s, transform 0.2s;
+            }
+
+            .crud-btn.create {
+                background: linear-gradient(90deg, #a867fd 60%, #ffb4be 100%);
+                color: #fff;
+            }
+
+            .crud-btn.read {
+                background: linear-gradient(90deg, #4e33e9 60%, #a867fd 100%);
+                color: #fff;
+            }
+
+
+        }
+
+    }
+}
+
+.crud-btn.update {
+    background: linear-gradient(90deg, #1de9b6 60%, #00bcd4 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #1de9b633;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+}
+
+.crud-btn.update:hover {
+    background: linear-gradient(90deg, #00bcd4 60%, #1de9b6 100%);
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px #1de9b644;
+    opacity: 0.92;
+}
+
+.crud-btn.update .update-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.crud-btn.update .update-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.crud-btn.delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff4e4e 60%, #a31f66 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ff4e4e33;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-left: 6px;
+}
+
+.crud-btn.delete:hover {
+    background: linear-gradient(90deg, #a31f66 60%, #ff4e4e 100%);
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px #ff4e4e44;
+    opacity: 0.92;
+}
+
+.crud-btn.delete .delete-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.crud-btn.delete .delete-icon img {
+    filter: brightness(0) invert(1);
+}
+
 /*ABOUT US*/
 section .section .about_us {
     display: flex;
@@ -1970,4 +2108,17 @@ a {
     height: auto;
     animation: tilt-n-move-shaking 0.2s infinite linear;
     /* small values = slow ; large values = fast*/
+}
+
+section .section .event_manager .create .create_button {
+    background: linear-gradient(90deg, #a867fd 60%, #ffb4be 100%);
+    color: #fff;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+section .section .event_manager .create .create_button:hover {
+    background: linear-gradient(90deg, #ffb4be 60%, #a867fd 100%);
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px #a867fd44;
+    opacity: 0.92;
 }

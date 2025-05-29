@@ -6,7 +6,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "<p>Create event button is clicked.</p>";
     $event->insertEvent();
   }
-
+  if (isset($_POST["update"])) {
+    echo "<p>Update event button is clicked.</p>";
+    $event->updateEvent();
+  }
+  if (isset($_POST["delete"])) {
+    echo "<p>Delete event button is clicked.</p>";
+    $event->deleteEvent();
+  }
   if (isset($_GET["read"])) {
     echo "<p>Read event button is clicked.</p>";
     $event->readEvents();
@@ -77,6 +84,72 @@ class EventController
       echo "Error while reading events: " . $e->getMessage();
     }
     $conn = null;
+  }
+
+  public function getEventById($id_event)
+  {
+    try {
+        $stmt = $this->conn->prepare("SELECT * FROM event WHERE id_event = :id_event");
+        $stmt->execute([':id_event' => $id_event]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        return null;
+    }
+  }
+
+  public function updateEvent()
+  {
+    $id_event = $_POST["id_event"];
+    $eventName = $_POST["eventName"];
+    $eventLocation = $_POST["eventLocation"];
+    $eventDescription = $_POST["eventDescription"];
+    $eventStart = $_POST["eventStart"];
+    $eventEnd = $_POST["eventEnd"];
+    $eventPrice = $_POST["eventPrice"];
+    $eventUrl = $_POST["eventUrl"];
+
+    $stmt = $this->conn->prepare("UPDATE event SET name = :name, description = :description, start_date = :start_date, end_date = :end_date, location = :location, price = :price, url = :url WHERE id_event = :id_event");
+    $result = $stmt->execute([
+        ':name' => $eventName,
+        ':description' => $eventDescription,
+        ':start_date' => $eventStart,
+        ':end_date' => $eventEnd,
+        ':location' => $eventLocation,
+        ':price' => $eventPrice,
+        ':url' => $eventUrl,
+        ':id_event' => $id_event
+    ]);
+
+    if ($result) {
+        $_SESSION["update_success"] = "EVENT UPDATED SUCCESSFULLY";
+        $this->conn = null;
+        header("Location: ../View/NexTech_event_manager.php");
+        exit();
+    } else {
+        $this->conn = null;
+        $_SESSION["error_update"] = "ERROR WHILE UPDATING EVENT";
+        header("Location: ../View/NexTech_event_manager.php");
+        exit();
+    }
+  }
+
+  public function deleteEvent()
+  {
+    $id_event = $_POST["id_event"];
+    $stmt = $this->conn->prepare("DELETE FROM event WHERE id_event = :id_event");
+    $result = $stmt->execute([':id_event' => $id_event]);
+
+    if ($result) {
+        $_SESSION["delete_success"] = "EVENT DELETED SUCCESSFULLY";
+        $this->conn = null;
+        header("Location: ../View/NexTech_event_manager.php");
+        exit();
+    } else {
+        $this->conn = null;
+        $_SESSION["error_delete"] = "ERROR WHILE DELETING EVENT";
+        header("Location: ../View/NexTech_event_manager.php");
+        exit();
+    }
   }
 }
 ?>
