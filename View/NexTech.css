@@ -2083,3 +2083,10 @@ a {
     animation: tilt-n-move-shaking 0.2s infinite linear;
     /* small values = slow ; large values = fast*/
 }
+
+.create_button:hover {
+    background: linear-gradient(100deg,#a867fd 100%, #ffb4be 60%);
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px #a867fd44;
+    opacity: 0.92;
+}
